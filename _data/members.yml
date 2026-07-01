@@ -23,21 +23,21 @@
   role: tutor
   home: true
 
-- name: First Name Last Name
-  github: https://kdd.isti.cnr.it/people/student-1
+- name: Nicolò Fiore
+  github: https://github.com/nicolofiore1998-lgtm
   role: student
-- name: First Name Last Name
-  github: https://kdd.isti.cnr.it/people/student-2
+- name: Giuseppe Granata
+  github: https://github.com/ops404error
   role: student
-- name: First Name Last Name
-  github: https://kdd.isti.cnr.it/people/student-3
+- name: Federico Martinelli
+  github: https://github.com/Federicomartinelli99
   role: student
-- name: First Name Last Name
-  github: https://kdd.isti.cnr.it/people/student-4
+- name: Jonar De Meyer
+  github: https://github.com/jonas-de-meyer
   role: student
-- name: First Name Last Name
-  github: https://kdd.isti.cnr.it/people/student-5
+- name: Mattia De Tommaso
+  github: https://github.com/leone2497
   role: student
-- name: First Name Last Name
-  github: https://kdd.isti.cnr.it/people/student-6
+- name: Manuel Pusceddu
+  github: https://github.com/skywalker975
   role: student
