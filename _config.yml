@@ -29,14 +29,14 @@ description: >- # ignora i ritorni a capo fino a "baseurl:"
 # Riportare il github del gruppo di progetto e quello del sito web (se differente).
 # Tali informazioni appariranno nel Footer del sito.
 github_repo:
-  - name: "Template per i Progettoni del Master SoBigData"
-    url: "https://github.com/danielefadda/master-projects-template-2026/"
+  - name: "Gruppo 5 - Repository del sito"
+    url: "https://github.com/skywalker975/g5-2026-website.git"
 
 markdown: kramdown
 
-baseurl: "/master-projects-template-2026"
+baseurl: "/g5-2026-website"
 #baseurl: ""
-url: "https://danielefadda.github.io" # il dominio principale del sito senza barra finale (in questo caso il tuo username.github.io)
+url: "https://skywalker975.github.io" # il dominio principale del sito senza barra finale (in questo caso il tuo username.github.io)
 
 #################################
 #    Configurazione navigazione #
