@@ -18,8 +18,8 @@
 # {{ site.title }}, {{ site.email }}, ecc. Puoi creare variabili personalizzate:
 # saranno accessibili nei template tramite {{ site.myvariable }}.
 
-title: "Template per Progettoni"
-subtitle: "Questo è un template per i progetti del Master SoBigData"
+title: "HERO: Hunger Early-warning & Risk Optimizer"
+subtitle: "Un'architettura Big Data per la scomposizione analitica delle crisi umanitarie: mappare i driver socio-economici e climatici attraverso l’integrazione di flussi informativi globali"
 description: >- # ignora i ritorni a capo fino a "baseurl:"
   Scrivi qui una descrizione accattivante per il tuo nuovo sito. Puoi modificare questa
   riga in _config.yml. Apparirà nei meta del documento head (per
@@ -45,34 +45,40 @@ url: "https://skywalker975.github.io" # il dominio principale del sito senza bar
 navbar:
   style :  dual # non modificarlo: imposta lo stile della navbar.
   brand: # brand della navbar, mostrato a sinistra.
-    title :  "Template Progettoni"
+    title :  "HERO"
     img: "./assets/images/Logo_masthead.png" # non modificare
     url: /
   nav:
-    - title: installazione di Jekyll
+    - title: Introduzione
+      url: /introduzione.html
+    - title: Raccolta Dati
+      url: /raccolta-dati.html
+    - title: Clustering
+      url: /clustering.html
+    - title: Nowcast & Forecast
+      url: /nowcast-forecast.html
+    - title: Esempi & Guida
       child:
-      - title: Sviluppo locale
-        url: /local-development.html
-      - title: Local development
-        url: /local-development-eng.html
-    - title: Guida
-      url: /guide.html
-    - title: Pagina di esempio
-      url: /example.html
-    - title: Approfondimenti
-      child:
-        - title: Markdown
-          url: /markdown.html
+        - title: Guida Completa
+          url: /guide.html
+        - title: Sviluppo locale
+          url: /local-development.html
+        - title: Local development (EN)
+          url: /local-development-eng.html
+        - title: Pagina di Esempio
+          url: /example.html
         - title: Grafici Altair
           url: /charts.html
         - title: Grafici Plotly
           url: /plotly.html
-        - title: Folium
+        - title: Mappe Folium
           url: /folium.html
         - title: Slider
           url: /slider.html
         - title: Scrollytelling
           url: /scrollama.html
+        - title: Markdown
+          url: /markdown.html
 
     - title: SBD Master # deve essere sempre l'ultimo elemento della navbar, non modificarlo
       url: https://masterbigdata.it/
