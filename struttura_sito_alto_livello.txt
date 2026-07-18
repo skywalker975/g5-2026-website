@@ -1,7 +1,5 @@
 
 
-Obiettivo è quello di
-
 Quali driver guidano IPC 
 
 Pubblico che ha un interesse e un minimo tecniche tipo 'Le Scienze'. ???
@@ -12,11 +10,14 @@ Titolo: "HERO: Hunger Early-warning & Risk Optimizer" ???
 Sottotitolo:  
 Un'architettura Big Data per la scomposizione analitica delle crisi umanitarie: mappare i driver socio-economici e climatici attraverso l’integrazione di flussi informativi globali​ 
 
-
+EXTRA:
+- titolo, abstract, immagine
+- intervista
 
 
 
 Obiettivo: sfruttare clustering per migliorare inferenza
+
 
 ------------------------------------------------------------------------------------------------------------------
 --- Introduzione	--- Si racconta il problema e l'obiettivo introducendo i concetti essenziali
@@ -26,6 +27,7 @@ Obiettivo: sfruttare clustering per migliorare inferenza
 			--- UI utile per fare visuals analytics e data exploration (come il maiale non si butta via nulla)
 			--- creare il link alla nostra piattaforma
 			--- giustificare UI come strumento per esplorare i dati in modo efficace.
+			--- confronto tra Admin1 e Admin2
 
 
 --- Raccolta Dati	--- (Criticità - antagonista) Dati nulli, analisi spazio temporale anche basata su plot UI
@@ -36,9 +38,9 @@ Obiettivo: sfruttare clustering per migliorare inferenza
 
 
 --- Clustering		--- confronto tra varie strategie di clustering
-				--- Clustering vanilla (entry scorrelate)
-				--- Timeseries based
-				--- NLP based
+				--- Clustering vanilla (entry scorrelate) (Mattia) a livello di adm1
+				--- Timeseries based (Federico) a livello di adm1
+				--- NLP based (Nicolo) a livello di paese
 			--- confronto tra varie tecniche di clustering
 				--- hierachical/WARD
 				--- kmeans
@@ -49,12 +51,14 @@ Obiettivo: sfruttare clustering per migliorare inferenza
 			
 
 --- Nowcast e Forecast	--- Analisi timeseries singola regione (stazionarietà, decomposizione,...)
+			--- adm1 vs adm2
 			--- Anomaly Detection	
 			--- Confronto risultati con e senza clustering
 			--- Feature importance and SHAP
 			
 
-
+--- Altre info		--- paper e referenze
+			--- animazioni
 
 
 
