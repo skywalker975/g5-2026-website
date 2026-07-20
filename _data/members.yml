@@ -33,18 +33,24 @@
 - name: Nicolò Fiore
   github: https://github.com/nicolofiore1998-lgtm
   role: student
+  home: true
 - name: Giuseppe Granata
   github: https://github.com/ops404error
   role: student
+  home: true
 - name: Federico Martinelli
   github: https://github.com/Federicomartinelli99
   role: student
+  home: true
 - name: Jonar De Meyer
   github: https://github.com/jonas-de-meyer
   role: student
+  home: true
 - name: Mattia De Tommaso
   github: https://github.com/leone2497
   role: student
+  home: true
 - name: Manuel Pusceddu
   github: https://github.com/skywalker975
   role: student
+  home: true
