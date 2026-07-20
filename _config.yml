@@ -59,8 +59,8 @@ navbar:
       url: /nowcast-forecast.html
     - title: Esempi & Guida
       child:
-        - title: Guida Completa
-          url: /guide.html
+        - title: Obiettivo
+          url: /obiettivo.html
         - title: Sviluppo locale
           url: /local-development.html
         - title: Local development (EN)
