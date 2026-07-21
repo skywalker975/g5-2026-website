@@ -29,7 +29,7 @@ description: >- # ignora i ritorni a capo fino a "baseurl:"
 # Riportare il github del gruppo di progetto e quello del sito web (se differente).
 # Tali informazioni appariranno nel Footer del sito.
 github_repo:
-  - name: "Gruppo 5 - Repository del sito"
+  - name: "Group 5 - Repository website"
     url: "https://github.com/skywalker975/g5-2026-website.git"
 
 markdown: kramdown
