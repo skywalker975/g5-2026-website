@@ -13,14 +13,15 @@ subtitle: "Hunger Early-warning & Risk Optimizer"
     <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
 </div>
 
-# <span class="text-gradient">Il Progetto HERO: Hunger Early-warning & Risk Optimizer</span>
+# <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
 
-La sicurezza alimentare globale è minacciata da una complessa rete di fattori interconnessi: conflitti armati, cambiamenti climatici estremi, instabilità macroeconomiche e migrazioni forzate. Il progetto **HERO (Hunger Early-warning & Risk Optimizer)** nasce con l'obiettivo di sviluppare un'architettura Big Data in grado di scomporre analiticamente queste crisi umanitarie. 
+Global food security is threatened by a complex web of interconnected factors: armed conflict, extreme climate change, macroeconomic instability, and forced migration. The HERO project (Hunger Early-warning & Risk Optimizer) was created with the goal of developing a Big Data architecture capable of analytically dissecting these humanitarian crises.
 
-L’obiettivo principale di HERO è superare la semplice descrizione della fame nel mondo per passare a un approccio fortemente analitico e predittivo. Il progetto sfrutta un’architettura Big Data e un modello di Machine Learning per individuare le cause reali che scatenano le crisi alimentari e ne determinano la gravità sulla scala IPC (Integrated Food Security Phase Classification).
-Per farlo, HERO unisce e analizza flussi di dati globali e diversificati: dalle dinamiche socio-economiche (come conflitti, instabilità politica e flussi di mercato) ai fattori climatici e ambientali (come siccità e anomalie pluviometriche).
-L'analisi viene condotta a livello regionale (Admin1). Questa scelta permette di superare la forte mancanza di dati che si riscontra a livello locale (Admin2), garantendo un dataset solido, continuo e arricchito da indicatori geopolitici globali che a risoluzioni più piccole andrebbero perduti.
-In questo modo, HERO non si limita a fotografare la situazione attuale, ma offre uno strumento di early-warning in grado di prevedere l'evoluzione dei rischi. Questo permette a organizzazioni umanitarie e decisori politici di pianificare interventi tempestivi, mirati e basati sui dati prima che un'emergenza si trasformi in una catastrofe.
+HERO’s primary objective is to move beyond merely describing global hunger and shift toward a highly analytical, predictive approach. The project leverages Big Data architecture and a Machine Learning model to identify the root causes driving food crises and determining their severity on the IPC (Integrated Food Security Phase Classification) scale.
+To achieve this, HERO integrates and analyzes diverse global data streams—ranging from socioeconomic dynamics (such as conflict, political instability, and market fluctuations) to climate and environmental drivers (such as drought and precipitation anomalies).
+The analysis is conducted at the regional level (Admin1). This choice makes it possible to overcome the severe data scarcity found at the local level (Admin2), ensuring a robust, continuous dataset enriched with global geopolitical indicators that would otherwise be lost at finer resolutions.
+In this way, HERO goes beyond capturing a snapshot of the current situation to provide an early-warning tool capable of forecasting evolving risks. This enables humanitarian organizations and policymakers to plan timely, targeted, data-driven interventions before an emergency turns into a catastrophe.
+
 
 
 ---
