@@ -53,34 +53,16 @@ navbar:
       url: /introduzione.html
     - title: Collection and data processing
       url: /Collection-and-Data-processing.html
+      child:
+        - title: Data collection
+          url: /obiettivo.html
     - title: Clustering
       url: /clustering.html
     - title: Nowcast & Forecast
       url: /nowcast-forecast.html
     - title: References
       url: /References.html
-    - title: Esempi & Guida
-      child:
-        - title: Obiettivo
-          url: /obiettivo.html
-        - title: Sviluppo locale
-          url: /local-development.html
-        - title: Local development (EN)
-          url: /local-development-eng.html
-        - title: Pagina di Esempio
-          url: /example.html
-        - title: Grafici Altair
-          url: /charts.html
-        - title: Grafici Plotly
-          url: /plotly.html
-        - title: Mappe Folium
-          url: /folium.html
-        - title: Slider
-          url: /slider.html
-        - title: Scrollytelling
-          url: /scrollama.html
-        - title: Markdown
-          url: /markdown.html
+    
 
     - title: SBD Master # deve essere sempre l'ultimo elemento della navbar, non modificarlo
       url: https://masterbigdata.it/
