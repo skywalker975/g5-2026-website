@@ -47,7 +47,7 @@ navbar:
   brand: # brand della navbar, mostrato a sinistra.
     title :  "HERO"
     img: "./assets/images/Logo_masthead.png" # non modificare
-    url: /
+    url: /introduzione.html
   nav:
     - title: Introduction
       url: /introduzione.html
