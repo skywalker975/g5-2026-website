@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Raccolta e Preprocessing dei Dati"
-permalink: /raccolta-dati.html
+title: "Data Collection and Preprocessing"
+permalink: /Collection-and-Data-processing.html
 show_sidetoc: true
 header_type: hero
 header_img: assets/images/header.svg
-header_title: "Raccolta & Preprocessing"
-subtitle: "Dall'eterogeneità del dato grezzo all'armonizzazione spazio-temporale"
+header_title: "Data Collection and Preprocessing"
+subtitle: "From raw data heterogeneity to spatiotemporal harmonization"
 ---
 
 <div class="full-width-wrapper">
