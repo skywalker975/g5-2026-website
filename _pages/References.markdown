@@ -9,6 +9,12 @@ header_title: "References"
 
 ---
 
+<div class="full-width-wrapper">
+    <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
+</div>
+
+---
+
 Chicago Manual of Style (17th Edition - Author-Date)
 Voukelatou, Vasiliki, Kevin Tang, Ilaria Lauzana, Manita Jangid, Giulia Martini, Saskia de Pee, Frances Knight, and Duccio Piovani. 2026. "Predicting Risk of Inadequate Micronutrient Intake with Transferable Machine Learning Models." Scientific Reports 16 (1): 4104.
 
