@@ -21,7 +21,7 @@ L’obiettivo principale di HERO è superare la semplice descrizione della fame 
 Per farlo, HERO unisce e analizza flussi di dati globali e diversificati: dalle dinamiche socio-economiche (come conflitti, instabilità politica e flussi di mercato) ai fattori climatici e ambientali (come siccità e anomalie pluviometriche).
 L'analisi viene condotta a livello regionale (Admin1). Questa scelta permette di superare la forte mancanza di dati che si riscontra a livello locale (Admin2), garantendo un dataset solido, continuo e arricchito da indicatori geopolitici globali che a risoluzioni più piccole andrebbero perduti.
 In questo modo, HERO non si limita a fotografare la situazione attuale, ma offre uno strumento di early-warning in grado di prevedere l'evoluzione dei rischi. Questo permette a organizzazioni umanitarie e decisori politici di pianificare interventi tempestivi, mirati e basati sui dati prima che un'emergenza si trasformi in una catastrofe.
-{: .lead }
+
 
 ---
 
