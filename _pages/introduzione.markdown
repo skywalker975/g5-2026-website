@@ -17,7 +17,10 @@ subtitle: "Hunger Early-warning & Risk Optimizer"
 
 La sicurezza alimentare globale è minacciata da una complessa rete di fattori interconnessi: conflitti armati, cambiamenti climatici estremi, instabilità macroeconomiche e migrazioni forzate. Il progetto **HERO (Hunger Early-warning & Risk Optimizer)** nasce con l'obiettivo di sviluppare un'architettura Big Data in grado di scomporre analiticamente queste crisi umanitarie. 
 
-L'ipotesi di ricerca fondamentale di HERO è che **sfruttare il clustering spaziotemporale delle regioni consenta di migliorare significativamente l'inferenza e le capacità previsionali** del target di insicurezza alimentare, in particolare la classificazione delle fasi IPC (Integrated Food Security Phase Classification).
+L’obiettivo principale di HERO è superare la semplice descrizione della fame nel mondo per passare a un approccio fortemente analitico e predittivo. Il progetto sfrutta un’architettura Big Data e un modello di Machine Learning per individuare le cause reali che scatenano le crisi alimentari e ne determinano la gravità sulla scala IPC (Integrated Food Security Phase Classification).
+Per farlo, HERO unisce e analizza flussi di dati globali e diversificati: dalle dinamiche socio-economiche (come conflitti, instabilità politica e flussi di mercato) ai fattori climatici e ambientali (come siccità e anomalie pluviometriche).
+L'analisi viene condotta a livello regionale (Admin1). Questa scelta permette di superare la forte mancanza di dati che si riscontra a livello locale (Admin2), garantendo un dataset solido, continuo e arricchito da indicatori geopolitici globali che a risoluzioni più piccole andrebbero perduti.
+In questo modo, HERO non si limita a fotografare la situazione attuale, ma offre uno strumento di early-warning in grado di prevedere l'evoluzione dei rischi. Questo permette a organizzazioni umanitarie e decisori politici di pianificare interventi tempestivi, mirati e basati sui dati prima che un'emergenza si trasformi in una catastrofe.
 {: .lead }
 
 ---
