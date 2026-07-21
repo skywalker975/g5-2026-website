@@ -49,7 +49,7 @@ navbar:
     img: "./assets/images/Logo_masthead.png" # non modificare
     url: /
   nav:
-    - title: Introduzione
+    - title: Introduction
       url: /introduzione.html
     - title: Collection and data processing
       url: /Collection-and-Data-processing.html
