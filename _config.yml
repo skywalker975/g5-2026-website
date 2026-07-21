@@ -51,8 +51,8 @@ navbar:
   nav:
     - title: Introduzione
       url: /introduzione.html
-    - title: Raccolta Dati
-      url: /raccolta-dati.html
+    - title: Collection and data processing
+      url: /Collection-and-Data-processing.html
     - title: Clustering
       url: /clustering.html
     - title: Nowcast & Forecast
