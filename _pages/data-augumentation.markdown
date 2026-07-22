@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Data Collection and Preprocessing"
-permalink: /Collection-and-Data-processing.html
+title: "Data augumentation"
+permalink: /data-augumentation.html
 show_sidetoc: true
 header_type: hero
 header_img: assets/images/header.svg
-header_title: "Data Collection and Preprocessing"
-subtitle: "From raw data heterogeneity to spatiotemporal harmonization"
+header_title: "Data augumentation"
+subtitle: "Handling missing data"
 ---
 
 <div class="full-width-wrapper">
