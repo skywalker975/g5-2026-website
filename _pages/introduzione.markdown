@@ -102,10 +102,8 @@ To understand the severity of food crises, HERO integrates and monitors various 
 
 ---
 
-<div class="storytelling-hero-wrapper text-center mb-5">
-    <span class="badge-premium-admin1 shadow-sm mb-2"><i class="fas fa-quote-left"></i> DATA STORYTELLING</span>
-    <h1 class="text-gradient font-weight-bold">From Words to Data: Mapping Famine Drivers Through Term Frequency</h1>
-</div>
+<h1 class="text-gradient font-weight-bold mb-4">From Words to Data: Mapping Famine Drivers Through Term Frequency</h1>
+
 
 <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
 In IPC reports, words are never neutral: their recurrence forms the digital footprint of a real-world emergency. Textual analysis reveals that the bigram <b>'food insecurity'</b> dominates the dataset with 1,068 occurrences, frequently paired with critical terms like <b>'acute'</b> (658) and <b>'malnutrition'</b> (154). However, it is the underlying drivers that shape this semantic map. The frequency of words like <b>'price'</b> (524) highlights economic shocks and barriers to food access, while the agricultural production cluster (<i>'production'</i>, <i>'harvest'</i>, <i>'crop'</i>) captures the immediate impact of climate factors on the ground. In this context, counting words means mapping the boundaries of hunger.
