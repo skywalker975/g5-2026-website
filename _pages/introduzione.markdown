@@ -26,9 +26,9 @@ In this way, HERO goes beyond capturing a snapshot of the current situation to p
 
 ---
 
-## I Driver della Crisi: I Flussi Informativi di HERO
+## Drivers
 
-Per comprendere la gravità delle crisi alimentari, HERO integra e monitora diversi flussi informativi globali, ciascuno dei quali rappresenta un tassello cruciale del puzzle umanitario:
+To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
 
 <div class="container mt-4">
     <div class="row">
@@ -37,7 +37,7 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
                 <div class="card-body">
                     <h4 class="card-title text-danger"><i class="fas fa-hand-fist"></i> Conflitti (ACLED)</h4>
                     <p class="card-text text-muted">
-                        Tracciamento in tempo reale di eventi di violenza politica, scontri armati e attacchi contro i civili. I dati sulle vittime e la frequenza degli scontri vengono normalizzati per <b>100.000 abitanti</b> per confrontare aree demograficamente dissimili.
+                        Real-time tracking of political violence events, armed clashes, and attacks against civilians. Data on casualties and the frequency of clashes are normalized per </b>100,000 inhabitants</b> to compare demographically dissimilar areas.
                     </p>
                 </div>
             </div>
@@ -47,7 +47,7 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
                 <div class="card-body">
                     <h4 class="card-title text-success"><i class="fas fa-cloud-showers-water"></i> Precipitazioni (CHIRPS)</h4>
                     <p class="card-text text-muted">
-                        Stima satellitare delle precipitazioni mensili accumulate e delle anomalie pluviometriche rispetto alle medie storiche trentennali, identificando precocemente l'insorgenza di siccità prolungate o alluvioni.
+                        Satellite-based estimation of monthly accumulated rainfall and rainfall anomalies compared to thirty-year historical averages, enabling early identification of prolonged droughts or floods.
                     </p>
                 </div>
             </div>
@@ -59,7 +59,7 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
                 <div class="card-body">
                     <h4 class="card-title text-info"><i class="fas fa-seedling"></i> Salute della Vegetazione (NDVI)</h4>
                     <p class="card-text text-muted">
-                        L'indice NDVI misura la densità e il vigore vegetativo delle colture agricole. Consente di quantificare lo shock climatico agricolo prima che si traduca in una perdita effettiva del raccolto.
+                        The NDVI index measures the density and vigor of agricultural crops. It allows for the quantification of agricultural climate shocks before they translate into actual yield loss.
                     </p>
                 </div>
             </div>
@@ -69,7 +69,7 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
                 <div class="card-body">
                     <h4 class="card-title text-warning"><i class="fas fa-shopping-basket"></i> Mercati Alimentari (WFP)</h4>
                     <p class="card-text text-muted">
-                        I prezzi dei mercati locali forniti dal World Food Programme. L'analisi traccia il costo del paniere alimentare e l'inflazione locale dei beni di prima necessità, catturando shock sui prezzi prima della propagazione globale.
+                        Local market prices provided by the World Food Programme. The analysis tracks the cost of the food basket and local inflation of basic necessities, capturing price shocks before they propagate globally."
                     </p>
                 </div>
             </div>
@@ -81,7 +81,7 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
                 <div class="card-body">
                     <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> Sfollati Interni (IDP)</h4>
                     <p class="card-text text-muted">
-                        Flussi di migrazione interna provocati da shock di violenza o calamità climatiche. Questo parametro viene espresso come percentuale sulla popolazione complessiva dell'area per valutare la pressione demografica residua.
+                        Internal migration flows driven by violence shocks or climate disasters. This parameter is expressed as a percentage of the overall population of the area to assess the residual demographic pressure.
                     </p>
                 </div>
             </div>
@@ -91,7 +91,7 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
                 <div class="card-body">
                     <h4 class="card-title text-dark"><i class="fas fa-newspaper"></i> Sentiment e Notizie (GDELT)</h4>
                     <p class="card-text text-muted">
-                        Il flusso globale dei media indicizzato per QuadClass. Attraverso l'estrazione quantitativa del tono (sentiment) e del volume di salienza delle notizie, monitoriamo la percezione esterna della crisi.
+                        Global media flows indexed by QuadClass. Through the quantitative extraction of news tone (sentiment) and salience volume, we monitor the external perception of the crisis.
                     </p>
                 </div>
             </div>
@@ -99,8 +99,8 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
     </div>
 </div>
 
-### L'Integrazione della Text Mining: La BOW di Manuel
-Un elemento innovativo introdotto in HERO riguarda l'analisi testuale applicata ai flussi di notizie storiche. Ipotizziamo che le sole variabili quantitative non colgano appieno il sentiment ed il contesto dei conflitti latenti. Attraverso l'integrazione di una metodologia basata sulla **Bag of Words (BOW)** sviluppata da Manuel sui flussi GDELT, andiamo a classificare i driver testuali principali. Le parole chiave e la frequenza semantica legata a parole come *"scarsità"*, *"siccità"*, *"attacco"*, o *"embargo"* vengono convertite in variabili numeriche dense, fornendo un "termometro" mediatico immediato che precede la crisi reale.
+### The Integration of Text Mining: Manuel's BOW
+An innovative element introduced in HERO concerns textual analysis applied to historical news flows. We hypothesize that quantitative variables alone do not fully capture the sentiment and context of latent conflicts. Through the integration of a Bag of Words (BOW) methodology developed by Manuel on GDELT flows, we classify the main textual drivers. Keywords and semantic frequencies related to terms like "scarcity", "drought", "attack", or "embargo" are converted into dense numerical variables, providing an immediate media "thermometer" that precedes the actual crisis.
 
 ---
 
