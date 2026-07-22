@@ -79,7 +79,7 @@ To understand the severity of food crises, HERO integrates and monitors various 
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-secondary">
                 <div class="card-body">
-                    <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> nternally Displaced Persons (IDPs) (IDP)</h4>
+                    <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> Internally Displaced Persons (IDP)</h4>
                     <p class="card-text text-muted">
                         Internal migration flows driven by violence shocks or climate disasters. This parameter is expressed as a percentage of the overall population of the area to assess the residual demographic pressure.
                     </p>
