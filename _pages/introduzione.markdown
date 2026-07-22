@@ -106,10 +106,10 @@ To understand the severity of food crises, HERO integrates and monitors various 
 
 
 
-## 🚀 Accedi alla Piattaforma HERO
+## 🚀 HERO platfrom
 
-Puoi esplorare tutti i dati, i grafici cartesiani, le mappe geospaziali e testare il simulatore di scenari interattivo direttamente sulla nostra dashboard:
+Explore all the data, Cartesian graphs, geospatial maps, and test the interactive scenario simulator directly on our dashboard:
 
 <div class="text-center my-5">
-    <a href="https://github.com/skywalker975/g5-2026-website" class="btn btn-premium-hero btn-lg px-5 py-3 shadow"><i class="fas fa-chart-line mr-2"></i> Esplora la Dashboard HERO</a>
+    <a href="https://github.com/skywalker975/g5-2026-website" class="btn btn-premium-hero btn-lg px-5 py-3 shadow"><i class="fas fa-chart-line mr-2"></i> Explore Dashboard HERO</a>
 </div>
