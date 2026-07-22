@@ -56,3 +56,32 @@ The </b>HERO</b> system organizes humanitarian data and its analytical component
 
 </div>
 </div>
+
+---
+<div class="comparison-table-wrapper">
+    <div class="row text-center mb-3">
+        <div class="col-md-6 mb-2">
+            <span class="badge-premium-admin1 shadow-sm"><i class="fas fa-layer-group"></i> ADMIN LEVEL 1 (Regionale / Provinciale)</span>
+        </div>
+        <div class="col-md-6 mb-2">
+            <span class="badge-premium-admin2 shadow-sm"><i class="fas fa-map-pin"></i> ADMIN LEVEL 2 (Distrettuale / Dipartimentale)</span>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-6 border-right">
+            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
+                <li><b>Dimensione Dati:</b> ~10.024 osservazioni spaziotemporali.</li>
+                <li><b>Integrazione Media (GDELT):</b> Include i segnali e il sentiment estratti dai media tramite GDELT (il tono e la salienza delle notizie sono storicamente georeferenziabili solo a livello Admin 1).</li>
+                <li><b>Uso Prediletto:</b> Ideale per il macro-clustering globale, l'identificazione di archetipi nazionali e la generalizzazione di modelli predittivi su scala inter-regionale.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
+                <li><b>Dimensione Dati:</b> ~42.957 osservazioni (4 volte più granulare).</li>
+                <li><b>Integrazione Media:</b> Non include i dati GDELT (i flussi giornalistici non sono localizzati a livello distrettuale).</li>
+                <li><b>Uso Prediletto:</b> Perfetto per la micro-cartografia digitale, il tracciamento locale della sicurezza alimentare e la rilevazione di micro-anomalie di resilienza o vulnerabilità distrettuale.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
