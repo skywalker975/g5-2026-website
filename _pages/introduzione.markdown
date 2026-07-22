@@ -26,18 +26,18 @@ In this way, HERO goes beyond capturing a snapshot of the current situation to p
 
 ---
 
-## I Driver della Crisi: I Flussi Informativi di HERO
+## Drivers
 
-Per comprendere la gravità delle crisi alimentari, HERO integra e monitora diversi flussi informativi globali, ciascuno dei quali rappresenta un tassello cruciale del puzzle umanitario:
+To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
 
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-danger">
                 <div class="card-body">
-                    <h4 class="card-title text-danger"><i class="fas fa-hand-fist"></i> Conflitti (ACLED)</h4>
+                    <h4 class="card-title text-danger"><i class="fas fa-hand-fist"></i> Conflicts (ACLED)</h4>
                     <p class="card-text text-muted">
-                        Tracciamento in tempo reale di eventi di violenza politica, scontri armati e attacchi contro i civili. I dati sulle vittime e la frequenza degli scontri vengono normalizzati per <b>100.000 abitanti</b> per confrontare aree demograficamente dissimili.
+                        Real-time tracking of political violence events, armed clashes, and attacks against civilians. Data on casualties and the frequency of clashes are normalized per </b>100,000 inhabitants</b> to compare demographically dissimilar areas.
                     </p>
                 </div>
             </div>
@@ -45,9 +45,9 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-success">
                 <div class="card-body">
-                    <h4 class="card-title text-success"><i class="fas fa-cloud-showers-water"></i> Precipitazioni (CHIRPS)</h4>
+                    <h4 class="card-title text-success"><i class="fas fa-cloud-showers-water"></i> Precipitation (CHIRPS)</h4>
                     <p class="card-text text-muted">
-                        Stima satellitare delle precipitazioni mensili accumulate e delle anomalie pluviometriche rispetto alle medie storiche trentennali, identificando precocemente l'insorgenza di siccità prolungate o alluvioni.
+                        Satellite-based estimation of monthly accumulated rainfall and rainfall anomalies compared to thirty-year historical averages, enabling early identification of prolonged droughts or floods.
                     </p>
                 </div>
             </div>
@@ -57,9 +57,9 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-info">
                 <div class="card-body">
-                    <h4 class="card-title text-info"><i class="fas fa-seedling"></i> Salute della Vegetazione (NDVI)</h4>
+                    <h4 class="card-title text-info"><i class="fas fa-seedling"></i> Vegetation Health (NDVI)</h4>
                     <p class="card-text text-muted">
-                        L'indice NDVI misura la densità e il vigore vegetativo delle colture agricole. Consente di quantificare lo shock climatico agricolo prima che si traduca in una perdita effettiva del raccolto.
+                        The NDVI index measures the density and vigor of agricultural crops. It allows for the quantification of agricultural climate shocks before they translate into actual yield loss.
                     </p>
                 </div>
             </div>
@@ -67,9 +67,9 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-warning">
                 <div class="card-body">
-                    <h4 class="card-title text-warning"><i class="fas fa-shopping-basket"></i> Mercati Alimentari (WFP)</h4>
+                    <h4 class="card-title text-warning"><i class="fas fa-shopping-basket"></i> Food Markets (WFP)</h4>
                     <p class="card-text text-muted">
-                        I prezzi dei mercati locali forniti dal World Food Programme. L'analisi traccia il costo del paniere alimentare e l'inflazione locale dei beni di prima necessità, catturando shock sui prezzi prima della propagazione globale.
+                        Local market prices provided by the World Food Programme. The analysis tracks the cost of the food basket and local inflation of basic necessities, capturing price shocks before they propagate globally."
                     </p>
                 </div>
             </div>
@@ -79,9 +79,9 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-secondary">
                 <div class="card-body">
-                    <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> Sfollati Interni (IDP)</h4>
+                    <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> nternally Displaced Persons (IDPs) (IDP)</h4>
                     <p class="card-text text-muted">
-                        Flussi di migrazione interna provocati da shock di violenza o calamità climatiche. Questo parametro viene espresso come percentuale sulla popolazione complessiva dell'area per valutare la pressione demografica residua.
+                        Internal migration flows driven by violence shocks or climate disasters. This parameter is expressed as a percentage of the overall population of the area to assess the residual demographic pressure.
                     </p>
                 </div>
             </div>
@@ -89,9 +89,9 @@ Per comprendere la gravità delle crisi alimentari, HERO integra e monitora dive
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-dark">
                 <div class="card-body">
-                    <h4 class="card-title text-dark"><i class="fas fa-newspaper"></i> Sentiment e Notizie (GDELT)</h4>
+                    <h4 class="card-title text-dark"><i class="fas fa-newspaper"></i> Sentiment and news (GDELT)</h4>
                     <p class="card-text text-muted">
-                        Il flusso globale dei media indicizzato per QuadClass. Attraverso l'estrazione quantitativa del tono (sentiment) e del volume di salienza delle notizie, monitoriamo la percezione esterna della crisi.
+                        Global media flows indexed by QuadClass. Through the quantitative extraction of news tone (sentiment) and salience volume, we monitor the external perception of the crisis.
                     </p>
                 </div>
             </div>
@@ -152,59 +152,7 @@ Behind the IPC data architecture lies the convergence of macroeconomic, climatic
 </div>
 
 
----
 
-## <span class="text-gradient">Risoluzione Territoriale: Admin 1 vs Admin 2</span>
-
-Un pilastro fondamentale dell'architettura dati di HERO è la flessibilità della risoluzione spaziale. Per mappare e analizzare le dinamiche dell'insicurezza alimentare, il nostro sistema organizza e confronta i dati a due livelli amministrativi distinti:
-
-<div class="comparison-table-wrapper">
-    <div class="row text-center mb-3">
-        <div class="col-md-6 mb-2">
-            <span class="badge-premium-admin1 shadow-sm"><i class="fas fa-layer-group"></i> ADMIN LEVEL 1 (Regionale / Provinciale)</span>
-        </div>
-        <div class="col-md-6 mb-2">
-            <span class="badge-premium-admin2 shadow-sm"><i class="fas fa-map-pin"></i> ADMIN LEVEL 2 (Distrettuale / Dipartimentale)</span>
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col-md-6 border-right">
-            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
-                <li><b>Dimensione Dati:</b> ~10.024 osservazioni spaziotemporali.</li>
-                <li><b>Integrazione Media (GDELT):</b> Include i segnali e il sentiment estratti dai media tramite GDELT (il tono e la salienza delle notizie sono storicamente georeferenziabili solo a livello Admin 1).</li>
-                <li><b>Uso Prediletto:</b> Ideale per il macro-clustering globale, l'identificazione di archetipi nazionali e la generalizzazione di modelli predittivi su scala inter-regionale.</li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
-                <li><b>Dimensione Dati:</b> ~42.957 osservazioni (4 volte più granulare).</li>
-                <li><b>Integrazione Media:</b> Non include i dati GDELT (i flussi giornalistici non sono localizzati a livello distrettuale).</li>
-                <li><b>Uso Prediletto:</b> Perfetto per la micro-cartografia digitale, il tracciamento locale della sicurezza alimentare e la rilevazione di micro-anomalie di resilienza o vulnerabilità distrettuale.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-> [!TIP]
-> **Scelta Metodologica**: La scomposizione su due livelli consente ad HERO di passare da una visione strategica e mediatica macroscopica (Admin 1) a una pianificazione tattica e umanitaria locale (Admin 2).
-
----
-
-## Data Visualization & Visual Analytics: Perché la UI è Essenziale
-
-Nel campo delle crisi umanitarie, i dati grezzi possono risultare opachi o difficili da interpretare per i decisori politici (policy makers) ed esperti delle agenzie internazionali. La piattaforma di visualizzazione web di HERO non è semplicemente un visualizzatore di grafici, ma rappresenta uno strumento essenziale di **Visual Analytics** per diversi motivi chiave:
-
-* **Scomposizione Multidimensionale**: Permette di analizzare simultaneamente l'andamento dell'insicurezza alimentare (IPC3+) a fianco dei driver climatici e di conflitto, agevolando l'identificazione di trend convergenti.
-* **Diagnostica e Trasparenza**: Consente di confrontare immediatamente la qualità del dato pre-elaborato (raw vs imputed) per assicurare l'affidabilità delle stime.
-* **Analisi di Scenario "What-If"**: Offre un simulatore basato su modelli VAR (Vector Autoregression) in cui gli utenti possono inserire shock sintetici (es. siccità prolungata del 30% o impennata di conflitti) e osservare interattivamente la risposta predittiva dell'IPC per i successivi 6 mesi.
-
-> [!NOTE]
-> La UI interattiva consente a chi pianifica gli aiuti umanitari di esplorare scenari futuri in modo intuitivo, traducendo modelli matematici complessi in decisioni pratiche.
-
-### Visualizzazioni di Alto Livello: L'Evoluzione delle Heatmap
-Un esempio chiave dell'efficacia delle visualizzazioni di HERO è rappresentato dalle Heatmap dinamiche. Queste mappe di calore bidimensionali tracciano l'evoluzione temporale della gravità alimentare nei diversi territori. A colpo d'occhio, l'analista può visualizzare lo scivolamento di intere regioni verso le fasi più critiche dell'IPC3+ (contrassegnate da tonalità via via più intense), identificando la velocità di propagazione geografica delle crisi.
-
----
 
 ## 🚀 Accedi alla Piattaforma HERO
 
