@@ -64,6 +64,8 @@ navbar:
       url: /nowcast-forecast.html
     - title: Text analisys
       url: /Text-analisys.html
+    - title: ML pipeline
+      url: /Text-analisys.html
     - title: References
       url: /References.html
     
