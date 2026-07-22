@@ -71,14 +71,12 @@ subtitle: "Handling missing data"
 <!-- Implementation Details -->
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
 <div class="card-body">
-<h4 class="card-title text-primary"><i class="fas fa-shield-halved"></i> Why This KNN Pipeline is Optimal</h4>
+<h4 class="card-title text-primary"><i class="fas fa-shield-halved me-2"></i>Why This KNN Pipeline is Optimal</h4>
 <p class="card-text text-muted">Beyond maximizing the Silhouette Score, the custom execution pipeline guarantees stability across sparse humanitarian datasets:</p>
 <ul class="list-unstyled text-muted mb-0">
-<li class="mb-2"><i class="fas fa-layer-group text-primary me-2"></i><b>Safe Grouping & Fallbacks:</b> Prevents execution crashes during group-by operations (e.g., country-by-country) by detecting and skipping fully missing (all-<code>NaN</code>) indicator columns.</li>
-<li class="mb-2"><i class="fas fa-sliders text-primary me-2"></i><b>Dynamic Neighbor Rescaling:</b> Automatically adjusts neighbor count $\text{Neighbors}_{\text{actual}} = \min(n_{\text{neighbors}}, \text{Rows}_{\text{available}})$ when a specific administrative group contains fewer records than requested.</li>
-<li class="mb-2"><i class="fas fa-scale-balanced text-primary me-2"></i><b>Forward & Inverse Z-Score Scaling:</b> Standardizes features before computing Euclidean distances so large scales do not dominate, then seamlessly converts back to original physical metrics post-imputation.</li>
+<li class="mb-3"><i class="fas fa-layer-group text-primary me-2"></i><b>Safe Grouping & Fallbacks:</b> Prevents execution crashes during group-by operations (e.g., country-by-country) by detecting and skipping fully missing (all-<code>NaN</code>) indicator columns.</li>
+<li class="mb-3"><i class="fas fa-sliders text-primary me-2"></i><b>Dynamic Neighbor Rescaling:</b> Automatically adjusts neighbor count <code>Neighbors = min(n_neighbors, Rows_available)</code> when a specific administrative group contains fewer records than requested.</li>
+<li class="mb-0"><i class="fas fa-scale-balanced text-primary me-2"></i><b>Forward & Inverse Z-Score Scaling:</b> Standardizes features before computing Euclidean distances so large scales do not dominate, then seamlessly converts back to original physical metrics post-imputation.</li>
 </ul>
 </div>
-</div>
-
 </div>
