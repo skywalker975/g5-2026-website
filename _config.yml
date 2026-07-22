@@ -60,6 +60,8 @@ navbar:
       url: /clustering.html
     - title: Nowcast & Forecast
       url: /nowcast-forecast.html
+    - title: Text analisys-GDELT
+      url: /nowcast-forecast.html
     - title: References
       url: /References.html
     
