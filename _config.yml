@@ -56,6 +56,8 @@ navbar:
       child:
         - title: Data collection
           url: /Data-Collection.html
+        - title: Data augumentation
+          url: /data-augumentation.html
     - title: Clustering
       url: /clustering.html
     - title: Nowcast & Forecast
