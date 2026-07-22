@@ -30,6 +30,15 @@
   home: true
   
 
+
+- name: Jonas De Meyer
+  github: https://www.linkedin.com/in/jonas-de-meyer-162745184/
+  role: student
+  home: true
+- name: Mattia De Tommaso
+  github: https://www.linkedin.com/in/mattia-de-tommaso-116361195/
+  role: student
+  home: true
 - name: Nicolò Fiore
   github: https://www.linkedin.com/in/nicoló-fiore1/
   role: student
@@ -40,14 +49,6 @@
   home: true
 - name: Federico Martinelli
   github: https://www.linkedin.com/in/federico-martinelli-460976186/
-  role: student
-  home: true
-- name: Jonar De Meyer
-  github: https://www.linkedin.com/in/jonas-de-meyer-162745184/
-  role: student
-  home: true
-- name: Mattia De Tommaso
-  github: https://www.linkedin.com/in/mattia-de-tommaso-116361195/
   role: student
   home: true
 - name: Manuel Pusceddu
