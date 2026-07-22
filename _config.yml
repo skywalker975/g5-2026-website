@@ -62,7 +62,7 @@ navbar:
       url: /clustering.html
     - title: Nowcast & Forecast
       url: /nowcast-forecast.html
-    - title: Text analisys
+    - title: Text analysis
       url: /Text-analysis.html
     - title: ML pipeline
       url: /ML-Pipeline.html
