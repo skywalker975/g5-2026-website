@@ -65,7 +65,7 @@ navbar:
     - title: Text analisys
       url: /Text-analisys.html
     - title: ML pipeline
-      url: /Text-analisys.html
+      url: /ML-Pipeline.html
     - title: References
       url: /References.html
     
