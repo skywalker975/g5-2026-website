@@ -37,13 +37,22 @@ header_title: "References"
 <!-- Reference 2 -->
 <li class="mb-4 pb-3 border-bottom">
 <div>
+  <h6 class="mb-1 text-dark fw-bold">ennemi: Non-linear Correlation Detection with Mutual Information</h6>
+  <p class="text-muted small mb-2">Laarne, P., Zaidan, M. A., & Nieminen, T. (2021)</p>
+  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">SoftwareX</span><a href="https://doi.org/10.1016/j.softx.2021.100686" target="_blank" class="text-primary text-decoration-none fw-semibold">doi:10.1016/j.softx.2021.100686</a></p>
+</div>
+</li>
+
+<!-- Reference 3 -->
+<li class="mb-4 pb-3 border-bottom">
+<div>
   <h6 class="mb-1 text-dark fw-bold">Time-Series Clustering: A Review</h6>
   <p class="text-muted small mb-2">Aghabozorgi, S., Shirkhorshidi, A. S., & Wah, T. Y. (2015)</p>
   <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Information Systems</span><code class="text-primary fs-6">Vol. 53, pp. 16–60</code></p>
 </div>
 </li>
 
-<!-- Reference 3 -->
+<!-- Reference 4 -->
 <li class="mb-4 pb-3 border-bottom">
 <div>
   <h6 class="mb-1 text-dark fw-bold">BERTopic: Neural Topic Modeling with a Class-Based TF-IDF Procedure</h6>
@@ -52,7 +61,7 @@ header_title: "References"
 </div>
 </li>
 
-<!-- Reference 4 -->
+<!-- Reference 5 -->
 <li class="mb-4 pb-3 border-bottom">
 <div>
   <h6 class="mb-1 text-dark fw-bold">GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer</h6>
@@ -61,7 +70,25 @@ header_title: "References"
 </div>
 </li>
 
-<!-- Reference 5 -->
+<!-- Reference 6 -->
+<li class="mb-4 pb-3 border-bottom">
+<div>
+  <h6 class="mb-1 text-dark fw-bold">Measuring Information Transfer</h6>
+  <p class="text-muted small mb-2">Schreiber, T. (2000)</p>
+  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Physical Review Letters</span><a href="https://doi.org/10.1103/PhysRevLett.85.461" target="_blank" class="text-primary text-decoration-none fw-semibold">doi:10.1103/PhysRevLett.85.461</a></p>
+</div>
+</li>
+
+<!-- Reference 7 -->
+<li class="mb-4 pb-3 border-bottom">
+<div>
+  <h6 class="mb-1 text-dark fw-bold">Symbolic Transfer Entropy</h6>
+  <p class="text-muted small mb-2">Staniek, M., & Lehnertz, K. (2008)</p>
+  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Physical Review Letters</span><a href="https://doi.org/10.1103/PhysRevLett.100.158101" target="_blank" class="text-primary text-decoration-none fw-semibold">doi:10.1103/PhysRevLett.100.158101</a></p>
+</div>
+</li>
+
+<!-- Reference 8 -->
 <li class="mb-0">
 <div>
   <h6 class="mb-1 text-dark fw-bold">Understanding Peace Through the World News</h6>
