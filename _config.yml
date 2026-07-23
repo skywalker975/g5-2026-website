@@ -57,7 +57,7 @@ navbar:
         - title: Data collection
           url: /Data-collection.html
         - title: Preprocessing
-          url: /Data-collection.html
+          url: /Preprocessing.html
         - title: Data augumentation
           url: /data-augumentation.html
     - title: Clustering
