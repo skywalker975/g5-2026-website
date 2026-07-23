@@ -16,7 +16,8 @@ subtitle: "Handling missing data"
 <!-- Sub-section: Feature Selection & Imputation Methodology -->
 <div class="container mt-5">
 
-<h3 class="text-primary mb-3"><i class="fas fa-filter"></i> Data Preprocessing & Feature Refinement</h3>
+<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Data Preprocessing & Feature Refinement</h1>
+
 <p class="text-muted">Prior to handling missing values, the feature space is refined to eliminate information redundancy. Strong correlations among statistical indicators can artificially distort distance metrics. By applying **Principal Component Analysis (PCA)** to a specific subset of variables, dimensionality is reduced by extracting principal components that capture maximum variance, ensuring distinct, noise-free behavioral signals for the model.</p>
 
 
