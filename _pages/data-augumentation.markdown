@@ -17,7 +17,7 @@ subtitle: "Handling missing data"
 <div class="container mt-5">
 
 <h3 class="text-primary mb-3"><i class="fas fa-filter"></i> Data Preprocessing & Feature Refinement</h3>
-<p class="text-muted">Before addressing missing values, the feature space is refined to eliminate redundancy. High correlation between statistical indicators can artificially inflate their weight during distance calculations. A rigorous multicollinearity screening (VIF analysis) isolates a final subset of independent features, ensuring every metric provides a distinct behavioral signal to the model.</p>
+<p class="text-muted">Prior to handling missing values, the feature space is refined to eliminate information redundancy. Strong correlations among statistical indicators can artificially distort distance metrics. By applying **Principal Component Analysis (PCA)** to a specific subset of variables, dimensionality is reduced by extracting principal components that capture maximum variance, ensuring distinct, noise-free behavioral signals for the model.</p>
 
 <h3 class="text-primary mt-4 mb-3"><i class="fas fa-calculator"></i> Evaluated Imputation Methodologies</h3>
 <p class="text-muted">To fill missing data without distorting regional variance, several structural and spatial approaches were evaluated against a distance-based behavioral pipeline:</p>
