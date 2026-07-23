@@ -184,21 +184,6 @@ The <b>HERO</b> analytics engine performs a two-dimensional missingness diagnosi
         </div>
 </div>
     </div>
-<!-- Callout Box: Imputation Safeguard -->
-    <div class="p-3 bg-white rounded-3 border border-warning border-2">
-      <div class="d-flex align-items-top">
-        <i class="fas fa-lightbulb text-warning fs-4 me-3 mt-1"></i>
-        <div>
-          <h6 class="fw-bold mb-1 text-dark">Imputation Strategy Implication</h6>
-          <p class="text-muted small mb-0">
-            Because coupled indicators fail together in tandem, <b>cross-sensor imputation between coupled pairs is prohibited</b> (e.g., using <code class="small">CHIRPS</code> to impute missing <code class="small">NDVI</code>, or <code class="small">WFP</code> to impute <code class="small">ACLED</code>). Reconstructions must instead leverage independent anchors (<code class="small">GDELT</code>) or behavioral KNN matching across secondary unaffected dimensions.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
 
 
 ---
