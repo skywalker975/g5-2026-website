@@ -54,8 +54,6 @@ navbar:
     - title: Collection and data processing
       url: /Collection-and-Data-processing.html
       child:
-        - title: Data collection
-          url: /Data-collection.html
         - title: Preprocessing
           url: /Preprocessing.html
         - title: Data augumentation
