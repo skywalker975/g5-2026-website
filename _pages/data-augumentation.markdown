@@ -27,6 +27,8 @@ subtitle: "Handling missing data"
   </p>
 </div>
 
+<hr class="section-divider">
+
 <!-- Evaluated Imputation Methodologies Section -->
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
   <div class="card-body">
@@ -128,6 +130,7 @@ subtitle: "Handling missing data"
   </div>
 </div>
 
+<hr class="section-divider">
 
 <!-- Implementation Details -->
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
