@@ -27,54 +27,107 @@ subtitle: "Handling missing data"
   </p>
 </div>
 
-<h3 class="text-primary mt-4 mb-3"><i class="fas fa-calculator"></i> Evaluated Imputation Methodologies</h3>
-<p class="text-muted">To fill missing data without distorting regional variance, several structural and spatial approaches were evaluated against a distance-based behavioral pipeline:</p>
+<!-- Evaluated Imputation Methodologies Section -->
+<div class="card hero-card card-border-top-primary mt-2 mb-4">
+  <div class="card-body">
+    
+<!-- Intestazione principale -->
+<h4 class="card-title text-primary mb-2">
+      <i class="fas fa-calculator me-2"></i>Evaluated Imputation Methodologies
+    </h4>
+    <p class="card-text text-muted mb-4">
+      To fill missing data without distorting regional variance, several structural and spatial approaches were evaluated against a distance-based behavioral pipeline:
+    </p>
 
-<div class="row">
+<!-- Griglia delle 3 Card Methodologies -->
+<div class="row align-items-stretch">
 
 <!-- Card 1: Mean/Median Imputation -->
-<div class="col-md-4 mb-4">
-<div class="card h-100 hero-card card-border-top-danger">
-<div class="card-body">
-<h4 class="card-title text-danger"><i class="fas fa-chart-line-down"></i> Mean / Median Imputation</h4>
-<p class="card-text text-muted">Fills missing values using the global or regional average.</p>
-<ul class="list-unstyled text-muted mb-0">
-<li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i><b>Limitation:</b> Artificially flattens natural variance and destroys critical spatial dynamics.</li>
-<li><i class="fas fa-ban text-danger me-2"></i><b>Status:</b> Rejected due to heavy statistical distortion.</li>
-</ul>
+<div class="col-md-4 mb-3 mb-md-0">
+        <div class="card h-100 hero-card card-border-top-danger shadow-sm">
+          <div class="card-body d-flex flex-column p-4">
+            
+<h5 class="card-title text-danger mb-3 d-flex align-items-start" style="min-height: 3rem;">
+              <i class="fas fa-chart-line me-2 mt-1"></i>
+              <span>Mean / Median Imputation</span>
+            </h5>
+            
+<p class="card-text text-muted mb-4">
+              Fills missing values using the global or regional average.
+            </p>
+            
+<div class="mt-auto pt-3 border-top">
+              <p class="mb-2 text-muted">
+                <i class="fas fa-circle-xmark text-danger me-2"></i><b>Limitation:</b> Artificially flattens natural variance and destroys critical spatial dynamics.
+              </p>
+              <p class="mb-0 text-muted">
+                <i class="fas fa-ban text-danger me-2"></i><b>Status:</b> Rejected due to heavy statistical distortion.
+              </p>
+            </div>
+
 </div>
-</div>
-</div>
+    </div>
+      </div>
 
 <!-- Card 2: Lat/Long Spatial Coordinates -->
-<div class="col-md-4 mb-4">
-<div class="card h-100 hero-card card-border-top-warning">
-<div class="card-body">
-<h4 class="card-title text-warning"><i class="fas fa-location-dot"></i> Admin 1 Lat/Long Coordinates</h4>
-<p class="card-text text-muted">Imputes values using pure geographic proximity (latitude and longitude centroids at Admin 1 level).</p>
-<ul class="list-unstyled text-muted mb-0">
-<li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i><b>Limitation:</b> Geographic proximity alone fails to capture non-spatial economic or conflict drivers.</li>
-<li><i class="fas fa-ban text-warning me-2"></i><b>Status:</b> Yielded lower clustering validation scores.</li>
-</ul>
-</div>
-</div>
-</div>
-
-<!-- Card 3: Selected Strategy - Behavioral KNN -->
-<div class="col-md-4 mb-4">
-<div class="card h-100 hero-card card-border-top-success">
-<div class="card-body">
-<h4 class="card-title text-success"><i class="fas fa-network-wired"></i> Distance-Weighted KNN</h4>
-<p class="card-text text-muted">Leverages non-missing statistical profiles across indicators to find true behavioral neighbors.</p>
-<ul class="list-unstyled text-muted mb-0">
-<li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i><b>Advantage:</b> Preserves variance while weighting closest statistical matches more heavily.</li>
-<li><i class="fas fa-trophy text-success me-2"></i><b>Status:</b> Selected — achieved the highest <b>Silhouette Score</b>.</li>
-</ul>
-</div>
-</div>
-</div>
+<div class="col-md-4 mb-3 mb-md-0">
+        <div class="card h-100 hero-card card-border-top-warning shadow-sm">
+          <div class="card-body d-flex flex-column p-4">
+            
+<h5 class="card-title text-warning mb-3 d-flex align-items-start" style="min-height: 3rem;">
+              <i class="fas fa-location-dot me-2 mt-1"></i>
+              <span>Admin 1 Lat/Long Coordinates</span>
+            </h5>
+            
+<p class="card-text text-muted mb-4">
+              Imputes values using pure geographic proximity (latitude and longitude centroids at Admin 1 level).
+            </p>
+            
+<div class="mt-auto pt-3 border-top">
+              <p class="mb-2 text-muted">
+                <i class="fas fa-triangle-exclamation text-warning me-2"></i><b>Limitation:</b> Geographic proximity alone fails to capture non-spatial economic or conflict drivers.
+              </p>
+              <p class="mb-0 text-muted">
+                <i class="fas fa-ban text-warning me-2"></i><b>Status:</b> Yielded lower clustering validation scores.
+              </p>
+            </div>
 
 </div>
+    </div>
+      </div>
+
+<!-- Card 3: Distance-Weighted KNN -->
+<div class="col-md-4 mb-0">
+        <div class="card h-100 hero-card card-border-top-success shadow-sm">
+          <div class="card-body d-flex flex-column p-4">
+            
+<h5 class="card-title text-success mb-3 d-flex align-items-start" style="min-height: 3rem;">
+              <i class="fas fa-network-wired me-2 mt-1"></i>
+              <span>Distance-Weighted KNN</span>
+            </h5>
+            
+<p class="card-text text-muted mb-4">
+              Leverages non-missing statistical profiles across indicators to find true behavioral neighbors.
+            </p>
+            
+<div class="mt-auto pt-3 border-top">
+              <p class="mb-2 text-muted">
+                <i class="fas fa-circle-check text-success me-2"></i><b>Advantage:</b> Preserves variance while weighting closest statistical matches more heavily.
+              </p>
+              <p class="mb-0 text-muted">
+                <i class="fas fa-trophy text-success me-2"></i><b>Status:</b> Selected — achieved the highest <b>Silhouette Score</b>.
+              </p>
+            </div>
+
+</div>
+    </div>
+      </div>
+
+</div>
+
+  </div>
+</div>
+
 
 <!-- Implementation Details -->
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
