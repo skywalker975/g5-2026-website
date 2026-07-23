@@ -34,31 +34,36 @@ subtitle: "Handling missing data"
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
   <div class="card-body">
     
-<!-- Intestazione principale -->
-<h4 class="card-title text-primary mb-2">
-      <i class="fas fa-calculator me-4"></i>Evaluated Imputation Methodologies
-    </h4>
-    <p class="card-text text-muted mb-4">
-      To fill missing data without distorting regional variance, several structural and spatial approaches were evaluated against a distance-based behavioral pipeline:
-    </p>
-
+ <div class="full-width-wrapper">
+    <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
+</div>
+<!-- Sub-section: Missing Data Imputation Methodology -->
+<div class="container mt-5">
+<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Missing Data Imputation Strategy</h1>
+<p class="text-muted">Incomplete regional coverage across indicators required a robust imputation strategy capable of filling gaps without eroding the natural variance between administrative units. A naive approach risks smoothing out the very heterogeneity the model is designed to detect. Several structural and spatial candidate methods were therefore benchmarked against a <strong>distance-based behavioral pipeline</strong> to identify the approach that best preserved regional signal.</p>
+<div class="mt-3">
+  <h4 class="h6 text-secondary fw-bold mb-2">Evaluated Imputation Methodologies</h4>
+  <p class="text-muted">
+    To fill missing data without distorting regional variance, several structural and spatial approaches were evaluated against a distance-based behavioral pipeline: a simple statistical baseline using <strong>mean/median imputation</strong>, a purely geographic approach based on <strong>Admin 1 lat/long coordinates</strong>, and a <strong>distance-weighted KNN</strong> method leveraging non-missing statistical profiles. Each candidate was assessed for its ability to preserve variance and produce coherent regional clusters, with performance measured via the <strong>Silhouette Score</strong>.
+  </p>
+</div>
 <!-- Griglia delle 3 Card Methodologies -->
-<div class="row align-items-stretch">
+    <div class="row align-items-stretch">
 
 <!-- Card 1: Mean/Median Imputation -->
 <div class="col-md-4 mb-3 mb-md-0">
         <div class="card h-100 hero-card card-border-top-danger shadow-sm">
           <div class="card-body d-flex flex-column p-4">
-            
-<h5 class="card-title text-danger mb-3 d-flex align-items-start" style="min-height: 3rem;">
+
+<h5 class="card-title text-danger mb-3 d-flex align-items-start" style="min-height: 4.2rem;">
               <i class="fas fa-chart-line me-4 mt-1"></i>
               <span>Mean / Median Imputation</span>
             </h5>
-            
-<p class="card-text text-muted mb-4">
+
+<p class="card-text text-muted mb-4 flex-grow-1">
               Fills missing values using the global or regional average.
             </p>
-            
+
 <div class="mt-auto pt-3 border-top">
               <p class="mb-2 text-muted">
                 <i class="fas fa-circle-xmark text-danger me-4"></i><b>Limitation:</b> Artificially flattens natural variance and destroys critical spatial dynamics.
@@ -68,24 +73,24 @@ subtitle: "Handling missing data"
               </p>
             </div>
 
-</div>
-    </div>
+ </div>
+        </div>
       </div>
 
 <!-- Card 2: Lat/Long Spatial Coordinates -->
 <div class="col-md-4 mb-3 mb-md-0">
         <div class="card h-100 hero-card card-border-top-warning shadow-sm">
           <div class="card-body d-flex flex-column p-4">
-            
-<h5 class="card-title text-warning mb-3 d-flex align-items-start" style="min-height: 3rem;">
+
+<h5 class="card-title text-warning mb-3 d-flex align-items-start" style="min-height: 4.2rem;">
               <i class="fas fa-location-dot me-4 mt-1"></i>
               <span>Admin 1 Lat/Long Coordinates</span>
             </h5>
-            
-<p class="card-text text-muted mb-4">
+
+<p class="card-text text-muted mb-4 flex-grow-1">
               Imputes values using pure geographic proximity (latitude and longitude centroids at Admin 1 level).
             </p>
-            
+
 <div class="mt-auto pt-3 border-top">
               <p class="mb-2 text-muted">
                 <i class="fas fa-triangle-exclamation text-warning me-4"></i><b>Limitation:</b> Geographic proximity alone fails to capture non-spatial economic or conflict drivers.
@@ -95,41 +100,43 @@ subtitle: "Handling missing data"
               </p>
             </div>
 
-</div>
-    </div>
+          </div>
+        </div>
       </div>
-
 <!-- Card 3: Distance-Weighted KNN -->
 <div class="col-md-4 mb-0">
         <div class="card h-100 hero-card card-border-top-success shadow-sm">
           <div class="card-body d-flex flex-column p-4">
-            
-<h5 class="card-title text-success mb-3 d-flex align-items-start" style="min-height: 3rem;">
+
+<h5 class="card-title text-success mb-3 d-flex align-items-start" style="min-height: 4.2rem;">
               <i class="fas fa-network-wired me-4 mt-1"></i>
               <span>Distance-Weighted KNN</span>
             </h5>
-            
-<p class="card-text text-muted mb-4">
+
+<p class="card-text text-muted mb-4 flex-grow-1">
               Leverages non-missing statistical profiles across indicators to find true behavioral neighbors.
             </p>
-            
+
 <div class="mt-auto pt-3 border-top">
               <p class="mb-2 text-muted">
                 <i class="fas fa-circle-check text-success me-4"></i><b>Advantage:</b> Preserves variance while weighting closest statistical matches more heavily.
               </p>
-              <p class="mb-0 text-muted">
+<p class="mb-0 text-muted">
                 <i class="fas fa-trophy text-success me-4"></i><b>Status:</b> Selected — achieved the highest <b>Silhouette Score</b>.
               </p>
             </div>
 
 </div>
     </div>
-      </div>
+    </div>
 
 </div>
 
   </div>
 </div>
+
+
+
 
 <hr class="section-divider">
 
