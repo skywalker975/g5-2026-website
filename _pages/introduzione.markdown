@@ -14,7 +14,9 @@ subtitle: "Hunger Early-warning & Risk Optimizer"
 </div>
 
 
-<img src="percorso/della-tua-immagine.jpg" class="img-fluid" alt="Descrizione immagine">
+<div class="my-5 text-center">
+    <img src="{{ site.baseurl }}/assets/images/heatmap_driver.png" alt="Heatmap of Food Insecurity Drivers by Country" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
+</div>
 
 
 # <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
