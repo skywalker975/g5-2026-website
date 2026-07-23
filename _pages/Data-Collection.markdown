@@ -49,10 +49,6 @@ The <b>HERO</b> system organizes humanitarian data and its analytical components
 </div>
 </div>
 
-</div>
-</div></div>
-</div>
-</div>
 
 </div>
 </div>
