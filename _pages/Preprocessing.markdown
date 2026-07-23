@@ -15,149 +15,100 @@ header_title: "Preprocessing"
 </div>
 
 
-<!-- Evaluated Imputation Methodologies Section -->
+<!-- Data Aggregation Architecture Section -->
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
-  <div class="card-body">
+  <div class="card-body p-4 p-md-5">
     
-<!-- Intestazione principale -->
-  <h4 class="card-title text-primary mb-2 d-flex align-items-center">
-      <span class="d-inline-flex justify-content-center me-3" style="width: 28px;">
-        <i class="fas fa-calculator"></i>
-      </span>
-      <span>Evaluated Imputation Methodologies</span>
-    </h4>
-    <p class="card-text text-muted mb-4">
-      To fill missing data without distorting regional variance, several structural and spatial approaches were evaluated against a distance-based behavioral pipeline:
+<!-- Intestazione Principale -->
+<h3 class="card-title text-primary fw-bold mb-2">
+      Data Pipeline: Multi-Domain Aggregation Framework
+    </h3>
+    <p class="card-text text-muted mb-4 lead fs-6">
+      Behind the IPC anchor data lies the temporal and spatial convergence of conflict, climatic, market, and social signals. 
+      Every external theme is aggregated strictly to match each IPC reference period and native admin level:
     </p>
-<!-- Griglia delle 3 Card Methodologies -->
-    <div class="row align-items-stretch g-3">
+ <!-- Card Contenitore Principale -->
+    <div class="card border-0 bg-light rounded-4 p-3 p-md-4">
+      <div class="row g-4">
 
-<!-- Card 1: Mean/Median Imputation -->
-  <div class="col-md-4 mb-3 mb-md-0">
-        <div class="card h-100 hero-card card-border-top-danger shadow-sm">
-          <div class="card-body d-flex flex-column p-4">
-            
-  <!-- Titolo della Card -->
-  <div class="d-flex align-items-start mb-3" style="min-height: 3.2rem;">
-              <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
-                <i class="fas fa-chart-line text-danger fs-5"></i>
-              </span>
-              <h5 class="card-title text-danger mb-0 fw-bold">Mean / Median Imputation</h5>
+<!-- Colonna 1: Market & Economic Signals -->
+<div class="col-md-4 border-end-md">
+          <div class="p-2">
+            <!-- Badge / Pill Header -->
+            <div class="bg-primary text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm">
+              <i class="fas fa-chart-line me-2"></i> MARKET & ECONOMIC
+              <span class="d-block text-white-50 small fw-normal">(WFP Data)</span>
             </div>
             
-<!-- Descrizione -->
-  <p class="card-text text-muted mb-4 flex-grow-1">
-              Fills missing values using the global or regional average.
-            </p>
-            
-  <!-- Blocco inferiore allineato -->
-  <div class="mt-auto pt-3 border-top">
-              <div class="d-flex align-items-start mb-2">
-                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
-                  <i class="fas fa-circle-xmark text-danger fs-6"></i>
-                </span>
-                <div class="text-muted small">
-                  <b>Limitation:</b> Artificially flattens natural variance and destroys critical spatial dynamics.
-                </div>
-              </div>
-              <div class="d-flex align-items-start">
-                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
-                  <i class="fas fa-ban text-danger fs-6"></i>
-                </span>
-                <div class="text-muted small">
-                  <b>Status:</b> Rejected due to heavy statistical distortion.
-                </div>
-              </div>
-            </div>
-
-  </div>
+ <!-- Lista Punti -->
+<ul class="list-unstyled mb-0">
+              <li class="mb-3">
+                <span class="fw-bold text-dark">Price & Inflation Metrics:</span>
+                <span class="text-muted">Calculates per-period mean market prices and mean inflation rates across all active local markets.</span>
+              </li>
+              <li class="mb-3">
+                <span class="fw-bold text-dark">Observation Rigor:</span>
+                <span class="text-muted">Tracks observation counts (<code class="small">wfp_obs_count</code>) to quantify market sampling density per window.</span>
+              </li>
+              <li>
+                <span class="fw-bold text-dark">Mapping Quality Propagation:</span>
+                <span class="text-muted">Enforces worst-case status (<code class="small">'elastic_buffer'</code> over <code class="small">'strict_pip'</code>) if any contributing market relies on spatial buffer fallback.</span>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-<!-- Card 2: Lat/Long Spatial Coordinates -->
-      <div class="col-md-4 mb-3 mb-md-0">
-        <div class="card h-100 hero-card card-border-top-warning shadow-sm">
-          <div class="card-body d-flex flex-column p-4">
-            
-  <!-- Titolo della Card -->
-  <div class="d-flex align-items-start mb-3" style="min-height: 3.2rem;">
-              <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
-                <i class="fas fa-location-dot text-warning fs-5"></i>
-              </span>
-              <h5 class="card-title text-warning mb-0 fw-bold">Admin 1 Lat/Long Coordinates</h5>
+<!-- Colonna 2: Environmental & Vegetation -->
+        <div class="col-md-4 border-end-md">
+          <div class="p-2">
+            <!-- Badge / Pill Header -->
+            <div class="bg-warning text-dark text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fef08a !important;">
+              <i class="fas fa-cloud-sun-rain me-2"></i> CLIMATE & VEGETATION
+              <span class="d-block text-muted small fw-normal">(Rainfall & NDVI)</span>
             </div>
-            
-<!-- Descrizione -->
-   <p class="card-text text-muted mb-4 flex-grow-1">
-              Imputes values using pure geographic proximity (latitude and longitude centroids at Admin 1 level).
-            </p>
-            
-<!-- Blocco inferiore allineato -->
-  <div class="mt-auto pt-3 border-top">
-              <div class="d-flex align-items-start mb-2">
-                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
-                  <i class="fas fa-triangle-exclamation text-warning fs-6"></i>
-                </span>
-                <div class="text-muted small">
-                  <b>Limitation:</b> Geographic proximity alone fails to capture non-spatial economic or conflict drivers.
-                </div>
-              </div>
-              <div class="d-flex align-items-start">
-                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
-                  <i class="fas fa-ban text-warning fs-6"></i>
-                </span>
-                <div class="text-muted small">
-                  <b>Status:</b> Yielded lower clustering validation scores.
-                </div>
-              </div>
-            </div>
-
-  </div>
+            <!-- Lista Punti -->
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3">
+                <span class="fw-bold text-dark">Precipitation Dynamics:</span>
+                <span class="text-muted">Aggregates 1-month true period sum alongside 1-month and 3-month rolling precipitation means and percentage anomalies.</span>
+              </li>
+              <li class="mb-3">
+                <span class="fw-bold text-dark">Spatial Pixel Weighting:</span>
+                <span class="text-muted">Aggregates dekadal NDVI greenness (<code class="small">vim</code>) and vegetation condition (% of normal, <code class="small">viq</code>) weighted by polygon pixel count (<code class="small">n_pixels</code>).</span>
+              </li>
+              <li>
+                <span class="fw-bold text-dark">Deduplication:</span>
+                <span class="text-muted">Removes exact upstream duplicates prior to aggregation to prevent double-counting dekads.</span>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-
-<!-- Card 3: Distance-Weighted KNN -->
-<div class="col-md-4 mb-0">
-        <div class="card h-100 hero-card card-border-top-success shadow-sm">
-          <div class="card-body d-flex flex-column p-4">
-            
-<!-- Titolo della Card -->
-  <div class="d-flex align-items-start mb-3" style="min-height: 3.2rem;">
-              <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
-                <i class="fas fa-network-wired text-success fs-5"></i>
-              </span>
-              <h5 class="card-title text-success mb-0 fw-bold">Distance-Weighted KNN</h5>
+<!-- Colonna 3: Conflict & Displacement -->
+        <div class="col-md-4">
+          <div class="p-2">
+            <!-- Badge / Pill Header -->
+            <div class="bg-danger text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fee2e2 !important; color: #991b1b !important;">
+              <i class="fas fa-shield-halved me-2"></i> CONFLICT & DISPLACEMENT
+              <span class="d-block small fw-normal" style="color: #991b1b; opacity: 0.8;">(ACLED, GDELT & IDP)</span>
             </div>
-            
-  <!-- Descrizione -->
-  <p class="card-text text-muted mb-4 flex-grow-1">
-              Leverages non-missing statistical profiles across indicators to find true behavioral neighbors.
-            </p>
-            
-  <!-- Blocco inferiore allineato -->
-  <div class="mt-auto pt-3 border-top">
-              <div class="d-flex align-items-start mb-2">
-                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
-                  <i class="fas fa-circle-check text-success fs-6"></i>
-                </span>
-                <div class="text-muted small">
-                  <b>Advantage:</b> Preserves variance while weighting closest statistical matches more heavily.
-                </div>
-              </div>
-              <div class="d-flex align-items-start">
-                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
-                  <i class="fas fa-trophy text-success fs-6"></i>
-                </span>
-                <div class="text-muted small">
-                  <b>Status:</b> Selected — achieved the highest <b>Silhouette Score</b>.
-                </div>
-              </div>
-            </div>
-
-  </div>
+            <!-- Lista Punti -->
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3">
+                <span class="fw-bold text-dark">ACLED Event Pivoting:</span>
+                <span class="text-muted">Sums conflict events and fatalities by specific event types during each IPC window into a wide schema.</span>
+              </li>
+              <li class="mb-3">
+                <span class="fw-bold text-dark">GDELT Tone & Mentions:</span>
+                <span class="text-muted">Aggregates media signals into 4 CAMEO QuadClasses, computing total events, mentions, and mentions-weighted mean tone.</span>
+              </li>
+              <li>
+                <span class="fw-bold text-dark">IDP Temporal Alignment:</span>
+                <span class="text-muted">Matches the latest displacement snapshot prior to IPC period end, enforcing strict max-staleness thresholds.</span>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-
  </div>
+    </div>
 
   </div>
 </div>
