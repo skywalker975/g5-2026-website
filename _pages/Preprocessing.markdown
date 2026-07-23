@@ -57,11 +57,11 @@ The <b>HERO</b> analytics engine performs a two-dimensional missingness diagnosi
             <ul class="list-unstyled mb-0">
               <li class="mb-3">
                 <span class="fw-bold text-dark">Correlation Matrix Computation:</span>
-                <span class="text-muted d-block small mt-1">Calculates a pairwise Pearson correlation matrix across the 7 binary shadow variables (<code class="small">missing_cols</code>) to measure co-missingness independently of spatial location.</span>
+                <span class="text-muted d-block small mt-1">Calculates a pairwise Pearson correlation matrix across the 7 binary shadow variables to measure co-missingness independently of spatial location.</span>
               </li>
               <li class="mb-3">
                 <span class="fw-bold text-dark">Co-Failure Pattern Identification:</span>
-                <span class="text-muted d-block small mt-1">High positive correlations (approaching $+1.0$) reveal systematic co-failing datasets—such as cases where conflict escalations cause simultaneous losses in both market prices and displacement data.</span>
+                <span class="text-muted d-block small mt-1">High positive correlations (approaching +1.0) reveal systematic co-failing datasets—such as cases where conflict escalations cause simultaneous losses in both market prices and displacement data.</span>
               </li>
               <li>
                 <span class="fw-bold text-dark">Bidirectional Heatmap Rendering:</span>
