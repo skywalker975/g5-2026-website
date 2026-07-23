@@ -124,87 +124,87 @@ The <b>HERO</b> system organizes humanitarian data and its analytical components
 <!-- Section: Missing Data Dynamics & Imputation Tactics -->
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
   <div class="card-body p-4 p-md-5">
-    <!-- Intestazione Principale -->
+    <!-- Main Header -->
     <h3 class="card-title text-primary fw-bold mb-2">
       Data Missingness Dynamics & Imputation Architecture
     </h3>
     <p class="card-text text-muted mb-4 lead fs-6">
-      I dati non mancano mai a caso: l'assenza di un valore racchiude un significato operativo preciso. Compreso se il vuoto deriva da un blackout logistico, un blocco politico o una nuvola satellitare, la pipeline applica la corretta strategia di risoluzione per non distorcere la realtà.
+      Data is never missing by accident: missingness carries actionable operational context. By identifying whether gaps stem from logistical blackouts, political hurdles, or cloud cover, the pipeline deploys targeted mitigation strategies to prevent real-world distortion.
     </p>
-<!-- Card Contenitore Principale -->
+ <!-- Main Container Card -->
     <div class="card border-0 bg-light rounded-4 p-3 p-md-4">
       <div class="row g-4">
-<!-- Colonna 1: Cause Real-World dei Nulli -->
+<!-- Column 1: Real-World Missingness Drivers -->
         <div class="col-md-4 border-end-md">
           <div class="p-2">
             <!-- Badge / Pill Header -->
             <div class="bg-danger text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fee2e2 !important; color: #991b1b !important;">
-              <i class="fas fa-triangle-exclamation me-2"></i> ANATOMIA DEI NULLI
-              <span class="d-block small fw-normal" style="color: #991b1b; opacity: 0.8;">(Origine Reale dei Valori Mancanti)</span>
+              <i class="fas fa-triangle-exclamation me-2"></i> MISSINGNESS DRIVERS
+              <span class="d-block small fw-normal" style="color: #991b1b; opacity: 0.8;">(Real-World Root Causes)</span>
             </div>
-             <!-- Lista Punti -->
+            <!-- Bullet List -->
             <ul class="list-unstyled mb-0">
               <li class="mb-3">
-                <span class="fw-bold text-dark">Blackout Istituzionali & Geopolitici:</span>
-                <span class="text-muted d-block small mt-1">L'assenza dei report WFP, ACLED o IDP nei paesi instabili è <b>MNAR</b> (Missing Not At Random). Quando scoppia un conflitto o crolla un governo, i mercati chiudono e gli operatori umanitari sul campo vengono evacuati, interrompendo la produzione del dato.</span>
+                <span class="fw-bold text-dark">Institutional & Geopolitical Blackouts:</span>
+                <span class="text-muted d-block small mt-1">Missing WFP, ACLED, or IDP reports in unstable areas are <b>MNAR</b> (Missing Not At Random). Active conflict or governance collapse closes markets and forces field staff evacuations, disrupting data pipelines.</span>
               </li>
               <li class="mb-3">
-                <span class="fw-bold text-dark">Interferenze Ambientali & Satellitari:</span>
-                <span class="text-muted d-block small mt-1">La perdita di segnale NDVI o CHIRPS è guidata da fattori fisici (<b>MAR</b> - Missing At Random). Coperture nuvolose persistenti durante le stagioni delle piogge accecano i sensori ottici, creando lacune sistematiche ma prevedibili.</span>
+                <span class="fw-bold text-dark">Environmental & Satellite Interference:</span>
+                <span class="text-muted d-block small mt-1">Lost NDVI or CHIRPS signals are driven by physical factors (<b>MAR</b> - Missing At Random). Persistent cloud cover during rainy seasons blinds optical sensors, creating systematic yet predictable gaps.</span>
               </li>
               <li>
-                <span class="fw-bold text-dark">Collasso Simultaneo (Cascade Effect):</span>
-                <span class="text-muted d-block small mt-1">I vuoti sono strutturalmente correlati. Quando un evento critico isola una regione, si verifica la caduta simultanea di molteplici metriche (es. prezzi, flussi migratori e tracciamento conflitti).</span>
+                <span class="fw-bold text-dark">Cascading Co-Missingness:</span>
+                <span class="text-muted d-block small mt-1">Gaps are structurally correlated. When a crisis isolates a region, multiple indicators collapse simultaneously (e.g., market prices, displacement tracking, and conflict reports vanish together).</span>
               </li>
             </ul>
           </div>
         </div>
-<!-- Colonna 2: Tecniche di Ricostruzione Spazio-Temporale -->
+<!-- Column 2: Reconstruction Tactics -->
         <div class="col-md-4 border-end-md">
           <div class="p-2">
             <!-- Badge / Pill Header -->
             <div class="bg-primary text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm">
-              <i class="fas fa-wand-magic-sparkles me-2"></i> STRATEGIE DI IMPUTAZIONE
-              <span class="d-block text-white-50 small fw-normal">(Ricostruzione dei Dati Mancanti)</span>
+              <i class="fas fa-wand-magic-sparkles me-2"></i> IMPUTATION TACTICS
+              <span class="d-block text-white-50 small fw-normal">(Data Reconstruction Pipeline)</span>
             </div>
-            <!-- Lista Punti -->
+            <!-- Bullet List -->
             <ul class="list-unstyled mb-0">
               <li class="mb-3">
-                <span class="fw-bold text-dark">Algoritmo KNN Comportamentale:</span>
-                <span class="text-muted d-block small mt-1">Imputa il dato mancante trovando i "vicini di comportamento" statistico. Non guarda solo alla vicinanza geografica, ma confronta l'intero profilo delle altre metriche disponibili (es. livello di inflazione o anomalie di pioggia).</span>
+                <span class="fw-bold text-dark">Behavioral KNN Imputation:</span>
+                <span class="text-muted d-block small mt-1">Fills missing points by finding statistical "behavioral neighbors." Rather than relying solely on geographic distance, it evaluates matching profiles across secondary metrics (e.g., inflation spikes or rainfall anomalies).</span>
               </li>
               <li class="mb-3">
-                <span class="fw-bold text-dark">Allineamento Temporale Capped:</span>
-                <span class="text-muted d-block small mt-1">Per dati lenti come gli sfollati (IDP), si utilizza l'ultimo report valido entro un limite massimo di giorni (<code class="small">idp_staleness_days</code>). Oltre questa finestra di affidabilità, la sovrascrittura si ferma per evitare di propagare dati obsoleti.</span>
+                <span class="fw-bold text-dark">Capped Temporal Carry-Forward:</span>
+                <span class="text-muted d-block small mt-1">For slow-moving metrics like IDP counts, the latest valid snapshot is carried forward up to a strict maximum threshold (<code class="small">idp_staleness_days</code>), halting propagation before data becomes stale.</span>
               </li>
               <li>
-                <span class="fw-bold text-dark">Ponderazione per Pixel (NDVI):</span>
-                <span class="text-muted d-block small mt-1">La vegetazione mancante viene aggregata nei periodi IPC tramite medie pesate sulla superficie (<code class="small">n_pixels</code>), garantendo che i territori più ampi abbiano il giusto peso nella stima.</span>
+                <span class="fw-bold text-dark">Pixel-Weighted Aggregation (NDVI):</span>
+                <span class="text-muted d-block small mt-1">Missing vegetation indices within IPC periods are re-aggregated using spatial area weights (<code class="small">n_pixels</code>), ensuring larger sub-regions carry proportionate weight in estimated averages.</span>
               </li>
             </ul>
           </div>
         </div>
-<!-- Colonna 3: Guardrails e Protezioni del Modello -->
+ <!-- Column 3: Model Safeguards & Anti-Bias Rules -->
         <div class="col-md-4">
           <div class="p-2">
             <!-- Badge / Pill Header -->
             <div class="bg-warning text-dark text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fef08a !important;">
-              <i class="fas fa-shield-cat me-2"></i> PROTEZIONE DEL MODELLO
-              <span class="d-block text-muted small fw-normal">(Guardrail & Anti-Distorsione)</span>
+              <i class="fas fa-shield-cat me-2"></i> MODEL SAFEGUARDS
+              <span class="d-block text-muted small fw-normal">(Anti-Distortion Rules)</span>
             </div>
-            <!-- Lista Punti -->
+            <!-- Bullet List -->
             <ul class="list-unstyled mb-0">
               <li class="mb-3">
-                <span class="fw-bold text-dark">Rifiuto delle Medie Globali:</span>
-                <span class="text-muted d-block small mt-1">Sostituire i nulli con la media piatta distrugge la varianza naturale e appiattisce i picchi di crisi locale. Questa tecnica è stata formalmente rigettata nel benchmarking.</span>
+                <span class="fw-bold text-dark">Rejection of Global Averages:</span>
+                <span class="text-muted d-block small mt-1">Replacing missing values with mean or median averages artificially flattens variance and erases local crisis signals. This approach was explicitly rejected during benchmarking.</span>
               </li>
               <li class="mb-3">
-                <span class="fw-bold text-dark">Non-Imputazione Neutrale del Tone:</span>
-                <span class="text-muted d-block small mt-1">Nei dati mediatici (GDELT), l'assenza di notizie non equivale a un sentiment "neutro". Il punteggio di <i>tone</i> non viene mai imputato a zero in assenza di menzioni per non falsare l'indice di conflittualità.</span>
+                <span class="fw-bold text-dark">Neutral Tone Non-Imputation:</span>
+                <span class="text-muted d-block small mt-1">For news indicators (GDELT), zero media coverage does not equal a "neutral" sentiment. Media tone is never imputed to zero in the absence of mentions, preserving signal integrity.</span>
               </li>
               <li>
-                <span class="fw-bold text-dark">Isolamento dei Livelli (No-Fallback):</span>
-                <span class="text-muted d-block small mt-1">I dati regionali (ADM1) e distrettuali (ADM2) rimangono separati. Se manca un dato al livello distrettuale, non viene riempito artificialmente con quello regionale per evitare una falsa sensazione di precisione.</span>
+                <span class="fw-bold text-dark">Strict Admin Isolation (No Fallback):</span>
+                <span class="text-muted d-block small mt-1">Regional (ADM1) and district (ADM2) processing remain completely isolated. Missing district data is never filled with regional averages, preventing false geographic precision.</span>
               </li>
             </ul>
           </div>
