@@ -1,0 +1,158 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Evaluated Imputation Methodologies Section -->
+<div class="card hero-card card-border-top-primary mt-2 mb-4">
+  <div class="card-body">
+    
+<!-- Intestazione principale -->
+  <h4 class="card-title text-primary mb-2 d-flex align-items-center">
+      <span class="d-inline-flex justify-content-center me-3" style="width: 28px;">
+        <i class="fas fa-calculator"></i>
+      </span>
+      <span>Evaluated Imputation Methodologies</span>
+    </h4>
+    <p class="card-text text-muted mb-4">
+      To fill missing data without distorting regional variance, several structural and spatial approaches were evaluated against a distance-based behavioral pipeline:
+    </p>
+<!-- Griglia delle 3 Card Methodologies -->
+    <div class="row align-items-stretch g-3">
+
+<!-- Card 1: Mean/Median Imputation -->
+  <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card h-100 hero-card card-border-top-danger shadow-sm">
+          <div class="card-body d-flex flex-column p-4">
+            
+  <!-- Titolo della Card -->
+  <div class="d-flex align-items-start mb-3" style="min-height: 3.2rem;">
+              <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
+                <i class="fas fa-chart-line text-danger fs-5"></i>
+              </span>
+              <h5 class="card-title text-danger mb-0 fw-bold">Mean / Median Imputation</h5>
+            </div>
+            
+<!-- Descrizione -->
+  <p class="card-text text-muted mb-4 flex-grow-1">
+              Fills missing values using the global or regional average.
+            </p>
+            
+  <!-- Blocco inferiore allineato -->
+  <div class="mt-auto pt-3 border-top">
+              <div class="d-flex align-items-start mb-2">
+                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
+                  <i class="fas fa-circle-xmark text-danger fs-6"></i>
+                </span>
+                <div class="text-muted small">
+                  <b>Limitation:</b> Artificially flattens natural variance and destroys critical spatial dynamics.
+                </div>
+              </div>
+              <div class="d-flex align-items-start">
+                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
+                  <i class="fas fa-ban text-danger fs-6"></i>
+                </span>
+                <div class="text-muted small">
+                  <b>Status:</b> Rejected due to heavy statistical distortion.
+                </div>
+              </div>
+            </div>
+
+  </div>
+        </div>
+      </div>
+<!-- Card 2: Lat/Long Spatial Coordinates -->
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card h-100 hero-card card-border-top-warning shadow-sm">
+          <div class="card-body d-flex flex-column p-4">
+            
+  <!-- Titolo della Card -->
+  <div class="d-flex align-items-start mb-3" style="min-height: 3.2rem;">
+              <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
+                <i class="fas fa-location-dot text-warning fs-5"></i>
+              </span>
+              <h5 class="card-title text-warning mb-0 fw-bold">Admin 1 Lat/Long Coordinates</h5>
+            </div>
+            
+<!-- Descrizione -->
+   <p class="card-text text-muted mb-4 flex-grow-1">
+              Imputes values using pure geographic proximity (latitude and longitude centroids at Admin 1 level).
+            </p>
+            
+<!-- Blocco inferiore allineato -->
+  <div class="mt-auto pt-3 border-top">
+              <div class="d-flex align-items-start mb-2">
+                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
+                  <i class="fas fa-triangle-exclamation text-warning fs-6"></i>
+                </span>
+                <div class="text-muted small">
+                  <b>Limitation:</b> Geographic proximity alone fails to capture non-spatial economic or conflict drivers.
+                </div>
+              </div>
+              <div class="d-flex align-items-start">
+                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
+                  <i class="fas fa-ban text-warning fs-6"></i>
+                </span>
+                <div class="text-muted small">
+                  <b>Status:</b> Yielded lower clustering validation scores.
+                </div>
+              </div>
+            </div>
+
+  </div>
+        </div>
+      </div>
+
+<!-- Card 3: Distance-Weighted KNN -->
+<div class="col-md-4 mb-0">
+        <div class="card h-100 hero-card card-border-top-success shadow-sm">
+          <div class="card-body d-flex flex-column p-4">
+            
+<!-- Titolo della Card -->
+  <div class="d-flex align-items-start mb-3" style="min-height: 3.2rem;">
+              <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
+                <i class="fas fa-network-wired text-success fs-5"></i>
+              </span>
+              <h5 class="card-title text-success mb-0 fw-bold">Distance-Weighted KNN</h5>
+            </div>
+            
+  <!-- Descrizione -->
+  <p class="card-text text-muted mb-4 flex-grow-1">
+              Leverages non-missing statistical profiles across indicators to find true behavioral neighbors.
+            </p>
+            
+  <!-- Blocco inferiore allineato -->
+  <div class="mt-auto pt-3 border-top">
+              <div class="d-flex align-items-start mb-2">
+                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
+                  <i class="fas fa-circle-check text-success fs-6"></i>
+                </span>
+                <div class="text-muted small">
+                  <b>Advantage:</b> Preserves variance while weighting closest statistical matches more heavily.
+                </div>
+              </div>
+              <div class="d-flex align-items-start">
+                <span class="d-inline-flex justify-content-center me-3 mt-1" style="width: 24px; flex-shrink: 0;">
+                  <i class="fas fa-trophy text-success fs-6"></i>
+                </span>
+                <div class="text-muted small">
+                  <b>Status:</b> Selected — achieved the highest <b>Silhouette Score</b>.
+                </div>
+              </div>
+            </div>
+
+  </div>
+        </div>
+      </div>
+
+ </div>
+
+  </div>
+</div>
