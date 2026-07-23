@@ -22,6 +22,17 @@ header_title: "Text analysis"
 In IPC reports, words are never neutral: their recurrence forms the digital footprint of a real-world emergency. Textual analysis reveals that the bigram <b>'food insecurity'</b> dominates the dataset with 1,068 occurrences, frequently paired with critical terms like <b>'acute'</b> (658) and <b>'malnutrition'</b> (154). However, it is the underlying drivers that shape this semantic map. The frequency of words like <b>'price'</b> (524) highlights economic shocks and barriers to food access, while the agricultural production cluster (<i>'production'</i>, <i>'harvest'</i>, <i>'crop'</i>) captures the immediate impact of climate factors on the ground. In this context, counting words means mapping the boundaries of hunger.
 </p>
 
+<div class="row my-5 text-center">
+    <div class="col-md-6 mb-4">
+        <h5 class="mb-3 fw-bold text-secondary fade-in-up" style="animation-delay: 0.3s;">Top 50 Words (Treemap)</h5>
+        <img src="{{ site.baseurl }}/assets/images/treemap_mixed.png" alt="Treemap of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift fade-in-up" style="max-width: 100%; border: 1px solid #e0e0e0; animation-delay: 0.4s;">
+    </div>
+    <div class="col-md-6 mb-4">
+        <h5 class="mb-3 fw-bold text-secondary fade-in-up" style="animation-delay: 0.5s;">Top 50 Words (Bubble Chart)</h5>
+        <img src="{{ site.baseurl }}/assets/images/packed_bubble_mixed.png" alt="Packed Bubble Chart of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift fade-in-up" style="max-width: 100%; border: 1px solid #e0e0e0; animation-delay: 0.6s;">
+    </div>
+</div>
+
 <hr class="section-divider">
 
 ## <span class="text-gradient">The Crisis Algorithm: Drivers of Food Insecurity</span>
