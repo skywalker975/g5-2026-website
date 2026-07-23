@@ -106,6 +106,102 @@ The <b>HERO</b> analytics engine performs a two-dimensional missingness diagnosi
 </div>
 
 ---
+<!-- Section: Structurally Coupled Missingness & Analytical Findings -->
+<div class="card hero-card card-border-top-primary mt-2 mb-4">
+  <div class="card-body p-4 p-md-5">
+    <!-- Main Header -->
+    <h3 class="card-title text-primary fw-bold mb-2">
+      Key Findings: Structurally Coupled Data Missingness
+    </h3>
+    <p class="card-text text-muted mb-4 lead fs-6">
+      Data gaps in the HERO pipeline are <b>structurally coupled</b> rather than randomly distributed. When missingness occurs, multiple indicators collapse simultaneously due to shared real-world failure mechanisms.
+    </p>
+<!-- Main Container Card -->
+    <div class="card border-0 bg-light rounded-4 p-3 p-md-4 mb-4">
+      <div class="row g-4">
+<!-- Column 1: Satellite & Environmental Coupling -->
+        <div class="col-md-4 border-end-md">
+          <div class="p-2">
+            <!-- Badge Header -->
+            <div class="bg-warning text-dark text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fef08a !important;">
+              <i class="fas fa-satellite me-2"></i> EARTH-OBSERVATION
+              <span class="d-block text-muted small fw-normal">(r = 0.92)</span>
+            </div>
+            <!-- Content -->
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3">
+                <span class="fw-bold text-dark">NDVI & CHIRPS Coupling:</span>
+                <span class="text-muted d-block small mt-1">Optical vegetation (<code class="small">missing_NDVI</code>) and precipitation data (<code class="small">missing_CHIRPS</code>) exhibit a near-perfect positive correlation.</span>
+              </li>
+              <li>
+                <span class="fw-bold text-dark">Physical Failure Mode:</span>
+                <span class="text-muted d-block small mt-1">Persistent cloud cover during rainy seasons simultaneously blinds optical sensors and disrupts satellite rainfall estimates over the exact same grid.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+<!-- Column 2: Geopolitical & Field Access Coupling -->
+        <div class="col-md-4 border-end-md">
+          <div class="p-2">
+            <!-- Badge Header -->
+            <div class="bg-danger text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fee2e2 !important; color: #991b1b !important;">
+              <i class="fas fa-triangle-exclamation me-2"></i> INSTITUTIONAL BLACKOUTS
+              <span class="d-block small fw-normal" style="color: #991b1b; opacity: 0.8;">(r = 0.60 - 0.65)</span>
+            </div>
+            <!-- Content -->
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3">
+                <span class="fw-bold text-dark">Ground-Truth Co-Failures:</span>
+                <span class="text-muted d-block small mt-1">Conflict reports (<code class="small">ACLED</code>), market prices (<code class="small">WFP</code>), and displacement data (<code class="small">IDP</code>) fail together in tight clusters.</span>
+              </li>
+              <li>
+                <span class="fw-bold text-dark">Operational Failure Mode:</span>
+                <span class="text-muted d-block small mt-1">Conflict escalations close local markets and force humanitarian field evacuations, triggering simultaneous <b>MNAR</b> ground-data dropouts.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+<!-- Column 3: Independent Anchor Datasets -->
+        <div class="col-md-4">
+          <div class="p-2">
+            <!-- Badge Header -->
+            <div class="bg-primary text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm">
+              <i class="fas fa-shield-halved me-2"></i> INDEPENDENT ANCHORS
+              <span class="d-block text-white-50 small fw-normal">(r ≤ 0.19)</span>
+            </div>
+            <!-- Content -->
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3">
+                <span class="fw-bold text-dark">Uncoupled Indicators:</span>
+                <span class="text-muted d-block small mt-1">Media signals (<code class="small">GDELT</code>) and assessment periods (<code class="small">IPC</code>) show negligible correlation with ground or satellite failures.</span>
+              </li>
+              <li>
+                <span class="fw-bold text-dark">Robust Baseline Signals:</span>
+                <span class="text-muted d-block small mt-1">These data sources operate independently of local field access or atmospheric conditions, serving as reliable anchors during major regional blackouts.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+</div>
+    </div>
+<!-- Callout Box: Imputation Safeguard -->
+    <div class="p-3 bg-white rounded-3 border border-warning border-2">
+      <div class="d-flex align-items-top">
+        <i class="fas fa-lightbulb text-warning fs-4 me-3 mt-1"></i>
+        <div>
+          <h6 class="fw-bold mb-1 text-dark">Imputation Strategy Implication</h6>
+          <p class="text-muted small mb-0">
+            Because coupled indicators fail together in tandem, <b>cross-sensor imputation between coupled pairs is prohibited</b> (e.g., using <code class="small">CHIRPS</code> to impute missing <code class="small">NDVI</code>, or <code class="small">WFP</code> to impute <code class="small">ACLED</code>). Reconstructions must instead leverage independent anchors (<code class="small">GDELT</code>) or behavioral KNN matching across secondary unaffected dimensions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+---
 
 <!-- Section: Missing Data Dynamics & Imputation Tactics -->
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
