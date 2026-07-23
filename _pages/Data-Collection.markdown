@@ -6,21 +6,16 @@ show_sidetoc: true
 header_type: hero
 header_img: assets/images/header.svg
 header_title: "Data collection"
-
 ---
 
 <div class="full-width-wrapper">
     <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
 </div>
 
-
 ### Integrated Datasets and Architecture of HERO
 
-The </b>HERO</b> system organizes humanitarian data and its analytical components around a unified, ready-to-use structure. The framework combines various dimensions of risk (IPC, conflict, displacement, meteorological data, market prices, media signals, and vegetation health) by directly aligning them with food security assessment periods.
+The <b>HERO</b> system organizes humanitarian data and its analytical components around a unified, ready-to-use structure. The framework combines various dimensions of risk (IPC, conflict, displacement, meteorological data, market prices, media signals, and vegetation health) by directly aligning them with food security assessment periods.
 
-
-
----
 <div class="container mt-4">
 <div class="row">
 
@@ -51,6 +46,11 @@ The </b>HERO</b> system organizes humanitarian data and its analytical component
 <h4 class="card-title text-warning"><i class="fas fa-shield-halved"></i> Why It Matters</h4>
 <p class="card-text text-muted">Keeping food security assessments at the core prevents dropping remote or conflict-affected regions simply because secondary data is unavailable. This approach ensures complete spatial coverage, leaving the task of reconstructing missing data transparently to downstream steps.</p>
 </div>
+</div>
+</div>
+
+</div>
+</div></div>
 </div>
 </div>
 
