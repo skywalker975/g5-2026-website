@@ -65,7 +65,7 @@ The <b>HERO</b> analytics engine performs a two-dimensional missingness diagnosi
               </li>
               <li>
                 <span class="fw-bold text-dark">Bidirectional Heatmap Rendering:</span>
-                <span class="text-muted d-block small mt-1">Outputs a $7 \times 7$ correlation matrix (<code class="small">coolwarm</code> palette, bounded from $-1$ to $+1$) to visually isolate interconnected clusters of missingness.</span>
+                <span class="text-muted d-block small mt-1">Outputs a $7 \times 7$ correlation matrix  to visually isolate interconnected clusters of missingness.</span>
               </li>
             </ul>
           </div>
@@ -90,7 +90,7 @@ The <b>HERO</b> analytics engine performs a two-dimensional missingness diagnosi
               </li>
               <li>
                 <span class="fw-bold text-dark">Unidirectional Heatmap Rendering:</span>
-                <span class="text-muted d-block small mt-1">Generates a spatial heatmap (<code class="small">YlOrRd</code> palette, bounded from $0$ to $1$) to pinpoint geographical blackouts where multiple data streams systematically fail simultaneously.</span>
+                <span class="text-muted d-block small mt-1">Generates a spatial heatmap  to pinpoint geographical blackouts where multiple data streams systematically fail simultaneously.</span>
               </li>
             </ul>
           </div>
