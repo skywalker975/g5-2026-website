@@ -19,6 +19,14 @@ subtitle: "Handling missing data"
 <h3 class="text-primary mb-3"><i class="fas fa-filter"></i> Data Preprocessing & Feature Refinement</h3>
 <p class="text-muted">Prior to handling missing values, the feature space is refined to eliminate information redundancy. Strong correlations among statistical indicators can artificially distort distance metrics. By applying **Principal Component Analysis (PCA)** to a specific subset of variables, dimensionality is reduced by extracting principal components that capture maximum variance, ensuring distinct, noise-free behavioral signals for the model.</p>
 
+
+<div class="mt-3">
+  <h4 class="h6 text-secondary fw-bold mb-2">Focus on Event & Conflict Datasets</h4>
+  <p class="text-muted">
+    The core feature selection effort focused on normalized indicators from <strong>GDELT</strong> and <strong>ACLED conflict data</strong>. Because these datasets track heavily overlapping socio-political events, raw features exhibited severe cross-correlation and multicollinearity. Applying PCA to this specific subgroup allowed us to compress highly collinear event signals into orthogonal principal components, stripping out redundancy while fully retaining the underlying intensity of regional conflicts.
+  </p>
+</div>
+
 <h3 class="text-primary mt-4 mb-3"><i class="fas fa-calculator"></i> Evaluated Imputation Methodologies</h3>
 <p class="text-muted">To fill missing data without distorting regional variance, several structural and spatial approaches were evaluated against a distance-based behavioral pipeline:</p>
 
