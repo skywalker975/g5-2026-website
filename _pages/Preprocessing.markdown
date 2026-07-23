@@ -25,98 +25,84 @@ The <b>HERO</b> system organizes humanitarian data and its analytical components
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
   <div class="card-body p-4 p-md-5">
     
-<!-- Intestazione Principale -->
-<h3 class="card-title text-primary fw-bold mb-2">
-      Data Pipeline: Multi-Domain Aggregation Framework
+### Systemic Data Missingness & Blackout Dynamics
+
+The <b>HERO</b> analytics engine performs a two-dimensional missingness diagnosis across all 7 target data sources. By mapping missing values into binary shadow indicators ($1$ for `NaN`, $0$ for observed), the pipeline uncovers both **cross-dataset co-failures** and **spatial coverage blackouts** to guide targeted imputation strategies.
+
+<div class="container mt-4">
+<div class="row">
+
+<!-- Section: Two-Step Missingness Workflow -->
+<div class="card hero-card card-border-top-primary mt-2 mb-4">
+  <div class="card-body p-4 p-md-5">
+    <!-- Main Header -->
+    <h3 class="card-title text-primary fw-bold mb-2">
+      Shadow Matrix Analysis: Two-Step Analytical Workflow
     </h3>
     <p class="card-text text-muted mb-4 lead fs-6">
-      Behind the IPC anchor data lies the temporal and spatial convergence of conflict, climatic, market, and social signals. 
-      Every external theme is aggregated strictly to match each IPC reference period and native admin level:
+      Data unavailability is rarely random. This workflow isolates structural dependencies between sensors and tracks regional data degradation to prevent operational bias during modeling:
     </p>
- <!-- Card Contenitore Principale -->
+<!-- Main Container Card -->
     <div class="card border-0 bg-light rounded-4 p-3 p-md-4">
       <div class="row g-4">
-
-<!-- Colonna 1: Market & Economic Signals -->
-<div class="col-md-4 border-end-md">
+<!-- Column 1: Step 1 - Structural Correlation Analysis -->
+        <div class="col-md-6 border-end-md">
           <div class="p-2">
             <!-- Badge / Pill Header -->
             <div class="bg-primary text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm">
-              <i class="fas fa-chart-line me-2"></i> MARKET & ECONOMIC
-              <span class="d-block text-white-50 small fw-normal">(WFP Data)</span>
+              <i class="fas fa-network-wired me-2"></i> STEP 1: STRUCTURAL CORRELATION
+              <span class="d-block text-white-50 small fw-normal">(Cross-Dataset Dependencies)</span>
             </div>
-            
- <!-- Lista Punti -->
-<ul class="list-unstyled mb-0">
-              <li class="mb-3">
-                <span class="fw-bold text-dark">Price & Inflation Metrics:</span>
-                <span class="text-muted">Calculates per-period mean market prices and mean inflation rates across all active local markets.</span>
-              </li>
-              <li class="mb-3">
-                <span class="fw-bold text-dark">Observation Rigor:</span>
-                <span class="text-muted">Tracks observation counts (<code class="small">wfp_obs_count</code>) to quantify market sampling density per window.</span>
-              </li>
-              <li>
-                <span class="fw-bold text-dark">Mapping Quality Propagation:</span>
-                <span class="text-muted">Enforces worst-case status (<code class="small">'elastic_buffer'</code> over <code class="small">'strict_pip'</code>) if any contributing market relies on spatial buffer fallback.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-<!-- Colonna 2: Environmental & Vegetation -->
-        <div class="col-md-4 border-end-md">
-          <div class="p-2">
-            <!-- Badge / Pill Header -->
-            <div class="bg-warning text-dark text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fef08a !important;">
-              <i class="fas fa-cloud-sun-rain me-2"></i> CLIMATE & VEGETATION
-              <span class="d-block text-muted small fw-normal">(Rainfall & NDVI)</span>
-            </div>
-            <!-- Lista Punti -->
+            <!-- Bullet List -->
             <ul class="list-unstyled mb-0">
               <li class="mb-3">
-                <span class="fw-bold text-dark">Precipitation Dynamics:</span>
-                <span class="text-muted">Aggregates 1-month true period sum alongside 1-month and 3-month rolling precipitation means and percentage anomalies.</span>
+                <span class="fw-bold text-dark">Correlation Matrix Computation:</span>
+                <span class="text-muted d-block small mt-1">Calculates a pairwise Pearson correlation matrix across the 7 binary shadow variables (<code class="small">missing_cols</code>) to measure co-missingness independently of spatial location.</span>
               </li>
               <li class="mb-3">
-                <span class="fw-bold text-dark">Spatial Pixel Weighting:</span>
-                <span class="text-muted">Aggregates dekadal NDVI greenness (<code class="small">vim</code>) and vegetation condition (% of normal, <code class="small">viq</code>) weighted by polygon pixel count (<code class="small">n_pixels</code>).</span>
+                <span class="fw-bold text-dark">Co-Failure Pattern Identification:</span>
+                <span class="text-muted d-block small mt-1">High positive correlations (approaching $+1.0$) reveal systematic co-failing datasets—such as cases where conflict escalations cause simultaneous losses in both market prices and displacement data.</span>
               </li>
               <li>
-                <span class="fw-bold text-dark">Deduplication:</span>
-                <span class="text-muted">Removes exact upstream duplicates prior to aggregation to prevent double-counting dekads.</span>
+                <span class="fw-bold text-dark">Bidirectional Heatmap Rendering:</span>
+                <span class="text-muted d-block small mt-1">Outputs a $7 \times 7$ correlation matrix (<code class="small">coolwarm</code> palette, bounded from $-1$ to $+1$) to visually isolate interconnected clusters of missingness.</span>
               </li>
             </ul>
           </div>
         </div>
-<!-- Colonna 3: Conflict & Displacement -->
-        <div class="col-md-4">
+<!-- Column 2: Step 2 - Geographical Blackout Analysis -->
+        <div class="col-md-6">
           <div class="p-2">
             <!-- Badge / Pill Header -->
             <div class="bg-danger text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fee2e2 !important; color: #991b1b !important;">
-              <i class="fas fa-shield-halved me-2"></i> CONFLICT & DISPLACEMENT
-              <span class="d-block small fw-normal" style="color: #991b1b; opacity: 0.8;">(ACLED, GDELT & IDP)</span>
+              <i class="fas fa-earth-americas me-2"></i> STEP 2: GEOGRAPHICAL BLACKOUT
+              <span class="d-block small fw-normal" style="color: #991b1b; opacity: 0.8;">(Spatial Failure Patterns)</span>
             </div>
-            <!-- Lista Punti -->
+            <!-- Bullet List -->
             <ul class="list-unstyled mb-0">
               <li class="mb-3">
-                <span class="fw-bold text-dark">ACLED Event Pivoting:</span>
-                <span class="text-muted">Sums conflict events and fatalities by specific event types during each IPC window into a wide schema.</span>
+                <span class="fw-bold text-dark">Spatial Aggregation:</span>
+                <span class="text-muted d-block small mt-1">Groups the shadow matrix by <code class="small">Country</code> and calculates the column mean to determine the exact percentage missingness rate per sensor within each national jurisdiction.</span>
               </li>
               <li class="mb-3">
-                <span class="fw-bold text-dark">GDELT Tone & Mentions:</span>
-                <span class="text-muted">Aggregates media signals into 4 CAMEO QuadClasses, computing total events, mentions, and mentions-weighted mean tone.</span>
+                <span class="fw-bold text-dark">Severity Ranking & Scoring:</span>
+                <span class="text-muted d-block small mt-1">Sums missingness rates across all 7 indicators to compute a <code class="small">total_failure_score</code>, sorting nations from highest to lowest overall data availability collapse.</span>
               </li>
               <li>
-                <span class="fw-bold text-dark">IDP Temporal Alignment:</span>
-                <span class="text-muted">Matches the latest displacement snapshot prior to IPC period end, enforcing strict max-staleness thresholds.</span>
+                <span class="fw-bold text-dark">Unidirectional Heatmap Rendering:</span>
+                <span class="text-muted d-block small mt-1">Generates a spatial heatmap (<code class="small">YlOrRd</code> palette, bounded from $0$ to $1$) to pinpoint geographical blackouts where multiple data streams systematically fail simultaneously.</span>
               </li>
             </ul>
           </div>
         </div>
- </div>
+
+</div>
     </div>
 
   </div>
+</div>
+
+</div>
 </div>
 
 ---
