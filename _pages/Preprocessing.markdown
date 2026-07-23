@@ -10,6 +10,11 @@ header_title: "Preprocessing"
 ---
 
 
+<div class="full-width-wrapper">
+    <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
+</div>
+
+
 <!-- Evaluated Imputation Methodologies Section -->
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
   <div class="card-body">
