@@ -60,8 +60,8 @@ navbar:
           url: /data-augumentation.html
     - title: Clustering
       url: /clustering.html
-    - title: Nowcast & Forecast
-      url: /nowcast-forecast.html
+    - title: Modelling
+      url: /modelling.html
     - title: Text analysis
       url: /Text-analysis.html
     - title: ML pipeline
