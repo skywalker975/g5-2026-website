@@ -36,7 +36,7 @@ subtitle: "Handling missing data"
     
 <!-- Intestazione principale -->
 <h4 class="card-title text-primary mb-2">
-      <i class="fas fa-calculator me-2"></i>Evaluated Imputation Methodologies
+      <i class="fas fa-calculator me-4"></i>Evaluated Imputation Methodologies
     </h4>
     <p class="card-text text-muted mb-4">
       To fill missing data without distorting regional variance, several structural and spatial approaches were evaluated against a distance-based behavioral pipeline:
@@ -51,7 +51,7 @@ subtitle: "Handling missing data"
           <div class="card-body d-flex flex-column p-4">
             
 <h5 class="card-title text-danger mb-3 d-flex align-items-start" style="min-height: 3rem;">
-              <i class="fas fa-chart-line me-2 mt-1"></i>
+              <i class="fas fa-chart-line me-4 mt-1"></i>
               <span>Mean / Median Imputation</span>
             </h5>
             
@@ -61,10 +61,10 @@ subtitle: "Handling missing data"
             
 <div class="mt-auto pt-3 border-top">
               <p class="mb-2 text-muted">
-                <i class="fas fa-circle-xmark text-danger me-2"></i><b>Limitation:</b> Artificially flattens natural variance and destroys critical spatial dynamics.
+                <i class="fas fa-circle-xmark text-danger me-4"></i><b>Limitation:</b> Artificially flattens natural variance and destroys critical spatial dynamics.
               </p>
               <p class="mb-0 text-muted">
-                <i class="fas fa-ban text-danger me-2"></i><b>Status:</b> Rejected due to heavy statistical distortion.
+                <i class="fas fa-ban text-danger me-4"></i><b>Status:</b> Rejected due to heavy statistical distortion.
               </p>
             </div>
 
@@ -78,7 +78,7 @@ subtitle: "Handling missing data"
           <div class="card-body d-flex flex-column p-4">
             
 <h5 class="card-title text-warning mb-3 d-flex align-items-start" style="min-height: 3rem;">
-              <i class="fas fa-location-dot me-2 mt-1"></i>
+              <i class="fas fa-location-dot me-4 mt-1"></i>
               <span>Admin 1 Lat/Long Coordinates</span>
             </h5>
             
@@ -88,10 +88,10 @@ subtitle: "Handling missing data"
             
 <div class="mt-auto pt-3 border-top">
               <p class="mb-2 text-muted">
-                <i class="fas fa-triangle-exclamation text-warning me-2"></i><b>Limitation:</b> Geographic proximity alone fails to capture non-spatial economic or conflict drivers.
+                <i class="fas fa-triangle-exclamation text-warning me-4"></i><b>Limitation:</b> Geographic proximity alone fails to capture non-spatial economic or conflict drivers.
               </p>
               <p class="mb-0 text-muted">
-                <i class="fas fa-ban text-warning me-2"></i><b>Status:</b> Yielded lower clustering validation scores.
+                <i class="fas fa-ban text-warning me-4"></i><b>Status:</b> Yielded lower clustering validation scores.
               </p>
             </div>
 
@@ -105,7 +105,7 @@ subtitle: "Handling missing data"
           <div class="card-body d-flex flex-column p-4">
             
 <h5 class="card-title text-success mb-3 d-flex align-items-start" style="min-height: 3rem;">
-              <i class="fas fa-network-wired me-2 mt-1"></i>
+              <i class="fas fa-network-wired me-4 mt-1"></i>
               <span>Distance-Weighted KNN</span>
             </h5>
             
@@ -115,10 +115,10 @@ subtitle: "Handling missing data"
             
 <div class="mt-auto pt-3 border-top">
               <p class="mb-2 text-muted">
-                <i class="fas fa-circle-check text-success me-2"></i><b>Advantage:</b> Preserves variance while weighting closest statistical matches more heavily.
+                <i class="fas fa-circle-check text-success me-4"></i><b>Advantage:</b> Preserves variance while weighting closest statistical matches more heavily.
               </p>
               <p class="mb-0 text-muted">
-                <i class="fas fa-trophy text-success me-2"></i><b>Status:</b> Selected — achieved the highest <b>Silhouette Score</b>.
+                <i class="fas fa-trophy text-success me-4"></i><b>Status:</b> Selected — achieved the highest <b>Silhouette Score</b>.
               </p>
             </div>
 
