@@ -55,7 +55,7 @@ navbar:
       url: /Collection-and-Data-processing.html
       child:
         - title: Data collection
-          url: /Data-Collection.html
+          url: /Data-collection.html
         - title: Data augumentation
           url: /data-augumentation.html
     - title: Clustering
