@@ -54,30 +54,30 @@ The <b>HERO</b> system organizes humanitarian data and its analytical components
 </div>
 
 ---
+
 <div class="comparison-table-wrapper">
     <div class="row text-center mb-3">
         <div class="col-md-6 mb-2">
-            <span class="badge-premium-admin1 shadow-sm"><i class="fas fa-layer-group"></i> ADMIN LEVEL 1 (Regionale / Provinciale)</span>
+            <span class="badge-premium-admin1 shadow-sm"><i class="fas fa-layer-group"></i> ADMIN LEVEL 1 (Regional / Provincial)</span>
         </div>
         <div class="col-md-6 mb-2">
-            <span class="badge-premium-admin2 shadow-sm"><i class="fas fa-map-pin"></i> ADMIN LEVEL 2 (Distrettuale / Dipartimentale)</span>
+            <span class="badge-premium-admin2 shadow-sm"><i class="fas fa-map-pin"></i> ADMIN LEVEL 2 (District / Departmental)</span>
         </div>
     </div>
     <div class="row mt-3">
         <div class="col-md-6 border-right">
             <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
-                <li><b>Dimensione Dati:</b> ~10.024 osservazioni spaziotemporali.</li>
-                <li><b>Integrazione Media (GDELT):</b> Include i segnali e il sentiment estratti dai media tramite GDELT (il tono e la salienza delle notizie sono storicamente georeferenziabili solo a livello Admin 1).</li>
-                <li><b>Uso Prediletto:</b> Ideale per il macro-clustering globale, l'identificazione di archetipi nazionali e la generalizzazione di modelli predittivi su scala inter-regionale.</li>
+                <li><b>Data Size:</b> ~10,024 spatiotemporal observations.</li>
+                <li><b>Media Integration (GDELT):</b> Includes media signals and sentiment extracted via GDELT (news tone and salience have historically only been geolocatable at the Admin 1 level).</li>
+                <li><b>Preferred Use:</b> Ideal for global macro-clustering, identifying national archetypes, and generalizing predictive models across inter-regional scales.</li>
             </ul>
         </div>
         <div class="col-md-6">
             <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
-                <li><b>Dimensione Dati:</b> ~42.957 osservazioni (4 volte più granulare).</li>
-                <li><b>Integrazione Media:</b> Non include i dati GDELT (i flussi giornalistici non sono localizzati a livello distrettuale).</li>
-                <li><b>Uso Prediletto:</b> Perfetto per la micro-cartografia digitale, il tracciamento locale della sicurezza alimentare e la rilevazione di micro-anomalie di resilienza o vulnerabilità distrettuale.</li>
+                <li><b>Data Size:</b> ~42,957 observations (4 times more granular).</li>
+                <li><b>Media Integration:</b> Does not include GDELT data (news flows are not localized at the district level).</li>
+                <li><b>Preferred Use:</b> Perfect for digital micro-mapping, local food security tracking, and detecting micro-anomalies in district-level resilience or vulnerability.</li>
             </ul>
         </div>
     </div>
 </div>
-
