@@ -15,6 +15,12 @@ header_title: "Preprocessing"
 </div>
 
 
+### Integrated Datasets and Architecture of HERO
+
+The <b>HERO</b> system organizes humanitarian data and its analytical components around a unified, ready-to-use structure. The framework combines various dimensions of risk (IPC, conflict, displacement, meteorological data, market prices, media signals, and vegetation health) by directly aligning them with food security assessment periods.
+
+<div class="container mt-4">
+<div class="row">
 <!-- Data Aggregation Architecture Section -->
 <div class="card hero-card card-border-top-primary mt-2 mb-4">
   <div class="card-body p-4 p-md-5">
