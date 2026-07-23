@@ -13,6 +13,10 @@ subtitle: "Hunger Early-warning & Risk Optimizer"
     <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
 </div>
 
+
+<img src="percorso/della-tua-immagine.jpg" class="img-fluid" alt="Descrizione immagine">
+
+
 # <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
 
 Global food security is threatened by a complex web of interconnected factors: armed conflict, extreme climate change, macroeconomic instability, and forced migration. The HERO project (Hunger Early-warning & Risk Optimizer) was created with the goal of developing a Big Data architecture capable of analytically dissecting these humanitarian crises.
