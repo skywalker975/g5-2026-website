@@ -94,154 +94,113 @@ header_title: "Preprocessing"
     Data gaps in the HERO pipeline are <b>structurally coupled</b> rather than randomly distributed. When missingness occurs, multiple indicators collapse simultaneously due to shared real-world failure mechanisms.
 </p>
 
-<div class="container mt-4">
+<!-- 1. Structural Topology -->
+<h4 class="fw-bold text-dark mt-4 mb-3"><i class="fas fa-network-wired me-2 text-primary"></i> 1. Structural Topology (Correlation Heatmap)</h4>
+<p class="text-muted mb-3">The infrastructure collapses into isolated functional blocks:</p>
+
+<div class="container">
     <div class="row">
-        <!-- Earth-Observation Card -->
+        <!-- Environmental Sensors Card -->
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-warning">
                 <div class="card-body">
                     <h4 class="card-title text-warning">
-                        <i class="fas fa-satellite me-2"></i> EARTH-OBSERVATION
+                        <i class="fas fa-satellite me-2"></i> Environmental Sensors
                     </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Strong Coupling (r = 0.92)</h6>
-                    <ul class="list-unstyled mb-0 card-text text-muted">
-                        <li class="mb-3">
-                            <strong class="text-dark">NDVI & CHIRPS Coupling:</strong><br>
-                            Optical vegetation (<code>missing_NDVI</code>) and precipitation data (<code>missing_CHIRPS</code>) exhibit a near-perfect positive correlation.
-                        </li>
-                        <li>
-                            <strong class="text-dark">Physical Failure Mode:</strong><br>
-                            Persistent cloud cover during rainy seasons simultaneously blinds optical sensors and disrupts satellite rainfall estimates over the exact same grid.
-                        </li>
-                    </ul>
+                    <h6 class="card-subtitle mb-3 text-muted">Strong Correlation (r = 0.92)</h6>
+                    <p class="card-text text-muted">
+                        A high correlation of <b>0.92</b> between <code>missing_NDVI</code> and <code>missing_CHIRPS</code>. The failure of optical vegetation monitoring is directly accompanied by rainfall measurement blackouts.
+                    </p>
                 </div>
             </div>
         </div>
- <!-- Institutional Blackouts Card -->
+<!-- Socio-Political Sensors Card -->
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-danger">
                 <div class="card-body">
                     <h4 class="card-title text-danger">
-                        <i class="fas fa-triangle-exclamation me-2"></i> INSTITUTIONAL BLACKOUTS
+                        <i class="fas fa-triangle-exclamation me-2"></i> Socio-Political Sensors
                     </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Moderate-High Coupling (r = 0.60 - 0.65)</h6>
-                    <ul class="list-unstyled mb-0 card-text text-muted">
-                        <li class="mb-3">
-                            <strong class="text-dark">Ground-Truth Co-Failures:</strong><br>
-                            Conflict reports (<code>ACLED</code>), market prices (<code>WFP</code>), and displacement data (<code>IDP</code>) fail together in tight clusters.
-                        </li>
-                        <li>
-                            <strong class="text-dark">Operational Failure Mode:</strong><br>
-                            Conflict escalations close local markets and force humanitarian field evacuations, triggering simultaneous <b>MNAR</b> ground-data dropouts.
-                        </li>
-                    </ul>
+                    <h6 class="card-subtitle mb-3 text-muted">Critical Correlations (r = 0.60 - 0.65)</h6>
+                    <p class="card-text text-muted">
+                        Critical correlations between <b>ACLED and WFP (0.65)</b> as well as <b>ACLED and IDP (0.60)</b>. When tracking of armed conflicts is lost, market reporting and internally displaced person metrics collapse simultaneously.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<!-- 2. Temporal Dynamics -->
+<h4 class="fw-bold text-dark mt-4 mb-3"><i class="fas fa-chart-line me-2 text-primary"></i> 2. Temporal Dynamics (Time Series)</h4>
+<p class="text-muted mb-3">Shadow vectors over time confirm distinct underlying causes for missingness:</p>
+
+<div class="container">
     <div class="row">
-        <!-- Independent Anchors Card -->
+        <!-- Cyclic Environmental Pattern Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-success">
+                <div class="card-body">
+                    <h4 class="card-title text-success">
+                        <i class="fas fa-arrows-rotate me-2"></i> Cyclic Environmental Pattern (MAR)
+                    </h4>
+                    <h6 class="card-subtitle mb-3 text-muted">Periodic Natural Interference</h6>
+                    <p class="card-text text-muted">
+                        NDVI and CHIRPS exhibit periodic and overlapping blackouts (missingness rates generally &lt; 0.4), attributable to consistent atmospheric and optical barriers over time.
+                    </p>
+                </div>
+            </div>
+        </div>
+ <!-- Synchronous Institutional Collapse Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-danger">
+                <div class="card-body">
+                    <h4 class="card-title text-danger">
+                        <i class="fas fa-building-circle-xmark me-2"></i> Synchronous Institutional Collapse (MNAR/MAR)
+                    </h4>
+                    <h6 class="card-subtitle mb-3 text-muted">Catastrophic Pipeline Failures (Peaks at 1.0)</h6>
+                    <p class="card-text text-muted">
+                        ACLED, WFP, and IDP time series record sudden, prolonged, and simultaneous infrastructure collapses. The lack of periodicity rules out natural noise and highlights severe failures in institutional data pipelines.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Geographic Fragmentation -->
+<h4 class="fw-bold text-dark mt-4 mb-3"><i class="fas fa-earth-americas me-2 text-primary"></i> 3. Geographic Fragmentation</h4>
+<p class="text-muted mb-3">Spatial distribution reveals structural gaps that standard imputation cannot address:</p>
+
+<div class="container">
+    <div class="row">
+        <!-- ACLED Isolation Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-danger">
+                <div class="card-body">
+                    <h4 class="card-title text-danger">
+                        <i class="fas fa-shield-cat me-2"></i> ACLED Isolation
+                    </h4>
+                    <h6 class="card-subtitle mb-3 text-muted">Systemic Failure Rate 1.0 (17/18 Countries)</h6>
+                    <p class="card-text text-muted">
+                        A systemic failure rate obliterates data across 17 out of 18 nations. Data survives exclusively in CAF (Central African Republic) and partially in KEN. This represents a purely <b>MNAR</b> dropout driven by geopolitical barriers.
+                    </p>
+                </div>
+            </div>
+        </div>
+<!-- IDP Blackouts Card -->
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-info">
                 <div class="card-body">
                     <h4 class="card-title text-info">
-                        <i class="fas fa-shield-halved me-2"></i> INDEPENDENT ANCHORS
+                        <i class="fas fa-people-roof me-2"></i> IDP Blackouts
                     </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Uncoupled Baseline (r ≤ 0.19)</h6>
-                    <ul class="list-unstyled mb-0 card-text text-muted">
-                        <li class="mb-3">
-                            <strong class="text-dark">Uncoupled Indicators:</strong><br>
-                            Media signals (<code>GDELT</code>) and assessment periods (<code>IPC</code>) show negligible correlation with ground or satellite failures.
-                        </li>
-                        <li>
-                            <strong class="text-dark">Robust Baseline Signals:</strong><br>
-                            These data sources operate independently of local field access or atmospheric conditions, serving as reliable anchors during major regional blackouts.
-                        </li>
-                    </ul>
+                    <h6 class="card-subtitle mb-3 text-muted">Deterministic Data Absence</h6>
+                    <p class="card-text text-muted">
+                        A similar dynamic affects internally displaced persons data, which is deterministically missing across large dataset clusters (e.g., <code>SLV</code>, <code>GTM</code>, <code>ZWE</code>).
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
----
-<!-- Section: Structurally Coupled Missingness & Analytical Findings -->
-<div class="card hero-card card-border-top-primary mt-2 mb-4">
-  <div class="card-body p-4 p-md-5">
-    <!-- Main Header -->
-    <h3 class="card-title text-primary fw-bold mb-2">
-      Key Findings: Structurally Coupled Data Missingness
-    </h3>
-    <p class="card-text text-muted mb-4 lead fs-6">
-      Data gaps in the HERO pipeline are <b>structurally coupled</b> rather than randomly distributed. When missingness occurs, multiple indicators collapse simultaneously due to shared real-world failure mechanisms.
-    </p>
-<!-- Main Container Card -->
-    <div class="card border-0 bg-light rounded-4 p-3 p-md-4 mb-4">
-      <div class="row g-4">
-<!-- Column 1: Satellite & Environmental Coupling -->
-        <div class="col-md-4 border-end-md">
-          <div class="p-2">
-            <!-- Badge Header -->
-            <div class="bg-warning text-dark text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fef08a !important;">
-              <i class="fas fa-satellite me-2"></i> EARTH-OBSERVATION
-              <span class="d-block text-muted small fw-normal">(r = 0.92)</span>
-            </div>
-            <!-- Content -->
-            <ul class="list-unstyled mb-0">
-              <li class="mb-3">
-                <span class="fw-bold text-dark">NDVI & CHIRPS Coupling:</span>
-                <span class="text-muted d-block small mt-1">Optical vegetation (<code class="small">missing_NDVI</code>) and precipitation data (<code class="small">missing_CHIRPS</code>) exhibit a near-perfect positive correlation.</span>
-              </li>
-              <li>
-                <span class="fw-bold text-dark">Physical Failure Mode:</span>
-                <span class="text-muted d-block small mt-1">Persistent cloud cover during rainy seasons simultaneously blinds optical sensors and disrupts satellite rainfall estimates over the exact same grid.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-<!-- Column 2: Geopolitical & Field Access Coupling -->
-        <div class="col-md-4 border-end-md">
-          <div class="p-2">
-            <!-- Badge Header -->
-            <div class="bg-danger text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm" style="background-color: #fee2e2 !important; color: #991b1b !important;">
-              <i class="fas fa-triangle-exclamation me-2"></i> INSTITUTIONAL BLACKOUTS
-              <span class="d-block small fw-normal" style="color: #991b1b; opacity: 0.8;">(r = 0.60 - 0.65)</span>
-            </div>
-            <!-- Content -->
-            <ul class="list-unstyled mb-0">
-              <li class="mb-3">
-                <span class="fw-bold text-dark">Ground-Truth Co-Failures:</span>
-                <span class="text-muted d-block small mt-1">Conflict reports (<code class="small">ACLED</code>), market prices (<code class="small">WFP</code>), and displacement data (<code class="small">IDP</code>) fail together in tight clusters.</span>
-              </li>
-              <li>
-                <span class="fw-bold text-dark">Operational Failure Mode:</span>
-                <span class="text-muted d-block small mt-1">Conflict escalations close local markets and force humanitarian field evacuations, triggering simultaneous <b>MNAR</b> ground-data dropouts.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-<!-- Column 3: Independent Anchor Datasets -->
-        <div class="col-md-4">
-          <div class="p-2">
-            <!-- Badge Header -->
-            <div class="bg-primary text-white text-center fw-bold rounded-4 py-2 px-3 mb-4 shadow-sm">
-              <i class="fas fa-shield-halved me-2"></i> INDEPENDENT ANCHORS
-              <span class="d-block text-white-50 small fw-normal">(r ≤ 0.19)</span>
-            </div>
-            <!-- Content -->
-            <ul class="list-unstyled mb-0">
-              <li class="mb-3">
-                <span class="fw-bold text-dark">Uncoupled Indicators:</span>
-                <span class="text-muted d-block small mt-1">Media signals (<code class="small">GDELT</code>) and assessment periods (<code class="small">IPC</code>) show negligible correlation with ground or satellite failures.</span>
-              </li>
-              <li>
-                <span class="fw-bold text-dark">Robust Baseline Signals:</span>
-                <span class="text-muted d-block small mt-1">These data sources operate independently of local field access or atmospheric conditions, serving as reliable anchors during major regional blackouts.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-</div>
-    </div>
-
-
-
