@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Preprocessing"
-permalink: /Preprocessing.html
+title: "Missing values"
+permalink: /Missing-values.html
 show_sidetoc: true
 header_type: hero
 header_img: assets/images/header.svg
-header_title: "Preprocessing"
+header_title: "issing values"
 
 ---
 
