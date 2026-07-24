@@ -16,31 +16,31 @@ subtitle: "Handling missing data"
 <!-- Data Preprocessing & Robust KNN Imputation Workflow -->
 <h4 class="text-primary fw-bold mb-2 mt-4">Data Preprocessing & Robust KNN Imputation Workflow</h4>
 <p class="text-muted mb-4">
-    Before clustering, the dataset undergoes a rigorous preparation pipeline. This process eliminates redundant features through multicollinearity screening and imputes missing values using a distance-weighted KNN framework to preserve variance and statistical integrity:
+    Before feeding features into the clustering algorithms, the dataset undergoes a rigorous preparation pipeline. This process reduces dimensionality on correlated indicators via PCA and imputes missing values using a distance-weighted KNN framework to preserve variance and statistical integrity:
 </p>
 
 <div class="container mt-4">
     <div class="row">
-        <!-- Step 1 Card: Feature Selection & Multicollinearity -->
+        <!-- Step 1 Card: Feature Refinement & PCA -->
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-primary">
                 <div class="card-body">
                     <h4 class="card-title text-primary">
-                        <i class="fas fa-filter me-2"></i> STEP 1: FEATURE SELECTION
+                        <i class="fas fa-compress me-2"></i> STEP 1: FEATURE REFINEMENT & PCA
                     </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">VIF Screening & Multicollinearity Analysis</h6>
+                    <h6 class="card-subtitle mb-3 text-muted">Dimensionality Reduction on Variable Subsets</h6>
                     <ul class="list-unstyled mb-0 card-text text-muted">
                         <li class="mb-3">
-                            <strong class="text-dark">Multicollinearity Screening:</strong><br>
-                            Evaluates metrics such as Variance Inflation Factor (VIF) to detect highly redundant statistical features (e.g., overlapping AR1 coefficients).
+                            <strong class="text-dark">Sub-Subset PCA Reduction:</strong><br>
+                            Applies Principal Component Analysis specifically to subsets of highly correlated features (e.g., GDELT and ACLED event indicators).
                         </li>
                         <li class="mb-3">
                             <strong class="text-dark">Distance Distortion Prevention:</strong><br>
-                            Eliminates correlated variables that would artificially inflate specific weights during distance metric calculations.
+                            Compresses cross-correlated metrics into orthogonal components, preventing redundant features from dominating distance metrics.
                         </li>
                         <li>
-                            <strong class="text-dark">Refined Target Subset:</strong><br>
-                            Isolates independent <code>target_columns</code> to ensure every feature delivers a unique, distinct behavioral signal.
+                            <strong class="text-dark">Orthogonal Signal Extraction:</strong><br>
+                            Strips out statistical noise and redundancy while fully preserving the underlying variance of regional behavioral profiles.
                         </li>
                     </ul>
                 </div>
@@ -57,7 +57,7 @@ subtitle: "Handling missing data"
                     <ul class="list-unstyled mb-0 card-text text-muted">
                         <li class="mb-3">
                             <strong class="text-dark">Forward & Inverse Z-Score Scaling:</strong><br>
-                            Standardizes data prior to Euclidean distance calculations, seamlessly transforming back to original physical metrics post-imputation.
+                            Standardizes features prior to Euclidean distance calculations, seamlessly converting back to original physical metrics post-imputation.
                         </li>
                         <li class="mb-3">
                             <strong class="text-dark">Dynamic Neighbor Scaling:</strong><br>
