@@ -132,7 +132,7 @@ header_title: "Missing values"
 </div>
 
 <div class="my-5 text-center">
-    <img src="{{ site.baseurl }}/assets/images/ANALISI_NULLI_correlazione_strutturale.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
+    <img src="{{ site.baseurl }}/assets/images/Unknown.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
 
 <!-- 2. Temporal Dynamics -->
 <h4 class="fw-bold text-dark mt-4 mb-3"><i class="fas fa-chart-line me-2 text-primary"></i> 2. Temporal Dynamics (Time Series)</h4>
