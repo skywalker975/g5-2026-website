@@ -88,6 +88,70 @@ header_title: "Missing values"
     </div>
 </div>
 
+
+<!-- Two-Step Missingness Analysis Workflow -->
+<h4 class="text-primary fw-bold mb-2 mt-4">Missingness Analysis: Two-Step Analytical Workflow</h4>
+<p class="text-muted mb-4">
+    Data unavailability is rarely random. This workflow tests whether missing data points structurally depend on other observed features (MAR) or occur purely stochastically (MCAR), guiding the appropriate imputation strategy:
+</p>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Step 1 Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-primary">
+                <div class="card-body">
+                    <h4 class="card-title text-primary">
+                        <i class="fas fa-brain me-2"></i> STEP 1: MULTIVARIATE MODELING
+                    </h4>
+                    <h6 class="card-subtitle mb-3 text-muted">Logistic Regression & Predictability of Absence</h6>
+                    <ul class="list-unstyled mb-0 card-text text-muted">
+                        <li class="mb-3">
+                            <strong class="text-dark">Dummy Target Creation:</strong><br>
+                            Maps data unavailability into a binary indicator (<code>1</code> if missing/<code>NaN</code>, <code>0</code> if observed).
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-dark">Classifier Training:</strong><br>
+                            Trains a Logistic Regression model using all other numerical features to predict target missingness on a test split.
+                        </li>
+                        <li>
+                            <strong class="text-dark">ROC AUC Evaluation:</strong><br>
+                            An <strong>AUC > 0.6</strong> demonstrates predictable missingness and rejects MCAR (supporting MAR/MNAR). An AUC near 0.5 indicates stochastic missingness.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!-- Step 2 Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-danger">
+                <div class="card-body">
+                    <h4 class="card-title text-danger">
+                        <i class="fas fa-chart-bar me-2"></i> STEP 2: UNIVARIATE VERIFICATION
+                    </h4>
+                    <h6 class="card-subtitle mb-3 text-muted">Welch's T-Test Across Individual Features</h6>
+                    <ul class="list-unstyled mb-0 card-text text-muted">
+                        <li class="mb-3">
+                            <strong class="text-dark">Group Separation:</strong><br>
+                            Splits the dataset for each predictor into two distinct cohorts: missing target group vs. observed target group.
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-dark">Mean Difference Testing:</strong><br>
+                            Executes an independent sample Welch's t-test (unequal variances) to isolate statistical shifts between both cohorts.
+                        </li>
+                        <li>
+                            <strong class="text-dark">Statistical Significance:</strong><br>
+                            A <strong>p-value < 0.05</strong> highlights that a specific predictor directly influences missingness likelihood, supporting the MAR hypothesis.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!-- Key Findings Section -->
 <h3 class="text-primary fw-bold mb-2 mt-5">Key Findings: Structurally Coupled Data Missingness</h3>
 <p class="text-muted mb-4">
