@@ -39,11 +39,8 @@ subtitle: "Handling missing data"
                             <strong class="text-dark">PCA Application:</strong><br>
                             Applies Principal Component Analysis to targeted variable subsets, extracting components that capture maximum variance while reducing feature dimensions.
                         </li>
-                        <li>
-                            <strong class="text-dark">Signal Optimization:</strong><br>
-                            Ensures distinct, noise-free behavioral signals are passed down to downstream predictive and clustering models.
-                        </li>
-                    </ul>
+    
+</ul>
                 </div>
             </div>
         </div>
