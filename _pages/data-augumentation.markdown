@@ -13,6 +13,70 @@ subtitle: "Handling missing data"
     <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
 </div>
 
+
+<!-- Data Preprocessing & Feature Refinement Header -->
+<h4 class="text-primary fw-bold mb-2 mt-4">Data Preprocessing & Feature Refinement</h4>
+<p class="text-muted mb-4">
+    Prior to handling missing values, the feature space is refined to eliminate information redundancy, mitigate severe cross-correlation across overlapping indicators, and project complex signals into orthogonal principal components.
+</p>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Step 1 Card: Dimensionality Reduction & PCA -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-primary">
+                <div class="card-body">
+                    <h4 class="card-title text-primary">
+                        <i class="fas fa-compress-arrows-alt me-2"></i> STEP 1: DIMENSIONALITY REDUCTION
+                    </h4>
+                    <h6 class="card-subtitle mb-3 text-muted">Feature Refinement & Noise Elimination</h6>
+                    <ul class="list-unstyled mb-0 card-text text-muted">
+                        <li class="mb-3">
+                            <strong class="text-dark">Redundancy Removal:</strong><br>
+                            Refines the feature space prior to imputation to prevent strong correlations among statistical indicators from artificially distorting distance metrics.
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-dark">PCA Application:</strong><br>
+                            Applies Principal Component Analysis to targeted variable subsets, extracting components that capture maximum variance while reducing feature dimensions.
+                        </li>
+                        <li>
+                            <strong class="text-dark">Signal Optimization:</strong><br>
+                            Ensures distinct, noise-free behavioral signals are passed down to downstream predictive and clustering models.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!-- Step 2 Card: Event, Conflict & Environmental Subgroups -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-danger">
+                <div class="card-body">
+                    <h4 class="card-title text-danger">
+                        <i class="fas fa-layer-group me-2"></i> STEP 2: DOMAIN FEATURE DECOUPLING
+                    </h4>
+                    <h6 class="card-subtitle mb-3 text-muted">Conflict & Environmental Multicollinearity Resolution</h6>
+                    <ul class="list-unstyled mb-0 card-text text-muted">
+                        <li class="mb-3">
+                            <strong class="text-dark">Overlapping Event Tracking:</strong><br>
+                            Addresses raw normalized indicators from <strong>GDELT</strong>, <strong>ACLED</strong>, and <strong>Floods datasets</strong>, which inherently exhibit severe cross-correlation.
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-dark">Orthogonal Compression:</strong><br>
+                            Compresses highly collinear event signals into orthogonal principal components within specific domain subgroups.
+                        </li>
+                        <li>
+                            <strong class="text-dark">Intensity Retention:</strong><br>
+                            Strips out structural redundancy while fully preserving the underlying magnitude and intensity of regional conflicts and flood events.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+</div>
+</div>
+
+
 <!-- Overall Analytical Pipeline Workflow -->
 <h4 class="text-primary fw-bold mb-2 mt-4">Analytical Pipeline: Feature-Based Clustering & Optimal Imputation</h4>
 <p class="text-muted mb-4">
