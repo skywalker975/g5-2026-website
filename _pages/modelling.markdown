@@ -51,7 +51,7 @@ share of a population in <b>IPC Phase 3+</b> ("Crisis or worse", a 0–100 scale
 
 Both rounds use the same **13 features — 11 driver rates (conflict, displacement, rainfall, vegetation,
 food prices, media) plus seasonality** — and deliberately exclude country identity and coordinates, so the
-model learns the driver → IPC relationship rather than memorising *which* place it is looking at.
+model learns the relationship between drivers and IPC rather than memorising *which* place it is looking at.
 
 They differ only in validation. IPC is strongly autocorrelated in space and time, so each round holds out
 the dimension that would otherwise leak:
@@ -77,20 +77,22 @@ Out-of-fold leaderboard (admin-1, imputed dataset):
 | RandomForest | 0.486 | 9.11 | 12.14 |
 | DecisionTree | 0.299 | 10.56 | 14.18 |
 
-The striking result is that **the drivers-only global model does *not* beat the country-mean baseline**
-(R² 0.529 vs 0.549). This is an *insight*, not a failure: a large part of "why is this area worse" is
-simply *which country* it sits in — chronic structural differences the country-mean captures for free —
-and forcing **one** global driver → IPC mapping to fit 37 very different contexts averages away exactly
-the relationships that matter locally. That points straight at **localization**.
+The same rainfall anomaly, conflict rate or displacement level means very different things in the Sahel,
+the Horn, Central America and Yemen. Forcing **one** global mapping from drivers to IPC across 37 such
+contexts averages away exactly the relationships that matter locally. And much of "why is this area worse"
+is simply *which country* an area sits in — chronic structural differences the country-mean baseline
+captures for free. So the drivers-only global model does **not** beat that baseline (R² 0.529 vs 0.549):
+the value is *within* countries and regions, not in one global model — which points to **localization**.
 
 ### Localization works — and narrative clusters help most
 
 We re-run the round at **nine training scopes** — **global**, **regional** (a 6-region agro-climatic
 map), **local** (one model per country), two **quantitative** clusters (K-Means and hierarchical, grouping
 areas by the shape of their own driver time-series), and **four qualitative** clusters built from the IPC
-*report text* (a TF-IDF and a dense-embedding representation, each split by K-Means and HDBSCAN). Every
-row is routed to its subgroup's model, then each scope is re-compared to the global model **on exactly the
-rows it scored** — an apples-to-apples "did routing help?"
+*report text* (a TF-IDF and a dense-embedding representation, each split by K-Means and HDBSCAN). Each
+area is scored by its own subgroup's model, then every scope is compared against the global model **on
+exactly the rows it scored** — so both are measured on identical rows, and the only difference is whether
+the data was split into subgroups.
 
 | scope | overall R² | MAE (pp) | global on same rows | ΔR² |
 |---|---|---|---|---|
@@ -110,8 +112,8 @@ rows it scored** — an apples-to-apples "did routing help?"
   already have.
 - **The text-narrative clusters are the strongest cluster scopes — and even edge out the region map.**
   All four add **+0.11 to +0.13 ΔR²**. Grouping countries by *what their IPC reports are about*
-  (conflict-refugee, agropastoral-water, price-inflation typologies) turns out to be a better partition
-  than grouping them by agro-climatic region.
+  (conflict-refugee, agropastoral-water, price-inflation typologies) is a better grouping than the
+  agro-climatic region map.
 
 <div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/nowcast/static_scope_box.png" alt="Static inference — per-country R² and MAE by localization scope" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
@@ -138,8 +140,8 @@ Aggregated SHAP (mean \|SHAP\|) for the global XGBoost model, by driver family:
 | rainfall | 1.76 |
 
 **Food prices and conflict dominate the explanation** — matching field intuition that price shocks and
-violence drive acute food insecurity. The hierarchy is stable and interpretable precisely *because* the
-model can't lean on "which country": every bit of signal it uses is an actual driver relationship.
+violence drive acute food insecurity. The hierarchy is stable and interpretable because the model can't
+lean on "which country": every bit of signal it uses is an actual driver relationship.
 
 <div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/nowcast/static_shap_beeswarm.png" alt="Static inference — SHAP beeswarm for the global model" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
@@ -207,8 +209,8 @@ the **change in rainfall**, the leading early signal that conditions are shiftin
 
 Same nine scopes as the static round. Read the **ΔR² column, not "overall R²"** — each scope scores a
 different subset of rows (fewer for local/cluster scopes than for global), so their raw R² isn't
-comparable to each other. ΔR² fixes that: it re-scores the *global* model on that same row subset, so
-"scope R² vs ΔR²'s global R²" is the honest apples-to-apples test of whether routing actually helped.
+comparable to each other. ΔR² fixes that: it re-scores the *global* model on that same row subset, so comparing a scope's R²
+against that global R² measures whether splitting into subgroups helped, on identical rows.
 
 | scope | overall R² | MAE (pp) | global on same rows | ΔR² |
 |---|---|---|---|---|
@@ -223,11 +225,11 @@ comparable to each other. ΔR² fixes that: it re-scores the *global* model on t
 | cluster_emb_hdbscan (text) | 0.746 | 5.18 | 0.752 | −0.006 |
 
 By ΔR², every scope is within ±0.01 of global — **including the text clusters that lifted the static
-model by +0.11–0.13.** `cluster_emb_kmeans`'s 0.763 looks like a win, but global scores 0.759 on that
-same easier subset of rows, so the routing itself added almost nothing. This makes sense: once you
-condition on an area's *own last assessment*, the "which crisis context is this" information
-localization supplies — geographic, behavioural or narrative — is largely already baked in.
-**The recommendation is one global model.**
+model by +0.11–0.13.** `cluster_emb_kmeans`'s 0.763 looks like a win, but the global model scores 0.759
+on that same easier subset of rows, so splitting the data into per-group models added almost nothing.
+Once the model already has an area's *own last assessment*, the extra thing a per-group model would add —
+knowing which region, country or crisis type the area belongs to — is largely already captured by that
+last value. **The recommendation is one global model.**
 
 <div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/nowcast/nowcast_scope_box.png" alt="Nowcast — per-country skill and MAE by localization scope" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
@@ -297,8 +299,8 @@ geography exposes real within-country variation for them to explain:
 <div class="card-body">
 <h4 class="card-title text-success"><i class="fas fa-key me-2"></i>The "why" must learn its context; the "now" already remembers it</h4>
 <ul class="list-unstyled text-muted mb-0">
-<li class="mb-3"><i class="fas fa-map-location-dot text-success me-2"></i><b>The "why" model wants tailoring.</b> Driver → hunger relationships are context-specific, so a single global model loses to the country prior at admin-1 — but <b>regional, local and narrative-cluster</b> routing turns that around (up to +0.14 R²), and text-narrative clusters are the single best grouping.</li>
-<li class="mb-3"><i class="fas fa-globe text-success me-2"></i><b>The "now" model thrives global.</b> An area's own last assessment already encodes its local context — the very thing localization would otherwise supply — so routing to regional or local sub-models adds nothing and only starves each of data. One global nowcast beats persistence by <b>~18%</b>, tracking the direction of change at <b>r ≈ 0.54</b>.</li>
+<li class="mb-3"><i class="fas fa-map-location-dot text-success me-2"></i><b>The "why" model wants tailoring.</b> The relationship between drivers and hunger is context-specific, so a single global model loses to the country prior at admin-1 — but <b>regional, local and narrative-cluster</b> sub-models turn that around (up to +0.14 R²), and text-narrative clusters are the single best grouping.</li>
+<li class="mb-3"><i class="fas fa-globe text-success me-2"></i><b>The "now" model gains nothing from tailoring.</b> An area's own last assessment already encodes its local context — the very thing a subgroup model would otherwise supply — so regional or local sub-models add nothing and only leave each with less data. One global nowcast beats persistence by <b>~18%</b>, tracking the direction of change at <b>r ≈ 0.54</b>.</li>
 <li class="mb-0"><i class="fas fa-arrow-trend-up text-success me-2"></i><b>Both scale.</b> Taken to admin-2 — the level where targeting and early-warning decisions are actually made — the explanatory model strengthens and the operational nowcast holds.</li>
 </ul>
 </div>
@@ -308,8 +310,8 @@ geography exposes real within-country variation for them to explain:
 
 ## The nowcast, live
 
-Everything above is a static summary of the backtest. The map below is the model's output made
-tangible: each **admin-1** area coloured by its **latest nowcast** of the IPC Phase&nbsp;3+ share.
+Everything above is a summary of the backtest. The map below shows the model's actual output: each
+**admin-1** area coloured by its **latest nowcast** of the IPC Phase&nbsp;3+ share.
 **Hover** an area for its trend — the observed IPC assessments (solid) and the walk-forward nowcast
 (line), with a dotted connector from the last real assessment to the latest nowcast. **Click** a province
 to zoom in; for **Cameroon** and **DR&nbsp;Congo** this drills into the **admin-2** layer — the same
