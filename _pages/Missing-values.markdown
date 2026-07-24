@@ -5,7 +5,7 @@ permalink: /Missing-values.html
 show_sidetoc: true
 header_type: hero
 header_img: assets/images/header.svg
-header_title: "issing values"
+header_title: "Missing values"
 
 ---
 
@@ -208,4 +208,4 @@ header_title: "issing values"
     </div>
 </div>
 
-<img src="{{ site.baseurl }}/assets/images/ANALISI_NULLI_correlazione_strutturale.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
+<img src="{{ site.baseurl }}/assets/images/Gemini_Generated_Image_mytpddmytpddmytp.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
