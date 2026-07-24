@@ -303,3 +303,19 @@ geography exposes real within-country variation for them to explain:
 </ul>
 </div>
 </div>
+
+<hr class="section-divider">
+
+## The nowcast, live
+
+Everything above is a static summary of the backtest. The map below is the model's output made
+tangible: each **admin-1** area coloured by its **latest nowcast** of the IPC Phase&nbsp;3+ share.
+**Hover** an area for its trend — the observed IPC assessments (solid) and the walk-forward nowcast
+(line), with a dotted connector from the last real assessment to the latest nowcast. **Click** a province
+to zoom in; for **Cameroon** and **DR&nbsp;Congo** this drills into the **admin-2** layer — the same
+model, one geographic level finer, at the resolution where decisions are actually made.
+
+<div class="my-4">
+    <iframe src="{{ site.baseurl }}/assets/charts/nowcast_map.html" width="100%" height="640px" style="border: 1px solid #e0e0e0; border-radius: 0.5rem;" loading="lazy" title="HERO admin-1 nowcast map with admin-2 drill-down"></iframe>
+    <p class="text-muted mt-2"><small>Latest walk-forward nowcast of IPC Phase 3+ (% of population). Admin-1 for all four countries; click Cameroon or DR&nbsp;Congo provinces to drill into admin-2. Afghanistan and Somalia show admin-1 only — their admin-2 boundaries don't resolve against the assessment data.</small></p>
+</div>
