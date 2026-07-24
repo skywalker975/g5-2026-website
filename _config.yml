@@ -54,8 +54,8 @@ navbar:
     - title: Collection and data processing
       url: /Collection-and-Data-processing.html
       child:
-        - title: Preprocessing
-          url: /Preprocessing.html
+        - title: Missing values
+          url: /Missing-values.html
         - title: Data augumentation
           url: /data-augumentation.html
     - title: Clustering
