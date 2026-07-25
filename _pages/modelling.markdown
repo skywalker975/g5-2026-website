@@ -19,26 +19,16 @@ subtitle: "Two questions: why an area suffers, and whether it is getting worse r
 The last stage of HERO turns the combined dataset into models. We use the same drivers for both models: conflict, displacement, rainfall, vegetation, food prices, and media coverage. From these drivers we answer two separate questions, and each question has its own model. In both cases the thing we predict is the share of the population in acute food insecurity, meaning IPC Phase 3 or above.
 </p>
 
-<div class="row mt-4">
-
-<div class="col-md-6 mb-4">
-<div class="card h-100 hero-card card-border-top-primary">
-<div class="card-body">
-<h4 class="card-title text-primary"><i class="fas fa-layer-group me-2"></i>What explains global hunger?</h4>
-<p class="card-text text-muted">Why is one area worse off than another? Using the drivers alone, we try to explain the level of acute food insecurity in each area, and to learn which drivers matter most.</p>
-</div>
-</div>
+<div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1.25rem 1.5rem; margin-top: 1.5rem; margin-bottom: 1.25rem;">
+<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1; margin-bottom: 0.35rem;">Question 1 · Static inference</div>
+<h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #0369a1;">What explains global hunger?</h4>
+<p class="text-muted mb-0">Why is one area worse off than another? Using the drivers alone, we try to explain the level of acute food insecurity in each area, and to learn which drivers matter most.</p>
 </div>
 
-<div class="col-md-6 mb-4">
-<div class="card h-100 hero-card card-border-top-info">
-<div class="card-body">
-<h4 class="card-title text-info"><i class="fas fa-clock-rotate-left me-2"></i>What are hunger levels right now?</h4>
-<p class="card-text text-muted">IPC assessments are expensive and slow. Most areas are updated only once or twice a year, so a sudden shock can go unseen for months. Between two assessments, we estimate the current level of acute food insecurity from the latest drivers.</p>
-</div>
-</div>
-</div>
-
+<div style="background-color: #fff8e1; border-left: 5px solid #e0a800; border-radius: 6px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #a16207; margin-bottom: 0.35rem;">Question 2 · Nowcasting</div>
+<h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #a16207;">What are hunger levels right now?</h4>
+<p class="text-muted mb-0">IPC assessments are expensive and slow. Most areas are updated only once or twice a year, so a sudden shock can go unseen for months. Between two assessments, we estimate the current level of acute food insecurity from the latest drivers.</p>
 </div>
 
 <p style="text-align: justify;">
@@ -47,11 +37,11 @@ Both models are built the same way. They use 13 features drawn from conflict, di
 
 <hr class="section-divider">
 
-## What explains global hunger?
+## <span style="border-left: 5px solid #0284c7; padding-left: 0.6rem; color: #0369a1;">What explains global hunger?</span>
 
 To test this fairly, we hold out whole areas. The model trains on some areas and is scored on other areas it has never seen. This stops it from simply recalling an area's usual level.
 
-### Hunger depends on context
+### <span style="color: #0369a1;">Hunger depends on context</span>
 
 The same drop in rainfall, the same level of conflict, or the same number of displaced people can mean very different things in the Sahel, the Horn of Africa, Central America, or Yemen. A single global model has to apply one rule across 37 very different settings, and that averages out the local patterns that actually matter.
 
@@ -68,7 +58,7 @@ On top of that, much of why one area is worse than another comes down to which c
 
 The lesson is not that the drivers are weak. It is that the useful signal sits inside countries and regions, not in one global rule. This points to localisation: training the model on smaller groups of similar areas.
 
-### Localisation works, and the report text helps most
+### <span style="color: #0369a1;">Localisation works, and the report text helps most</span>
 
 To localise, we retrain the same model at nine different scopes. A scope is simply the set of areas each model is allowed to learn from. These range from one global model, to six geographic regions, to one model per country. We also try grouping areas in two other ways: by the values of their drivers, and by what their IPC reports actually talk about.
 
@@ -101,7 +91,7 @@ Two results stand out.
     <p class="text-muted mt-2"><small>Each scope's per-country R² (left) and MAE (right). The dashed line is the global median R². A box sitting to its right usually beats global.</small></p>
 </div>
 
-### What drives acute food insecurity
+### <span style="color: #0369a1;">What drives acute food insecurity</span>
 
 > "Explainability is even more important than performance." — a WFP data scientist
 
@@ -128,13 +118,13 @@ Food prices and conflict are the two strongest drivers. This matches what global
 
 <hr class="section-divider">
 
-## What are hunger levels right now?
+## <span style="border-left: 5px solid #e0a800; padding-left: 0.6rem; color: #a16207;">What are hunger levels right now?</span>
 
 IPC assessments are thorough, but they are slow and costly, so most areas are reassessed only once or twice a year. The question here is simple: can we estimate an area's current level of hunger from its last known assessment plus the latest drivers?
 
 To keep this fair, we only ever train on the past and test on the future. The model never sees data from after the point it is predicting.
 
-### Hunger is sticky
+### <span style="color: #a16207;">Hunger is sticky</span>
 
 Levels of acute food insecurity are persistent. Where an area stood at its last assessment tells you a lot about where it stands now. Crises can still shift sharply, but the last known level is a strong starting point, which is why simply carrying it forward is a baseline that is hard to beat.
 
@@ -152,7 +142,7 @@ Our nowcast builds on more than the single last value. It uses the last two asse
 - The nowcast beats the carry-forward baseline in 17 of 21 countries.
 - It tracks real change, not just the level. The match between predicted change and actual change since the last assessment is r = 0.54.
 
-### What the drivers add
+### <span style="color: #a16207;">What the drivers add</span>
 
 The recent assessments do most of the work, and the drivers add the edge that catches movement.
 
@@ -164,7 +154,7 @@ The recent assessments do most of the work, and the drivers add the edge that ca
 
 A model with drivers but no history does worse than carry-forward, which confirms that the recent assessments are the anchor. The extra accuracy the drivers bring comes from picking up movement, and the strongest early signal is the change in rainfall.
 
-### A real example: Afghanistan
+### <span style="color: #a16207;">A real example: Afghanistan</span>
 
 <div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/nowcast/nowcast_afghanistan.png" alt="Afghanistan, nowcast vs actual, per province" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
@@ -172,16 +162,11 @@ A model with drivers but no history does worse than carry-forward, which confirm
 </div>
 
 <div class="my-5 text-center">
-    <img src="{{ site.baseurl }}/assets/images/nowcast/nowcast_change_scatter.png" alt="Nowcast, predicted vs actual change since last assessment" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
-    <p class="text-muted mt-2"><small>Predicted change against actual change since the previous assessment (r = 0.54). The model gets both the direction and the size of the movement, not just the level.</small></p>
-</div>
-
-<div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/nowcast/nowcast_skill_vs_baseline.png" alt="Nowcast, per-country improvement over carry-forward" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
     <p class="text-muted mt-2"><small>Per-country improvement over carry-forward. Positive almost everywhere.</small></p>
 </div>
 
-### One global model is enough
+### <span style="color: #a16207;">One global model is enough</span>
 
 For the "why" question, tailoring the model to regions or countries helped a lot. For the "now" question it does not. We tested the same nine scopes, and every one of them lands within about 0.01 of the global model on the same areas. The reason is simple: once the model knows an area's own last value, it already knows most of what a regional or country model could add. So for nowcasting, one global model is the right choice.
 
@@ -190,7 +175,7 @@ For the "why" question, tailoring the model to regions or countries helped a lot
     <p class="text-muted mt-2"><small>Improvement over carry-forward (left) and MAE (right) per country, by scope. Every box sits to the right of zero, so every scope beats carry-forward, and the boxes overlap almost exactly, so no scope is clearly better than global.</small></p>
 </div>
 
-### What drives the nowcast
+### <span style="color: #a16207;">What drives the nowcast</span>
 
 | feature family | importance |
 |---|---|
@@ -235,21 +220,6 @@ Admin-1 areas are provinces. Admin-2 areas are the districts inside them, so thi
 <div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/nowcast/nowcast_adm2_skill.png" alt="Nowcast at admin-2, per-country improvement over carry-forward" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
     <p class="text-muted mt-2"><small>Admin-2 nowcast: per-country improvement over carry-forward. The result carries to the finer level.</small></p>
-</div>
-
-<hr class="section-divider">
-
-## The takeaway
-
-<div class="card hero-card card-border-top-success mt-2 mb-4">
-<div class="card-body">
-<h4 class="card-title text-success"><i class="fas fa-key me-2"></i>The "why" model needs local context; the "now" model already carries it</h4>
-<ul class="list-unstyled text-muted mb-0">
-<li class="mb-3"><i class="fas fa-map-location-dot text-success me-2"></i><b>Explaining hunger needs tailoring.</b> The link between drivers and hunger depends on context, so a single global model loses to the simple country average. Regional, country and report-text models turn that around, adding up to +0.14 R², and grouping by report text is the single best grouping.</li>
-<li class="mb-3"><i class="fas fa-globe text-success me-2"></i><b>Estimating hunger now does not.</b> Hunger is persistent, so an area's last known level is a strong starting point that already carries its local context. That is why regional or country models add little: one global model is enough, beating carry-forward by about 18 percent and tracking the direction of change at r = 0.54.</li>
-<li class="mb-0"><i class="fas fa-arrow-trend-up text-success me-2"></i><b>Both scale.</b> Taken to admin-2, the level where targeting and early-warning decisions are actually made, the "why" model gets stronger and the "now" model holds.</li>
-</ul>
-</div>
 </div>
 
 <hr class="section-divider">
