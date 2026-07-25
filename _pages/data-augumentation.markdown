@@ -79,31 +79,21 @@ subtitle: "Handling missing data"
 
 <div class="container mt-4">
     <div class="row">
-        <!-- Step 1 Card: Feature-Based Clustering & Spatial Scenarios -->
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-primary">
-                <div class="card-body">
-                    <h4 class="card-title text-primary">
-                        <i class="fas fa-cubes me-2"></i> STEP 1: CLUSTERING & SPATIAL EXPERIMENTS
-                    </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Feature Fingerprints & Algorithmic Validation</h6>
-                    <ul class="list-unstyled mb-0 card-text text-muted">
-                        <li class="mb-3">
-                            <strong class="text-dark">Temporal Fingerprinting:</strong><br>
-                            Compresses raw sequences into statistical descriptors, ensuring phase invariance, noise filtering, and extreme dimensionality reduction.
-                        </li>
-                        <li class="mb-3">
-                            <strong class="text-dark">Dual Data Scenarios:</strong><br>
-                            Compares <strong>Scenario A</strong> (pure behavioral data) against <strong>Scenario B</strong> (behavioral data + Lat/Long) to isolate spatial proximity effects.
-                        </li>
-                        <li>
-                            <strong class="text-dark">Cross-Algorithmic Validation:</strong><br>
-                            Benchmarks <strong>Hierarchical (Bottom-Up)</strong> tree-building against <strong>K-Means (Center-Out)</strong> centroid assignment across both scenarios.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <div class="col-lg-10 offset-lg-1">
+            <div class="py-3" style="color: #0b2545; font-size: 1.15rem; line-height: 1.6;">
+                
+<p class="mb-4">
+                    The initial phase focuses on feature fingerprints and algorithmic validation, starting with temporal fingerprinting. This process compresses raw sequences into statistical descriptors, ensuring phase invariance, effective noise filtering, and extreme dimensionality reduction. To isolate spatial proximity effects, the pipeline evaluates dual data scenarios, directly comparing Scenario A (pure behavioral data) against Scenario B (behavioral data combined with Latitude and Longitude coordinates).
+                </p>
+
+<p class="mb-0">
+                 To assess structural stability across both datasets, cross-algorithmic validation is performed. This benchmarks a Hierarchical (Bottom-Up) tree-building approach against a K-Means (Center-Out) centroid assignment strategy. Evaluating how both algorithms handle behavioral parameters with and without spatial coordinates establishes a clear baseline for clustering quality before downstream reconstruction.
+                </p>
+
+</div>
+</div>
+</div>
+</div>
 
 
 | **Clustering** | Silhouette indicator |
@@ -114,33 +104,30 @@ subtitle: "Handling missing data"
 | Hierarchical (With coordinates) | 0.122 | 
 
 
-<!-- Step 2 Card: Optimal Distance-Weighted Imputation -->
-<div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-danger">
-                <div class="card-body">
-                    <h4 class="card-title text-danger">
-                        <i class="fas fa-network-wired me-2"></i> STEP 2: OPTIMAL KNN IMPUTATION
-                    </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Distance-Weighted Post-Restructuring Pipeline</h6>
-                    <ul class="list-unstyled mb-0 card-text text-muted">
-                        <li class="mb-3">
-                            <strong class="text-dark">Z-Score Scale Invariance:</strong><br>
-                            Applies forward Z-score standardization before distance calculations and inverse scales post-imputation back to physical units.
-                        </li>
-                        <li class="mb-3">
-                            <strong class="text-dark">Dynamic Group Safety:</strong><br>
-                            Handles regional group-by execution safely with all-<code>NaN</code> column fallbacks and dynamic neighbor rescaling (<code>min(n_neighbors, Rows_available)</code>).
-                        </li>
-                        <li>
-                            <strong class="text-dark">Behavioral Coordinate Weights:</strong><br>
-                            Uses <code>weights='distance'</code> to ensure highly similar statistical profiles exert proportional mathematical influence over missing values.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="py-3" style="color: #0b2545; font-size: 1.15rem; line-height: 1.6;">
+                <p class="mb-4">
+                    Following the clustering phase, silhouette score evaluation identified k-NN (k-Nearest Neighbors) as the optimal methodology to drive the reconstruction process. This served as the foundation for designing a distance-weighted post-restructuring imputation pipeline. To prevent scale distortion during distance calculations, the pipeline enforces Z-Score scale invariance—applying forward standardization before calculating distances and inversely scaling the imputed values back to their original physical units upon completion.
+                </p>
+<p class="mb-0">
+                    System robustness is maintained through dynamic group safety measures: regional group-by executions safely handle all-NaN column fallbacks while dynamically rescaling the neighbor threshold based on available regional data points. Finally, leveraging distance-weighted coordinates (weights='distance') ensures that highly similar statistical profiles exert a proportionally higher mathematical influence when reconstructing missing values, preserving overall behavioral coherence.
+                </p>
+
+</div>
+</div>
+</div>
 </div>
 
 
+
+<!-- Contenitore Mappa Interattiva -->
+
+
+<div class="my-4">
+<iframe src="{{ site.baseurl }}/assets/charts/mappa_mondiale_admin1_clusters.html" style="width: 100%; height: 640px; border: 1px solid #e0e0e0; border-radius: 0.5rem;" loading="lazy" title="HERO Map Clustering-2 drill-down"></iframe>
+</div>
 
