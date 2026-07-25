@@ -195,8 +195,8 @@ Can the drivers predict hunger? We ask two questions, each with its own model.
 <h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #0369a1;">What explains where hunger is?</h4>
 </div>
 
-- Hunger is local. The drivers alone do not beat a simple country-average baseline, because one global rule cannot fit dozens of very different settings.
-- Localising fixes this. Grouping areas by what their IPC reports describe (conflict, water, prices) works best, better than geography or driver values.
+- Hunger is very context dependent: the same drop in rainfall or the same level of conflict means different things in the Sahel, the Horn of Africa, or Central America. One global rule has to fit all of them at once, so it does not even beat a simple baseline: the average level of each country.
+- Localising fixes this. We train separate models for smaller groups of similar areas, for example one model per country, or one per geographic region. The grouping that works best is by what an area's IPC reports actually talk about, such as conflict and refugees, farming and water, or prices and inflation.
 - Food prices and conflict are the strongest drivers.
 
 <div class="my-5 text-center">
