@@ -127,7 +127,7 @@ subtitle: "Handling missing data"
 <!-- Contenitore Mappa Interattiva -->
 <div class="mt-4 shadow-sm rounded overflow-hidden" style="border: 1px solid #e0e0e0; background-color: #ffffff;">
     <iframe 
-        src="https://TUO-USERNAME.github.io/NOME-REPO/mappa_mondiale_admin1_clusters.html" 
+        src="mappa_mondiale_admin1_clusters.html" 
         width="100%" 
         height="800px" 
         style="border: none;"
