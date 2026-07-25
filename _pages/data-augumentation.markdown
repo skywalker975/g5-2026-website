@@ -147,3 +147,20 @@ subtitle: "Handling missing data"
 </div>
 </div>
 </div>
+
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="py-3" style="color: #0b2545; font-size: 1.15rem; line-height: 1.6;">
+                <p class="mb-4">
+                    Following the clustering phase, silhouette score evaluation identified k-NN (k-Nearest Neighbors) as the optimal methodology to drive the reconstruction process. This served as the foundation for designing a distance-weighted post-restructuring imputation pipeline. To prevent scale distortion during distance calculations, the pipeline enforces Z-Score scale invariance—applying forward standardization before calculating distances and inversely scaling the imputed values back to their original physical units upon completion.
+                </p>
+<p class="mb-0">
+                    System robustness is maintained through dynamic group safety measures: regional group-by executions safely handle all-NaN column fallbacks while dynamically rescaling the neighbor threshold based on available regional data points. Finally, leveraging distance-weighted coordinates (weights='distance') ensures that highly similar statistical profiles exert a proportionally higher mathematical influence when reconstructing missing values, preserving overall behavioral coherence.
+                </p>
+
+</div>
+</div>
+</div>
+</div>
