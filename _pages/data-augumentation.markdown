@@ -17,7 +17,7 @@ subtitle: "Handling missing data"
 <!-- Data Preprocessing & Feature Refinement Header -->
 <h4 class="text-primary fw-bold mb-2 mt-4">Data Preprocessing & Feature Refinement</h4>
 <p class="text-muted mb-4">
-    Prior to handling missing values, the feature space across the ACTED, GDELT, and Rainfall datasets is refined using Principal Component Analysis (PCA) to project complex signals into orthogonal components, eliminating redundancy and mitigating severe cross-correlation among overlapping indicators.
+    Prior to handling missing values, the joint feature space is refined through targeted Principal Component Analysis (PCA) to decouple highly cross-correlated indicators and construct an orthogonal feature representation for downstream modeling.
 </p>
 
 <div class="container mt-4">
@@ -27,48 +27,46 @@ subtitle: "Handling missing data"
             <div class="card h-100 hero-card card-border-top-primary">
                 <div class="card-body">
                     <h4 class="card-title text-primary">
-                        <i class="fas fa-compress-arrows-alt me-2"></i> STEP 1: DIMENSIONALITY REDUCTION
+                        <i class="fas fa-compress-arrows-alt me-2"></i> STEP 1: DISTANCE & GEOMETRY PROTECTION
                     </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Feature Refinement & Orthogonal Projection</h6>
+                    <h6 class="card-subtitle mb-3 text-muted">Mathematical Foundations & Clustering Stability</h6>
                     <ul class="list-unstyled mb-0 card-text text-muted">
                         <li class="mb-3">
-                            <strong class="text-dark">Multicollinearity & Distance Protection:</strong><br>
-                            Refines the joint feature space of ACTED, GDELT, and Rainfall prior to imputation to eliminate artificial over-weighting of correlated variables, preventing severe warping of the Euclidean distance space in downstream algorithms.
+                            <strong class="text-dark">Multicollinearity Mitigation:</strong><br>
+                            Eliminates the artificial over-weighting of repetitive variables, preventing severe distortion and warping of the Euclidean distance space.
                         </li>
                         <li class="mb-3">
-                            <strong class="text-dark">PCA:</strong><br>
-                            Applies Principal Component Analysis to transform highly cross-correlated indicators into orthogonal, uncorrelated components, restoring an isotropic geometry that captures maximum variance while stripping redundant noise.
+                            <strong class="text-dark">Isotropic Projection:</strong><br>
+                            Transforms correlated feature axes into uncorrelated, orthogonal components that preserve maximum global variance while discarding structural noise.
                         </li>
                         <li class="mb-3">
-                            <strong class="text-dark">Clustering Stability & Explainability:</strong><br>
-                            Eliminates structural cluster distortions, stabilizing cluster boundaries against local fluctuations and ensuring distinct, highly interpretable drivers within each identified group.
+                            <strong class="text-dark">Cluster Explainability:</strong><br>
+                            Stabilizes cluster boundaries against local fluctuations, ensuring clear identification of unique underlying drivers for each identified group.
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- Step 2 Card: Event, Conflict & Environmental Subgroups -->
+<!-- Step 2 Card: Domain Feature Decoupling -->
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-danger">
                 <div class="card-body">
                     <h4 class="card-title text-danger">
                         <i class="fas fa-layer-group me-2"></i> STEP 2: DOMAIN FEATURE DECOUPLING
                     </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Conflict & Environmental Multicollinearity Resolution</h6>
+                    <h6 class="card-subtitle mb-3 text-muted">Application to Conflict & Environmental Datasets</h6>
                     <ul class="list-unstyled mb-0 card-text text-muted">
                         <li class="mb-3">
-                            <strong class="text-dark">Overlapping Event Tracking:</strong><br>
-                            Addresses raw normalized indicators from <strong>GDELT</strong>, <strong>ACLED</strong>, and <strong>Floods datasets</strong>, which inherently exhibit severe cross-correlation.
+                            <strong class="text-dark">Targeted Domain Subgroups:</strong><br>
+                            Isolates overlapping event-tracking indicators across <strong>ACTED</strong>, <strong>GDELT/ACLED</strong>, and <strong>Rainfall/Floods</strong> datasets.
                         </li>
                         <li class="mb-3">
-                            <strong class="text-dark">Orthogonal Compression:</strong><br>
-                            Compresses highly collinear event signals into orthogonal principal components within specific domain subgroups.
+                            <strong class="text-dark">Subgroup Orthogonalization:</strong><br>
+                            Applies PCA independently within conflict and environmental clusters to compress redundant signals without cross-contaminating domain semantics.
                         </li>
                         <li>
                             <strong class="text-dark">Intensity Retention:</strong><br>
-                            Strips out structural redundancy while fully preserving the underlying magnitude and intensity of regional conflicts and flood events.
+                            Strips out spatial and temporal redundancy while fully preserving the underlying magnitude and severity of regional events.
                         </li>
                     </ul>
                 </div>
@@ -77,7 +75,6 @@ subtitle: "Handling missing data"
 
 </div>
 </div>
-
 
 <!-- Overall Analytical Pipeline Workflow -->
 <h4 class="text-primary fw-bold mb-2 mt-4">Analytical Pipeline: Feature-Based Clustering & Optimal Imputation</h4>
