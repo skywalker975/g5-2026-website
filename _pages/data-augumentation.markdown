@@ -17,7 +17,7 @@ subtitle: "Handling missing data"
 <!-- Data Preprocessing & Feature Refinement Header -->
 <h4 class="text-primary fw-bold mb-2 mt-4">Data Preprocessing & Feature Refinement</h4>
 <p class="text-muted mb-4">
-    Prior to handling missing values, the feature space is refined to eliminate information redundancy, mitigate severe cross-correlation across overlapping indicators, and project complex signals into orthogonal principal components.
+    Prior to handling missing values, the feature space across the ACTED, GDELT, and Rainfall datasets is refined using Principal Component Analysis (PCA) to project complex signals into orthogonal components, eliminating redundancy and mitigating severe cross-correlation among overlapping indicators.
 </p>
 
 <div class="container mt-4">
@@ -29,21 +29,26 @@ subtitle: "Handling missing data"
                     <h4 class="card-title text-primary">
                         <i class="fas fa-compress-arrows-alt me-2"></i> STEP 1: DIMENSIONALITY REDUCTION
                     </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Feature Refinement & Noise Elimination</h6>
+                    <h6 class="card-subtitle mb-3 text-muted">Feature Refinement & Orthogonal Projection</h6>
                     <ul class="list-unstyled mb-0 card-text text-muted">
                         <li class="mb-3">
-                            <strong class="text-dark">Redundancy Removal:</strong><br>
-                            Refines the feature space prior to imputation to prevent strong correlations among statistical indicators from artificially distorting distance metrics.
+                            <strong class="text-dark">Multicollinearity & Distance Protection:</strong><br>
+                            Refines the joint feature space of ACTED, GDELT, and Rainfall prior to imputation to eliminate artificial over-weighting of correlated variables, preventing severe warping of the Euclidean distance space in downstream algorithms.
                         </li>
                         <li class="mb-3">
-                            <strong class="text-dark">PCA Application:</strong><br>
-                            Applies Principal Component Analysis to targeted variable subsets, extracting components that capture maximum variance while reducing feature dimensions.
+                            <strong class="text-dark">PCA & Isotropic Projection:</strong><br>
+                            Applies Principal Component Analysis to transform highly cross-correlated indicators into orthogonal, uncorrelated components, restoring an isotropic geometry that captures maximum variance while stripping redundant noise.
                         </li>
-    
-</ul>
+                        <li class="mb-3">
+                            <strong class="text-dark">Clustering Stability & Explainability:</strong><br>
+                            Eliminates structural cluster distortions, stabilizing cluster boundaries against local fluctuations and ensuring distinct, highly interpretable drivers within each identified group.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 <!-- Step 2 Card: Event, Conflict & Environmental Subgroups -->
         <div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-danger">
