@@ -54,7 +54,7 @@ subtitle: "Handling missing data"
                             <ul class="list-unstyled card-text text-muted">
                                 <li class="mb-3">
                                     <strong class="text-dark">Subgroup Decoupling:</strong><br>
-                                    Applies PCA independently within isolated conflict (GDELT, ACLED) and environmental (ACTED, Rainfall/Floods) subgroups to avoid cross-contaminating domain semantics.
+                                    Applies PCA independently within isolated conflict (GDELT, ACLED) and environmental (Rainfall) subgroups to avoid cross-contaminating domain semantics.
                                 </li>
                                 <li class="mb-3">
                                     <strong class="text-dark">Signal Compression:</strong><br>
