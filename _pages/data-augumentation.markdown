@@ -41,10 +41,6 @@ subtitle: "Handling missing data"
                                     Eliminates artificial over-weighting of repetitive variables, preventing severe warping of the Euclidean distance space in downstream algorithms.
                                 </li>
                                 <li class="mb-3">
-                                    <strong class="text-dark">Isotropic Projection:</strong><br>
-                                    Transforms cross-correlated axes into orthogonal, uncorrelated components that capture maximum variance while stripping redundant noise.
-                                </li>
-                                <li class="mb-3">
                                     <strong class="text-dark">Cluster Explainability:</strong><br>
                                     Stabilizes cluster boundaries against local fluctuations, ensuring distinct and highly interpretable drivers within each identified group.
                                 </li>
