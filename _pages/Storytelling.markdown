@@ -211,8 +211,328 @@ Ultimately, we selected KNN (K-Nearest Neighbors) because it achieved the highes
 
 
 # Qualitative Profiles of Food Insecurity
-### Text analysis
-### Text-based clusters etc
+
+
+<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">From Words to Data: Mapping Famine Drivers Through Term Frequency</h1>
+
+
+
+
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+
+In IPC reports, words are never neutral: their recurrence forms the digital footprint of a real-world emergency. Textual analysis reveals that the bigram <b>'food insecurity'</b> dominates the dataset with 1,068 occurrences, frequently paired with critical terms like <b>'acute'</b> (658) and <b>'malnutrition'</b> (154). However, it is the underlying drivers that shape this semantic map. The frequency of words like <b>'price'</b> (524) highlights economic shocks and barriers to food access, while the agricultural production cluster (<i>'production'</i>, <i>'harvest'</i>, <i>'crop'</i>) captures the immediate impact of climate factors on the ground. In this context, counting words means mapping the boundaries of hunger.
+
+</p>
+
+
+
+<div class="row my-5 justify-content-center text-center">
+
+    <div class="col-md-12 mb-4">
+
+        <h5 class="mb-3 fw-bold text-secondary fade-in-up" style="animation-delay: 0.5s;">Top 50 Words (Bubble Chart)</h5>
+
+        <img src="{{ site.baseurl }}/assets/images/packed_bubble_mixed.png" alt="Packed Bubble Chart of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift fade-in-up" style="max-width: 100%; border: 1px solid #e0e0e0; animation-delay: 0.6s;">
+
+    </div>
+
+</div>
+
+
+
+<hr class="section-divider">
+
+
+
+## <span class="text-gradient">The Crisis Algorithm: Drivers of Food Insecurity</span>
+
+
+
+Behind the IPC data architecture lies the convergence of macroeconomic, climatic, and social forces. By analyzing the semantic patterns within the reports, the primary catalysts of hunger emerge clearly across three interconnected macro-drivers:
+
+
+
+<div class="comparison-table-wrapper glass-card hover-lift">
+
+    <div class="row text-center mb-3">
+
+        <div class="col-md-4 mb-2">
+
+            <span class="badge-premium-admin1 shadow-sm"><i class="fas fa-chart-line"></i> ECONOMIC SHOCKS (Access)</span>
+
+        </div>
+
+        <div class="col-md-4 mb-2">
+
+            <span class="badge-premium-admin2 shadow-sm"><i class="fas fa-cloud-sun-rain"></i> CLIMATE FACTORS (Availability)</span>
+
+        </div>
+
+        <div class="col-md-4 mb-2">
+
+            <span class="badge-premium-admin1 shadow-sm"><i class="fas fa-shield-alt"></i> STRUCTURAL INSTABILITY (Vulnerability)</span>
+
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col-md-4 border-right">
+
+            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
+
+                <li><b>Key Words:</b> <i>price</i> (524), <i>food price</i> (221), <i>access</i> (399), <i>income</i>, <i>market</i>.</li>
+
+                <li><b>Market Dynamics:</b> Hunger unfolds primarily as a purchasing power crisis. Inflationary spikes build invisible financial barriers: food remains on shelves but becomes entirely unaffordable for vulnerable households.</li>
+
+            </ul>
+
+        </div>
+
+        <div class="col-md-4 border-right">
+
+            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
+
+                <li><b>Key Words:</b> <i>production</i> (346), <i>harvest</i> (316), <i>crop</i> (315), <i>drought</i>, <i>rain</i>.</li>
+
+                <li><b>Agricultural Collapse:</b> This reflects the systemic breakdown of local livelihoods (<i>livelihood</i>, 450). Weather anomalies and droughts destroy crops upstream, triggering physical supply deficits and rural income loss.</li>
+
+            </ul>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
+
+                <li><b>Key Words:</b> <i>conflict</i>, <i>displacement</i>, <i>humanitarian assistance</i> (140), <i>food consumption</i> (195).</li>
+
+                <li><b>Breaking Point:</b> Conflicts and forced displacement shatter local trade networks and drive populations to flee. At this tipping point, food consumption plummces, making external humanitarian aid vital to bridge survival deficits.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<h3 class="mt-5 mb-4 text-gradient">Mapping the Geography of Crisis Drivers</h3>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+
+While the macroeconomic, climatic, and structural drivers of hunger are universal, their impact is intensely localized. By normalizing the frequency of these critical terms, we can generate a focused heatmap highlighting a selected group of highly vulnerable nations. The visualization below reveals the unique crisis signature of these specific regions: some nations are predominantly scarred by conflict and displacement, while others suffer primarily from the collapse of agricultural production due to climate extremes. This heatmap translates semantic prevalence into a stark geographic reality.
+
+</p>
+
+
+
+<div class="my-5 text-center">
+
+    <img src="{{ site.baseurl }}/assets/images/heatmap_driver.png" alt="Heatmap of Food Insecurity Drivers by Country" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
+
+</div>
+
+
+
+<hr class="section-divider">
+
+
+<style>
+/* Modern Interactive Tooltip */
+.history-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    border-bottom: 2px dotted #007bff;
+    color: inherit;
+    font-weight: 600;
+}
+
+.history-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 280px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: left;
+    border-radius: 8px;
+    padding: 12px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -140px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.85rem;
+    font-weight: normal;
+    line-height: 1.4;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    font-family: var(--font-sans);
+}
+
+.history-tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #2c3e50 transparent transparent transparent;
+}
+
+.history-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.history-tooltip i {
+    margin-right: 5px;
+    color: #4ade80;
+}
+</style>
+
+## <span class="text-gradient">Decoding the Narrative: The NLP Pipeline</span>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+To move beyond simple word counts and uncover the hidden semantic structures of food crises, we utilized an advanced Natural Language Processing (NLP) pipeline. Since we were operating on a highly specialized dataset of only a few hundred reports, training an AI from scratch was impossible. Instead, we leveraged powerful pretrained models to read the reports and let the data organize itself into coherent thematic clusters. <i>(For a deep dive into the technical details and architectures of the models cited below, please refer to our <a href="{{ site.baseurl }}/Text-analysis.html">Technical Text Analysis</a> page).</i>
+</p>
+
+<div class="row mt-4">
+    <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-user-secret"></i> 1. Anonymization: Hiding the Map</h4>
+        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
+        Before diving into the vocabulary, it was crucial to anonymize the texts using <b>GLiNER</b>, a pretrained model for <a href="{{ site.baseurl }}/Text-analysis.html">Named Entity Recognition (NER)</a>. We explicitly masked dates and geopolitical entities (like country and region names). The goal was to prevent the algorithm from grouping reports simply because they mentioned the same country, forcing it instead to find the <i>true</i> underlying causes of the crisis.
+        </p>
+
+        <div class="example-box mt-4 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #007bff;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-file-alt"></i> Original Text</h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px;">
+                "The 8th analysis cycle on the Integrated Food Security Classification Framework (IPC) of <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">DRC</span> held in <span style="background-color: #ffffcc; padding: 2px 4px; border-radius: 3px;">December 2012</span> identified 6.4 million people affected by a situation of food and livelihood crises, <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">77 regions</span> have been classified in phase 3 and <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">8 regions</span> in Phase 4 throughout <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">DRC</span>."
+            </p>
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-user-secret"></i> GLiNER Anonymized Text</h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #28a745; margin-bottom: 0;">
+                "The 8th analysis cycle on the Integrated Food Security Classification Framework (IPC) of <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span> held in <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[DATE]</span> identified 6.4 million people affected by a situation of food and livelihood crises, <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span> have been classified in phase 3 and <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span> in Phase 4 throughout <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span>."
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-filter"></i> 2. The Power and Limits of Keywords (TF-IDF)</h4>
+        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
+        Initially, we used <b>TF-IDF</b> (Term Frequency-Inverse Document Frequency) to cluster the reports. This method groups texts based on the statistical frequency of identical words. Below, we can see two reports that were grouped together because they share the exact same vocabulary (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>) to describe a complex agricultural and economic shock. 
+        </p>
+
+        <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #17a2b8;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Zimbabwe <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Apr 2013 - Apr 2014)</span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
+                "Agriculture is a key livelihoods activity for the majority of Zimbabwe's rural population. Mainly because of the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">poor</span> rainfall <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span> quality, <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> of major <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">crops</span> in 2012/13 fell compared to last <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span>'s harvest. Livestock were in a fair to <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> condition in April 2013. Grazing and water for livestock were generally adequate in most parts of the country save for the communal <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">areas</span>... Currently, staple cereals are generally available throughout the country from both own <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> and the market, but low incomes and higher than normal <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">prices</span> of staple cereals are limiting household <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">access</span>. There is continued limited diversity of <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">food</span> consumed by rural <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span>..."
+            </p>
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Uganda <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Jan 2017 - Feb 2018)</span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 0; line-height: 1.5; text-align: justify;">
+                "<span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">Food</span> in markets is easily accessed and affordable because <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">prices</span> have declined and the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span> have adequate purchasing power. They have <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> nutrition levels because they are able to eat two or more time a day with a <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> dietary diversity. Currently <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">access</span> to livestock products is <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> because of the available pasture and water... The <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span> in these regions all suffered the effects of prolonged dry spells that stressed most of the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">crops</span> and reduced yields... However, as the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> in the second <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span> is anticipated to be normal and above normal for some <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">areas</span>... They have <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">poor</span> purchasing power as their incomes are low..."
+            </p>
+        </div>
+        
+        <br>
+        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
+        While TF-IDF is highly effective when authors use the exact same terminology, it has a fatal flaw: <b>it relies entirely on exact keyword matches</b>. This makes it vulnerable to <b>False Positives</b>. Because many reports use the same standard humanitarian boilerplate language, TF-IDF will often cluster them together, completely ignoring the underlying cause of the crisis. 
+        <br><br>
+        Take a look at the two reports below. TF-IDF confidently clustered them together because they both heavily use words like <i>"malnutrition"</i>, <i>"child"</i>, <i>"production"</i>, and <i>"season"</i> (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>). However, look at the actual climatic shock that triggered the crisis (highlighted in <span style="color: #dc3545; font-weight: bold;">red</span>): Angola is suffering from the worst <b>drought</b> in 40 years, while Bangladesh is submerged by severe river <b>flooding</b>. TF-IDF grouped a crisis of "no water" with a crisis of "too much water" just because the humanitarian jargon matched!
+        </p>
+
+        <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #dc3545;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Angola <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Apr 2021 - Mar 2022) - <span style="color: #dc3545; font-weight: bold;">Drought Shock</span></span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
+                "The worst <span style="color: #dc3545; font-weight: bold; text-decoration: underline;">drought in the last 40 years</span> and rising food prices have resulted in high acute food insecurity... The high acute food insecurity in this region can mainly be attributed to the recurrent effects of <span style="color: #dc3545; font-weight: bold; text-decoration: underline;">drought</span> which has reduced both agricultural and livestock <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span>... An IPC Acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">Malnutrition</span> analysis of 10 municipalities in Southern Angola has revealed that around 114,000 <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">children</span> under the age of five are suffering or are likely to suffer from acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">malnutrition</span>... For the period of October 2021 to February 2022, a projection analysis of the situation suggests that the rainy <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span>, characterized by food shortages and high incidence of acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">malnutrition</span>, may lead to a deterioration..."
+            </p>
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Bangladesh <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Sep 2014 - Dec 2014) - <span style="color: #007bff; font-weight: bold;">Flooding Shock</span></span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 0; line-height: 1.5; text-align: justify;">
+                "During the <span style="color: #007bff; font-weight: bold; text-decoration: underline;">flooding</span>, crop land and homesteads <span style="color: #007bff; font-weight: bold; text-decoration: underline;">deluged with water</span> and cause severe damage to standing crops... <span style="color: #007bff; font-weight: bold; text-decoration: underline;">Flood water</span> brings huge silt and sands and cultivable lands lose its productivity... Analysis revealed that income opportunities may be greatly hampered due to the 2014 <span style="color: #007bff; font-weight: bold; text-decoration: underline;">flooding and consequent river erosion</span>. Fish <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> is also negatively affected... <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">Child Malnutrition</span>: The districts and upazilas analyzed structurally suffer from the alarming <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">level</span> of acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">malnutrition</span>... shocks due to <span style="color: #007bff; font-weight: bold; text-decoration: underline;">flooding</span> and consequent river erosion... alarming <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">level</span> of acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">child malnutrition</span>."
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-brain"></i> 3. Dense Embeddings: Finding the Meaning</h4>
+        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
+        To solve the keyword limitation, we advanced to <b>Dense Semantic Embeddings</b> using the pretrained <b>BGE-M3</b> model. Instead of counting words, this model maps entire paragraphs into a high-dimensional mathematical space where texts are grouped purely by their <i>meaning</i>. This allowed us to discover profound, previously invisible connections, successfully linking reports that described the exact same structural crisis using entirely different vocabularies.
+        </p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-search-plus"></i> Discovery: Connecting Different Words to the Same Crisis</h4>
+        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
+        To demonstrate what we gained by moving to dense embeddings, look at how the model connected a report from <b>El Salvador</b> with one from <b>Zambia</b>. 
+        <br><br>
+        Because they use completely different phrasing—"mobility restrictions" versus "reduced livelihood opportunities"—TF-IDF would struggle to link them. But the dense embedding model recognized they were describing the exact same underlying tragedy: families plunged into food insecurity by the economic paralysis of the COVID-19 lockdown.
+        </p>
+        <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #17a2b8;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> El Salvador <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(October 2020 - February 2021)</span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
+                "These groups have experienced <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">income losses</span> due to <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">mobility and transportation restrictions</span> due to the <span style="background-color: #d1ecf1; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #0c5460;">COVID-19 pandemic</span>... This <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">reduction of income</span> limits affected households' access to basic services and food."
+            </p>
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Zambia <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(July - September 2022)</span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 0; line-height: 1.5; text-align: justify;">
+                "The current vulnerability in Zambia has been driven by a high incidence of poverty, the impact of the <span style="background-color: #d1ecf1; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #0c5460;">COVID-19 pandemic</span>, macroeconomic instability... primarily driven by shocks such as prolonged dry spells, flooding, <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">reduced livelihood opportunities</span> due to <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">restrictions</span> linked to <span style="background-color: #d1ecf1; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #0c5460;">COVID-19</span>."
+            </p>
+        </div>
+    </div>
+</div>
+
+<hr class="section-divider">
+
+## <span class="text-gradient">The Interactive Timeline: A History of Crisis</span>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+Food insecurity is rarely a static condition; it evolves. By mapping out the dominant crisis type (using our semantic clusters) for each country year by year, we built the interactive timeline below. You can explore how nations shift from agricultural shocks to economic inflation, or how conflict suddenly hijacks a country's entire food system. 
+<br><br><i>Select a country from the sidebar to isolate its unique journey through the crisis landscape.</i>
+</p>
+
+<div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+    <iframe src="{{ site.baseurl }}/assets/data/Cluster_evolution_global.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
+</div>
+
+<hr class="section-divider">
+
+### <span class="text-gradient">Crisis Profiles: Shared Destinies</span>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+The most startling revelation from the dense clustering was the discovery of <b>Crisis Profiles</b>—nations that share identical evolutionary paths despite being thousands of miles apart. By removing borders, the data showed us that risk follows specific, recurring patterns. <i>(Hover over the highlighted text to reveal the historical context).</i>
+</p>
+
+#### Profile 1: The Agro-Pastoral Climate Trap (Kenya & Uganda)
+
+<p style="font-size: 1rem; line-height: 1.6; text-align: justify;">
+Kenya and Uganda are bound by a shared geographical vulnerability. Their evolutionary trajectory perfectly mirrors the unpredictable swings of the climate. We see both nations plunge into <b>Agro-pastoral Water Vulnerability</b> during the devastating <span class="history-tooltip">El Niño-induced floods<span class="tooltip-text"><i class="fas fa-info-circle"></i> In 2015-2016, a super El Niño triggered torrential rains across East Africa, washing away harvests and decimating livestock herds before they could recover.</span></span>, and then suffer immense <b>Rainfall Impact on Crops</b> during the punishing <span class="history-tooltip">La Niña droughts<span class="tooltip-text"><i class="fas fa-info-circle"></i> Between 2020 and 2023, the Horn of Africa experienced an unprecedented five consecutive failed rainy seasons, pushing millions to the brink of famine.</span></span>. This is a classic climate-driven trap, where communities have no time to recover before the next environmental shock hits.
+</p>
+
+<div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+    <iframe src="{{ site.baseurl }}/assets/data/df_cluster_embedding_densi_ok_pair_fullscreen.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
+</div>
+
+#### Profile 2: The Multidimensional Collapse (Sudan & Haiti)
+
+<p style="font-size: 1rem; line-height: 1.6; text-align: justify;">
+At first glance, a North African nation and a Caribbean island have nothing in common. Yet, the model recognized their shared tragedy. Both nations are enduring a profound structural collapse, overwhelmed by <span class="history-tooltip">severe political crises<span class="tooltip-text"><i class="fas fa-info-circle"></i> Haiti was plunged into chaos following the 2021 assassination of President Jovenel Moïse, while Sudan's fragile transition shattered into civil war in April 2023.</span></span> and escalating <span class="history-tooltip">violent internal conflicts<span class="tooltip-text"><i class="fas fa-info-circle"></i> Armed factions in Sudan have displaced millions, while heavily armed gangs in Haiti have effectively blockaded Port-au-Prince, cutting off vital food supplies.</span></span>. Their trajectories are not driven by the weather, but by <b>Conflict-Induced Refugee Emergency</b> and <b>Agricultural Price Inflation</b>. This profile shows us the darkest side of food insecurity: hunger weaponized by systemic failure and violence.
+</p>
+
+<div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+    <iframe src="{{ site.baseurl }}/assets/data/df_cluster_embedding_densi_ok_pair4_fullscreen.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
+</div>
+
 
 
 # Predicting Food Insecurity through its drivers

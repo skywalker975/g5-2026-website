@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Cluster Evolution – Proportional View</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-main: #0b0f19;
+    --bg-card: rgba(17, 24, 39, 0.85);
+    --bg-card-hover: rgba(26, 36, 56, 0.9);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.18);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --color-primary: #6366f1;
+    --color-primary-glow: rgba(99, 102, 241, 0.25);
+    --color-warning: #f59e0b;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-title: 'Outfit', sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family:var(--font-sans);
+    background:var(--bg-main);
+    color:var(--text-primary);
+    height:100vh;
+    width:100vw;
+    overflow:hidden;
+    display:flex;
+}
+
+/* --- SIDEBAR A SCOMPARSA (AUTO-HIDE) --- */
+.side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 100vh;
+    background: rgba(11, 15, 25, 0.92);
+    backdrop-filter: blur(16px);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transform: translateX(-258px);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.side:hover {
+    transform: translateX(0);
+    box-shadow: 12px 0 35px rgba(0, 0, 0, 0.6);
+}
+
+.side::after {
+    content: '›';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 50px;
+    background: var(--color-primary);
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    opacity: 0.8;
+}
+
+.side:hover::after {
+    opacity: 0;
+}
+
+.side-head {
+    padding: 18px;
+    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(180deg, rgba(99,102,241,0.12) 0%, transparent 100%);
+}
+.side-head h1 { font-family: var(--font-title); font-size: 18px; font-weight: 700; color: var(--text-primary); }
+
+.side-block { padding: 14px 18px; display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+.side-block h3 {
+    font-family: var(--font-title); font-size: 11px; text-transform: uppercase;
+    letter-spacing: 1.2px; color: var(--text-muted); margin-bottom: 10px; font-weight: 600;
+}
+
+.sinput {
+    width: 100%; padding: 8px 12px;
+    background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-color);
+    border-radius: 8px; font-size: 13px; outline: none; font-family: inherit;
+    color: var(--text-primary); transition: all .2s;
+}
+.sinput:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-glow); }
+
+.clist { flex: 1; overflow-y: auto; margin-top: 8px; }
+.citem {
+    padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 13px;
+    color: var(--text-secondary); transition: all .2s; display: flex; align-items: center; gap: 8px;
+}
+.citem:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+.citem.on {
+    background: linear-gradient(135deg, rgba(99,102,241,0.3), rgba(168,85,247,0.25));
+    color: #fff; font-weight: 600; border: 1px solid rgba(99,102,241,0.4);
+}
+.citem .flag { font-size: 16px; line-height: 1; }
+
+/* Trajectory Panel */
+.tpanel { padding: 14px 18px; border-top: 1px solid var(--border-color); display: none; }
+.tpanel.vis { display: block; background: rgba(245, 158, 11, 0.05); }
+.tpanel h3 { font-family: var(--font-title); font-size: 14px; font-weight: 700; color: var(--color-warning); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.tstep { display: flex; align-items: center; gap: 6px; padding: 3px 0; }
+.tstep .ty { font-family: var(--font-title); color: var(--text-muted); font-weight: 600; font-size: 12px; min-width: 36px; }
+.tstep .tc { padding: 3px 8px; border-radius: 4px; color: #fff; font-weight: 500; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px; }
+
+/* --- MAIN AREA --- */
+.main {
+    flex: 1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px 15px 25px;
+}
+
+#chartContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    user-select: none;
+}
+
+/* Tooltip */
+.tip {
+    position: fixed; background: var(--bg-card); backdrop-filter: blur(16px);
+    border: 1px solid var(--border-hover); border-radius: 10px;
+    padding: 10px 14px; pointer-events: none; z-index: 2000; max-width: 320px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5); display: none; font-size: 12px; line-height: 1.4;
+}
+.tip .th { font-family: var(--font-title); font-weight: 700; color: var(--text-primary); margin-bottom: 4px; font-size: 14px; }
+.tip .ts { color: var(--text-muted); font-size: 12px; margin-bottom: 6px; }
+.tip .tc { display: flex; flex-wrap: wrap; gap: 4px; }
+.tip .tc span { background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.2); padding: 2px 6px; border-radius: 4px; font-size: 11px; color: var(--text-secondary); }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<div class="side" id="sideNav">
+    <div class="side-head">
+        <h1>Cluster Evolution</h1>
+    </div>
+    <div class="side-block">
+        <h3>Cerca Paese</h3>
+        <input class="sinput" id="sInput" placeholder="Digita per filtrare..." oninput="filterC()">
+        <div class="clist" id="cList"></div>
+    </div>
+    <div class="tpanel" id="tPanel">
+        <h3 id="tTitle"></h3>
+        <div id="tSteps"></div>
+    </div>
+</div>
+
+<div class="main">
+    <div id="chartContainer"></div>
+</div>
+
+<div class="tip" id="tip"></div>
+
+<script>
+const D = {"years": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026], "countries": ["Afghanistan", "Angola", "Bangladesh", "Burundi", "Cambodia", "Central African Republic", "Democratic Republic of the Congo", "Djibouti", "Dominican Republic", "Ecuador", "El Salvador", "Eswatini", "Ethiopia", "Gaza Strip", "Guatemala", "Haiti", "Honduras", "Kenya", "Lebanon", "Lesotho", "Madagascar", "Malawi", "Mozambique", "Namibia", "Pakistan", "Somalia", "South Africa", "South Sudan", "Sudan", "Tajikistan", "Timor-Leste", "Uganda", "United Republic of Tanzania", "Yemen", "Zambia", "Zimbabwe"], "clusters": ["Conflict-Induced Refugee Emergency", "COVID-19 Economic Impact", "Rainfall Impact on Crops", "Agricultural Price Inflation", "Child Malnutrition", "Uncategorized Reports", "Agro-pastoral Water Vulnerability"], "records": [{"country": "South Sudan", "year": 2011, "cluster": "Agricultural Price Inflation"}, {"country": "Bangladesh", "year": 2012, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Cambodia", "year": 2012, "cluster": "Child Malnutrition"}, {"country": "Democratic Republic of the Congo", "year": 2012, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Djibouti", "year": 2012, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Honduras", "year": 2012, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Somalia", "year": 2012, "cluster": "Child Malnutrition"}, {"country": "South Sudan", "year": 2012, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Sudan", "year": 2012, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Tajikistan", "year": 2012, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Yemen", "year": 2012, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Zimbabwe", "year": 2012, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Afghanistan", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Bangladesh", "year": 2013, "cluster": "Child Malnutrition"}, {"country": "Burundi", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Central African Republic", "year": 2013, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Democratic Republic of the Congo", "year": 2013, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Djibouti", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Haiti", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Honduras", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Kenya", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Pakistan", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Somalia", "year": 2013, "cluster": "Child Malnutrition"}, {"country": "South Sudan", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Sudan", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Tajikistan", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Uganda", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Yemen", "year": 2013, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Zimbabwe", "year": 2013, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Afghanistan", "year": 2014, "cluster": "Agricultural Price Inflation"}, {"country": "Bangladesh", "year": 2014, "cluster": "Child Malnutrition"}, {"country": "Burundi", "year": 2014, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Central African Republic", "year": 2014, "cluster": "COVID-19 Economic Impact"}, {"country": "Democratic Republic of the Congo", "year": 2014, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Djibouti", "year": 2014, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Haiti", "year": 2014, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Honduras", "year": 2014, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Kenya", "year": 2014, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Pakistan", "year": 2014, "cluster": "Agricultural Price Inflation"}, {"country": "Somalia", "year": 2014, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "South Sudan", "year": 2014, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Sudan", "year": 2014, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Uganda", "year": 2014, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Yemen", "year": 2014, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Afghanistan", "year": 2015, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Burundi", "year": 2015, "cluster": "Rainfall Impact on Crops"}, {"country": "Central African Republic", "year": 2015, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Democratic Republic of the Congo", "year": 2015, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Djibouti", "year": 2015, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Honduras", "year": 2015, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Kenya", "year": 2015, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Somalia", "year": 2015, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "South Sudan", "year": 2015, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Sudan", "year": 2015, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Tajikistan", "year": 2015, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Uganda", "year": 2015, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Yemen", "year": 2015, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Afghanistan", "year": 2016, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Bangladesh", "year": 2016, "cluster": "Child Malnutrition"}, {"country": "Burundi", "year": 2016, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Central African Republic", "year": 2016, "cluster": "Agricultural Price Inflation"}, {"country": "Democratic Republic of the Congo", "year": 2016, "cluster": "Rainfall Impact on Crops"}, {"country": "Djibouti", "year": 2016, "cluster": "Rainfall Impact on Crops"}, {"country": "El Salvador", "year": 2016, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Eswatini", "year": 2016, "cluster": "Rainfall Impact on Crops"}, {"country": "Haiti", "year": 2016, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Honduras", "year": 2016, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Kenya", "year": 2016, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Lesotho", "year": 2016, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2016, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Mozambique", "year": 2016, "cluster": "Rainfall Impact on Crops"}, {"country": "Somalia", "year": 2016, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "South Sudan", "year": 2016, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Sudan", "year": 2016, "cluster": "Rainfall Impact on Crops"}, {"country": "Uganda", "year": 2016, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Yemen", "year": 2016, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Zimbabwe", "year": 2016, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Afghanistan", "year": 2017, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Burundi", "year": 2017, "cluster": "Rainfall Impact on Crops"}, {"country": "Central African Republic", "year": 2017, "cluster": "Agricultural Price Inflation"}, {"country": "Democratic Republic of the Congo", "year": 2017, "cluster": "Child Malnutrition"}, {"country": "El Salvador", "year": 2017, "cluster": "Child Malnutrition"}, {"country": "Eswatini", "year": 2017, "cluster": "Child Malnutrition"}, {"country": "Guatemala", "year": 2017, "cluster": "Child Malnutrition"}, {"country": "Haiti", "year": 2017, "cluster": "Agricultural Price Inflation"}, {"country": "Kenya", "year": 2017, "cluster": "Agricultural Price Inflation"}, {"country": "Lesotho", "year": 2017, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2017, "cluster": "Rainfall Impact on Crops"}, {"country": "Malawi", "year": 2017, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Mozambique", "year": 2017, "cluster": "Agricultural Price Inflation"}, {"country": "Pakistan", "year": 2017, "cluster": "Child Malnutrition"}, {"country": "Somalia", "year": 2017, "cluster": "Agricultural Price Inflation"}, {"country": "South Sudan", "year": 2017, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Sudan", "year": 2017, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Uganda", "year": 2017, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "United Republic of Tanzania", "year": 2017, "cluster": "Child Malnutrition"}, {"country": "Yemen", "year": 2017, "cluster": "Child Malnutrition"}, {"country": "Afghanistan", "year": 2018, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Burundi", "year": 2018, "cluster": "COVID-19 Economic Impact"}, {"country": "Central African Republic", "year": 2018, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Democratic Republic of the Congo", "year": 2018, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "El Salvador", "year": 2018, "cluster": "Uncategorized Reports"}, {"country": "Eswatini", "year": 2018, "cluster": "COVID-19 Economic Impact"}, {"country": "Guatemala", "year": 2018, "cluster": "Uncategorized Reports"}, {"country": "Haiti", "year": 2018, "cluster": "Rainfall Impact on Crops"}, {"country": "Honduras", "year": 2018, "cluster": "Rainfall Impact on Crops"}, {"country": "Kenya", "year": 2018, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Lesotho", "year": 2018, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2018, "cluster": "Rainfall Impact on Crops"}, {"country": "Malawi", "year": 2018, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2018, "cluster": "Child Malnutrition"}, {"country": "Pakistan", "year": 2018, "cluster": "Child Malnutrition"}, {"country": "Somalia", "year": 2018, "cluster": "Child Malnutrition"}, {"country": "South Sudan", "year": 2018, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Sudan", "year": 2018, "cluster": "Agricultural Price Inflation"}, {"country": "Uganda", "year": 2018, "cluster": "Agricultural Price Inflation"}, {"country": "Yemen", "year": 2018, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Zambia", "year": 2018, "cluster": "Rainfall Impact on Crops"}, {"country": "Zimbabwe", "year": 2018, "cluster": "Rainfall Impact on Crops"}, {"country": "Afghanistan", "year": 2019, "cluster": "Agricultural Price Inflation"}, {"country": "Angola", "year": 2019, "cluster": "Agricultural Price Inflation"}, {"country": "Central African Republic", "year": 2019, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Democratic Republic of the Congo", "year": 2019, "cluster": "Child Malnutrition"}, {"country": "El Salvador", "year": 2019, "cluster": "Agricultural Price Inflation"}, {"country": "Eswatini", "year": 2019, "cluster": "Rainfall Impact on Crops"}, {"country": "Ethiopia", "year": 2019, "cluster": "COVID-19 Economic Impact"}, {"country": "Guatemala", "year": 2019, "cluster": "Agricultural Price Inflation"}, {"country": "Haiti", "year": 2019, "cluster": "Agricultural Price Inflation"}, {"country": "Honduras", "year": 2019, "cluster": "Agricultural Price Inflation"}, {"country": "Kenya", "year": 2019, "cluster": "Agricultural Price Inflation"}, {"country": "Lesotho", "year": 2019, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2019, "cluster": "Rainfall Impact on Crops"}, {"country": "Malawi", "year": 2019, "cluster": "Rainfall Impact on Crops"}, {"country": "Mozambique", "year": 2019, "cluster": "Child Malnutrition"}, {"country": "Namibia", "year": 2019, "cluster": "Child Malnutrition"}, {"country": "Somalia", "year": 2019, "cluster": "Child Malnutrition"}, {"country": "South Sudan", "year": 2019, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Sudan", "year": 2019, "cluster": "Agricultural Price Inflation"}, {"country": "United Republic of Tanzania", "year": 2019, "cluster": "Rainfall Impact on Crops"}, {"country": "Yemen", "year": 2019, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Zambia", "year": 2019, "cluster": "Agricultural Price Inflation"}, {"country": "Zimbabwe", "year": 2019, "cluster": "Rainfall Impact on Crops"}, {"country": "Afghanistan", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Burundi", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Central African Republic", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Democratic Republic of the Congo", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Djibouti", "year": 2020, "cluster": "Agricultural Price Inflation"}, {"country": "El Salvador", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Eswatini", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Ethiopia", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Guatemala", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Haiti", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Honduras", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Kenya", "year": 2020, "cluster": "Child Malnutrition"}, {"country": "Lesotho", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Madagascar", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Malawi", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Mozambique", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Namibia", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Pakistan", "year": 2020, "cluster": "Agricultural Price Inflation"}, {"country": "Somalia", "year": 2020, "cluster": "Child Malnutrition"}, {"country": "South Africa", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "South Sudan", "year": 2020, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Sudan", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Uganda", "year": 2020, "cluster": "Child Malnutrition"}, {"country": "Yemen", "year": 2020, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Zambia", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Zimbabwe", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Afghanistan", "year": 2021, "cluster": "COVID-19 Economic Impact"}, {"country": "Angola", "year": 2021, "cluster": "Child Malnutrition"}, {"country": "Burundi", "year": 2021, "cluster": "COVID-19 Economic Impact"}, {"country": "Central African Republic", "year": 2021, "cluster": "Agricultural Price Inflation"}, {"country": "Democratic Republic of the Congo", "year": 2021, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "El Salvador", "year": 2021, "cluster": "COVID-19 Economic Impact"}, {"country": "Eswatini", "year": 2021, "cluster": "COVID-19 Economic Impact"}, {"country": "Ethiopia", "year": 2021, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Guatemala", "year": 2021, "cluster": "Agricultural Price Inflation"}, {"country": "Haiti", "year": 2021, "cluster": "Agricultural Price Inflation"}, {"country": "Honduras", "year": 2021, "cluster": "Agricultural Price Inflation"}, {"country": "Kenya", "year": 2021, "cluster": "Child Malnutrition"}, {"country": "Lesotho", "year": 2021, "cluster": "Child Malnutrition"}, {"country": "Madagascar", "year": 2021, "cluster": "Child Malnutrition"}, {"country": "Malawi", "year": 2021, "cluster": "COVID-19 Economic Impact"}, {"country": "Mozambique", "year": 2021, "cluster": "COVID-19 Economic Impact"}, {"country": "Namibia", "year": 2021, "cluster": "Agricultural Price Inflation"}, {"country": "Pakistan", "year": 2021, "cluster": "Child Malnutrition"}, {"country": "Somalia", "year": 2021, "cluster": "Child Malnutrition"}, {"country": "Sudan", "year": 2021, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Uganda", "year": 2021, "cluster": "Child Malnutrition"}, {"country": "United Republic of Tanzania", "year": 2021, "cluster": "Agricultural Price Inflation"}, {"country": "Zambia", "year": 2021, "cluster": "COVID-19 Economic Impact"}, {"country": "Afghanistan", "year": 2022, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Burundi", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Central African Republic", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Democratic Republic of the Congo", "year": 2022, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Djibouti", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Dominican Republic", "year": 2022, "cluster": "COVID-19 Economic Impact"}, {"country": "El Salvador", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Eswatini", "year": 2022, "cluster": "Rainfall Impact on Crops"}, {"country": "Guatemala", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Haiti", "year": 2022, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Honduras", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Kenya", "year": 2022, "cluster": "Child Malnutrition"}, {"country": "Lebanon", "year": 2022, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Lesotho", "year": 2022, "cluster": "Child Malnutrition"}, {"country": "Madagascar", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Namibia", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Pakistan", "year": 2022, "cluster": "Child Malnutrition"}, {"country": "Somalia", "year": 2022, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "South Sudan", "year": 2022, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Sudan", "year": 2022, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Timor-Leste", "year": 2022, "cluster": "Agro-pastoral Water Vulnerability"}, {"country": "Uganda", "year": 2022, "cluster": "Child Malnutrition"}, {"country": "United Republic of Tanzania", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Yemen", "year": 2022, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Zambia", "year": 2022, "cluster": "COVID-19 Economic Impact"}, {"country": "Afghanistan", "year": 2023, "cluster": "COVID-19 Economic Impact"}, {"country": "Bangladesh", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Burundi", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Central African Republic", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Democratic Republic of the Congo", "year": 2023, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Djibouti", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Dominican Republic", "year": 2023, "cluster": "Rainfall Impact on Crops"}, {"country": "El Salvador", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Eswatini", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Gaza Strip", "year": 2023, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Guatemala", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Haiti", "year": 2023, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Honduras", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Kenya", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Lebanon", "year": 2023, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Lesotho", "year": 2023, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Malawi", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2023, "cluster": "Rainfall Impact on Crops"}, {"country": "Namibia", "year": 2023, "cluster": "Rainfall Impact on Crops"}, {"country": "Pakistan", "year": 2023, "cluster": "Child Malnutrition"}, {"country": "Somalia", "year": 2023, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "South Sudan", "year": 2023, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Sudan", "year": 2023, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Timor-Leste", "year": 2023, "cluster": "Rainfall Impact on Crops"}, {"country": "Uganda", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "United Republic of Tanzania", "year": 2023, "cluster": "Rainfall Impact on Crops"}, {"country": "Yemen", "year": 2023, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Zambia", "year": 2023, "cluster": "Rainfall Impact on Crops"}, {"country": "Afghanistan", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Bangladesh", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Burundi", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Central African Republic", "year": 2024, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Democratic Republic of the Congo", "year": 2024, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Djibouti", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Dominican Republic", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Ecuador", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "El Salvador", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Eswatini", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Gaza Strip", "year": 2024, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Guatemala", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Haiti", "year": 2024, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Honduras", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Kenya", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Lebanon", "year": 2024, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Lesotho", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Malawi", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Mozambique", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Namibia", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Pakistan", "year": 2024, "cluster": "Child Malnutrition"}, {"country": "Somalia", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "South Sudan", "year": 2024, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Sudan", "year": 2024, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Uganda", "year": 2024, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Yemen", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Zambia", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Afghanistan", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Bangladesh", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Burundi", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Central African Republic", "year": 2025, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Democratic Republic of the Congo", "year": 2025, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Djibouti", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Ecuador", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "El Salvador", "year": 2025, "cluster": "Rainfall Impact on Crops"}, {"country": "Eswatini", "year": 2025, "cluster": "Rainfall Impact on Crops"}, {"country": "Gaza Strip", "year": 2025, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Guatemala", "year": 2025, "cluster": "Rainfall Impact on Crops"}, {"country": "Haiti", "year": 2025, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Honduras", "year": 2025, "cluster": "Rainfall Impact on Crops"}, {"country": "Kenya", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Lebanon", "year": 2025, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Lesotho", "year": 2025, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Malawi", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2025, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Namibia", "year": 2025, "cluster": "Rainfall Impact on Crops"}, {"country": "Pakistan", "year": 2025, "cluster": "Child Malnutrition"}, {"country": "Somalia", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "South Sudan", "year": 2025, "cluster": "Child Malnutrition"}, {"country": "Sudan", "year": 2025, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Uganda", "year": 2025, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "United Republic of Tanzania", "year": 2025, "cluster": "Rainfall Impact on Crops"}, {"country": "Yemen", "year": 2025, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Zambia", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Bangladesh", "year": 2026, "cluster": "Agricultural Price Inflation"}, {"country": "Central African Republic", "year": 2026, "cluster": "Agricultural Price Inflation"}, {"country": "Democratic Republic of the Congo", "year": 2026, "cluster": "Agricultural Price Inflation"}, {"country": "El Salvador", "year": 2026, "cluster": "Rainfall Impact on Crops"}, {"country": "Haiti", "year": 2026, "cluster": "Agricultural Price Inflation"}, {"country": "Honduras", "year": 2026, "cluster": "Rainfall Impact on Crops"}, {"country": "Kenya", "year": 2026, "cluster": "Child Malnutrition"}, {"country": "Lebanon", "year": 2026, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Somalia", "year": 2026, "cluster": "Agricultural Price Inflation"}, {"country": "South Sudan", "year": 2026, "cluster": "Child Malnutrition"}, {"country": "Sudan", "year": 2026, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Uganda", "year": 2026, "cluster": "Agricultural Price Inflation"}, {"country": "United Republic of Tanzania", "year": 2026, "cluster": "Child Malnutrition"}, {"country": "Yemen", "year": 2026, "cluster": "Agricultural Price Inflation"}], "colors": {"Conflict-Induced Refugee Emergency": "#6366f1", "COVID-19 Economic Impact": "#10b981", "Rainfall Impact on Crops": "#f59e0b", "Agricultural Price Inflation": "#ef4444", "Child Malnutrition": "#a855f7", "Uncategorized Reports": "#06b6d4", "Agro-pastoral Water Vulnerability": "#ec4899"}, "filename": "df_cluster_embedding_densi.csv"};
+
+let sel = null, enK = new Set(D.clusters);
+
+const ISO={"Afghanistan":"AF","Angola":"AO","Bangladesh":"BD","Burundi":"BI","Cambodia":"KH","Central African Republic":"CF","Democratic Republic of the Congo":"CD","Djibouti":"DJ","Dominican Republic":"DO","Ecuador":"EC","El Salvador":"SV","Eswatini":"SZ","Ethiopia":"ET","Gaza Strip":"PS","Guatemala":"GT","Haiti":"HT","Honduras":"HN","Kenya":"KE","Lebanon":"LB","Lesotho":"LS","Madagascar":"MG","Malawi":"MW","Mozambique":"MZ","Namibia":"NA","Pakistan":"PK","Somalia":"SO","South Africa":"ZA","South Sudan":"SS","Sudan":"SD","Tajikistan":"TJ","Timor-Leste":"TL","Uganda":"UG","United Republic of Tanzania":"TZ","Yemen":"YE","Zambia":"ZM","Zimbabwe":"ZW"};
+
+function getFlag(name){
+    const code=ISO[name];
+    if(!code) return '';
+    return String.fromCodePoint(...[...code.toUpperCase()].map(c=>0x1F1E6+c.charCodeAt(0)-65));
+}
+
+(function(){
+    const cl = document.getElementById('cList');
+    D.countries.forEach(c => {
+        const d = document.createElement('div');
+        d.className = 'citem'; d.dataset.c = c;
+        d.innerHTML = `<span class="flag">${getFlag(c)}</span><span>${escH(c)}</span>`;
+        d.onclick = () => pickC(c);
+        cl.appendChild(d);
+    });
+})();
+
+function filterC(){
+    const q = document.getElementById('sInput').value.toLowerCase();
+    document.querySelectorAll('.citem').forEach(e => {
+        e.style.display = e.dataset.c.toLowerCase().includes(q) ? '' : 'none';
+    });
+}
+
+function pickC(c){
+    sel = sel === c ? null : c;
+    document.querySelectorAll('.citem').forEach(e => e.classList.toggle('on', e.dataset.c === sel));
+    updTraj(); draw();
+}
+
+function toggleCluster(c){
+    if(enK.has(c)) enK.delete(c);
+    else enK.add(c);
+    updTraj(); draw();
+}
+
+function updTraj(){
+    const p = document.getElementById('tPanel'), s = document.getElementById('tSteps'), t = document.getElementById('tTitle');
+    if(!sel){ p.classList.remove('vis'); return; }
+    p.classList.add('vis');
+    t.innerHTML = `<span class="flag">${getFlag(sel)}</span> ${escH(sel)}`;
+    const recs = D.records.filter(r => r.country === sel && enK.has(r.cluster)).sort((a,b) => a.year - b.year);
+    s.innerHTML = '';
+    recs.forEach(r => {
+        const d = document.createElement('div'); d.className = 'tstep';
+        const sn = r.cluster.length > 25 ? r.cluster.substring(0,23) + '…' : r.cluster;
+        d.innerHTML = `<span class="ty">${r.year}</span><span class="tc" style="background:${D.colors[r.cluster]}" title="${escH(r.cluster)}">${escH(sn)}</span>`;
+        s.appendChild(d);
+    });
+    if(!recs.length) s.innerHTML = '<div style="color:var(--text-muted);font-size:11px;padding:4px 0">Nessun dato nei cluster attivi.</div>';
+}
+
+function escH(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+function escSvg(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+const tipEl = document.getElementById('tip');
+function showTip(ev, html){
+    tipEl.innerHTML = html; tipEl.style.display = 'block';
+    const r = tipEl.getBoundingClientRect();
+    let x = ev.clientX + 16, y = ev.clientY + 16;
+    if(x + r.width > innerWidth - 12) x = ev.clientX - r.width - 16;
+    if(y + r.height > innerHeight - 12) y = ev.clientY - r.height - 16;
+    tipEl.style.left = x + 'px'; tipEl.style.top = y + 'px';
+}
+function hideTip(){ tipEl.style.display = 'none'; }
+
+// --- RENDER UNIFICATO E OTTIMIZZATO ---
+function draw(){
+    const VIEW_W = 1450;
+    const VIEW_H = 750;
+    const LEFT_COL_W = 320;
+    const HEADER_H = 50;
+
+    const gridW = VIEW_W - LEFT_COL_W - 20;
+    const gridH = VIEW_H - HEADER_H - 20;
+
+    const colW = gridW / D.years.length;
+    const rowH = gridH / D.clusters.length;
+
+    const filt = D.records.filter(r => enK.has(r.cluster));
+    const byY = {}; D.years.forEach(y => byY[y] = {});
+    filt.forEach(r => { if(!byY[r.year][r.cluster]) byY[r.year][r.cluster] = []; byY[r.year][r.cluster].push(r.country); });
+
+    const yOf = {};
+    D.clusters.forEach((c, i) => { yOf[c] = HEADER_H + i * rowH + rowH / 2; });
+
+    let s = `<svg viewBox="0 0 ${VIEW_W} ${VIEW_H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="font-family:Inter,system-ui,sans-serif;">`;
+    s += `<defs>
+        <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+        <filter id="ds"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.4" flood-color="#000"/></filter>
+    </defs>`;
+
+    s += `<rect width="${VIEW_W}" height="${VIEW_H}" fill="var(--bg-main)"/>`;
+
+    // Griglia di sfondo e Barre dei Topic Sinistra
+    D.clusters.forEach((c, i) => {
+        const topY = HEADER_H + i * rowH;
+        const cy = yOf[c];
+        const isOn = enK.has(c);
+        const col = D.colors[c] || '#475569';
+
+        if(i % 2 === 0) s += `<rect x="${LEFT_COL_W}" y="${topY}" width="${gridW + 20}" height="${rowH}" fill="rgba(255,255,255,0.015)"/>`;
+        s += `<line x1="${LEFT_COL_W}" y1="${cy}" x2="${VIEW_W - 10}" y2="${cy}" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>`;
+
+        // BARRA TOPIC
+        s += `<g style="cursor:pointer;" onclick="toggleCluster('${escSvg(c)}')">`;
+        s += `<rect x="5" y="${topY + 5}" width="305" height="${rowH - 10}" rx="6" fill="${isOn ? 'rgba(255,255,255,0.04)' : 'rgba(255,255,255,0.01)'}" stroke="${isOn ? 'rgba(255,255,255,0.12)' : 'transparent'}"/>`;
+        s += `<text x="15" y="${cy + 4}" fill="${isOn ? '#94a3b8' : '#475569'}" font-size="13">${isOn ? '◉' : '◯'}</text>`;
+        s += `<rect x="33" y="${cy - 5}" width="10" height="10" rx="2.5" fill="${col}" opacity="${isOn ? 1 : 0.3}"/>`;
+        s += `<text x="50" y="${cy + 4}" fill="${isOn ? '#f8fafc' : '#64748b'}" font-size="11.5" font-weight="${isOn ? '600' : '400'}">${escSvg(c)}</text>`;
+        s += `</g>`;
+    });
+
+    // Anni Intestazione e Guide Verticali
+    D.years.forEach((y, i) => {
+        const x = LEFT_COL_W + i * colW + colW / 2;
+        s += `<line x1="${x}" y1="${HEADER_H}" x2="${x}" y2="${VIEW_H - 10}" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>`;
+        s += `<text x="${x}" y="${HEADER_H / 2 + 4}" text-anchor="middle" font-size="13" font-weight="700" fill="#64748b" font-family="Outfit,sans-serif">${y}</text>`;
+    });
+
+    // Calcolo Transizioni / Flussi
+    let mxF = 1; const flows = [];
+    for(let i = 0; i < D.years.length - 1; i++){
+        const y1 = D.years[i], y2 = D.years[i+1], d1 = byY[y1], d2 = byY[y2];
+        for(const c1 of Object.keys(d1)){
+            for(const c2 of Object.keys(d2)){
+                const sh = d1[c1].filter(p => d2[c2].includes(p));
+                if(sh.length){ flows.push({ i, c1, c2, cs: sh, n: sh.length }); if(sh.length > mxF) mxF = sh.length; }
+            }
+        }
+    }
+
+    const hl = sel !== null;
+    const th = n => Math.max(2, Math.sqrt(n / mxF) * (rowH * 0.35));
+
+    flows.forEach((f, fi) => {
+        const x1 = LEFT_COL_W + f.i * colW + colW / 2;
+        const x2 = LEFT_COL_W + (f.i + 1) * colW + colW / 2;
+        const cy1 = yOf[f.c1], cy2 = yOf[f.c2];
+        if(cy1 === undefined || cy2 === undefined) return;
+
+        const w = th(f.n), cx1 = x1 + colW * 0.45, cx2 = x2 - colW * 0.45;
+        const col = D.colors[f.c1] || '#475569';
+        let op = hl ? 0.04 : 0.25;
+        if(hl && f.cs.includes(sel)) op = 0.15;
+
+        const fid = 'f' + fi;
+        s += `<path id="${fid}" d="M${x1},${cy1} C${cx1},${cy1} ${cx2},${cy2} ${x2},${cy2}" fill="none" stroke="${col}" stroke-width="${w}" opacity="${op}" stroke-linecap="round" data-cs="${f.cs.join('|')}" data-c1="${encodeURIComponent(f.c1)}" data-c2="${encodeURIComponent(f.c2)}" data-n="${f.n}" onmousemove="sfTip(event,'${fid}')" onmouseleave="hideTip()" style="cursor:pointer;transition:opacity .25s"/>`;
+    });
+
+    // Nodi dei Cluster
+    D.years.forEach((y, yi) => {
+        const x = LEFT_COL_W + yi * colW + colW / 2;
+        Object.keys(byY[y]).forEach(c => {
+            if(!enK.has(c) || yOf[c] === undefined) return;
+            const cy = yOf[c], cs = byY[y][c].sort(), n = cs.length;
+            const col = D.colors[c] || '#475569';
+            const r = Math.max(9, Math.min(rowH * 0.28, 5 + Math.sqrt(n) * 2.5));
+
+            let op = hl ? 0.25 : 1;
+            if(hl && cs.includes(sel)) op = 1;
+
+            const nid = `n${yi}_${D.clusters.indexOf(c)}`;
+            s += `<g id="${nid}" opacity="${op}" style="cursor:pointer;transition:opacity .25s" data-k="${encodeURIComponent(c)}" data-y="${y}" data-cs="${cs.join('|')}" onmousemove="snTip(event,'${nid}')" onmouseleave="hideTip()">`;
+            s += `<circle cx="${x}" cy="${cy}" r="${r + 4}" fill="${col}" fill-opacity=".08"/>`;
+            s += `<circle cx="${x}" cy="${cy}" r="${r}" fill="rgba(11,15,25,0.9)" stroke="${col}" stroke-width="2.5"/>`;
+            s += `<text x="${x}" y="${cy + 1}" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="${col}" font-family="Outfit,sans-serif">${n}</text>`;
+            s += `</g>`;
+        });
+    });
+
+    // Percorso Paese Selezionato
+    if(sel){
+        const recs = filt.filter(r => r.country === sel).sort((a,b) => a.year - b.year);
+        const pts = recs.map(r => ({
+            x: LEFT_COL_W + D.years.indexOf(r.year) * colW + colW / 2,
+            y: yOf[r.cluster], yr: r.year, cl: r.cluster
+        })).filter(p => p.y !== undefined);
+
+        if(pts.length >= 2){
+            let d = `M${pts[0].x},${pts[0].y}`;
+            for(let i = 1; i < pts.length; i++){
+                d += ` C${pts[i-1].x + colW * 0.45},${pts[i-1].y} ${pts[i].x - colW * 0.45},${pts[i].y} ${pts[i].x},${pts[i].y}`;
+            }
+            s += `<path d="${d}" fill="none" stroke="#f59e0b" stroke-width="9" opacity=".25" stroke-linecap="round" filter="url(#glow)"/>`;
+            s += `<path d="${d}" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round"/>`;
+            s += `<path d="${d}" fill="none" stroke="#fde68a" stroke-width="1.2" stroke-linecap="round"/>`;
+        }
+        pts.forEach(p => {
+            s += `<circle cx="${p.x}" cy="${p.y}" r="12" fill="#f59e0b" fill-opacity=".15" stroke="#f59e0b" stroke-width="1.5"/>`;
+            s += `<circle cx="${p.x}" cy="${p.y}" r="5" fill="#fbbf24" stroke="#0b0f19" stroke-width="2"/>`;
+        });
+        if(pts.length > 0){
+            const fp = pts[0];
+            const label = getFlag(sel) + ' ' + sel;
+            const lw = Math.max(90, label.length * 7.5 + 16);
+            s += `<rect x="${fp.x - lw / 2}" y="${fp.y - 34}" width="${lw}" height="24" rx="12" fill="#f59e0b" filter="url(#ds)"/>`;
+            s += `<text x="${fp.x}" y="${fp.y - 18}" text-anchor="middle" font-size="12" font-weight="700" fill="#0b0f19" font-family="Outfit,sans-serif">${escSvg(sel)}</text>`;
+        }
+    }
+
+    s += `</svg>`;
+    document.getElementById('chartContainer').innerHTML = s;
+}
+
+window.snTip = function(ev, id){
+    const el = document.getElementById(id); if(!el) return;
+    const k = decodeURIComponent(el.dataset.k), y = el.dataset.y, cs = el.dataset.cs.split('|').sort();
+    let h = `<div class="th">${escH(k)}</div><div class="ts">Anno: ${y} · ${cs.length} paes${cs.length===1?'e':'i'}</div><div class="tc">${cs.map(c=>`<span><span class="flag">${getFlag(c)}</span>${escH(c)}</span>`).join('')}</div>`;
+    showTip(ev, h);
+};
+
+window.sfTip = function(ev, id){
+    const el = document.getElementById(id); if(!el) return;
+    const c1 = decodeURIComponent(el.dataset.c1), c2 = decodeURIComponent(el.dataset.c2), cs = el.dataset.cs.split('|').sort(), n = el.dataset.n;
+    let h = `<div class="th">${n} paes${n==1?'e':'i'} in transizione</div><div class="ts">Da: ${escH(c1)}<br>A: ${escH(c2)}</div><div class="tc">${cs.map(c=>`<span><span class="flag">${getFlag(c)}</span>${escH(c)}</span>`).join('')}</div>`;
+    showTip(ev, h);
+};
+
+draw();
+</script>
+</body>
+</html>
