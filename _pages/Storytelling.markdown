@@ -72,6 +72,8 @@ In this way, HERO goes beyond capturing a snapshot of the current situation to p
 
 -- METTERE IMMAGINE ANIMATA PAESI CHE SI SPENGONO E ACCENDONO NEL TEMPO -- paesi nelle varie fasi (rosso tenue fasi iniziali e rosso scuro fasi più gravi)
 
+##### [PENSARE SE ANTICIPARE ALCUNI RISULTATI COME SUGGERITO DAL PROF]
+##### [AGGIUNGERE BOTTONE SPOILER CHE NASCONDE TESTO CON RISULTATI PUò ESSERE SIMPATICO?]
 
 
 -- why we move from national to admin1 level analysis
