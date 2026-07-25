@@ -37,29 +37,14 @@ The graph illustrates the aggregated percentage of the population experiencing I
   early 2023. Following the onset of systemic conflict on April 15, 2023, Sudan experienced a
   massive structural shock, resulting in a sudden, sharp escalation in food insecurity that
   peaked near 55%, completely destabilizing its previous baseline.
-  
--grafico( assets/toADD/sito/SDN_3+.html)
+
 <iframe src="assets/toADD/sito/SDN_3_modificato_v2.html" width="100%" height="600" style="border:none;"></iframe>
-  .descrizione guerra in sudan:
-  testo: From mid-2019 to early 2023, the share of Sudan's population facing severe food insecurity (IPC Phase 3+)
-  remained relatively low and stable, staying between 13% and 25%.
-  That changed in April 2023, when civil war broke out between the Sudanese Armed Forces (SAF) and
-  the Rapid Support Forces (RSF) after the 2021 coup.
-  Food insecurity then rose sharply. Within a year, it more than doubled — climbing from around 35% to a 
-  peak of over 53% by mid-2024.
-  Levels have stayed high ever since, remaining between 40% and 50% through 2025. The impact goes far
-  beyond this chart: the war has forced more than 14 million people from their homes, left around 25
-  million facing severe hunger, and caused an estimated 400,000 deaths — making it one of the worst
-  humanitarian crises in the world today.
- 
- testo: Before the conflict's began, the percentage of the aggregated population
- experiencing IPC Phase 3+ acute food insecurity stayed within a relatively stable range, though still concerning — moving between roughly 13% and 25% from July 2019 through early 2023.
- Once the the conflict began in early 2023, the data takes a dramatic turn upward. By
- July 2023, the insecurity metric passes the 40% mark, demonstrating an immediate and severe degradation of
- logistical and agricultural stability. The numbers kept rising, reaching a devastating peak of nearly 55%
- by mid-2024. Although levels have eased slightly since that peak they haven't gone back down. 
- The metric remains structurally elevated well above 40% through January 2026, showing that this isn't a
- temporary spike, but a lasting crisis with no sign of returning to pre-war conditions.
+
+From mid-2019 to early 2023, the share of Sudan's population facing severe food insecurity (IPC Phase 3+) remained relatively low and stable, staying between 13% and 25%. That changed in April 2023, when <span class="history-tooltip">civil war broke out<span class="tooltip-text"><i class="fas fa-info-circle"></i> The conflict erupted in Khartoum on April 15, 2023, driven by a violent power struggle between military and paramilitary factions over the country's transition to civilian rule.</span></span> between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) after the 2021 coup.
+
+Food insecurity then rose sharply. Within a year, it more than doubled — climbing from around 35% to a peak of over 53% by mid-2024. Levels have stayed high ever since, remaining between 40% and 50% through 2025. The impact goes far beyond this chart: the war has forced more than 14 million people from their homes, left around 25 million facing severe hunger, and caused an estimated 400,000 deaths — making it one of the worst humanitarian crises in the world today.
+
+Before the conflict began, the percentage of the aggregated population experiencing IPC Phase 3+ acute food insecurity stayed within a relatively stable range, though still concerning — moving between roughly 13% and 25% from July 2019 through early 2023. Once the conflict began in early 2023, the data takes a dramatic turn upward. By July 2023, the insecurity metric passes the 40% mark, demonstrating an immediate and severe degradation of logistical and agricultural stability. The numbers kept rising, reaching a devastating peak of nearly 55% by mid-2024. Although levels have eased slightly since that peak they haven't gone back down. The metric remains structurally elevated well above 40% through January 2026, showing that this isn't a temporary spike, but a lasting crisis with no sign of returning to pre-war conditions.
 
 -grafico Afghanistan 
 <iframe src="assets/toADD/sito/AFG_IPC3+_modificata.html" width="100%" height="600" style="border:none;"></iframe>

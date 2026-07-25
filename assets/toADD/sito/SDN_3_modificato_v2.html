@@ -17,5 +17,84 @@
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
     </script>
+
+<style>
+/* Custom Tooltip for Annotation */
+#war-tooltip {
+    position: absolute;
+    visibility: hidden;
+    width: 280px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: left;
+    border-radius: 8px;
+    padding: 12px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.85rem;
+    font-weight: normal;
+    line-height: 1.4;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+    pointer-events: none;
+    font-family: sans-serif;
+}
+#war-tooltip i {
+    margin-right: 5px;
+    color: #4ade80;
+}
+</style>
+
+<div id="war-tooltip">
+    <strong style="color: #4ade80; font-size: 1rem; display:block; margin-bottom: 5px;">Sudanese Civil War</strong>
+    The conflict erupted in Khartoum on April 15, 2023, driven by a violent power struggle between military and paramilitary factions over the country's transition to civilian rule.
+</div>
+
+
+<script>
+// Use event delegation on the chart container to handle zooming/panning redraws safely
+var chartDiv = document.getElementById('chart');
+var tooltip = document.getElementById('war-tooltip');
+
+if (chartDiv && tooltip) {
+    chartDiv.addEventListener('mousemove', function(e) {
+        var lines = document.querySelectorAll('.apexcharts-xaxis-annotation-line, line[stroke="#ff0000"]');
+        var targetLine = null;
+        for (var i = 0; i < lines.length; i++) {
+            if (lines[i].getAttribute('stroke') === '#ff0000' || lines[i].style.stroke === 'rgb(255, 0, 0)') {
+                targetLine = lines[i];
+                break;
+            }
+        }
+        
+        if (!targetLine) {
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = '0';
+            return;
+        }
+        
+        var rect = targetLine.getBoundingClientRect();
+        
+        // Check if mouse is within a 15px radius horizontally of the line
+        // And vertically within the line's bounding rect
+        if (Math.abs(e.clientX - rect.left) < 15 && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+            tooltip.style.visibility = 'visible';
+            tooltip.style.opacity = '1';
+            
+            tooltip.style.left = (e.pageX - 310) + 'px';
+            tooltip.style.top = (e.pageY - 20) + 'px';
+        } else {
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = '0';
+        }
+    });
+
+    chartDiv.addEventListener('mouseleave', function(e) {
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.opacity = '0';
+    });
+}
+</script>
 </body>
+
 </html>
