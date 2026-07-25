@@ -18,7 +18,7 @@ subtitle: "Hunger Early-warning & Risk Optimizer"
 In 2015, all United Nations Member States adopted the 2030 Agenda for Sustainable Development, whose second goal — "Zero Hunger" (SDG 2) — commits the international community to «end hunger, achieve food security and improved nutrition and promote sustainable agriculture». Over a decade later, that promise remains dramatically distant.
 {: .lead }
 In 2024, approximately 673 million people were still undernourished, and in 2025, 266 million in 47 countries were facing acute food insecurity; in the same year, famine was confirmed in certain areas of the Gaza Strip and Sudan. Hunger, in short, remains a present-day emergency.
-# Accordi di Parigi (mettere in un riquadro a lato)
+# Paris's agreement
 The Paris Agreement is a legally binding international climate treaty adopted in 2015 that aims to limit global temperature increase to 1.5°C above pre-industrial levels. It drives action through a five-year cycle where countries submit increasingly ambitious Nationally Determined Contributions (NDCs) to reduce greenhouse gas emissions and build climate resilience. The treaty establishes a framework for developed nations to provide financial, technological, and capacity-building support to vulnerable countries. Global progress is rigorously tracked via an Enhanced Transparency Framework and a Global Stocktake, collectively accelerating the worldwide transition toward zero-carbon economies.
 
 # Food Insecurity
