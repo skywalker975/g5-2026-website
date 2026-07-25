@@ -36,7 +36,7 @@ subtitle: "Handling missing data"
                             Refines the joint feature space of ACTED, GDELT, and Rainfall prior to imputation to eliminate artificial over-weighting of correlated variables, preventing severe warping of the Euclidean distance space in downstream algorithms.
                         </li>
                         <li class="mb-3">
-                            <strong class="text-dark">PCA & Isotropic Projection:</strong><br>
+                            <strong class="text-dark">PCA:</strong><br>
                             Applies Principal Component Analysis to transform highly cross-correlated indicators into orthogonal, uncorrelated components, restoring an isotropic geometry that captures maximum variance while stripping redundant noise.
                         </li>
                         <li class="mb-3">
