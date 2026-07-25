@@ -26,8 +26,7 @@ The Paris Agreement is a legally binding international climate treaty adopted in
 # Food Insecurity
 
 ### Trends of food insecurity
-MODIFICA: SUDAN HA DOPPIO PUNTO NEL GRAFICO (AGGREGATO E SINGOLO)
-- <iframe src="assets/toADD/sito/SDN_3+.html" width="100%" height="600" style="border:none;"></iframe>
+<iframe src="assets/toADD/sito/HTI_vs_SSD_SDN_modificato.html" width="100%" height="600" style="border:none;"></iframe>
 The graph illustrates the aggregated percentage of the population experiencing IPC
   Phase 3+ food insecurity across three nations from 2017 to 2026. Haiti demonstrates a
   sustained, secular upward trend, with acute food insecurity climbing steadily from below 20%
@@ -40,6 +39,7 @@ The graph illustrates the aggregated percentage of the population experiencing I
   peaked near 55%, completely destabilizing its previous baseline.
   
 -grafico( assets/toADD/sito/SDN_3+.html)
+<iframe src="assets/toADD/sito/SDN_3+_modificato_v2.html" width="100%" height="600" style="border:none;"></iframe>
   .aggiungere linea rossa 15/4/23 in poi (inizio shock)
   .descrizione guerra in sudan:
   testo: From mid-2019 to early 2023, the share of Sudan's population facing severe food insecurity (IPC Phase 3+)
@@ -62,7 +62,7 @@ The graph illustrates the aggregated percentage of the population experiencing I
  The metric remains structurally elevated well above 40% through January 2026, showing that this isn't a
  temporary spike, but a lasting crisis with no sign of returning to pre-war conditions.
 
--grafico Afghanistan (assets/toADD/sito/AFG_IPC3+.html)
+-grafico Afghanistan <iframe src="assets/toADD/sito/AFG_IPC3+_modificata.html" width="100%" height="600" style="border:none;"></iframe>
  .trend stabile basso
  .shock 5/2021 ritiro truppe USA e poi diminuzione trend
 testo:The graph presented tracks the aggregated percentage of the population facing IPC Phase 3+ acute food insecurity. Initially, the metric fluctuates around a relatively stable, low baseline. This stability is violently disrupted by a massive structural shock beginning in May 2021, coinciding with the withdrawal of US troops. This geopolitical event acts as a catalyst for a sharp escalation in acute food insecurity, driving the population percentage to a peak of nearly 55%. Following this acute crisis phase, the data demonstrates a steady, though volatile, downward trajectory, with food insecurity levels progressively declining through 2026 to settle back near 20%.
