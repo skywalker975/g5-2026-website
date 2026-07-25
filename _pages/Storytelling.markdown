@@ -14,10 +14,6 @@ subtitle: "Hunger Early-warning & Risk Optimizer"
 </div>
 
 # Introduction
-
-# Food Insecurity
-
-### Trends of food insecurity
 # <span class="text-gradient">Zero Hunger by 2030: a promise still unfulfilled</span>
 In 2015, all United Nations Member States adopted the 2030 Agenda for Sustainable Development, whose second goal — "Zero Hunger" (SDG 2) — commits the international community to «end hunger, achieve food security and improved nutrition and promote sustainable agriculture». Over a decade later, that promise remains dramatically distant.
 {: .lead }
@@ -25,11 +21,37 @@ In 2024, approximately 673 million people were still undernourished, and in 2025
 # Accordi di Parigi (mettere in un riquadro a lato)
 The Paris Agreement is a legally binding international climate treaty adopted in 2015 that aims to limit global temperature increase to 1.5°C above pre-industrial levels. It drives action through a five-year cycle where countries submit increasingly ambitious Nationally Determined Contributions (NDCs) to reduce greenhouse gas emissions and build climate resilience. The treaty establishes a framework for developed nations to provide financial, technological, and capacity-building support to vulnerable countries. Global progress is rigorously tracked via an Enhanced Transparency Framework and a Global Stocktake, collectively accelerating the worldwide transition toward zero-carbon economies.
 
+# Food Insecurity
+
+### Trends of food insecurity
+MODIFICA: SUDAN HA DOPPIO PUNTO NEL GRAFICO (AGGREGATO E SINGOLO)
+- Grafico (assets/toADD/sito/HTI_vs_SSD_SDN.html)
+  .haiti trend crescente, sud sudan trend stabile ma con oscillazioni
+  .sudan inizio livelli bassi di insicurezza alimientari e shock da 15/4/23 in poi
+  testo: The graph illustrates the aggregated percentage of the population experiencing IPC Phase 3+ food insecurity across three nations from 2017 to 2026. Haiti demonstrates a sustained, secular upward trend, with acute food insecurity climbing steadily from below 20% in late 2017 to over 50% by 2026. In contrast, South Sudan exhibits a stable longitudinal baseline but is characterized by severe, high-amplitude oscillations, repeatedly fluctuating between approximately 35% and 65%. Sudan presents a distinctly different trajectory: the country maintained comparatively low levels of food insecurity (remaining under 25%) until early 2023. Following the onset of systemic conflict on April 15, 2023, Sudan experienced a massive structural shock, resulting in a sudden, sharp escalation in food insecurity that peaked near 55%, completely destabilizing its previous baseline.
+  
+-grafico( assets/toADD/sito/SDN_3+.html)
+  .aggiungere linea rossa 15/4/23 in poi (inizio shock)
+  .descrizione guerra in sudan: The Sudanese civil war, initiated in April 2023, is a violent power struggle between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) following a 2021 coup. The conflict has triggered a catastrophic humanitarian crisis resulting in the displacement of over 14 million people. It has produced extreme food insecurity metrics, with 25 million individuals affected by severe shortages and famine, severely compounding the difficulty of clustering and analyzing accurate humanitarian reports on the ground. Current fatality estimates reach up to 400,000
+ 
+ testo: Prior to the conflict's onset, the percentage of the aggregated population experiencing IPC Phase 3+ acute food insecurity oscillated within a relatively stable, though concerning, baseline between roughly 13% and 25% from July 2019 through early 2023.
+Following the start of the conflict in early 2023, the data exhibits a violent upward inflection point. By July 2023, the insecurity metric breaches 40%, demonstrating an immediate and severe degradation of logistical and agricultural stability. This sharp escalation continues unabated, propelling the food insecurity level to a devastating peak of nearly 55% by mid-2024. While there is a slight regression following this peak, the baseline has been fundamentally destabilized; the metric remains structurally elevated well above 40% through January 2026, indicating a prolonged, systemic humanitarian crisis with no return to pre-war levels.
+
+-grafico Afghanistan (assets/toADD/sito/AFG_IPC3+.html)
+ .trend stabile basso
+ .shock 5/2021 ritiro truppe USA e poi diminuzione trend
+testo:The graph presented tracks the aggregated percentage of the population facing IPC Phase 3+ acute food insecurity. Initially, the metric fluctuates around a relatively stable, low baseline. This stability is violently disrupted by a massive structural shock beginning in May 2021, coinciding with the withdrawal of US troops. This geopolitical event acts as a catalyst for a sharp escalation in acute food insecurity, driving the population percentage to a peak of nearly 55%. Following this acute crisis phase, the data demonstrates a steady, though volatile, downward trajectory, with food insecurity levels progressively declining through 2026 to settle back near 20%.
+
+ - Stagionalità Sus Sudan (assets/toADD/sito/01_Statistical_Decomposition_STL.png)
+   .stagionalità visibile fino a 2020 (COVID) e poi si perde il dato
+   .ha senso metterlo?
+   testo: The Seasonal and Trend-Loess (STL) decomposition illustrates a drastic structural break in the time series data. Through 2018 and 2019, the seasonal component exhibits a distinct, regular periodicity with a pronounced amplitude, indicating a strong underlying cyclical pattern. However, corresponding with the systemic shock of the COVID-19 pandemic in 2020, this established cyclicality abruptly deteriorates. The seasonal signal heavily flattens and loses its predictable rhythmic structure, demonstrating that the standard temporal patterns were completely disrupted and the historical seasonal signature was effectively erased from the data post-2020.
+
+
 # Project description
 <div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/Progetto-Hero.png" alt="Heatmap of Food Insecurity Drivers by Country" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
 </div>
-
 
 # <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
 
@@ -40,11 +62,19 @@ To achieve this, HERO integrates and analyzes diverse global data streams—rang
 The analysis is conducted at the regional level (Admin1). This choice makes it possible to overcome the severe data scarcity found at the local level (Admin2), ensuring a robust, continuous dataset enriched with global geopolitical indicators that would otherwise be lost at finer resolutions.
 In this way, HERO goes beyond capturing a snapshot of the current situation to provide an early-warning tool capable of forecasting evolving risks. This enables humanitarian organizations and policymakers to plan timely, targeted, data-driven interventions before an emergency turns into a catastrophe.
 
+-- METTERE IMMAGINE ANIMATA PAESI CHE SI SPENGONO E ACCENDONO NEL TEMPO -- paesi nelle varie fasi (rosso tenue fasi iniziali e rosso scuro fasi più gravi)
 
 
----
 
-## Drivers
+-- why we move from national to admin1 level analysis
+### Events of extreme levels of food insecurity (IPC Phase 5)
+<div class="my-5 text-center">
+    <img src="{{ site.baseurl }}/assets/toADD/sito/SSD_temporal_anomalies.png" alt="Static inference, per-country detail, one marker per scope" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
+    <p class="text-muted mt-2"><small>We shift to admin1-level analysis to capture sub-national variances and cross-border similarities that broad national averages obscure. While admin2 provides better granularity, severe data sparsity renders it analytically unviable. Admin1 strikes the optimal balance, ensuring robust data availability while retaining sufficient detail to expose localized anomalies.</small></p>
+</div> 
+
+# Food Insecurity through the lens of its Main Drivers
+## Drivers description
 
 To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
 
@@ -117,21 +147,35 @@ To understand the severity of food crises, HERO integrates and monitors various 
     </div>
 </div>
 
+### Trends of food insecurity x trends of drivers+
+- Inserire grafici drivers (AFFIANCARLI UNO A ALTRO E NON SOVRAPPORLI)
+- confrontare i trends dei drivers con trends food insecurity (c'è una correlazione)
 
----
--- why we move from national to admin1 level analysis
-### Events of extreme levels of food insecurity (IPC Phase 5)
-<div class="my-5 text-center">
-    <img src="{{ site.baseurl }}/assets/toADD/sito/SSD_temporal_anomalies.png" alt="Static inference, per-country detail, one marker per scope" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
-    <p class="text-muted mt-2"><small>We shift to admin1-level analysis to capture sub-national variances and cross-border similarities that broad national averages obscure. While admin2 provides better granularity, severe data sparsity renders it analytically unviable. Admin1 strikes the optimal balance, ensuring robust data availability while retaining sufficient detail to expose localized anomalies.</small></p>
-</div> 
+### Seasonality of food insecurity x trends of drivers+
+-Inserire grafici (AFFIANCARLI UNO A ALTRO E NON SOVRAPPORLI)
+-possiamo far vedere stagionalità (CHIRPS E NDVI)
+-anche i drivers meno sensibili a stagionalità hanno stagionalità (ACLED e IDP)
 
-# Food Insecurity through the lens of its Main Drivers
-### Drivers
-- Trends
-- Seasonality
-### Trends of food insecurity x trends of drivers
 ### Missing data
+-grafico (assets/toADD/sito/datiMancanti.html)
+ .alta presenza di valori nulli (specialmente ACLED)
+ .paesi con molti valori nulli e altri con meno.
+ .**CITAZIONE INTERVISTA** "i missing values sono un pain point"
+ .problemi per modelli predittivi.
+ .presenza maggiore di valori nulli a livello admin2
+ .importante capire origine valori nulli (blackout ACLED per assenza conflitti o mancata rilevazione per via dei conflitti?          mancanza rilevazione WFP per presenza conflitti?)
+  **citazione intervista**: Non conoscendo le cause per cui mancano i dati fare imputazione potrebbe nuocere alla explainability.    In parte si puo collegare alla shadow matrix (Acled). Si potrebbe incrociare con dati esterni (Manuel). missing values è il      problema principale delle nostre analisi. Se IDP è missing può voler dire molte cose: troppo pericoloso, surveys con pochissime persone.
+testo:
+The prevalence of missing values constitutes the primary obstacle in this analysis, representing a significant "pain point" that severely degrades the performance and reliability of predictive models. As evidenced by the missingness matrix, there is a high concentration of null values characterized by stark disparities across different countries. Furthermore, data sparsity increases significantly at the admin2 level compared to broader aggregations, with the ACLED dataset being particularly compromised.
+Understanding the precise origin of these missing values is critical before applying any statistical interventions. As noted in stakeholder interviews, implementing blind imputation without knowing the underlying causes of the data gaps actively harms the explainability of the models. The absence of data is rarely random; for instance, an ACLED blackout could signify a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has collapsed. Similarly, missing IDP or WFP data often translates to environments that are too dangerous for humanitarian surveyors to operate in, or situations where survey sample sizes are critically low. To mitigate these structural blind spots, analytical strategies must cross-reference external data sources—as suggested by Manuel—or utilize shadow matrices for datasets like ACLED to explicitly capture and model the missingness itself, rather than arbitrarily filling the voids.
+
+<div class="full-width-wrapper">
+    <img src="{{ site.baseurl }}assets/images/ANALISI_NULLI_correlazione_strutturale.png" alt="sbd-pattern" class="full-width-image">
+     <p class="text-muted mt-2"><small>
+
+The structural analysis of missingness reveals that data gaps across the evaluated humanitarian datasets are distinctly non-random and highly correlated. This structural missingness offers critical explainability regarding systemic data collection failures, demonstrating that outages occur in distinct functional blocks. Environmental sensor blackouts exhibit severe collinearity, highlighted by a 0.92 correlation between NDVI and CHIRPS, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Concurrently, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness in the field; it correlates strongly with missing market vulnerability data (WFP, 0.65) and displacement metrics (IDP, 0.60). This indicates that kinetic events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots during periods of acute crisis.</small></p>
+</div>
+ 
 ### Clustering based on main drivers (quantitative)
 
 -- also show how admin1s across countries are similar 
