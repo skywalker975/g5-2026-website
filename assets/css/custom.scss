@@ -173,4 +173,73 @@ iframe {
   padding: 6px 12px;
   border-radius: 20px;
   display: inline-block;
+}
+
+// -----------------------------------------------------------------------------
+// Fixes for classes referenced in the pages but previously undefined (no-ops)
+// -----------------------------------------------------------------------------
+
+// Missing primary variant — makes the two intro question-cards symmetric
+.card-border-top-primary { border-top: 4px solid var(--primary); }
+
+// Styled section divider (was rendering as a bare <hr>)
+.section-divider {
+  border: 0;
+  height: 3px;
+  margin: 3rem 0;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0) 0%, #3b82f6 50%, rgba(59, 130, 246, 0) 100%);
+  opacity: 0.6;
+}
+
+// Real hover-lift (referenced on many cards/images but undefined)
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+}
+
+// Entrance animation (fade-in-up is used with inline animation-delay but had no keyframes)
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up { animation: none; opacity: 1; }
+}
+
+// Style tables placed inside a comparison-table-wrapper
+.comparison-table-wrapper { overflow-x: auto; }
+.comparison-table-wrapper table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  background: #fff;
+}
+.comparison-table-wrapper thead th {
+  background: #1e3a8a;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+.comparison-table-wrapper th,
+.comparison-table-wrapper td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.comparison-table-wrapper tbody tr:hover { background: #f1f5f9; }
+.comparison-table-wrapper tr.highlight-row { background: #dbeafe; font-weight: 600; }
+
+// Centered breakout wider than the content container (e.g. the live map),
+// capped on ultrawide screens, with a small gutter from the viewport edges
+.wide-breakout {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94vw;
+  max-width: 1500px;
 }
