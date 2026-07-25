@@ -17,62 +17,64 @@ subtitle: "Handling missing data"
 <!-- Data Preprocessing & Feature Refinement Header -->
 <h4 class="text-primary fw-bold mb-2 mt-4">Data Preprocessing & Feature Refinement</h4>
 <p class="text-muted mb-4">
-    Prior to handling missing values, the joint feature space is refined through targeted Principal Component Analysis (PCA) to decouple highly cross-correlated indicators and construct an orthogonal feature representation for downstream modeling.
+    Prior to handling missing values, the joint feature space across ACTED, GDELT/ACLED, and Rainfall/Floods datasets is refined through targeted Principal Component Analysis (PCA) to resolve severe domain multicollinearity and ensure structural clustering stability.
 </p>
 
 <div class="container mt-4">
     <div class="row">
-        <!-- Step 1 Card: Dimensionality Reduction & PCA -->
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-primary">
+        <!-- Unified Card: Dimensionality Reduction & Domain Feature Decoupling -->
+        <div class="col-12 mb-4">
+            <div class="card hero-card card-border-top-primary">
                 <div class="card-body">
-                    <h4 class="card-title text-primary">
-                        <i class="fas fa-compress-arrows-alt me-2"></i> STEP 1: DISTANCE & GEOMETRY PROTECTION
+                    <h4 class="card-title text-primary mb-3">
+                        <i class="fas fa-compress-arrows-alt me-2"></i> FEATURE REFINEMENT & DOMAIN DECOUPLING
                     </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Mathematical Foundations & Clustering Stability</h6>
-                    <ul class="list-unstyled mb-0 card-text text-muted">
-                        <li class="mb-3">
-                            <strong class="text-dark">Multicollinearity Mitigation:</strong><br>
-                            Eliminates the artificial over-weighting of repetitive variables, preventing severe distortion and warping of the Euclidean distance space.
-                        </li>
-                        <li class="mb-3">
-                            <strong class="text-dark">Isotropic Projection:</strong><br>
-                            Transforms correlated feature axes into uncorrelated, orthogonal components that preserve maximum global variance while discarding structural noise.
-                        </li>
-                        <li class="mb-3">
-                            <strong class="text-dark">Cluster Explainability:</strong><br>
-                            Stabilizes cluster boundaries against local fluctuations, ensuring clear identification of unique underlying drivers for each identified group.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-<!-- Step 2 Card: Domain Feature Decoupling -->
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-danger">
-                <div class="card-body">
-                    <h4 class="card-title text-danger">
-                        <i class="fas fa-layer-group me-2"></i> STEP 2: DOMAIN FEATURE DECOUPLING
-                    </h4>
-                    <h6 class="card-subtitle mb-3 text-muted">Application to Conflict & Environmental Datasets</h6>
-                    <ul class="list-unstyled mb-0 card-text text-muted">
-                        <li class="mb-3">
-                            <strong class="text-dark">Targeted Domain Subgroups:</strong><br>
-                            Isolates overlapping event-tracking indicators across <strong>ACTED</strong>, <strong>GDELT/ACLED</strong>, and <strong>Rainfall/Floods</strong> datasets.
-                        </li>
-                        <li class="mb-3">
-                            <strong class="text-dark">Subgroup Orthogonalization:</strong><br>
-                            Applies PCA independently within conflict and environmental clusters to compress redundant signals without cross-contaminating domain semantics.
-                        </li>
-                        <li>
-                            <strong class="text-dark">Intensity Retention:</strong><br>
-                            Strips out spatial and temporal redundancy while fully preserving the underlying magnitude and severity of regional events.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                    <div class="row">
+                        <!-- Column 1: Theoretical & Geometric Rationale -->
+                        <div class="col-md-6">
+                            <h6 class="text-dark fw-bold border-bottom pb-2 mb-3">
+                                <i class="fas fa-calculator me-2 text-primary"></i> Distance & Geometry Protection
+                            </h6>
+                            <ul class="list-unstyled card-text text-muted">
+                                <li class="mb-3">
+                                    <strong class="text-dark">Multicollinearity Mitigation:</strong><br>
+                                    Eliminates artificial over-weighting of repetitive variables, preventing severe warping of the Euclidean distance space in downstream algorithms.
+                                </li>
+                                <li class="mb-3">
+                                    <strong class="text-dark">Isotropic Projection:</strong><br>
+                                    Transforms cross-correlated axes into orthogonal, uncorrelated components that capture maximum variance while stripping redundant noise.
+                                </li>
+                                <li class="mb-3">
+                                    <strong class="text-dark">Cluster Explainability:</strong><br>
+                                    Stabilizes cluster boundaries against local fluctuations, ensuring distinct and highly interpretable drivers within each identified group.
+                                </li>
+                            </ul>
+                        </div>
+<!-- Column 2: Application to Specific Datasets -->
+                        <div class="col-md-6 border-start-md">
+                            <h6 class="text-dark fw-bold border-bottom pb-2 mb-3">
+                                <i class="fas fa-layer-group me-2 text-primary"></i> Domain Application (Conflict & Climate)
+                            </h6>
+                            <ul class="list-unstyled card-text text-muted">
+                                <li class="mb-3">
+                                    <strong class="text-dark">Subgroup Decoupling:</strong><br>
+                                    Applies PCA independently within isolated conflict (GDELT, ACLED) and environmental (ACTED, Rainfall/Floods) subgroups to avoid cross-contaminating domain semantics.
+                                </li>
+                                <li class="mb-3">
+                                    <strong class="text-dark">Signal Compression:</strong><br>
+                                    Compresses highly collinear event-tracking indicators into lean, orthogonal features prior to missing value imputation.
+                                </li>
+                                <li class="mb-3">
+                                    <strong class="text-dark">Intensity Retention:</strong><br>
+                                    Strips out spatial and temporal redundancy while fully preserving the underlying magnitude and severity of regional events.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
+</div>
+</div>
+</div>
 </div>
 </div>
 
