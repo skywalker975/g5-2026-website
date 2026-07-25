@@ -104,8 +104,18 @@ subtitle: "Handling missing data"
                 </div>
             </div>
         </div>
- <!-- Step 2 Card: Optimal Distance-Weighted Imputation -->
-        <div class="col-md-6 mb-4">
+
+
+| **Clustering** | Silhouette indicator |
+|---|---|
+| K-Means (W/o coordinates) | 0.193 | 
+| Hierarchical (W/o coordinates) | 0.172 | 
+| K-Means (With coordinates) | 0.166 | 
+| Hierarchical (With coordinates) | 0.122 | 
+
+
+<!-- Step 2 Card: Optimal Distance-Weighted Imputation -->
+<div class="col-md-6 mb-4">
             <div class="card h-100 hero-card card-border-top-danger">
                 <div class="card-body">
                     <h4 class="card-title text-danger">
@@ -132,10 +142,5 @@ subtitle: "Handling missing data"
     </div>
 </div>
 
-| **Clustering** | Silhouette indicator |
-|---|---|
-| K-Means (W/o coordinates) | 0.193 | 
-| Hierarchical (W/o coordinates) | 0.172 | 
-| K-Means (With coordinates) | 0.166 | 
-| Hierarchical (With coordinates) | 0.122 | 
+
 
