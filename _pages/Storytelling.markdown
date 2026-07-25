@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Storytelling"
-permalink: /introduzione.html
+permalink: /Storytelling.html
 show_sidetoc: true
 header_type: hero
 header_img: assets/images/folium_map.webp
@@ -187,8 +187,56 @@ The structural analysis of missingness reveals that data gaps across the evaluat
 
 
 # Predicting Food Insecurity through its drivers
-### Static inference
-### Nowcasting
+
+Can the drivers predict hunger? We ask two questions, each with its own model.
+
+<div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1rem 1.25rem; margin-top: 1.5rem; margin-bottom: 1rem;">
+<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1;">Question 1 · Static inference</div>
+<h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #0369a1;">What explains where hunger is?</h4>
+</div>
+
+<div style="background-color: #fff8e1; border-left: 5px solid #e0a800; border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #a16207;">Question 2 · Nowcasting</div>
+<h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #a16207;">What are hunger levels right now?</h4>
+</div>
+
+## <span style="border-left: 5px solid #0284c7; padding-left: 0.6rem; color: #0369a1;">What explains where hunger is?</span>
+
+- Hunger is local. The drivers alone do not beat a simple country-average baseline, because one global rule cannot fit dozens of very different settings.
+- Localising fixes this. Grouping areas by what their IPC reports describe (conflict, water, prices) works best, better than geography or driver values.
+- Food prices and conflict are the strongest drivers.
+
+<div class="my-5 text-center">
+    <img src="{{ site.baseurl }}/assets/images/nowcast/static_scope_box.png" alt="Accuracy by grouping method" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
+    <p class="text-muted mt-2"><small>Accuracy by grouping method, scored per country. Boxes to the right of the dashed global line do better. Grouping by report text wins.</small></p>
+</div>
+
+<div class="my-5 text-center">
+    <img src="{{ site.baseurl }}/assets/images/nowcast/static_shap_beeswarm.png" alt="Which drivers explain hunger" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
+    <p class="text-muted mt-2"><small>Higher food prices and more conflict push the predicted level of hunger up.</small></p>
+</div>
+
+## <span style="border-left: 5px solid #e0a800; padding-left: 0.6rem; color: #a16207;">What are hunger levels right now?</span>
+
+IPC assessments are slow, so a shock can go unseen for months. We estimate the current level from the last assessment plus the latest drivers.
+
+- About 18 percent lower error than carrying the last value forward, and it tracks the direction of change.
+- One global model is enough here, the opposite of the static question. Once the model knows an area's own last value, a local model adds little.
+- Rainfall is the strongest early signal among the drivers.
+
+<div class="my-5 text-center">
+    <img src="{{ site.baseurl }}/assets/images/nowcast/nowcast_shap_beeswarm.png" alt="What drives the nowcast" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
+    <p class="text-muted mt-2"><small>The recent assessments matter most, and rainfall is the strongest driver signal.</small></p>
+</div>
+
+<div class="my-4">
+    <iframe src="{{ site.baseurl }}/assets/charts/nowcast_map.html" width="100%" height="640px" style="border: 1px solid #e0e0e0; border-radius: 0.5rem;" loading="lazy" title="HERO live nowcast map"></iframe>
+    <p class="text-muted mt-2"><small>Latest nowcast of the share of people in IPC Phase 3 or above. Hover for the trend, click to zoom.</small></p>
+</div>
+
+<div class="my-4 text-center">
+    <a href="{{ site.baseurl }}/modelling.html" class="btn btn-premium-hero">Read the full modelling details</a>
+</div>
 
 
 # Conclusion + UI

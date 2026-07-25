@@ -49,6 +49,8 @@ navbar:
     img: "./assets/images/Logo_masthead.png" # non modificare
     url: /introduzione.html
   nav:
+    - title: Storytelling
+      url: /Storytelling.html
     - title: Introduction
       url: /introduzione.html
     - title: Collection and data processing
