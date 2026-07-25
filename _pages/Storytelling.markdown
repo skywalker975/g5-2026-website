@@ -30,7 +30,16 @@ MODIFICA: SUDAN HA DOPPIO PUNTO NEL GRAFICO (AGGREGATO E SINGOLO)
 - Grafico (assets/toADD/sito/HTI_vs_SSD_SDN.html)
   .haiti trend crescente, sud sudan trend stabile ma con oscillazioni
   .sudan inizio livelli bassi di insicurezza alimientari e shock da 15/4/23 in poi
-  testo: The graph illustrates the aggregated percentage of the population experiencing IPC Phase 3+ food insecurity across three nations from 2017 to 2026. Haiti demonstrates a sustained, secular upward trend, with acute food insecurity climbing steadily from below 20% in late 2017 to over 50% by 2026. In contrast, South Sudan exhibits a stable longitudinal baseline but is characterized by severe, high-amplitude oscillations, repeatedly fluctuating between approximately 35% and 65%. Sudan presents a distinctly different trajectory: the country maintained comparatively low levels of food insecurity (remaining under 25%) until early 2023. Following the onset of systemic conflict on April 15, 2023, Sudan experienced a massive structural shock, resulting in a sudden, sharp escalation in food insecurity that peaked near 55%, completely destabilizing its previous baseline.
+  The graph illustrates the aggregated percentage of the population experiencing IPC
+  Phase 3+ food insecurity across three nations from 2017 to 2026. Haiti demonstrates a
+  sustained, secular upward trend, with acute food insecurity climbing steadily from below 20%
+  in late 2017 to over 50% by 2026. In contrast, South Sudan exhibits a stable longitudinal
+  baseline but is characterized by severe, high-amplitude oscillations, repeatedly fluctuating
+  between approximately 35% and 65%. Sudan presents a distinctly different trajectory: the
+  country maintained comparatively low levels of food insecurity (remaining under 25%) until
+  early 2023. Following the onset of systemic conflict on April 15, 2023, Sudan experienced a
+  massive structural shock, resulting in a sudden, sharp escalation in food insecurity that
+  peaked near 55%, completely destabilizing its previous baseline.
   
 -grafico( assets/toADD/sito/SDN_3+.html)
   .aggiungere linea rossa 15/4/23 in poi (inizio shock)
