@@ -133,8 +133,19 @@ subtitle: "Handling missing data"
 </div>
 
 | **Clustering** | Silhouette indicator  |
-|---|---|---|---|
+|---|---|
 | K-Means (W/o coordinates) | 0.193 | 
 | Hierarchical (W/o coordinates) | 0.172 | 
 | K-Means (With coordinates) | 0.166 | 
 | Hierarchical (With coordinates) | 0.122 | 
+
+
+| driver family | importance |
+|---|---|
+| **food prices** | 4.04 |
+| **conflict** | 3.88 |
+| seasonality | 3.38 |
+| vegetation | 2.87 |
+| displacement | 2.56 |
+| media | 2.15 |
+| rainfall | 1.76 |
