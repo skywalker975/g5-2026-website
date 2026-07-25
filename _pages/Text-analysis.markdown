@@ -247,8 +247,59 @@ To move beyond simple word counts and uncover the hidden semantic structures of 
         <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
 
         To categorize the reports into distinct crisis typologies, we tested two different clustering algorithms. First, <b>K-Means</b>, an approach that partitions the space into a predefined number of clusters, perfect for segmenting broad macro-trends. Second, <b>HDBSCAN</b>, a density-based algorithm capable of discovering clusters of varying shapes and sizes while isolating "noise" (reports that don't fit into any clear pattern). 
-
         </p>
+        
+        <div class="mt-4">
+            <style scoped>
+                .dataframe tbody tr th:only-of-type {
+                    vertical-align: middle;
+                }
+                .dataframe tbody tr th {
+                    vertical-align: top;
+                }
+                .dataframe thead th {
+                    text-align: right;
+                }
+            </style>
+            <div class="table-responsive">
+                <table border="1" class="dataframe table table-striped table-bordered text-center" style="font-size: 0.9rem;">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th></th>
+                      <th style="text-align: center;">Metrica</th>
+                      <th style="text-align: center;">K-Means</th>
+                      <th style="text-align: center;">HDBSCAN</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>0</th>
+                      <td>Numero di Cluster trovati</td>
+                      <td>10</td>
+                      <td>11</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>Silhouette Score</td>
+                      <td>0.380</td>
+                      <td>0.386</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>Calinski-Harabasz Index</td>
+                      <td>280.6</td>
+                      <td>219.0</td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>Davies-Bouldin Index</td>
+                      <td>0.889</td>
+                      <td>0.884</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
 
     </div>
 
@@ -311,11 +362,8 @@ To move beyond simple word counts and uncover the hidden semantic structures of 
 
 
 <div class="iframe-container my-5" style="width: 100%; height: 500px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-
     <iframe src="{{ site.baseurl }}/assets/data/df_cluster_tf_idf.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
-
 </div>
-
 
 
 <hr class="section-divider">

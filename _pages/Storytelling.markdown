@@ -382,7 +382,7 @@ To move beyond simple word counts and uncover the hidden semantic structures of 
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-user-secret"></i> 1. Anonymization: Hiding the Map</h4>
         <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
-        Before diving into the vocabulary, it was crucial to anonymize the texts using <b>GLiNER</b>, a pretrained model for <a href="{{ site.baseurl }}/Text-analysis.html">Named Entity Recognition (NER)</a>. We explicitly masked dates and geopolitical entities (like country and region names). The goal was to prevent the algorithm from grouping reports simply because they mentioned the same country, forcing it instead to find the <i>true</i> underlying causes of the crisis.
+        Before diving into the vocabulary, it was crucial to anonymize the texts using <a href="{{ site.baseurl }}/Text-analysis.html"><b>GLiNER</b></a>, a pretrained model for Named Entity Recognition (NER). We explicitly masked dates and geopolitical entities (like country and region names). The goal was to prevent the algorithm from grouping reports simply because they mentioned the same country, forcing it instead to find the <i>true</i> underlying causes of the crisis.
         </p>
 
         <div class="example-box mt-4 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #007bff;">
@@ -498,14 +498,21 @@ Kenya and Uganda are bound by a shared geographical vulnerability. Their evoluti
     <iframe src="{{ site.baseurl }}/assets/data/df_cluster_embedding_densi_ok_pair_fullscreen.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
 </div>
 
-#### Profile 2: The Multidimensional Collapse (Sudan & Haiti)
+#### Profile 2: The Multi-Shock Vortex (Mozambique & Madagascar)
 
 <p style="font-size: 1rem; line-height: 1.6; text-align: justify;">
-At first glance, a North African nation and a Caribbean island have nothing in common. Yet, the model recognized their shared tragedy. Both nations are enduring a profound structural collapse, overwhelmed by <span class="history-tooltip">severe political crises<span class="tooltip-text"><i class="fas fa-info-circle"></i> Haiti was plunged into chaos following the 2021 assassination of President Jovenel Moïse, while Sudan's fragile transition shattered into civil war in April 2023.</span></span> and escalating <span class="history-tooltip">violent internal conflicts<span class="tooltip-text"><i class="fas fa-info-circle"></i> Armed factions in Sudan have displaced millions, while heavily armed gangs in Haiti have effectively blockaded Port-au-Prince, cutting off vital food supplies.</span></span>. Their trajectories are not driven by the weather, but by <b>Conflict-Induced Refugee Emergency</b> and <b>Agricultural Price Inflation</b>. This profile shows us the darkest side of food insecurity: hunger weaponized by systemic failure and violence.
+Located across the Mozambique Channel from one another, these two nations share more than just geography: they are trapped in the exact same vortex of climatic and systemic shocks. The algorithm maps an incredibly complex, yet shared trajectory for both. They are repeatedly battered by <b>Rainfall Impact on Crops</b> due to devastating Indian Ocean weather events <span class="history-tooltip">(like recurrent super-cyclones)<span class="tooltip-text"><i class="fas fa-info-circle"></i> Both countries are frequently in the crosshairs of extreme cyclones (e.g., Idai, Freddy, Batsirai), which decimate agricultural lands and infrastructure.</span></span>. This baseline fragility makes them highly susceptible to external shocks, driving them through identical, synchronized phases of <b>COVID-19 Economic Impact</b> and soaring <b>Agricultural Price Inflation</b>. Ultimately, these compounding economic and climatic crises converge on the most vulnerable, plunging both nations into recurring, severe spikes of <b>Child Malnutrition</b>. Their shared sequence highlights how repetitive climate disasters trap fragile economies in an inescapable loop.
 </p>
 
 <div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-    <iframe src="{{ site.baseurl }}/assets/data/df_cluster_embedding_densi_ok_pair4_fullscreen.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
+    <iframe src="{{ site.baseurl }}/assets/data/df_cluster_embedding_densi_ok_pair6_fullscreen.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
+</div>
+
+<div style="background-color: #f8f9fa; border-left: 5px solid #6366f1; border-radius: 6px; padding: 1.5rem; margin-top: 3rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+<h4 style="font-weight: 700; margin-top: 0; color: #4338ca;"><i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 10px;"></i> Looking Ahead: Clustering by Trajectory</h4>
+<p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0; color: #475569; text-align: justify;">
+The discovery of these perfectly synchronized crisis profiles opens a fascinating door for future research. Instead of classifying regions merely by their current dominant topic, what if we clustered them by their entire evolutionary sequence? By grouping nations that share the same "DNA" of crisis evolution (e.g., the <i>Climate-to-Economic-Collapse</i> pattern vs. the <i>Chronic-Conflict-Trap</i>), predictive models could anticipate the next phase of a food crisis simply by recognizing the historical precedent set by another country in the same trajectory group.
+</p>
 </div>
 
 

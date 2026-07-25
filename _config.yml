@@ -56,16 +56,18 @@ navbar:
     - title: Collection and data processing
       url: /Collection-and-Data-processing.html
       child:
+        - title: Data Collection
+          url: /Data-Collection.html
         - title: Missing values
           url: /Missing-values.html
         - title: Data augumentation
           url: /data-augumentation.html
     - title: Clustering
       url: /clustering.html
-    - title: Modelling
-      url: /modelling.html
     - title: Text analysis
       url: /Text-analysis.html
+    - title: Modelling
+      url: /modelling.html
     - title: References
       url: /References.html
     
