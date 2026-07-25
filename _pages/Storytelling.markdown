@@ -39,8 +39,7 @@ The graph illustrates the aggregated percentage of the population experiencing I
   peaked near 55%, completely destabilizing its previous baseline.
   
 -grafico( assets/toADD/sito/SDN_3+.html)
-<iframe src="assets/toADD/sito/SDN_3+_modificato_v2.html" width="100%" height="600" style="border:none;"></iframe>
-  .aggiungere linea rossa 15/4/23 in poi (inizio shock)
+<iframe src="assets/toADD/sito/SDN_3_modificato_v2.html" width="100%" height="600" style="border:none;"></iframe>
   .descrizione guerra in sudan:
   testo: From mid-2019 to early 2023, the share of Sudan's population facing severe food insecurity (IPC Phase 3+)
   remained relatively low and stable, staying between 13% and 25%.
@@ -62,12 +61,13 @@ The graph illustrates the aggregated percentage of the population experiencing I
  The metric remains structurally elevated well above 40% through January 2026, showing that this isn't a
  temporary spike, but a lasting crisis with no sign of returning to pre-war conditions.
 
--grafico Afghanistan <iframe src="assets/toADD/sito/AFG_IPC3+_modificata.html" width="100%" height="600" style="border:none;"></iframe>
+-grafico Afghanistan 
+<iframe src="assets/toADD/sito/AFG_IPC3+_modificata.html" width="100%" height="600" style="border:none;"></iframe>
  .trend stabile basso
  .shock 5/2021 ritiro truppe USA e poi diminuzione trend
 testo:The graph presented tracks the aggregated percentage of the population facing IPC Phase 3+ acute food insecurity. Initially, the metric fluctuates around a relatively stable, low baseline. This stability is violently disrupted by a massive structural shock beginning in May 2021, coinciding with the withdrawal of US troops. This geopolitical event acts as a catalyst for a sharp escalation in acute food insecurity, driving the population percentage to a peak of nearly 55%. Following this acute crisis phase, the data demonstrates a steady, though volatile, downward trajectory, with food insecurity levels progressively declining through 2026 to settle back near 20%.
 
- - Stagionalità Sus Sudan (assets/toADD/sito/01_Statistical_Decomposition_STL.png)
+ - Stagionalità Sud Sudan (assets/toADD/sito/01_Statistical_Decomposition_STL.png)
    .stagionalità visibile fino a 2020 (COVID) e poi si perde il dato
    .ha senso metterlo?
    testo: The Seasonal and Trend-Loess (STL) decomposition illustrates a drastic structural break in the time series data. Through 2018 and 2019, the seasonal component exhibits a distinct, regular periodicity with a pronounced amplitude, indicating a strong underlying cyclical pattern. However, corresponding with the systemic shock of the COVID-19 pandemic in 2020, this established cyclicality abruptly deteriorates. The seasonal signal heavily flattens and loses its predictable rhythmic structure, demonstrating that the standard temporal patterns were completely disrupted and the historical seasonal signature was effectively erased from the data post-2020.
@@ -182,6 +182,7 @@ To understand the severity of food crises, HERO integrates and monitors various 
 -anche i drivers meno sensibili a stagionalità hanno stagionalità (ACLED e IDP)
 
 ### Missing data
+<iframe src="assets/toADD/sito/datiMancanti.html" width="100%" height="600" style="border:none;"></iframe>
 -grafico (assets/toADD/sito/datiMancanti.html)
  .alta presenza di valori nulli (specialmente ACLED)
  .paesi con molti valori nulli e altri con meno.
