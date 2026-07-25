@@ -28,9 +28,9 @@ The Paris Agreement is a legally binding international climate treaty adopted in
 ### Trends of food insecurity
 MODIFICA: SUDAN HA DOPPIO PUNTO NEL GRAFICO (AGGREGATO E SINGOLO)
 - Grafico (assets/toADD/sito/HTI_vs_SSD_SDN.html)
-  .haiti trend crescente, sud sudan trend stabile ma con oscillazioni
-  .sudan inizio livelli bassi di insicurezza alimientari e shock da 15/4/23 in poi
-  The graph illustrates the aggregated percentage of the population experiencing IPC
+  [.haiti trend crescente, sud sudan trend stabile ma con oscillazioni
+  .sudan inizio livelli bassi di insicurezza alimientari e shock da 15/4/23 in poi]
+  testo:The graph illustrates the aggregated percentage of the population experiencing IPC
   Phase 3+ food insecurity across three nations from 2017 to 2026. Haiti demonstrates a
   sustained, secular upward trend, with acute food insecurity climbing steadily from below 20%
   in late 2017 to over 50% by 2026. In contrast, South Sudan exhibits a stable longitudinal
@@ -43,10 +43,26 @@ MODIFICA: SUDAN HA DOPPIO PUNTO NEL GRAFICO (AGGREGATO E SINGOLO)
   
 -grafico( assets/toADD/sito/SDN_3+.html)
   .aggiungere linea rossa 15/4/23 in poi (inizio shock)
-  .descrizione guerra in sudan: The Sudanese civil war, initiated in April 2023, is a violent power struggle between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) following a 2021 coup. The conflict has triggered a catastrophic humanitarian crisis resulting in the displacement of over 14 million people. It has produced extreme food insecurity metrics, with 25 million individuals affected by severe shortages and famine, severely compounding the difficulty of clustering and analyzing accurate humanitarian reports on the ground. Current fatality estimates reach up to 400,000
+  .descrizione guerra in sudan:
+  testo: From mid-2019 to early 2023, the share of Sudan's population facing severe food insecurity (IPC Phase 3+)
+  remained relatively low and stable, staying between 13% and 25%.
+  That changed in April 2023, when civil war broke out between the Sudanese Armed Forces (SAF) and
+  the Rapid Support Forces (RSF) after the 2021 coup.
+  Food insecurity then rose sharply. Within a year, it more than doubled — climbing from around 35% to a 
+  peak of over 53% by mid-2024.
+  Levels have stayed high ever since, remaining between 40% and 50% through 2025. The impact goes far
+  beyond this chart: the war has forced more than 14 million people from their homes, left around 25
+  million facing severe hunger, and caused an estimated 400,000 deaths — making it one of the worst
+  humanitarian crises in the world today.
  
- testo: Prior to the conflict's onset, the percentage of the aggregated population experiencing IPC Phase 3+ acute food insecurity oscillated within a relatively stable, though concerning, baseline between roughly 13% and 25% from July 2019 through early 2023.
-Following the start of the conflict in early 2023, the data exhibits a violent upward inflection point. By July 2023, the insecurity metric breaches 40%, demonstrating an immediate and severe degradation of logistical and agricultural stability. This sharp escalation continues unabated, propelling the food insecurity level to a devastating peak of nearly 55% by mid-2024. While there is a slight regression following this peak, the baseline has been fundamentally destabilized; the metric remains structurally elevated well above 40% through January 2026, indicating a prolonged, systemic humanitarian crisis with no return to pre-war levels.
+ testo: Before the conflict's began, the percentage of the aggregated population
+ experiencing IPC Phase 3+ acute food insecurity stayed within a relatively stable range, though still concerning — moving between roughly 13% and 25% from July 2019 through early 2023.
+ Once the the conflict began in early 2023, the data takes a dramatic turn upward. By
+ July 2023, the insecurity metric passes the 40% mark, demonstrating an immediate and severe degradation of
+ logistical and agricultural stability. The numbers kept rising, reaching a devastating peak of nearly 55%
+ by mid-2024. Although levels have eased slightly since that peak they haven't gone back down. 
+ The metric remains structurally elevated well above 40% through January 2026, showing that this isn't a
+ temporary spike, but a lasting crisis with no sign of returning to pre-war conditions.
 
 -grafico Afghanistan (assets/toADD/sito/AFG_IPC3+.html)
  .trend stabile basso
