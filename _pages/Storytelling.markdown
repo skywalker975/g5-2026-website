@@ -37,7 +37,8 @@ The graph illustrates the aggregated percentage of the population experiencing I
   early 2023. Following the onset of systemic conflict on April 15, 2023, Sudan experienced a
   massive structural shock, resulting in a sudden, sharp escalation in food insecurity that
   peaked near 55%, completely destabilizing its previous baseline.
-
+  
+-grafico( assets/toADD/sito/SDN_3+.html)
 <iframe src="assets/toADD/sito/SDN_3_modificato_v2.html" width="100%" height="600" style="border:none;"></iframe>
 
 From mid-2019 to early 2023, the share of Sudan's population facing severe food insecurity (IPC Phase 3+) remained relatively low and stable, staying between 13% and 25%. That changed in April 2023, when <span class="history-tooltip">civil war broke out<span class="tooltip-text"><i class="fas fa-info-circle"></i> The conflict erupted in Khartoum on April 15, 2023, driven by a violent power struggle between military and paramilitary factions over the country's transition to civilian rule.</span></span> between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) after the 2021 coup.
@@ -48,14 +49,11 @@ Before the conflict began, the percentage of the aggregated population experienc
 
 -grafico Afghanistan 
 <iframe src="assets/toADD/sito/AFG_IPC3+_modificata.html" width="100%" height="600" style="border:none;"></iframe>
- .trend stabile basso
- .shock 5/2021 ritiro truppe USA e poi diminuzione trend
-testo:The graph presented tracks the aggregated percentage of the population facing IPC Phase 3+ acute food insecurity. Initially, the metric fluctuates around a relatively stable, low baseline. This stability is violently disrupted by a massive structural shock beginning in May 2021, coinciding with the withdrawal of US troops. This geopolitical event acts as a catalyst for a sharp escalation in acute food insecurity, driving the population percentage to a peak of nearly 55%. Following this acute crisis phase, the data demonstrates a steady, though volatile, downward trajectory, with food insecurity levels progressively declining through 2026 to settle back near 20%.
+While the proportion of the population facing IPC Phase 3+ acute food insecurity initially hovered around a low baseline, this stability ended abruptly in May 2021 with the withdrawal of US troops. This event triggered a sharp surge, driving food insecurity to a peak of nearly 55%. Subsequently, levels followed a volatile downward trajectory, declining steadily through 2026 to settle near 20%.
 
- - Stagionalità Sud Sudan (assets/toADD/sito/01_Statistical_Decomposition_STL.png)
-   .stagionalità visibile fino a 2020 (COVID) e poi si perde il dato
-   .ha senso metterlo?
-   testo: The Seasonal and Trend-Loess (STL) decomposition illustrates a drastic structural break in the time series data. Through 2018 and 2019, the seasonal component exhibits a distinct, regular periodicity with a pronounced amplitude, indicating a strong underlying cyclical pattern. However, corresponding with the systemic shock of the COVID-19 pandemic in 2020, this established cyclicality abruptly deteriorates. The seasonal signal heavily flattens and loses its predictable rhythmic structure, demonstrating that the standard temporal patterns were completely disrupted and the historical seasonal signature was effectively erased from the data post-2020.
+
+<iframe src="assets/toADD/sito/01_Statistical_Decomposition_STL.png" width="100%" height="600" style="border:none;"></iframe>
+Through 2018 and 2019, the seasonal component exhibits a distinct, regular periodicity with a pronounced amplitude, indicating a strong underlying cyclical pattern. However, corresponding with the systemic shock of the COVID-19 pandemic in 2020, this established cyclicality abruptly deteriorates. The seasonal signal heavily flattens and loses its predictable rhythmic structure, demonstrating that the standard temporal patterns were completely disrupted and the historical seasonal signature was effectively erased from the data post-2020.
 
 
 # Project description
@@ -168,14 +166,7 @@ To understand the severity of food crises, HERO integrates and monitors various 
 
 ### Missing data
 <iframe src="assets/toADD/sito/datiMancanti.html" width="100%" height="600" style="border:none;"></iframe>
--grafico (assets/toADD/sito/datiMancanti.html)
- .alta presenza di valori nulli (specialmente ACLED)
- .paesi con molti valori nulli e altri con meno.
- .**CITAZIONE INTERVISTA** "i missing values sono un pain point"
- .problemi per modelli predittivi.
- .presenza maggiore di valori nulli a livello admin2
- .importante capire origine valori nulli (blackout ACLED per assenza conflitti o mancata rilevazione per via dei conflitti?          mancanza rilevazione WFP per presenza conflitti?)
-  **citazione intervista**: "Since we don't know the root causes of the missing data, performing imputation could compromise explainability. This can be partly linked to the shadow matrix (Acled). It could also be cross-referenced with external data. Missing values are the main issue in our analysis. If IDP is missing, it could mean several things: it's too dangerous, or the surveys cover very few people."
+"Since we don't know the root causes of the missing data, performing imputation could compromise explainability. This can be partly linked to the shadow matrix (Acled). It could also be cross-referenced with external data. Missing values are the main issue in our analysis. If IDP is missing, it could mean several things: it's too dangerous, or the surveys cover very few people."
 The prevalence of missing values constitutes the primary obstacle in this analysis, representing a significant "pain point" that severely degrades the performance and reliability of predictive models. As evidenced by the missingness matrix, there is a high concentration of null values characterized by stark disparities across different countries. Furthermore, data sparsity increases significantly at the admin2 level compared to broader aggregations, with the ACLED dataset being particularly compromised.
 Understanding the precise origin of these missing values is critical before applying any statistical interventions. As noted in stakeholder interviews, implementing blind imputation without knowing the underlying causes of the data gaps actively harms the explainability of the models. The absence of data is rarely random; for instance, an ACLED blackout could signify a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has collapsed. Similarly, missing IDP or WFP data often translates to environments that are too dangerous for humanitarian surveyors to operate in, or situations where survey sample sizes are critically low. To mitigate these structural blind spots, analytical strategies must cross-reference external data sources—as suggested by Manuel—or utilize shadow matrices for datasets like ACLED to explicitly capture and model the missingness itself, rather than arbitrarily filling the voids.
 
