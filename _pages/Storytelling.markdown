@@ -204,6 +204,10 @@ Can the drivers predict hunger? We ask two questions, each with its own model.
     <p class="text-muted mt-2"><small>Accuracy by grouping method, scored per country. Boxes to the right of the dashed global line do better. Grouping by report text wins.</small></p>
 </div>
 
+> "Explainability is even more important than performance." —  WFP data scientist
+
+In humanitarian work, decisions affect lives, so results have to be explainable before anyone acts on them.
+
 <div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/nowcast/static_shap_beeswarm.png" alt="Which drivers explain hunger" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
     <p class="text-muted mt-2"><small>Higher food prices and more conflict push the predicted level of hunger up.</small></p>
@@ -214,7 +218,7 @@ Can the drivers predict hunger? We ask two questions, each with its own model.
 <h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #a16207;">What are hunger levels right now?</h4>
 </div>
 
-IPC assessments are slow, so a shock can go unseen for months. We estimate the current level from the last assessment plus the latest drivers.
+IPC assessments are slow, so a shock can go unseen for months. We developed a nowcasting model to accurately estimate the current level from the last assessment plus the latest drivers.
 
 - About 18 percent lower error than carrying the last value forward, and it tracks the direction of change.
 - One global model is enough here, the opposite of the static question. Once the model knows an area's own last value, a local model adds little.
