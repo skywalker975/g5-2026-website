@@ -132,7 +132,7 @@ subtitle: "Handling missing data"
     </div>
 </div>
 
-| **Clustering** | Silhouette indicator  |
+| **Clustering** | Silhouette indicator |
 |---|---|
 | K-Means (W/o coordinates) | 0.193 | 
 | Hierarchical (W/o coordinates) | 0.172 | 
