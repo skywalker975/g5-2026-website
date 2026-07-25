@@ -27,10 +27,8 @@ The Paris Agreement is a legally binding international climate treaty adopted in
 
 ### Trends of food insecurity
 MODIFICA: SUDAN HA DOPPIO PUNTO NEL GRAFICO (AGGREGATO E SINGOLO)
-- Grafico (assets/toADD/sito/HTI_vs_SSD_SDN.html)
-  [.haiti trend crescente, sud sudan trend stabile ma con oscillazioni
-  .sudan inizio livelli bassi di insicurezza alimientari e shock da 15/4/23 in poi]
-  testo:The graph illustrates the aggregated percentage of the population experiencing IPC
+- <iframe src="assets/toADD/sito/SDN_3+.html" width="100%" height="600" style="border:none;"></iframe>
+The graph illustrates the aggregated percentage of the population experiencing IPC
   Phase 3+ food insecurity across three nations from 2017 to 2026. Haiti demonstrates a
   sustained, secular upward trend, with acute food insecurity climbing steadily from below 20%
   in late 2017 to over 50% by 2026. In contrast, South Sudan exhibits a stable longitudinal
