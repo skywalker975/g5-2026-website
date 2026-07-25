@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERO Visualizer — Trend Indice di Vegetazione (NDVI) — Afghanistan (AFG)</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 2rem;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="max-w-6xl mx-auto space-y-6">
+        <header class="glass-card flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <div class="flex items-center gap-2 text-indigo-400 text-sm font-semibold tracking-wider uppercase mb-1">
+                    <i class="fa-solid fa-chart-line"></i> HERO Stand-Alone Interactive Chart
+                </div>
+                <h1 class="text-2xl font-bold text-white tracking-tight">Trend Indice di Vegetazione (NDVI) — Afghanistan (AFG)</h1>
+                <p class="text-slate-400 text-sm mt-1">VCI Condition Ratio (%)</p>
+            </div>
+        </header>
+
+        <div class="glass-card">
+            <div id="chart-container" style="min-height: 400px;"></div>
+        </div>
+        
+        
+    </div>
+
+    <script>
+        const series = [{"name": "NDVI Ratio (%)", "data": [103.58238219444445, 100.43213462009805, 106.97679462500001, 95.85880046078431, 94.61459626225488, 106.30552677777777, 100.83117111176472, 108.36366420588236, 106.76142914215686, 107.57026678104575, 108.07962035882353, 105.24152362745097, 99.11422240849674, 99.11767359803922, 106.03990753137253, 106.20282265359478, 99.49823113725489, 101.94164031372549, 107.8783815392157, 103.92470851960785, 98.81573583169936, 99.01265598039217, 109.43692298823531, 93.11710546568627, 107.66533114705882, 108.27092193137256, 106.24836470980392, 105.86145485784313, 101.18579816666666, null, null, null]}];
+        const categories = ["2017-05-01", "2017-08-01", "2017-11-01", "2018-08-01", "2018-11-01", "2019-08-01", "2019-11-01", "2020-04-01", "2020-06-01", "2020-08-01", "2020-11-01", "2021-03-01", "2021-06-01", "2021-09-01", "2021-11-01", "2022-03-01", "2022-06-01", "2022-09-01", "2022-11-01", "2023-04-01", "2023-05-01", "2023-10-01", "2023-11-01", "2024-03-01", "2024-05-01", "2024-09-01", "2024-11-01", "2025-03-01", "2025-05-01", "2025-09-01", "2025-11-01", "2026-04-01"];
+        const colors = ["#10b981"];
+        
+        const options = {
+            series: series,
+            chart: {
+                type: 'line',
+                height: 450,
+                toolbar: { show: true },
+                background: 'transparent'
+            },
+            colors: colors,
+            stroke: {
+                width: 3,
+                curve: 'smooth'
+            },
+            fill: {
+                type: 'solid',
+                opacity: 1,
+                gradient: {
+                    shade: 'dark',
+                    type: 'diagonal1',
+                    shadeIntensity: 0.5,
+                    opacityFrom: 0.45,
+                    opacityTo: 0.05,
+                    stops: [0, 100]
+                }
+            },
+            markers: {
+                size: 3,
+                hover: { size: 6 }
+            },
+            xaxis: {
+                categories: categories,
+                labels: {
+                    style: {
+                        colors: '#94a3b8',
+                        fontSize: '11px',
+                        fontFamily: 'Inter',
+                        fontWeight: 500
+                    }
+                }
+            },
+            yaxis: {
+                title: { text: 'Ratio (%)', style: { color: '#94a3b8' } },
+                labels: {
+                    style: { colors: '#64748b' }
+                }
+            },
+            theme: { mode: 'dark' },
+            tooltip: { shared: true, intersect: false },
+            legend: { position: 'bottom', fontFamily: 'Inter', fontSize: '12px' }
+        };
+        
+        const chart = new ApexCharts(document.querySelector("#chart-container"), options);
+        chart.render();
+    </script>
+</body>
+</html>
