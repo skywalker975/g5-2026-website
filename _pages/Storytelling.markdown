@@ -111,8 +111,15 @@ details.spoiler-container > summary::-webkit-details-marker {
 
 # The Root Causes: Decoding the Drivers of Crisis
 
-<iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato.html" width="100%" height="600" style="border:none;"></iframe>
+<div class="row my-5 justify-content-center text-center">
 
+    <div class="col-md-12 mb-4">
+
+        <img src="{{ site.baseurl }}/assets/images/packed_bubble_mixed.png" alt="Packed Bubble Chart of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift fade-in-up" style="max-width: 100%; border: 1px solid #e0e0e0; animation-delay: 0.6s;">
+
+    </div>
+
+</div>
 
 To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
 
@@ -185,6 +192,8 @@ To understand the severity of food crises, HERO integrates and monitors various 
     </div>
 </div>
 
+<iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato.html" width="100%" height="600" style="border:none;"></iframe>
+
 [TREND POLITICO/SOCIALI]
 
 <iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling" width="100%" height="600" style="border:none;"></iframe>
@@ -255,8 +264,6 @@ In IPC reports, words are never neutral: their recurrence forms the digital foot
 <div class="row my-5 justify-content-center text-center">
 
     <div class="col-md-12 mb-4">
-
-        <h5 class="mb-3 fw-bold text-secondary fade-in-up" style="animation-delay: 0.5s;">Top 50 Words (Bubble Chart)</h5>
 
         <img src="{{ site.baseurl }}/assets/images/packed_bubble_mixed.png" alt="Packed Bubble Chart of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift fade-in-up" style="max-width: 100%; border: 1px solid #e0e0e0; animation-delay: 0.6s;">
 
