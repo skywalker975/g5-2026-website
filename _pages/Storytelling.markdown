@@ -37,7 +37,7 @@ It is precisely to tackle this urgent challenge that the HERO project was born. 
         Expert Insight: The View from the Field
     </h4>
     <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify; margin-bottom: 10px;">
-        As part of the development of our project, we had the pleasure of interviewing <strong>Alice Giorgio</strong>, Data Scientist at the World Food Programme (WFP). With years of experience working as a Data Scientist and an academic background in Economics from Bocconi University, Alice also shares a strong educational connection with us, having enrolled in the Master's (2nd Level) in Big data and artificial intelligence at the University of Pisa. 
+        As part of the development of our project, we had the pleasure of interviewing <strong>Alice Giorgio</strong>, Data Scientist at the World Food Programme (WFP). With years of experience working as a Data Scientist and an academic background in Economics from Bocconi University, Alice also shares a strong educational connection with us, having enrolled in the Master's in Big data and artificial intelligence at the University of Pisa. 
     </p>
     <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify; margin-bottom: 10px;">
         The main objective of our conversation was to gather feedback on our methodological approach. Discussing our framework with a domain expert provided us with valuable technical insights and a real-world perspective on how to refine our model for maximum reliability and impact.
@@ -194,7 +194,7 @@ To understand the severity of food crises, HERO integrates and monitors various 
 <iframe src="assets/toADD/piogge_evt_best/Dashboard_SDN_Storytelling" width="100%" height="600" style="border:none;"></iframe>
 
 [TREND CLIMATICI]
-<iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto" width="100%" height="600" style="border:none;"></iframe>
+<iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto_con_mappa" width="100%" height="600" style="border:none;"></iframe>
 
 <iframe src="assets/toADD/sito/AFG_IPC3+_modificata.html" width="100%" height="600" style="border:none;"></iframe>
 While the proportion of the population facing IPC Phase 3+ acute food insecurity initially hovered around a low baseline, this stability ended abruptly in May 2021 with the withdrawal of US troops. This event triggered a sharp surge, driving food insecurity to a peak of nearly 55%. Subsequently, levels followed a volatile downward trajectory, declining steadily through 2026 to settle near 20%.
