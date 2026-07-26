@@ -77,10 +77,6 @@ subtitle: "Handling missing data"
     To extract meaningful regional profiles without raw time-series noise, the workflow compresses dynamic data into statistical fingerprints, benchmarks two spatial scenarios across dual clustering strategies, and resolves data gaps using an optimal imputation pipeline:
 </p>
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-            <div class="py-3" style="color: #0b2545; font-size: 1.15rem; line-height: 1.6;">
                 
 <p style="text-align: justify;">
                     The initial phase focuses on feature fingerprints and algorithmic validation, starting with temporal fingerprinting. This process compresses raw sequences into statistical descriptors, ensuring phase invariance, effective noise filtering, and extreme dimensionality reduction. To isolate spatial proximity effects, the pipeline evaluates dual data scenarios, directly comparing Scenario A (pure behavioral data) against Scenario B (behavioral data combined with Latitude and Longitude coordinates).
@@ -113,10 +109,7 @@ subtitle: "Handling missing data"
                     System robustness is maintained through dynamic group safety measures: regional group-by executions safely handle all-NaN column fallbacks while dynamically rescaling the neighbor threshold based on available regional data points. Finally, leveraging distance-weighted coordinates (weights='distance') ensures that highly similar statistical profiles exert a proportionally higher mathematical influence when reconstructing missing values, preserving overall behavioral coherence.
                 </p>
 
-</div>
-</div>
-</div>
-</div>
+
 
 
 
