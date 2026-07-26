@@ -116,12 +116,18 @@ details.spoiler-container > summary::-webkit-details-marker {
     <div class="col-md-12 mb-4">
 
         <img src="{{ site.baseurl }}/assets/images/packed_bubble_mixed.png" alt="Packed Bubble Chart of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift fade-in-up" style="max-width: 100%; border: 1px solid #e0e0e0; animation-delay: 0.6s;">
+        <p class="text-muted mt-3" style="font-size: 0.95rem; font-style: italic;">
+            <i class="fas fa-search" style="margin-right: 5px;"></i> This map illustrates the most frequently occurring terms in official IPC crisis reports. The prominence of words like "price", "production", and "conflict" highlights the real-world drivers that shape food insecurity. 
+            <a href="{{ site.baseurl }}/Text-analysis-storytelling.html" style="color: #0056b3; font-weight: 600; text-decoration: none; margin-left: 5px;">Discover the full Text Analysis here &rarr;</a>
+        </p>
 
     </div>
 
 </div>
 
-To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+To anticipate a food crisis before it strikes, we must understand the underlying forces that trigger it. To build the HERO architecture, we integrated six multidimensional streams of global data spanning from <strong>2017 to 2026</strong>, each representing a crucial piece of the humanitarian puzzle:
+</p>
 
 <div class="container mt-4">
     <div class="row">
@@ -129,8 +135,8 @@ To understand the severity of food crises, HERO integrates and monitors various 
             <div class="card h-100 hero-card card-border-top-danger">
                 <div class="card-body">
                     <h4 class="card-title text-danger"><i class="fas fa-hand-fist"></i> Conflicts (ACLED)</h4>
-                    <p class="card-text text-muted">
-                        Real-time tracking of political violence events, armed clashes, and attacks against civilians. Data on casualties and the frequency of clashes are normalized per </b>100,000 inhabitants</b> to compare demographically dissimilar areas.
+                    <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
+                        To gauge the direct threat to human life, we analyzed data on political violence, armed clashes, and attacks against civilians. By normalizing casualty data and event frequency per <strong>100,000 inhabitants</strong>, we were able to accurately compare the true scale of violence across demographically dissimilar regions.
                     </p>
                 </div>
             </div>
@@ -139,8 +145,8 @@ To understand the severity of food crises, HERO integrates and monitors various 
             <div class="card h-100 hero-card card-border-top-success">
                 <div class="card-body">
                     <h4 class="card-title text-success"><i class="fas fa-cloud-showers-water"></i> Precipitation (CHIRPS)</h4>
-                    <p class="card-text text-muted">
-                        Satellite-based estimation of monthly accumulated rainfall and rainfall anomalies compared to thirty-year historical averages, enabling early identification of prolonged droughts or floods.
+                    <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
+                        Using satellite-based estimates, we measured monthly rainfall and flagged critical anomalies against thirty-year historical averages. This allowed us to spot the early warning signs of devastating droughts or sudden floods long before harvests failed.
                     </p>
                 </div>
             </div>
@@ -151,8 +157,8 @@ To understand the severity of food crises, HERO integrates and monitors various 
             <div class="card h-100 hero-card card-border-top-info">
                 <div class="card-body">
                     <h4 class="card-title text-info"><i class="fas fa-seedling"></i> Vegetation Health (NDVI)</h4>
-                    <p class="card-text text-muted">
-                        The NDVI index measures the density and vigor of agricultural crops. It allows for the quantification of agricultural climate shocks before they translate into actual yield loss.
+                    <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
+                        The NDVI index acts as the pulse of the land, measuring the density and vigor of agricultural crops. Analyzing this data let us quantify the stress of climate shocks on vegetation, catching agricultural decline before it translated into a famine.
                     </p>
                 </div>
             </div>
@@ -161,8 +167,8 @@ To understand the severity of food crises, HERO integrates and monitors various 
             <div class="card h-100 hero-card card-border-top-warning">
                 <div class="card-body">
                     <h4 class="card-title text-warning"><i class="fas fa-shopping-basket"></i> Food Markets (WFP)</h4>
-                    <p class="card-text text-muted">
-                        Local market prices provided by the World Food Programme. The analysis tracks the cost of the food basket and local inflation of basic necessities, capturing price shocks before they propagate globally."
+                    <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
+                        Relying on comprehensive data from the World Food Programme, we reconstructed the heartbeat of local economies. By analyzing the cost of the basic food basket and local inflation, we captured sudden economic shocks that cut off food access for the most vulnerable.
                     </p>
                 </div>
             </div>
@@ -173,8 +179,8 @@ To understand the severity of food crises, HERO integrates and monitors various 
             <div class="card h-100 hero-card card-border-top-secondary">
                 <div class="card-body">
                     <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> Internally Displaced Persons (IDP)</h4>
-                    <p class="card-text text-muted">
-                        Internal migration flows driven by violence shocks or climate disasters. This parameter is expressed as a percentage of the overall population of the area to assess the residual demographic pressure.
+                    <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
+                        When violence or climate disasters strike, people are forced to flee. By extracting internal migration flows as a percentage of the total population, we assessed the crushing demographic pressure placed on host communities.
                     </p>
                 </div>
             </div>
@@ -183,11 +189,20 @@ To understand the severity of food crises, HERO integrates and monitors various 
             <div class="card h-100 hero-card card-border-top-dark">
                 <div class="card-body">
                     <h4 class="card-title text-dark"><i class="fas fa-newspaper"></i> Sentiment and news (GDELT)</h4>
-                    <p class="card-text text-muted">
-                        Global media flows indexed by QuadClass. Through the quantitative extraction of news tone (sentiment) and salience volume, we monitor the external perception of the crisis.
+                    <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
+                        Leveraging the GDELT Project's massive global database, we integrated pre-calculated metrics on the tone and volume of news coverage. This allowed us to quantify the external perception of the crisis, mapping how international attention shifted as emergencies unfolded.
                     </p>
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4 mb-2 fade-in-up" style="animation-delay: 0.2s;">
+        <div class="col-12 text-center">
+            <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
+                <i class="fas fa-database" style="margin-right: 6px;"></i> Curious about how we aggregated, cleaned, and handled these massive datasets? 
+                <a href="{{ site.baseurl }}/Data-Collection.html" style="color: #0056b3; font-weight: 600; text-decoration: none; margin-left: 5px;">Dive into our full Data Collection methodology &rarr;</a>
+            </p>
         </div>
     </div>
 </div>
@@ -249,9 +264,6 @@ Ultimately, we selected KNN (K-Nearest Neighbors) because it achieved the highes
 
 
 <h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">From Words to Data: Mapping Famine Drivers Through Term Frequency</h1>
-
-
-
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 
@@ -428,7 +440,7 @@ While the macroeconomic, climatic, and structural drivers of hunger are universa
     color: #4ade80;
 }
 </style>
-
+## From Words to Data: Decoding the Narrative through NLP Pipeline
 ## <span class="text-gradient">Decoding the Narrative: The NLP Pipeline</span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
