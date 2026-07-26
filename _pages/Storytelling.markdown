@@ -61,7 +61,7 @@ Not all food crises evolve in the same way. When we track the percentage of the 
 </p>
 
 <div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
-    <iframe src="assets/toADD/sito/HTI_vs_SSD_SDN_modificato.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
+    <iframe src="assets/toADD/sito/HTI_vs_SSD_SDN_modificato.html" width="100%" height="100%" frameborder="0" style="border:none; min-height: 400px;"></iframe>
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
