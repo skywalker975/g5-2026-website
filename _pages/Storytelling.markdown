@@ -213,11 +213,26 @@ To anticipate a food crisis before it strikes, we must understand the underlying
 Knowing the drivers is only half the battle; understanding how they interact and evolve over time is what makes early warning possible. Food crises are rarely the result of a single isolated event. Instead, they unfold as a cascade: a prolonged drought compromises vegetation, which in turn drives up local food prices, creating economic desperation that often sparks or exacerbates violent conflicts. By mapping the trajectories of these drivers alongside IPC severity, we can visualize this domino effect in action.
 </p>
 
-<iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato.html" width="100%" height="600" style="border:none;"></iframe>
+<div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+    <iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato.html" width="100%" height="100%" style="border:none;"></iframe>
+</div>
 
-[TREND POLITICO/SOCIALI]
+### <i class="fas fa-search"></i> Political and Social Shocks: Play the Detective
 
-<iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling" width="100%" height="600" style="border:none;"></iframe>
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+When we examine the trajectories of political and social drivers against food insecurity, major geopolitical events leave an unmistakable signature on the data. Look at the interactive dashboard below, which tracks Afghanistan's metrics over time. Before scrolling down, we challenge you to <strong>play the detective</strong>: explore the chart, observe the anomaly spikes, and try to pinpoint the exact moment a massive structural shock occurred. <em>(Hint: you can use the toggles in the chart to hide or reveal the key event!)</em>
+</p>
+
+<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+    <iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling" width="100%" height="100%" style="border:none;"></iframe>
+</div>
+
+<div class="card card-body text-start my-4" style="background-color: #f8f9fa; border: none; border-left: 5px solid #2563eb; border-radius: 8px;">
+    <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
+        <strong>Did you manage to crack the case?</strong> <i class="fas fa-search-location" style="color: #2563eb; margin-left: 5px;"></i><br>
+        If you toggled the key event marker, you noticed how everything changes abruptly in <strong>May 2021</strong>. The withdrawal of US troops didn't just cause political upheaval; it triggered an immediate surge in crisis levels, completely shattering the country's previous stability.
+    </p>
+</div>
 
 <iframe src="assets/toADD/sito/01_Statistical_Decomposition_STL.png" width="100%" height="600" style="border:none;"></iframe>
 
