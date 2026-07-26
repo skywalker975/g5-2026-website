@@ -15,9 +15,30 @@ header_title: "Data collection"
 ### Integrated Datasets and Architecture of HERO
 
 
-#### Fonte: HDX (IPC, ACLED, IDP, WFP, NDVI, rainfall)
-#### Fonte: GDELT
-#### Fonte: report IPC (web scraping)
+#### HERO Dataset: Sources and Methodology
+* ACLED: Powered by ACLED conflict logs matched with IPC hunger data, this pipeline measures how local violence directly drives food shortages. The method aggregates raw records of violent events and casualties, mapping them directly onto regional food security levels to create a single, unified dataset. The purpose is to reveal the exact link between armed conflict and rising hunger, giving AI models the conflict signals needed to catch emerging crisis hotspots early.
+The purpose is to feed machine learning models with clear conflict signals, helping analysts measure how localized violence directly drives food crisis severity and population displacement.
+* IPC: This pipeline collects official data from IPC (ipcinfo.org) on
+Acute Food Insecurity analyses (2011–2026).
+The method follows a two-stage automated process: first mapping and 
+deduplicating report URLs, then extracting Key Results text and
+downloading PDFs—automatically separating full reports from summary
+snapshots. The purpose is to build a qualitative text corpus to
+identify food crisis drivers and perform semantic comparisons across
+different emergency contexts.
+* WFP:
+* IDP:
+* RAINFALL: This pipeline collects subnational dekadal rainfall data
+from HDX/CHIRPS (data.humdata.org) via HDXRainfallLoader.
+The method automatically fetches the full historical -subnat-full
+csv resource for each country and organizes it into structured local
+directories (data/raw_rainfall/).
+The purpose is to supply quantitative precipitation metrics to
+support food security risk analysis and early-warning modeling.
+* NDVI: Driven by data from WFP via the HDX platform, this pipeline  gathers subnational NDVI (Normalized Difference Vegetation Index) metrics to gauge plant growth and biomass density.
+The method leverages the hdx-python-api to pull and structure full historical vegetation series directly into a unified dataset.
+The purpose is to provide clear environmental signals on drought, crop stress, and agricultural health—giving early-warning models the physical data needed to anticipate food shortages before they escalate.
+* GDELT: Sourced from the GDELT Project via Google BigQuery, this pipeline monitors global news coverage to capture real-time media signals on conflict, protests, and humanitarian responses. The method queries daily partitioned event tables and categorizes geopolitical actions using the CAMEO taxonomy to structure raw news data. The purpose is to provide early, near-real-time indicators of instability that often lead to food shortages, filling the time gap before official, structured field reports are published.
 
 
 
