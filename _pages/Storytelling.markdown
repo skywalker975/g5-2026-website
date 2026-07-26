@@ -220,8 +220,10 @@ Knowing the drivers is only half the battle; understanding how they interact and
 ### <i class="fas fa-search"></i> Political and Social Shocks: Play the Detective
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-When we examine the trajectories of political and social drivers against food insecurity, major geopolitical events leave an unmistakable signature on the data. Look at the interactive dashboard below, which tracks Afghanistan's metrics over time. Before scrolling down, we challenge you to <strong>play the detective</strong>: explore the chart, observe the anomaly spikes, and try to pinpoint the exact moment a massive structural shock occurred. <em>(Hint: you can use the toggles in the chart to hide or reveal the key event!)</em>
+When we examine the trajectories of political and social drivers against food insecurity, major geopolitical events leave an unmistakable signature on the data. Before reading our analysis of the next two countries, we challenge you to <strong>play the detective</strong>: explore the interactive charts, observe the anomaly spikes, and try to pinpoint the exact moment massive structural shocks occurred. <em>(Hint: you can use the toggles in the charts to hide or reveal the key events!)</em>
 </p>
+
+#### Case File #1: Afghanistan's Tipping Point
 
 <div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
     <iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling" width="100%" height="100%" style="border:none;"></iframe>
@@ -232,22 +234,52 @@ When we examine the trajectories of political and social drivers against food in
         <strong>Did you manage to crack the case?</strong> <i class="fas fa-search-location" style="color: #2563eb; margin-left: 5px;"></i><br>
         If you toggled the key event marker, you noticed how everything changes abruptly in <strong>May 2021</strong>. The withdrawal of US troops didn't just cause political upheaval; it triggered an immediate surge in crisis levels, completely shattering the country's previous stability.
     </p>
+    <details class="mt-3">
+        <summary style="cursor: pointer; color: #2563eb; font-weight: 600; font-size: 0.95rem;">
+            <i class="fas fa-book-open"></i> Dive Deeper: The US Withdrawal
+        </summary>
+        <p class="text-muted mt-2 mb-0" style="font-size: 0.95rem; line-height: 1.6;">
+            The departure of international forces led to an immediate collapse of the Afghan economy. Overnight, international aid—which previously funded 75% of public spending—was frozen. This sparked hyperinflation, massive unemployment, and an unprecedented liquidity crisis that crippled food access across the entire nation, transforming a fragile stability into a dire humanitarian emergency.
+        </p>
+    </details>
 </div>
 
-<iframe src="assets/toADD/sito/01_Statistical_Decomposition_STL.png" width="100%" height="600" style="border:none;"></iframe>
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-top: 3rem; margin-bottom: 2rem; font-weight: 300;">
+To grasp the true depth of this structural shock, we performed a Statistical Time Series Decomposition (STL) on the percentage of the population facing IPC Phase 3+ food insecurity in Afghanistan. As the chart below demonstrates, the May 2021 event didn't just cause a temporary spike in hunger—it fundamentally altered the rhythm of the crisis. Before the withdrawal, the <strong>seasonal component</strong> exhibited a distinct, regular periodicity. After May 2021, you can clearly see a drastic change of pattern in the seasonality, proving that the systemic shock permanently disrupted the historical cycles of food insecurity.
+</p>
+
+<div class="my-4 text-center">
+    <img src="assets/toADD/sito/01_Statistical_Decomposition_STL.png" alt="Statistical Decomposition STL" class="img-fluid rounded shadow-sm" style="max-width: 100%; border: 1px solid #e0e0e0;">
+</div>
 
 
-<iframe src="assets/toADD/piogge_evt_best/Dashboard_SDN_Storytelling" width="100%" height="600" style="border:none;"></iframe>
+#### Case File #2: Sudan's Shattered Stability
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+Let's test your investigative skills again, this time looking at Sudan. Historically, Sudan presented a very different baseline compared to Afghanistan—maintaining relatively low and stable food insecurity levels. But stability can be deceiving. Explore the dashboard below and try to identify the exact moment the trend line violently breaks. <em>(Hint: toggle the key event marker in the legend when you think you've found it!)</em>
+</p>
+
+<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+    <iframe src="assets/toADD/piogge_evt_best/Dashboard_SDN_Storytelling" width="100%" height="100%" style="border:none;"></iframe>
+</div>
+
+<div class="card card-body text-start my-4" style="background-color: #f8f9fa; border: none; border-left: 5px solid #2563eb; border-radius: 8px;">
+    <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
+        <strong>Did you spot the rupture?</strong> <i class="fas fa-search-location" style="color: #2563eb; margin-left: 5px;"></i><br>
+        The data unmistakably shatters on <strong>April 15, 2023</strong>. This marks the outbreak of the devastating civil war. Unlike a slow-moving climatic drought, this sudden, explosive political conflict caused an immediate and massive structural shock, destroying the country's prior stability and sending hunger levels skyrocketing in a matter of weeks.
+    </p>
+    <details class="mt-3">
+        <summary style="cursor: pointer; color: #2563eb; font-weight: 600; font-size: 0.95rem;">
+            <i class="fas fa-book-open"></i> Dive Deeper: The Sudanese Civil War
+        </summary>
+        <p class="text-muted mt-2 mb-0" style="font-size: 0.95rem; line-height: 1.6;">
+            The conflict erupted violently between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF), turning the capital, Khartoum, and surrounding regions into active war zones. The fighting immediately severed major supply chains, triggered mass displacement, and destroyed critical infrastructure, effectively weaponizing starvation and sparking one of the fastest-growing humanitarian disasters in modern history.
+        </p>
+    </details>
+</div>
 
 [TREND CLIMATICI]
 <iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto_con_mappa" width="100%" height="600" style="border:none;"></iframe>
-
-
-While the proportion of the population facing IPC Phase 3+ acute food insecurity initially hovered around a low baseline, this stability ended abruptly in May 2021 with the withdrawal of US troops. This event triggered a sharp surge, driving food insecurity to a peak of nearly 55%. Subsequently, levels followed a volatile downward trajectory, declining steadily through 2026 to settle near 20%.
-
-
-
-Through 2018 and 2019, the seasonal component exhibits a distinct, regular periodicity with a pronounced amplitude, indicating a strong underlying cyclical pattern. However, corresponding with the systemic shock of the COVID-19 pandemic in 2020, this established cyclicality abruptly deteriorates. The seasonal signal heavily flattens and loses its predictable rhythmic structure, demonstrating that the standard temporal patterns were completely disrupted and the historical seasonal signature was effectively erased from the data post-2020.
 
 
 -- why we move from national to admin1 level analysis
