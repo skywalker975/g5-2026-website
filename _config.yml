@@ -66,6 +66,8 @@ navbar:
       url: /Text-analysis.html
     - title: Modelling
       url: /modelling.html
+    - title: Modelling
+      url: /UI.html 
     - title: References
       url: /References.html
     
