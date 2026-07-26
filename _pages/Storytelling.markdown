@@ -189,28 +189,20 @@ To understand the severity of food crises, HERO integrates and monitors various 
 
 <iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling" width="100%" height="600" style="border:none;"></iframe>
 
+<iframe src="assets/toADD/sito/01_Statistical_Decomposition_STL.png" width="100%" height="600" style="border:none;"></iframe>
+
 
 <iframe src="assets/toADD/piogge_evt_best/Dashboard_SDN_Storytelling" width="100%" height="600" style="border:none;"></iframe>
 
 [TREND CLIMATICI]
 <iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto_con_mappa" width="100%" height="600" style="border:none;"></iframe>
 
-<iframe src="assets/toADD/sito/AFG_IPC3+_modificata.html" width="100%" height="600" style="border:none;"></iframe>
+
 While the proportion of the population facing IPC Phase 3+ acute food insecurity initially hovered around a low baseline, this stability ended abruptly in May 2021 with the withdrawal of US troops. This event triggered a sharp surge, driving food insecurity to a peak of nearly 55%. Subsequently, levels followed a volatile downward trajectory, declining steadily through 2026 to settle near 20%.
 
 
-<iframe src="assets/toADD/sito/01_Statistical_Decomposition_STL.png" width="100%" height="600" style="border:none;"></iframe>
+
 Through 2018 and 2019, the seasonal component exhibits a distinct, regular periodicity with a pronounced amplitude, indicating a strong underlying cyclical pattern. However, corresponding with the systemic shock of the COVID-19 pandemic in 2020, this established cyclicality abruptly deteriorates. The seasonal signal heavily flattens and loses its predictable rhythmic structure, demonstrating that the standard temporal patterns were completely disrupted and the historical seasonal signature was effectively erased from the data post-2020.
-
-
-# Project description
-<div class="my-5 text-center">
-    <img src="{{ site.baseurl }}/assets/images/Progetto-Hero.png" alt="Heatmap of Food Insecurity Drivers by Country" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
-</div>
-
-
-##### [PENSARE SE ANTICIPARE ALCUNI RISULTATI COME SUGGERITO DAL PROF]
-##### [AGGIUNGERE BOTTONE SPOILER CHE NASCONDE TESTO CON RISULTATI PUò ESSERE SIMPATICO?]
 
 
 -- why we move from national to admin1 level analysis
@@ -220,100 +212,6 @@ Through 2018 and 2019, the seasonal component exhibits a distinct, regular perio
     <p class="text-muted mt-2"><small>We shift to admin1-level analysis to capture sub-national variances and cross-border similarities that broad national averages obscure. While admin2 provides better granularity, severe data sparsity renders it analytically unviable. Admin1 strikes the optimal balance, ensuring robust data availability while retaining sufficient detail to expose localized anomalies.</small></p>
 </div> 
 
-# Food Insecurity through the lens of its Main Drivers
-## Drivers description
-
-
-
-To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
-
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-danger">
-                <div class="card-body">
-                    <h4 class="card-title text-danger"><i class="fas fa-hand-fist"></i> Conflicts (ACLED)</h4>
-                    <p class="card-text text-muted">
-                        Real-time tracking of political violence events, armed clashes, and attacks against civilians. Data on casualties and the frequency of clashes are normalized per </b>100,000 inhabitants</b> to compare demographically dissimilar areas.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-success">
-                <div class="card-body">
-                    <h4 class="card-title text-success"><i class="fas fa-cloud-showers-water"></i> Precipitation (CHIRPS)</h4>
-                    <p class="card-text text-muted">
-                        Satellite-based estimation of monthly accumulated rainfall and rainfall anomalies compared to thirty-year historical averages, enabling early identification of prolonged droughts or floods.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-info">
-                <div class="card-body">
-                    <h4 class="card-title text-info"><i class="fas fa-seedling"></i> Vegetation Health (NDVI)</h4>
-                    <p class="card-text text-muted">
-                        The NDVI index measures the density and vigor of agricultural crops. It allows for the quantification of agricultural climate shocks before they translate into actual yield loss.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-warning">
-                <div class="card-body">
-                    <h4 class="card-title text-warning"><i class="fas fa-shopping-basket"></i> Food Markets (WFP)</h4>
-                    <p class="card-text text-muted">
-                        Local market prices provided by the World Food Programme. The analysis tracks the cost of the food basket and local inflation of basic necessities, capturing price shocks before they propagate globally."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-secondary">
-                <div class="card-body">
-                    <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> Internally Displaced Persons (IDP)</h4>
-                    <p class="card-text text-muted">
-                        Internal migration flows driven by violence shocks or climate disasters. This parameter is expressed as a percentage of the overall population of the area to assess the residual demographic pressure.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-dark">
-                <div class="card-body">
-                    <h4 class="card-title text-dark"><i class="fas fa-newspaper"></i> Sentiment and news (GDELT)</h4>
-                    <p class="card-text text-muted">
-                        Global media flows indexed by QuadClass. Through the quantitative extraction of news tone (sentiment) and salience volume, we monitor the external perception of the crisis.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-### Trends of food insecurity x trends of drivers+
-
-
-[TREND POLITICO/SOCIALI]
-
-<iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling" width="100%" height="600" style="border:none;"></iframe>
-
-
-<iframe src="assets/toADD/piogge_evt_best/Dashboard_SDN_Storytelling" width="100%" height="600" style="border:none;"></iframe>
-
-[TREND CLIMATICI]
-<iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto" width="100%" height="600" style="border:none;"></iframe>
-
-
-### Seasonality of food insecurity x trends of drivers+
--Inserire grafici (AFFIANCARLI UNO A ALTRO E NON SOVRAPPORLI)
--possiamo far vedere stagionalità (CHIRPS E NDVI)
--anche i drivers meno sensibili a stagionalità hanno stagionalità (ACLED e IDP)
 
 ### Missing data
 <iframe src="assets/toADD/DATI_MANCANTI.html" width="100%" height="600" style="border:none;"></iframe>
