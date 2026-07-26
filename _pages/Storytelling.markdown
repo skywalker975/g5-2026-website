@@ -67,7 +67,6 @@ Not all food crises evolve in the same way. When we track the percentage of the 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
 As illustrated in the interactive chart above, <strong>Haiti</strong>'s trajectory shows a devastating upward climb, rising from under 20% in late 2017 to over 50% by 2026. <strong>South Sudan</strong>, on the other hand, remains trapped in a volatile loop, repeatedly fluctuating between 35% and 65% as seasonal and localized shocks hit a deeply fragile baseline. <strong>Sudan</strong> tells perhaps the most dramatic story of the three: a relatively stable environment (remaining under 25%) that was violently shattered in early 2023. The onset of systemic conflict caused an immediate, massive structural shock, resulting in a sudden escalation that peaked near 55% and completely destroyed the country's previous stability.
 </p>
-<iframe src="assets/toADD/sito/SDN_3_modificato_v2.html" width="100%" height="600" style="border:none;"></iframe>
 
 # <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
 
