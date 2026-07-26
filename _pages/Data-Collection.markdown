@@ -14,6 +14,17 @@ header_title: "Data collection"
 
 ### Integrated Datasets and Architecture of HERO
 
+
+#### Fonte: HDX (IPC, ACLED, IDP, WFP, NDVI, rainfall)
+#### Fonte: GDELT
+#### Fonte: report IPC (web scraping)
+
+
+
+
+
+
+
 The <b>HERO</b> system organizes humanitarian data and its analytical components around a unified, ready-to-use structure. The framework combines various dimensions of risk (IPC, conflict, displacement, meteorological data, market prices, media signals, and vegetation health) by directly aligning them with food security assessment periods.
 
 <div class="container mt-4">

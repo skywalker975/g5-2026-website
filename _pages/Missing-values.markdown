@@ -24,8 +24,16 @@ header_title: "Missing values"
 <!-- Systemic Data Missingness Section -->
 <h3 class="mt-4">Systemic Data Missingness & Blackout Dynamics</h3>
 <p class="text-muted">
-    The <b>HERO</b> analytics engine performs a two-dimensional missingness diagnosis across all 7 target data sources. By mapping missing values into binary shadow indicators ($1$ for <code>NaN</code>, $0$ for observed), the pipeline uncovers both <b>cross-dataset co-failures</b> and <b>spatial coverage blackouts</b> to guide targeted imputation strategies.
+    The <b>HERO</b> analytics engine performs a two-dimensional missingness diagnosis across all 7 target data sources. By mapping missing values into binary shadow indicators (1 for <code>NaN</code>, 0 for observed), the pipeline uncovers two distinct failure patterns to guide targeted imputation strategies:
 </p>
+<ul class="text-muted">
+    <li>
+        <b>Random Point Missingness:</b> Unsynchronized, stochastic dropouts where single, isolated values drop missing across datasets without a systemic cause—typically caused by minor sensor noise, momentary signal jitter, or transient network packet loss.
+    </li>
+    <li>
+        <b>Spatial Coverage Blackouts:</b> Extended, contiguous time blocks where all sensors across a specific geographic location drop offline simultaneously, creating complete "dark zones" across entire physical regions.
+    </li>
+</ul>
 
 <!-- Two-Step Analytical Workflow -->
 <h4 class="text-primary fw-bold mb-2 mt-4">Shadow Matrix Analysis: Two-Step Analytical Workflow</h4>
@@ -54,7 +62,7 @@ header_title: "Missing values"
                         </li>
                         <li>
                             <strong class="text-dark">Bidirectional Heatmap Rendering:</strong><br>
-                            Outputs a $7 \times 7$ correlation matrix to visually isolate interconnected clusters of missingness.
+                            Generates a correlation matrix to visually isolate interconnected clusters of missingness.
                         </li>
                     </ul>
                 </div>
@@ -234,6 +242,8 @@ header_title: "Missing values"
         </div>
     </div>
 </div>
+
+<img src="{{ site.baseurl }}/assets/images/Unknown-2.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
 
 <!-- 3. Geographic Fragmentation -->
 <h4 class="fw-bold text-dark mt-4 mb-3"><i class="fas fa-earth-americas me-2 text-primary"></i> 3. Geographic Fragmentation</h4>

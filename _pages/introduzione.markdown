@@ -43,7 +43,7 @@ To understand the severity of food crises, HERO integrates and monitors various 
                 <div class="card-body">
                     <h4 class="card-title text-danger"><i class="fas fa-hand-fist"></i> Conflicts (ACLED)</h4>
                     <p class="card-text text-muted">
-                        Real-time tracking of political violence events, armed clashes, and attacks against civilians. Data on casualties and the frequency of clashes are normalized per </b>100,000 inhabitants</b> to compare demographically dissimilar areas.
+                        Real-time tracking of political violence events, armed clashes, and attacks against civilians. Data on casualties and the frequency of clashes are normalized per 100,000 inhabitants to compare demographically dissimilar areas.
                     </p>
                 </div>
             </div>
