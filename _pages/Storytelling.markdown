@@ -60,10 +60,8 @@ Before exploring the evolution of these crises, it is essential to understand ho
 Not all food crises evolve in the same way. When we track the percentage of the population facing IPC Phase 3+ over time, distinct structural patterns emerge. Some nations, like <strong>South Sudan</strong>, endure a chronic crisis baseline punctuated by severe, high-amplitude oscillations. Others, such as <strong>Haiti</strong>, suffer from a relentless, secular deterioration, where food insecurity climbs steadily year after year without relief. Finally, there are countries like <strong>Sudan</strong>, which maintained relatively low and stable levels of hunger until a sudden, catastrophic shock—like the outbreak of a civil war—completely destabilized their entire food system overnight.
 </p>
 
-<div class="chart-container" style="margin: 0; padding: 0;">
 <div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
-    <iframe src="assets/toADD/sito/HTI_vs_SSD_SDN_modificato.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
-</div>
+    <iframe src="assets/toADD/sito/HTI_vs_SSD_SDN_modificato.html" width="100%" height="100%" frameborder="0" style="border:none; min-height: 400px;"></iframe>
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
