@@ -15,7 +15,7 @@ subtitle: "Handling missing data"
 
 
 <!-- Data Preprocessing & Feature Refinement Header -->
-##Data Preprocessing & Feature Refinement
+## Data Preprocessing & Feature Refinement
 <p style="text-align: justify;">
     Prior to handling missing values, the joint feature space is refined through targeted Principal Component Analysis (PCA) to eliminate domain redundancy, correct distance metrics, and optimize cluster interpretability.
 </p>
@@ -73,7 +73,7 @@ subtitle: "Handling missing data"
 
 <!-- Overall Analytical Pipeline Workflow -->
 ## Analytical Pipeline: Feature-Based Clustering & Optimal Imputation
-<p class="text-muted mb-4">
+<p style="text-align: justify;">
     To extract meaningful regional profiles without raw time-series noise, the workflow compresses dynamic data into statistical fingerprints, benchmarks two spatial scenarios across dual clustering strategies, and resolves data gaps using an optimal imputation pipeline:
 </p>
 
