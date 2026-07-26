@@ -373,14 +373,23 @@ As illustrated in the correlation matrix below, environmental sensor blackouts e
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 3rem; font-weight: 300;">
 Despite these immense challenges and the inherent risks highlighted by experts, an early warning system cannot function on empty spaces. To bridge the gap between acknowledging the dangers of missing data and actually making our models operational, we had to find a scientifically robust way to fill in the blanks. We needed an imputation strategy that respected the underlying geography and socioeconomic realities of the regions, minimizing the "hallucinations" of blind statistics. This is where clustering came into play.
 </p>
-    
- 
-### Clustering based on main drivers (quantitative)
-After understanding the structure of the missing data, the next step is finding the best imputation method. First, we needed to evaluate how geographic proximity and statistical patterns influence the data structure. We compared two scenarios — one based strictly on statistical profiles and another incorporating geographic coordinates — across different clustering approaches (such as Hierarchical and K-Means).
-Ultimately, we selected KNN (K-Nearest Neighbors) because it achieved the highest silhouette score, proving to be the most effective at identifying coherent and well-separated neighbors. This ensures that missing values are imputed using truly similar data points, maintaining high data integrity, even though, imputation create high level of uncertanty. In the interview that we hade with Alice Giorgio, we discussed the matter. Alice highlight how, in a context, where data collection can not be always guaranteed, the output of the models accept the risks arising from high uncertenty.
 
+### "Augmenting" Reality: The Clustering Approach
 
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
+If we can't always collect the data in the field, we must strategically "augment" the data we do have. Taking Alice's warning to heart, we knew we couldn't just blindly guess our way out of the void. To find the most reliable imputation method, we evaluated how geographic proximity and statistical profiles influence the data structure, testing everything from Hierarchical models to K-Means.
+<br><br>
+We won't bore you with all the deep technical mechanics here, but ultimately, we deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to be the most effective at identifying coherent, well-separated neighbors across different regions. This ensures that when we fill a missing data point, we are using the profile of a truly similar, statistically verified neighbor—maintaining data integrity and minimizing the uncertainty inherent in any imputation. We will utilize these clustering results to drastically refine our predictive models in the next phases, testing whether this "augmented" reality genuinely improves our early warning performance.
+</p>
 
+<div class="row mt-4 mb-5 fade-in-up" style="animation-delay: 0.2s;">
+    <div class="col-12 text-center">
+        <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
+            <i class="fas fa-project-diagram" style="margin-right: 6px;"></i> Love the technical math behind silhouette scores and spatial clustering? 
+            <a href="{{ site.baseurl }}/Data-augmentation.html" style="color: #0056b3; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Data Augmentation section &rarr;</a>
+        </p>
+    </div>
+</div>
 
 # Qualitative Profiles of Food Insecurity
 
