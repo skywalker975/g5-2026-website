@@ -15,8 +15,8 @@ subtitle: "Handling missing data"
 
 
 <!-- Data Preprocessing & Feature Refinement Header -->
-<h4 class="text-primary fw-bold mb-2 mt-4">Data Preprocessing & Feature Refinement</h4>
-<p class="text-muted mb-4">
+##Data Preprocessing & Feature Refinement
+<p style="text-align: justify;">
     Prior to handling missing values, the joint feature space is refined through targeted Principal Component Analysis (PCA) to eliminate domain redundancy, correct distance metrics, and optimize cluster interpretability.
 </p>
 
@@ -72,7 +72,7 @@ subtitle: "Handling missing data"
 </div>
 
 <!-- Overall Analytical Pipeline Workflow -->
-<h4 class="text-primary fw-bold mb-2 mt-4">Analytical Pipeline: Feature-Based Clustering & Optimal Imputation</h4>
+## Analytical Pipeline: Feature-Based Clustering & Optimal Imputation
 <p class="text-muted mb-4">
     To extract meaningful regional profiles without raw time-series noise, the workflow compresses dynamic data into statistical fingerprints, benchmarks two spatial scenarios across dual clustering strategies, and resolves data gaps using an optimal imputation pipeline:
 </p>
@@ -82,11 +82,11 @@ subtitle: "Handling missing data"
         <div class="col-lg-10 offset-lg-1">
             <div class="py-3" style="color: #0b2545; font-size: 1.15rem; line-height: 1.6;">
                 
-<p class="mb-4">
+<p style="text-align: justify;">
                     The initial phase focuses on feature fingerprints and algorithmic validation, starting with temporal fingerprinting. This process compresses raw sequences into statistical descriptors, ensuring phase invariance, effective noise filtering, and extreme dimensionality reduction. To isolate spatial proximity effects, the pipeline evaluates dual data scenarios, directly comparing Scenario A (pure behavioral data) against Scenario B (behavioral data combined with Latitude and Longitude coordinates).
                 </p>
 
-<p class="mb-0">
+<p style="text-align: justify;">
                  To assess structural stability across both datasets, cross-algorithmic validation is performed. This benchmarks a Hierarchical (Bottom-Up) tree-building approach against a K-Means (Center-Out) centroid assignment strategy. Evaluating how both algorithms handle behavioral parameters with and without spatial coordinates establishes a clear baseline for clustering quality before downstream reconstruction.
                 </p>
 
@@ -106,14 +106,10 @@ subtitle: "Handling missing data"
 
 
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-            <div class="py-3" style="color: #0b2545; font-size: 1.15rem; line-height: 1.6;">
-                <p class="mb-4">
+<p style="text-align: justify;">
                     Following the clustering phase, silhouette score evaluation identified k-NN (k-Nearest Neighbors) as the optimal methodology to drive the reconstruction process. This served as the foundation for designing a distance-weighted post-restructuring imputation pipeline. To prevent scale distortion during distance calculations, the pipeline enforces Z-Score scale invariance—applying forward standardization before calculating distances and inversely scaling the imputed values back to their original physical units upon completion.
                 </p>
-<p class="mb-0">
+<p style="text-align: justify;">
                     System robustness is maintained through dynamic group safety measures: regional group-by executions safely handle all-NaN column fallbacks while dynamically rescaling the neighbor threshold based on available regional data points. Finally, leveraging distance-weighted coordinates (weights='distance') ensures that highly similar statistical profiles exert a proportionally higher mathematical influence when reconstructing missing values, preserving overall behavioral coherence.
                 </p>
 
