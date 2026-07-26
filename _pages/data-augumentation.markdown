@@ -117,6 +117,6 @@ subtitle: "Handling missing data"
 
 
 <div class="my-4">
-<iframe src="{{ site.baseurl }}/assets/charts/mappa_mondiale_admin1_clusters.html" style="width: 100%; height: 640px; border: 1px solid #e0e0e0; border-radius: 0.5rem;" loading="lazy" title="HERO Map Clustering-2 drill-down"></iframe>
+<iframe src="{{ site.baseurl }}/assets/charts/mappa_mondiale_admin1_clusters_v2.html" style="width: 100%; height: 640px; border: 1px solid #e0e0e0; border-radius: 0.5rem;" loading="lazy" title="HERO Map Clustering-2 drill-down"></iframe>
 </div>
 
