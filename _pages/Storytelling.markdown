@@ -20,7 +20,7 @@ In 2015, all United Nations Member States adopted the 2030 Agenda for Sustainabl
 In 2024, approximately 673 million people were still undernourished, and in 2025, 266 million in 47 countries were facing acute food insecurity; in the same year, famine was confirmed in certain areas of the Gaza Strip and Sudan. Hunger, in short, remains a present-day emergency.
 {: .lead }
 It is precisely to tackle this urgent challenge that the HERO project was born. HERO aims to leverage advanced data analysis and predictive modeling to infer the root causes of food crises before they escalate, providing actionable insights to help the global community stay on track toward achieving Zero Hunger.
-# Alice Giorgio interview (WFP Data scientist)
+# Alice Giorgio's interview (WFP Data scientist)
 As part of the development of our project, we had the pleasure of interviewing Alice Giorgio, Data Scientist at the World Food Programme (WFP). With years of experience working as a Data Scientist and an academic background in Economics from Bocconi University, Alice also shares a strong educational connection with us, having enrolled—just like our team—in the Master's (2nd Level) in Big data and artificial intelligence at the University of Pisa. The main objective of our conversation was to gather feedback on our methodological approach. Discussing our framework with an domain expert provided us with valuable technical insights and a real-world perspective on how to refine our model for maximum reliability and impact.
 
 # Paris's agreement
