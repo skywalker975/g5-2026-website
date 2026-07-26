@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Data collection"
-permalink: /Data-collection.html
+permalink: /Data-Collection.html
 show_sidetoc: true
 header_type: hero
 header_img: assets/images/header.svg
