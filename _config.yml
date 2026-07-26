@@ -57,7 +57,7 @@ navbar:
       url: /Collection-and-Data-processing.html
       child:
         - title: Data Collection
-          url: /Data-collection.html
+          url: /Data-Collection.html
         - title: Missing values
           url: /Missing-values.html
         - title: Data augumentation
