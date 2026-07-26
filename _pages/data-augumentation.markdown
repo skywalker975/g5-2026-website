@@ -106,11 +106,7 @@ subtitle: "Handling missing data"
 
 
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-            <div class="py-3" style="color: #0b2545; font-size: 1.15rem; line-height: 1.6;">
-                <p class="mb-4">
+<p style="text-align: justify;">
                     Following the clustering phase, silhouette score evaluation identified k-NN (k-Nearest Neighbors) as the optimal methodology to drive the reconstruction process. This served as the foundation for designing a distance-weighted post-restructuring imputation pipeline. To prevent scale distortion during distance calculations, the pipeline enforces Z-Score scale invariance—applying forward standardization before calculating distances and inversely scaling the imputed values back to their original physical units upon completion.
                 </p>
 <p style="text-align: justify;">
