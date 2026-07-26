@@ -41,7 +41,6 @@ The graph illustrates the aggregated percentage of the population experiencing I
   massive structural shock, resulting in a sudden, sharp escalation in food insecurity that
   peaked near 55%, completely destabilizing its previous baseline.
   
--grafico( assets/toADD/sito/SDN_3+.html)
 <iframe src="assets/toADD/sito/SDN_3_modificato_v2.html" width="100%" height="600" style="border:none;"></iframe>
 
 From mid-2019 to early 2023, the share of Sudan's population facing severe food insecurity (IPC Phase 3+) remained relatively low and stable, staying between 13% and 25%. That changed in April 2023, when <span class="history-tooltip">civil war broke out<span class="tooltip-text"><i class="fas fa-info-circle"></i> The conflict erupted in Khartoum on April 15, 2023, driven by a violent power struggle between military and paramilitary factions over the country's transition to civilian rule.</span></span> between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) after the 2021 coup.
@@ -163,8 +162,18 @@ To understand the severity of food crises, HERO integrates and monitors various 
 </div>
 
 ### Trends of food insecurity x trends of drivers+
+
 - Inserire grafici drivers (AFFIANCARLI UNO A ALTRO E NON SOVRAPPORLI)
-- confrontare i trends dei drivers con trends food insecurity (c'è una correlazione)
+
+
+[TREND POLITICO/SOCIALI]
+
+
+[TREND CLIMATICI]
+<iframe src="assets/toADD/CHIRPS_KEN_vs_SEN.html" width="100%" height="600" style="border:none;"></iframe>
+
+[CONFRONTO CON IPC]
+confrontare i trends dei drivers con trends food insecurity (c'è una correlazione)
 
 ### Seasonality of food insecurity x trends of drivers+
 -Inserire grafici (AFFIANCARLI UNO A ALTRO E NON SOVRAPPORLI)
