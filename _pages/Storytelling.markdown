@@ -69,13 +69,127 @@ As illustrated in the interactive chart above, <strong>Haiti</strong>'s trajecto
 </p>
 <iframe src="assets/toADD/sito/SDN_3_modificato_v2.html" width="100%" height="600" style="border:none;"></iframe>
 
-From mid-2019 to early 2023, the share of Sudan's population facing severe food insecurity (IPC Phase 3+) remained relatively low and stable, staying between 13% and 25%. That changed in April 2023, when <span class="history-tooltip">civil war broke out<span class="tooltip-text"><i class="fas fa-info-circle"></i> The conflict erupted in Khartoum on April 15, 2023, driven by a violent power struggle between military and paramilitary factions over the country's transition to civilian rule.</span></span> between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) after the 2021 coup.
+# <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
 
-Food insecurity then rose sharply. Within a year, it more than doubled — climbing from around 35% to a peak of over 53% by mid-2024. Levels have stayed high ever since, remaining between 40% and 50% through 2025. The impact goes far beyond this chart: the war has forced more than 14 million people from their homes, left around 25 million facing severe hunger, and caused an estimated 400,000 deaths — making it one of the worst humanitarian crises in the world today.
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
+Global food security is not threatened by a single factor, but by a complex, interconnected web of crises: armed conflict, extreme climate events, macroeconomic instability, and forced migration. To disentangle this complexity, we created <strong>HERO (Hunger Early-warning & Risk Optimizer)</strong>—a Big Data architecture designed to analytically dissect and anticipate these humanitarian emergencies.
+</p>
 
-Before the conflict began, the percentage of the aggregated population experiencing IPC Phase 3+ acute food insecurity stayed within a relatively stable range, though still concerning — moving between roughly 13% and 25% from July 2019 through early 2023. Once the conflict began in early 2023, the data takes a dramatic turn upward. By July 2023, the insecurity metric passes the 40% mark, demonstrating an immediate and severe degradation of logistical and agricultural stability. The numbers kept rising, reaching a devastating peak of nearly 55% by mid-2024. Although levels have eased slightly since that peak they haven't gone back down. The metric remains structurally elevated well above 40% through January 2026, showing that this isn't a temporary spike, but a lasting crisis with no sign of returning to pre-war conditions.
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
+Rather than merely describing the current state of global hunger, HERO was built to look ahead. Our primary objective is to radically refine how food crises are forecasted. Instead of relying on a "one-size-fits-all" global model, HERO leverages a completely novel approach: <strong>predicting the future of a specific region by leveraging data from other countries that share the exact same "DNA" of crisis drivers</strong>. If we know how a specific sequence of climate and economic shocks historically unfolded in one nation, we can use that pattern to issue early warnings for a different, but structurally similar, country facing those same initial shocks today.
+</p>
 
--grafico Afghanistan 
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
+To achieve this, HERO integrates massive global data streams—from geopolitical instability to precipitation anomalies—and analyzes them at the sub-national level (Admin1). This geographic choice is highly strategic: it allows us to overcome the severe data scarcity found at the hyper-local level (Admin2), while still capturing critical regional nuances that get completely lost in broad national averages. 
+</p>
+
+<div style="background-color: #f8f9fa; border-left: 5px solid #10b981; border-radius: 6px; padding: 1.2rem; margin-top: 1.5rem; margin-bottom: 2rem;">
+<p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: #475569; font-style: italic;">
+<i class="fas fa-quote-left" style="color: #10b981; margin-right: 8px;"></i> "Data in our field are often a mess. Handling missing data and finding the right geographical granularity is the most critical aspect to address if we want these models to be truly operational and reliable." <br><strong>— Alice Giorgio</strong>
+</p>
+</div>
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+By clustering regions with affine drivers, HERO acts as a true early-warning system, enabling humanitarian organizations and policymakers to plan timely, data-driven interventions <em>before</em> an emergency turns into a catastrophe.
+</p>
+
+<details class="spoiler-container my-5 text-center" style="cursor: pointer; outline: none;">
+    <summary class="btn btn-outline-primary" style="font-weight: 600; padding: 10px 20px; border-radius: 30px; display: inline-block; list-style: none;">
+        <i class="fas fa-eye" style="margin-right: 8px;"></i> Curious about the outcome? Click for a spoiler of the results!
+    </summary>
+    <div class="card card-body text-start mt-3" style="background-color: #fffbeb; border: none; border-left: 5px solid #f59e0b; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); cursor: text;">
+        <h5 style="color: #d97706; font-weight: bold; margin-bottom: 12px;"><i class="fas fa-bolt" style="margin-right: 8px;"></i> Key Findings Anticipation</h5>
+        <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0; color: #451a03;">
+            Our intuition proved correct: grouping regions by their dominant drivers (e.g., predicting a conflict-driven region by training the model only on other conflict-driven regions) <strong>dramatically outperformed</strong> standard global models. We discovered that food prices and conflict are the strongest structural drivers of hunger, while rainfall anomalies serve as the most critical, immediate early-warning signal for sudden shocks. <em>(We'll dive deeply into the predictive modeling at the end of this page).</em>
+        </p>
+    </div>
+</details>
+<style>
+details.spoiler-container > summary::-webkit-details-marker {
+  display: none;
+}
+</style>
+
+# The Root Causes: Decoding the Drivers of Crisis
+
+<iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato.html" width="100%" height="600" style="border:none;"></iframe>
+
+
+<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">From Words to Data: Mapping Famine Drivers Through Term Frequency</h1>
+
+To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-danger">
+                <div class="card-body">
+                    <h4 class="card-title text-danger"><i class="fas fa-hand-fist"></i> Conflicts (ACLED)</h4>
+                    <p class="card-text text-muted">
+                        Real-time tracking of political violence events, armed clashes, and attacks against civilians. Data on casualties and the frequency of clashes are normalized per </b>100,000 inhabitants</b> to compare demographically dissimilar areas.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-success">
+                <div class="card-body">
+                    <h4 class="card-title text-success"><i class="fas fa-cloud-showers-water"></i> Precipitation (CHIRPS)</h4>
+                    <p class="card-text text-muted">
+                        Satellite-based estimation of monthly accumulated rainfall and rainfall anomalies compared to thirty-year historical averages, enabling early identification of prolonged droughts or floods.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-info">
+                <div class="card-body">
+                    <h4 class="card-title text-info"><i class="fas fa-seedling"></i> Vegetation Health (NDVI)</h4>
+                    <p class="card-text text-muted">
+                        The NDVI index measures the density and vigor of agricultural crops. It allows for the quantification of agricultural climate shocks before they translate into actual yield loss.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-warning">
+                <div class="card-body">
+                    <h4 class="card-title text-warning"><i class="fas fa-shopping-basket"></i> Food Markets (WFP)</h4>
+                    <p class="card-text text-muted">
+                        Local market prices provided by the World Food Programme. The analysis tracks the cost of the food basket and local inflation of basic necessities, capturing price shocks before they propagate globally."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-secondary">
+                <div class="card-body">
+                    <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> Internally Displaced Persons (IDP)</h4>
+                    <p class="card-text text-muted">
+                        Internal migration flows driven by violence shocks or climate disasters. This parameter is expressed as a percentage of the overall population of the area to assess the residual demographic pressure.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 hero-card card-border-top-dark">
+                <div class="card-body">
+                    <h4 class="card-title text-dark"><i class="fas fa-newspaper"></i> Sentiment and news (GDELT)</h4>
+                    <p class="card-text text-muted">
+                        Global media flows indexed by QuadClass. Through the quantitative extraction of news tone (sentiment) and salience volume, we monitor the external perception of the crisis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <iframe src="assets/toADD/sito/AFG_IPC3+_modificata.html" width="100%" height="600" style="border:none;"></iframe>
 While the proportion of the population facing IPC Phase 3+ acute food insecurity initially hovered around a low baseline, this stability ended abruptly in May 2021 with the withdrawal of US troops. This event triggered a sharp surge, driving food insecurity to a peak of nearly 55%. Subsequently, levels followed a volatile downward trajectory, declining steadily through 2026 to settle near 20%.
 
@@ -89,16 +203,6 @@ Through 2018 and 2019, the seasonal component exhibits a distinct, regular perio
     <img src="{{ site.baseurl }}/assets/images/Progetto-Hero.png" alt="Heatmap of Food Insecurity Drivers by Country" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
 </div>
 
-# <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
-
-Global food security is threatened by a complex web of interconnected factors: armed conflict, extreme climate change, macroeconomic instability, and forced migration. The HERO project (Hunger Early-warning & Risk Optimizer) was created with the goal of developing a Big Data architecture capable of analytically dissecting these humanitarian crises.
-
-HERO’s primary objective is to move beyond merely describing global hunger and shift toward a highly analytical, predictive approach. The project leverages Big Data architecture and a Machine Learning model to identify the root causes driving food crises and determining their severity on the IPC (Integrated Food Security Phase Classification) scale.
-To achieve this, HERO integrates and analyzes diverse global data streams—ranging from socioeconomic dynamics (such as conflict, political instability, and market fluctuations) to climate and environmental drivers (such as drought and precipitation anomalies).
-The analysis is conducted at the regional level (Admin1). This choice makes it possible to overcome the severe data scarcity found at the local level (Admin2), ensuring a robust, continuous dataset enriched with global geopolitical indicators that would otherwise be lost at finer resolutions (Cit. Alice Giorgio | Data scientist | WFP, data in our area are a mess and missing data are the main aspect to adress).
-In this way, HERO goes beyond capturing a snapshot of the current situation to provide an early-warning tool capable of forecasting evolving risks. This enables humanitarian organizations and policymakers to plan timely, targeted, data-driven interventions before an emergency turns into a catastrophe.
-
--- METTERE IMMAGINE ANIMATA PAESI CHE SI SPENGONO E ACCENDONO NEL TEMPO -- paesi nelle varie fasi (rosso tenue fasi iniziali e rosso scuro fasi più gravi)
 
 ##### [PENSARE SE ANTICIPARE ALCUNI RISULTATI COME SUGGERITO DAL PROF]
 ##### [AGGIUNGERE BOTTONE SPOILER CHE NASCONDE TESTO CON RISULTATI PUò ESSERE SIMPATICO?]
@@ -114,7 +218,7 @@ In this way, HERO goes beyond capturing a snapshot of the current situation to p
 # Food Insecurity through the lens of its Main Drivers
 ## Drivers description
 
-<iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato.html" width="100%" height="600" style="border:none;"></iframe>
+
 
 To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
 
