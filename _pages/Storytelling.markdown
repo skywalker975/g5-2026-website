@@ -278,8 +278,42 @@ Let's test your investigative skills again, this time looking at Sudan. Historic
     </details>
 </div>
 
-[TREND CLIMATICI]
-<iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto_con_mappa" width="100%" height="600" style="border:none;"></iframe>
+## The Rhythm of the Rains: Profiling Climatic Diversity
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+Unlike political shocks, which are sudden and structural, climatic drivers like rainfall are inherently cyclical. However, this rhythm is completely dictated by geography. In the dashboard below, we compare the rainfall profiles of Madagascar, Mozambique, Senegal, and Uganda. Explore the time series and the radar plot (which visualizes seasonality across the months of the year) to discover how drastically rainfall intensity and timing differ across the continent.
+</p>
+
+<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+    <iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto_con_mappa" width="100%" height="100%" style="border:none;"></iframe>
+</div>
+
+<div class="row mb-5 mt-2">
+    <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card h-100 shadow-sm" style="border: none; border-left: 4px solid #0ea5e9;">
+            <div class="card-body">
+                <h5 class="card-title" style="color: #0ea5e9; font-weight: 600; font-size: 1.1rem;"><i class="fas fa-cloud-showers-heavy"></i> Mozambique & Madagascar</h5>
+                <p class="card-text text-muted" style="font-size: 0.95rem;">These two nations share very similar profiles, experiencing massive, high-intensity rainfall peaks between <strong>January and March</strong>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card h-100 shadow-sm" style="border: none; border-left: 4px solid #10b981;">
+            <div class="card-body">
+                <h5 class="card-title" style="color: #10b981; font-weight: 600; font-size: 1.1rem;"><i class="fas fa-cloud-sun-rain"></i> Uganda</h5>
+                <p class="card-text text-muted" style="font-size: 0.95rem;">Uganda sees its primary rainfall peaks later in the year, particularly in <strong>July and August</strong>, but with much lower overall intensity compared to the torrential rains of Mozambique.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm" style="border: none; border-left: 4px solid #f59e0b;">
+            <div class="card-body">
+                <h5 class="card-title" style="color: #f59e0b; font-weight: 600; font-size: 1.1rem;"><i class="fas fa-sun"></i> Senegal</h5>
+                <p class="card-text text-muted" style="font-size: 0.95rem;">Senegal operates on a strict, concentrated cycle. It matches Uganda's intensity but is highly localized: heavy peaks hit in <strong>August and September</strong>, while the rest of the year is almost entirely dry.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 -- why we move from national to admin1 level analysis
