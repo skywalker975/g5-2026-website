@@ -135,3 +135,147 @@ The HERO v6 User Interface (UI) is an interactive dashboard designed to track re
   </div>
 
 </div>
+
+
+
+
+<h2 class="font-weight-bold mb-3">3. Detailed Breakdown of the Main Views & Sub-Sections</h2>
+
+<!-- 3.1 Vista Panoramica Globale -->
+<h3 class="font-weight-bold mt-4 mb-3">3.1. Global Overview</h3>
+
+<div class="row g-4 mb-5">
+  <div class="col-12">
+    <div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1.25rem 1.5rem;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1; margin-bottom: 0.35rem;">Interactive Map</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #0369a1;">Interactive World Map</h4>
+      <p class="text-muted mb-0">Displays global risk severity by country. Clicking any nation opens a Geographic Audit Modal to verify data availability before diving into details.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div style="background-color: #fff8e1; border-left: 5px solid #e0a800; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #a16207; margin-bottom: 0.35rem;">Risk Matrix</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #a16207;">53+ Country Risk Ranking</h4>
+      <p class="text-muted mb-0">A sortable table ranking monitored nations based on combined scores for humanitarian emergencies, conflicts, and climate anomalies.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div style="background-color: #f3e8ff; border-left: 5px solid #7c3aed; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #6b21a8; margin-bottom: 0.35rem;">Seasonal Insights</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #6b21a8;">Global Radar Toggle</h4>
+      <p class="text-muted mb-0">Switches the main view to comparative radar charts, highlighting lean seasons and critical seasonal months across all countries.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 3.2 Vista Dettaglio Paese -->
+<h3 class="font-weight-bold mt-4 mb-3">3.2. Country Detail & Its 11 Sub-Sections</h3>
+
+<p class="text-muted mb-4">
+  Selecting a country loads a dedicated header with key identifiers and grants access to 11 specialized sub-tabs:
+</p>
+
+<div class="row g-4">
+
+  <!-- Sub-tab 1 -->
+  <div class="col-md-6">
+    <div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1; margin-bottom: 0.35rem;">Sub-Section 01</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #0369a1;">Map & Regions</h4>
+      <p class="text-muted mb-0">Interactive sub-regional map (provinces, governorates). Clicking a province filters all national time series to that specific region.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 2 -->
+  <div class="col-md-6">
+    <div style="background-color: #fff8e1; border-left: 5px solid #e0a800; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #a16207; margin-bottom: 0.35rem;">Sub-Section 02</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #a16207;">Charts & Trends</h4>
+      <p class="text-muted mb-0">Aggregated socio-economic stability indicators. Supports switching between linear historical series and 12-month seasonal radar charts.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 3 -->
+  <div class="col-md-6">
+    <div style="background-color: #f3e8ff; border-left: 5px solid #7c3aed; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #6b21a8; margin-bottom: 0.35rem;">Sub-Section 03</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #6b21a8;">Food Markets & Inflation</h4>
+      <p class="text-muted mb-0">Tracks micro-economic food prices and local inflation with high granularity—from national aggregates down to individual market locations.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 4 -->
+  <div class="col-md-6">
+    <div style="background-color: #ecfdf5; border-left: 5px solid #059669; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #047857; margin-bottom: 0.35rem;">Sub-Section 04</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #047857;">Media & News Sentiment</h4>
+      <p class="text-muted mb-0">Monitors media coverage volume against ground events ("forgotten wars") and tracks shifts in global news sentiment over time.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 5 -->
+  <div class="col-md-6">
+    <div style="background-color: #fff1f2; border-left: 5px solid #e11d48; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #be123c; margin-bottom: 0.35rem;">Sub-Section 05</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #be123c;">Food Insecurity (IPC)</h4>
+      <p class="text-muted mb-0">Monitors official food security crisis levels, tracking populations in acute phases to project emergency aid requirements.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 6 -->
+  <div class="col-md-6">
+    <div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1; margin-bottom: 0.35rem;">Sub-Section 06</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #0369a1;">Conflict & Security Events</h4>
+      <p class="text-muted mb-0">Geolocated tracking of armed conflict, civilian violence, and security incidents to assess risks along humanitarian supply corridors.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 7 -->
+  <div class="col-md-6">
+    <div style="background-color: #fff8e1; border-left: 5px solid #e0a800; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #a16207; margin-bottom: 0.35rem;">Sub-Section 07</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #a16207;">Displaced Persons & Refugees</h4>
+      <p class="text-muted mb-0">Tracks population displacement flows (IDPs and refugees) and maps demographic pressure on host communities and camps.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 8 -->
+  <div class="col-md-6">
+    <div style="background-color: #f3e8ff; border-left: 5px solid #7c3aed; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #6b21a8; margin-bottom: 0.35rem;">Sub-Section 08</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #6b21a8;">Rainfall Monitoring</h4>
+      <p class="text-muted mb-0">Satellite-based precipitation tracking to detect agricultural droughts and extreme rainfall events causing flash floods.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 9 -->
+  <div class="col-md-6">
+    <div style="background-color: #ecfdf5; border-left: 5px solid #059669; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #047857; margin-bottom: 0.35rem;">Sub-Section 09</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #047857;">Vegetation & Crop Health</h4>
+      <p class="text-muted mb-0">Evaluates crop and pasture health using vegetation indices, providing early warnings for potential harvest failures.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 10 -->
+  <div class="col-md-6">
+    <div style="background-color: #fff1f2; border-left: 5px solid #e11d48; border-radius: 6px; padding: 1.25rem 1.5rem; height: 100%;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #be123c; margin-bottom: 0.35rem;">Sub-Section 10</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #be123c;">Spatio-Temporal Matrix</h4>
+      <p class="text-muted mb-0">Heatmaps linking provinces (Y-axis) with time (X-axis) to instantly identify where and when a crisis originated and spread.</p>
+    </div>
+  </div>
+
+  <!-- Sub-tab 11 -->
+  <div class="col-12">
+    <div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1.25rem 1.5rem;">
+      <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1; margin-bottom: 0.35rem;">Sub-Section 11</div>
+      <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #0369a1;">TSA Diagnostics & Predictive Modeling</h4>
+      <p class="text-muted mb-0">Advanced statistical engine for the selected area featuring trend-seasonality decomposition, anomaly detection, lag analysis, and Machine Learning predictive model comparisons.</p>
+    </div>
+  </div>
+
+</div>
