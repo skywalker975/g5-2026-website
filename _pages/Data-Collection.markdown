@@ -41,11 +41,6 @@ The purpose is to provide clear environmental signals on drought, crop stress, a
 * GDELT: Sourced from the GDELT Project via Google BigQuery, this pipeline monitors global news coverage to capture real-time media signals on conflict, protests, and humanitarian responses. The method queries daily partitioned event tables and categorizes geopolitical actions using the CAMEO taxonomy to structure raw news data. The purpose is to provide early, near-real-time indicators of instability that often lead to food shortages, filling the time gap before official, structured field reports are published.
 
 
-
-
-
-
-
 The <b>HERO</b> system organizes humanitarian data and its analytical components around a unified, ready-to-use structure. The framework combines various dimensions of risk (IPC, conflict, displacement, meteorological data, market prices, media signals, and vegetation health) by directly aligning them with food security assessment periods.
 
 <div class="container mt-4">
