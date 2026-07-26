@@ -502,6 +502,8 @@ Food insecurity is rarely a static condition; it evolves. By mapping out the dom
 
 ### <span class="text-gradient">Crisis Profiles: Shared Destinies</span>
 
+"Cosa più importante in questo campo è individuare profilo di crisi in modo da capire quale sarà l'evoluzione della crisi in un certo paese e adattare di conseguenza le decisioni da prendere"
+quote by Alice Giorgio
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 The most startling revelation from the dense clustering was the discovery of <b>Crisis Profiles</b>—nations that share identical evolutionary paths despite being thousands of miles apart. By removing borders, the data showed us that risk follows specific, recurring patterns. <i>(Hover over the highlighted text to reveal the historical context).</i>
 </p>
