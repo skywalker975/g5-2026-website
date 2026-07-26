@@ -207,6 +207,12 @@ To anticipate a food crisis before it strikes, we must understand the underlying
     </div>
 </div>
 
+## The Domino Effect: How Driver Anomalies Trigger Food Crises
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+Knowing the drivers is only half the battle; understanding how they interact and evolve over time is what makes early warning possible. Food crises are rarely the result of a single isolated event. Instead, they unfold as a cascade: a prolonged drought compromises vegetation, which in turn drives up local food prices, creating economic desperation that often sparks or exacerbates violent conflicts. By mapping the trajectories of these drivers alongside IPC severity, we can visualize this domino effect in action.
+</p>
+
 <iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato.html" width="100%" height="600" style="border:none;"></iframe>
 
 [TREND POLITICO/SOCIALI]
