@@ -183,7 +183,7 @@ The structural analysis of missingness reveals that data gaps across the evaluat
 </div>
  
 ### Clustering based on main drivers (quantitative)
-To find the best imputation method for our missing data, we first needed to evaluate how geographic proximity and statistical patterns influence the data structure. We compared two scenarios — one based strictly on statistical profiles and another incorporating geographic coordinates — across different clustering approaches (such as Hierarchical and K-Means).
+After understanding the structure of the missing data, the next step is finding the best imputation method. First, we needed to evaluate how geographic proximity and statistical patterns influence the data structure. We compared two scenarios — one based strictly on statistical profiles and another incorporating geographic coordinates — across different clustering approaches (such as Hierarchical and K-Means).
 Ultimately, we selected KNN (K-Nearest Neighbors) because it achieved the highest silhouette score, proving to be the most effective at identifying coherent and well-separated neighbors. This ensures that missing values are imputed using truly similar data points, maintaining high data integrity, even though, imputation create high level of uncertanty. In the interview that we hade with Alice Giorgio, we discussed the matter. Alice highlight how, in a context, where data collection can not be always guaranteed, the output of the models accept the risks arising from high uncertenty.
 
 
