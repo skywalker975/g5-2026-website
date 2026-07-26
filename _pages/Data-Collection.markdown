@@ -4,7 +4,7 @@ title: "Data collection"
 permalink: /Data-Collection.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/header.svg
+header_img: assets/images/folium_map.webp
 header_title: "Data collection"
 ---
 
