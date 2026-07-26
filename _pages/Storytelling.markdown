@@ -316,12 +316,20 @@ Unlike political shocks, which are sudden and structural, climatic drivers like 
 </div>
 
 
--- why we move from national to admin1 level analysis
-### Events of extreme levels of food insecurity (IPC Phase 5)
-<div class="my-5 text-center">
-    <iframe src="assets/toADD/AFG_temporal_anomalies_modificato.html" width="100%" height="600" style="border:none;"></iframe>
-    <p class="text-muted mt-2"><small>We shift to admin1-level analysis to capture sub-national variances and cross-border similarities that broad national averages obscure. While admin2 provides better granularity, severe data sparsity renders it analytically unviable. Admin1 strikes the optimal balance, ensuring robust data availability while retaining sufficient detail to expose localized anomalies.</small></p>
-</div> 
+## Zooming In: Why National Averages Aren't Enough
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+As we highlighted when introducing the HERO architecture, our models operate mostly at the <strong>admin-1</strong> (regional/provincial) level. Why is this geographical granularity so crucial? Because food crises rarely strike a country uniformly, and relying solely on broad national aggregates often masks devastating localized shocks. 
+<br><br>
+To illustrate this, the interactive heatmap below visualizes temporal anomalies (isolated via residual analysis) in the IPC Phase 3+ time series across the different micro-regions of Afghanistan. While a national average might simply show a general upward trend, this regional breakdown reveals the true anatomy of a crisis. Notice how, immediately following the May 2021 shock, intense anomaly clusters flare up across multiple specific provinces. This proves that to accurately anticipate a crisis, we must look beyond the national surface and monitor the localized fault lines where the tremors begin.
+</p>
+
+<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+    <iframe src="assets/toADD/AFG_temporal_anomalies_modificato.html" width="100%" height="100%" style="border:none;"></iframe>
+</div>
+<p class="text-center text-muted mt-2 mb-5" style="font-style: italic;">
+    <small><strong>Note on Methodology:</strong> We opted for admin-1 analysis to capture sub-national variances while avoiding the severe data sparsity that makes admin-2 analytically unviable. Admin-1 strikes the optimal balance between granularity and robust data availability.</small>
+</p>
 
 
 ### Missing data
@@ -338,6 +346,10 @@ Understanding the precise origin of these missing values is critical before appl
 
 The structural analysis of missingness reveals that data gaps across the evaluated humanitarian datasets are distinctly non-random and highly correlated. This structural missingness offers critical explainability regarding systemic data collection failures, demonstrating that outages occur in distinct functional blocks. Environmental sensor blackouts exhibit severe collinearity, highlighted by a 0.92 correlation between NDVI and CHIRPS, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Concurrently, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness in the field; it correlates strongly with missing market vulnerability data (WFP, 0.65) and displacement metrics (IDP, 0.60). This indicates that kinetic events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots during periods of acute crisis.</small></p>
 </div>
+
+<div class="my-5 text-center">
+    <img src="{{ site.baseurl }}/assets/images/ANALISI_NULLI_correlazione_strutturale.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
+    
  
 ### Clustering based on main drivers (quantitative)
 After understanding the structure of the missing data, the next step is finding the best imputation method. First, we needed to evaluate how geographic proximity and statistical patterns influence the data structure. We compared two scenarios — one based strictly on statistical profiles and another incorporating geographic coordinates — across different clustering approaches (such as Hierarchical and K-Means).
