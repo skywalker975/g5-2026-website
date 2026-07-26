@@ -86,10 +86,6 @@ subtitle: "Handling missing data"
                  To assess structural stability across both datasets, cross-algorithmic validation is performed. This benchmarks a Hierarchical (Bottom-Up) tree-building approach against a K-Means (Center-Out) centroid assignment strategy. Evaluating how both algorithms handle behavioral parameters with and without spatial coordinates establishes a clear baseline for clustering quality before downstream reconstruction.
                 </p>
 
-</div>
-</div>
-</div>
-</div>
 
 
 | **Clustering** | Silhouette indicator |
