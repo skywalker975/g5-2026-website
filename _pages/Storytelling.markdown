@@ -13,34 +13,60 @@ subtitle: "Hunger Early-warning & Risk Optimizer"
     <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
 </div>
 
-# Introduction
-# Zero Hunger by 2030: a promise still unfulfilled
-In 2015, all United Nations Member States adopted the 2030 Agenda for Sustainable Development, whose second goal — "Zero Hunger" (SDG 2) — commits the international community to «end hunger, achieve food security and improved nutrition and promote sustainable agriculture». Over a decade later, that promise remains dramatically distant.
-{: .lead }
+# Anatomy of a Global Crisis
+
+## <span class="text-gradient">Zero Hunger by 2030: a promise still unfulfilled</span>
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.2rem; font-weight: 300;">
+In 2015, all United Nations Member States adopted the <span class="history-tooltip">2030 Agenda for Sustainable Development<span class="tooltip-text"><i class="fas fa-info-circle"></i> The 2030 Agenda is a universal call to action to end poverty, protect the planet, and improve the lives and prospects of everyone, everywhere. It encompasses 17 Sustainable Development Goals (SDGs) tackling global challenges.</span></span>, whose second goal — "Zero Hunger" (SDG 2) — commits the international community to «end hunger, achieve food security and improved nutrition and promote sustainable agriculture». Over a decade later, that promise remains dramatically distant.
+</p>
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.2rem; font-weight: 300;">
 In 2024, approximately 673 million people were still undernourished, and in 2025, 266 million in 47 countries were facing acute food insecurity; in the same year, famine was confirmed in certain areas of the Gaza Strip and Sudan. Hunger, in short, remains a present-day emergency.
-{: .lead }
+</p>
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
 It is precisely to tackle this urgent challenge that the HERO project was born. HERO aims to leverage advanced data analysis and predictive modeling to infer the root causes of food crises before they escalate, providing actionable insights to help the global community stay on track toward achieving Zero Hunger.
-# Alice Giorgio's interview (WFP, Data scientist)
-As part of the development of our project, we had the pleasure of interviewing Alice Giorgio, Data Scientist at the World Food Programme (WFP). With years of experience working as a Data Scientist and an academic background in Economics from Bocconi University, Alice also shares a strong educational connection with us, having enrolled in the Master's (2nd Level) in Big data and artificial intelligence at the University of Pisa. The main objective of our conversation was to gather feedback on our methodological approach. Discussing our framework with an domain expert provided us with valuable technical insights and a real-world perspective on how to refine our model for maximum reliability and impact.
+</p>
 
-# Paris's agreement
-The Paris Agreement is a legally binding international climate treaty adopted in 2015 that aims to limit global temperature increase to 1.5°C above pre-industrial levels. It drives action through a five-year cycle where countries submit increasingly ambitious Nationally Determined Contributions (NDCs) to reduce greenhouse gas emissions and build climate resilience. The treaty establishes a framework for developed nations to provide financial, technological, and capacity-building support to vulnerable countries. Global progress is rigorously tracked via an Enhanced Transparency Framework and a Global Stocktake, collectively accelerating the worldwide transition toward zero-carbon economies.
+<hr class="section-divider">
 
-# Food Insecurity
+<div class="expert-profile-box" style="background-color: #f4f6f9; border-left: 5px solid #0056b3; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+    <h4 style="color: #0056b3; font-weight: 700; margin-top: 0; display: flex; align-items: center;">
+        <i class="fas fa-user-circle" style="font-size: 1.5rem; margin-right: 10px;"></i>
+        Expert Insight: The View from the Field
+    </h4>
+    <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify; margin-bottom: 10px;">
+        As part of the development of our project, we had the pleasure of interviewing <strong>Alice Giorgio</strong>, Data Scientist at the World Food Programme (WFP). With years of experience working as a Data Scientist and an academic background in Economics from Bocconi University, Alice also shares a strong educational connection with us, having enrolled in the Master's (2nd Level) in Big data and artificial intelligence at the University of Pisa. 
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify; margin-bottom: 10px;">
+        The main objective of our conversation was to gather feedback on our methodological approach. Discussing our framework with a domain expert provided us with valuable technical insights and a real-world perspective on how to refine our model for maximum reliability and impact.
+    </p>
+    <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify; margin-bottom: 0; font-weight: 500; color: #495057;">
+        <i class="fas fa-info-circle" style="color: #6c757d; margin-right: 6px;"></i> Throughout the rest of this narrative, you will find snippets of her commentary interspersed alongside our findings. Her quotes provide a crucial bridge between our data-driven models and the operational realities of humanitarian action on the ground.
+    </p>
+</div>
+
+
+# Measuring the Breaking Point
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+Before exploring the evolution of these crises, it is essential to understand how hunger is measured globally. The standard metric used by humanitarian organizations is the <span class="history-tooltip">Integrated Food Security Phase Classification (IPC)<span class="tooltip-text"><i class="fas fa-info-circle"></i> The IPC is a standardized global scale that classifies acute food insecurity into five severity phases: 1 (Minimal), 2 (Stressed), 3 (Crisis), 4 (Emergency), and 5 (Catastrophe/Famine). Source: ipcinfo.org</span></span>. Throughout our analysis, we specifically focus on the percentage of a country's population in <strong>IPC Phase 3 or higher (Phase 3+)</strong>. This threshold represents the critical tipping point where populations face acute malnutrition or are forced to deplete essential livelihood assets just to survive, requiring urgent humanitarian intervention.
+</p>
 
 ### Trends of food insecurity
-<iframe src="assets/toADD/sito/HTI_vs_SSD_SDN_modificato.html" width="100%" height="600" style="border:none;"></iframe>
-The graph illustrates the aggregated percentage of the population experiencing IPC
-  Phase 3+ food insecurity across three nations from 2017 to 2026. Haiti demonstrates a
-  sustained, secular upward trend, with acute food insecurity climbing steadily from below 20%
-  in late 2017 to over 50% by 2026. In contrast, South Sudan exhibits a stable longitudinal
-  baseline but is characterized by severe, high-amplitude oscillations, repeatedly fluctuating
-  between approximately 35% and 65%. Sudan presents a distinctly different trajectory: the
-  country maintained comparatively low levels of food insecurity (remaining under 25%) until
-  early 2023. Following the onset of systemic conflict on April 15, 2023, Sudan experienced a
-  massive structural shock, resulting in a sudden, sharp escalation in food insecurity that
-  peaked near 55%, completely destabilizing its previous baseline.
-  
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+Not all food crises evolve in the same way. When we track the percentage of the population facing IPC Phase 3+ over time, distinct structural patterns emerge. Some nations, like <strong>South Sudan</strong>, endure a chronic crisis baseline punctuated by severe, high-amplitude oscillations. Others, such as <strong>Haiti</strong>, suffer from a relentless, secular deterioration, where food insecurity climbs steadily year after year without relief. Finally, there are countries like <strong>Sudan</strong>, which maintained relatively low and stable levels of hunger until a sudden, catastrophic shock—like the outbreak of a civil war—completely destabilized their entire food system overnight.
+</p>
+
+<div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+    <iframe src="assets/toADD/sito/HTI_vs_SSD_SDN_modificato.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
+</div>
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+As illustrated in the interactive chart above, <strong>Haiti</strong>'s trajectory shows a devastating upward climb, rising from under 20% in late 2017 to over 50% by 2026. <strong>South Sudan</strong>, on the other hand, remains trapped in a volatile loop, repeatedly fluctuating between 35% and 65% as seasonal and localized shocks hit a deeply fragile baseline. <strong>Sudan</strong> tells perhaps the most dramatic story of the three: a relatively stable environment (remaining under 25%) that was violently shattered in early 2023. The onset of systemic conflict caused an immediate, massive structural shock, resulting in a sudden escalation that peaked near 55% and completely destroyed the country's previous stability.
+</p>
 <iframe src="assets/toADD/sito/SDN_3_modificato_v2.html" width="100%" height="600" style="border:none;"></iframe>
 
 From mid-2019 to early 2023, the share of Sudan's population facing severe food insecurity (IPC Phase 3+) remained relatively low and stable, staying between 13% and 25%. That changed in April 2023, when <span class="history-tooltip">civil war broke out<span class="tooltip-text"><i class="fas fa-info-circle"></i> The conflict erupted in Khartoum on April 15, 2023, driven by a violent power struggle between military and paramilitary factions over the country's transition to civilian rule.</span></span> between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) after the 2021 coup.
@@ -339,7 +365,7 @@ While the macroeconomic, climatic, and structural drivers of hunger are universa
 /* Modern Interactive Tooltip */
 .history-tooltip {
     position: relative;
-    display: inline-block;
+    display: inline;
     cursor: help;
     border-bottom: 2px dotted #007bff;
     color: inherit;
