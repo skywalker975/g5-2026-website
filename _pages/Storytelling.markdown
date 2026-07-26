@@ -349,18 +349,30 @@ Our shift to admin-1 level analysis was a strategic move to preserve data integr
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Understanding the precise origin of these missing values is critical before applying any statistical interventions. Implementing "blind imputation" without knowing the underlying causes of the data gaps actively harms the explainability of the models. The absence of data is rarely random: an ACLED blackout could signify a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has completely collapsed. Similarly, missing IDP or WFP data often translates to environments that are too dangerous for humanitarian surveyors to operate in. To mitigate these structural blind spots, our analytical strategies rely on cross-referencing external data sources and utilizing shadow matrices to explicitly capture and model the missingness itself, rather than arbitrarily filling the voids.
+As you can see in the matrix above, the sheer prevalence of these missing values forms the primary obstacle in our analysis. This "pain point" threatens to severely degrade the performance and reliability of our predictive models if left unchecked. There is a high concentration of null values characterized by stark disparities across different countries—what is well-documented in one nation might be a complete black box in another. Furthermore, as we attempt to drill down into more granular data, sparsity increases exponentially. At the <strong>admin-2</strong> (district) level, datasets like ACLED (conflict tracking) become particularly compromised, forcing us to balance our desire for hyper-local detail against the harsh reality of missing information on the ground.
 </p>
 
-<div class="full-width-wrapper">
-    <img src="{{ site.baseurl }}assets/images/ANALISI_NULLI_correlazione_strutturale.png" alt="sbd-pattern" class="full-width-image">
-     <p class="text-muted mt-2"><small>
+### The Anatomy of the Void: Structural Missingness
 
-The structural analysis of missingness reveals that data gaps across the evaluated humanitarian datasets are distinctly non-random and highly correlated. This structural missingness offers critical explainability regarding systemic data collection failures, demonstrating that outages occur in distinct functional blocks. Environmental sensor blackouts exhibit severe collinearity, highlighted by a 0.92 correlation between NDVI and CHIRPS, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Concurrently, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness in the field; it correlates strongly with missing market vulnerability data (WFP, 0.65) and displacement metrics (IDP, 0.60). This indicates that kinetic events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots during periods of acute crisis.</small></p>
-</div>
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+But these data gaps aren't just random noise—they have a distinct, structural anatomy. When we mapped the correlation of missingness across our different drivers, we uncovered a fascinating, albeit grim, reality: data outages occur in distinct, interconnected blocks. 
+<br><br>
+As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a staggering <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: kinetic, violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
+</p>
 
 <div class="my-5 text-center">
-    <img src="{{ site.baseurl }}/assets/images/ANALISI_NULLI_correlazione_strutturale.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
+    <img src="{{ site.baseurl }}/assets/images/ANALISI_NULLI_correlazione_strutturale.png" alt="Structural Missingness Correlation Matrix" class="img-fluid rounded shadow-sm" style="max-width: 100%; border: 1px solid #e0e0e0; border-radius: 8px;">
+</div>
+
+<div style="background-color: #f8f9fa; border-left: 5px solid #10b981; border-radius: 6px; padding: 1.2rem; margin-top: 3rem; margin-bottom: 2rem;">
+<p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: #475569; font-style: italic;">
+<i class="fas fa-quote-left" style="color: #10b981; margin-right: 8px;"></i> "Understanding the precise origin of missing values is critical before applying statistical interventions. Implementing 'blind imputation' without knowing the underlying causes actively harms the explainability of the models. We often cannot know the true cause: is an ACLED blackout signifying a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has completely collapsed? Similarly, missing WFP data often means environments are simply too dangerous for humanitarian surveyors to operate in. To mitigate these structural blind spots, analytical strategies must cross-reference external data sources." <br><br><strong>— Alice Giorgio, Data Scientist (WFP)</strong>
+</p>
+</div>
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 3rem; font-weight: 300;">
+Despite these immense challenges and the inherent risks highlighted by experts, an early warning system cannot function on empty spaces. To bridge the gap between acknowledging the dangers of missing data and actually making our models operational, we had to find a scientifically robust way to fill in the blanks. We needed an imputation strategy that respected the underlying geography and socioeconomic realities of the regions, minimizing the "hallucinations" of blind statistics. This is where clustering came into play.
+</p>
     
  
 ### Clustering based on main drivers (quantitative)
@@ -368,7 +380,6 @@ After understanding the structure of the missing data, the next step is finding 
 Ultimately, we selected KNN (K-Nearest Neighbors) because it achieved the highest silhouette score, proving to be the most effective at identifying coherent and well-separated neighbors. This ensures that missing values are imputed using truly similar data points, maintaining high data integrity, even though, imputation create high level of uncertanty. In the interview that we hade with Alice Giorgio, we discussed the matter. Alice highlight how, in a context, where data collection can not be always guaranteed, the output of the models accept the risks arising from high uncertenty.
 
 
--- also show how admin1s across countries are similar 
 
 
 # Qualitative Profiles of Food Insecurity
