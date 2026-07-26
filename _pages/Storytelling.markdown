@@ -332,13 +332,25 @@ To illustrate this, the interactive heatmap below visualizes temporal anomalies 
 </p>
 
 
-### Missing data
-<iframe src="assets/toADD/DATI_MANCANTI.html" width="100%" height="600" style="border:none;"></iframe>
-"Missing Data are a pain point" quote by Alice Giorgio.
-"Since we don't know the root causes of the missing data, performing imputation could compromise explainability. This can be partly linked to the shadow matrix (Acled). It could also be cross-referenced with external data. Missing values are the main issue in our analysis. If IDP is missing, it could mean several things: it's too dangerous, or the surveys cover very few people."
+## The Invisible Enemy: Tackling Missing Data
 
-The prevalence of missing values constitutes the primary obstacle in this analysis, representing a significant "pain point" that severely degrades the performance and reliability of predictive models. As evidenced by the missingness matrix, there is a high concentration of null values characterized by stark disparities across different countries. Furthermore, data sparsity increases significantly at the admin2 level compared to broader aggregations, with the ACLED dataset being particularly compromised.
-Understanding the precise origin of these missing values is critical before applying any statistical interventions. As noted in stakeholder interviews, implementing blind imputation without knowing the underlying causes of the data gaps actively harms the explainability of the models. The absence of data is rarely random; for instance, an ACLED blackout could signify a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has collapsed. Similarly, missing IDP or WFP data often translates to environments that are too dangerous for humanitarian surveyors to operate in, or situations where survey sample sizes are critically low. To mitigate these structural blind spots, analytical strategies must cross-reference external data sources—as suggested by Manuel—or utilize shadow matrices for datasets like ACLED to explicitly capture and model the missingness itself, rather than arbitrarily filling the voids.
+<div style="background-color: #f8f9fa; border-left: 5px solid #10b981; border-radius: 6px; padding: 1.2rem; margin-top: 1.5rem; margin-bottom: 2rem;">
+<p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: #475569; font-style: italic;">
+<i class="fas fa-quote-left" style="color: #10b981; margin-right: 8px;"></i> "Missing data remains one of the most critical pain points in this field. You simply cannot accurately predict what you cannot see." <br><br><strong>— Alice Giorgio, Data Scientist (WFP)</strong>
+</p>
+</div>
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+Our shift to admin-1 level analysis was a strategic move to preserve data integrity, but it didn't eliminate the void completely. As the interactive heatmap below reveals, the distribution of missing data is highly uneven across both space and time. Notice the significant gaps plaguing large parts of the African continent and the Middle East, particularly prior to 2021.
+</p>
+
+<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+    <iframe src="assets/toADD/DATI_MANCANTI.html" width="100%" height="100%" style="border:none;"></iframe>
+</div>
+
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
+Understanding the precise origin of these missing values is critical before applying any statistical interventions. Implementing "blind imputation" without knowing the underlying causes of the data gaps actively harms the explainability of the models. The absence of data is rarely random: an ACLED blackout could signify a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has completely collapsed. Similarly, missing IDP or WFP data often translates to environments that are too dangerous for humanitarian surveyors to operate in. To mitigate these structural blind spots, our analytical strategies rely on cross-referencing external data sources and utilizing shadow matrices to explicitly capture and model the missingness itself, rather than arbitrarily filling the voids.
+</p>
 
 <div class="full-width-wrapper">
     <img src="{{ site.baseurl }}assets/images/ANALISI_NULLI_correlazione_strutturale.png" alt="sbd-pattern" class="full-width-image">
