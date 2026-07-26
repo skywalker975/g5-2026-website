@@ -62,8 +62,6 @@ navbar:
           url: /Missing-values.html
         - title: Data augumentation
           url: /data-augumentation.html
-    - title: Clustering
-      url: /clustering.html
     - title: Text analysis
       url: /Text-analysis.html
     - title: Modelling
