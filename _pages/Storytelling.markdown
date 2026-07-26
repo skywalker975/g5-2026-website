@@ -115,8 +115,6 @@ details.spoiler-container > summary::-webkit-details-marker {
 <iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato.html" width="100%" height="600" style="border:none;"></iframe>
 
 
-<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">From Words to Data: Mapping Famine Drivers Through Term Frequency</h1>
-
 To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
 
 <div class="container mt-4">
@@ -188,7 +186,15 @@ To understand the severity of food crises, HERO integrates and monitors various 
     </div>
 </div>
 
+[TREND POLITICO/SOCIALI]
 
+<iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling" width="100%" height="600" style="border:none;"></iframe>
+
+
+<iframe src="assets/toADD/piogge_evt_best/Dashboard_SDN_Storytelling" width="100%" height="600" style="border:none;"></iframe>
+
+[TREND CLIMATICI]
+<iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto" width="100%" height="600" style="border:none;"></iframe>
 
 <iframe src="assets/toADD/sito/AFG_IPC3+_modificata.html" width="100%" height="600" style="border:none;"></iframe>
 While the proportion of the population facing IPC Phase 3+ acute food insecurity initially hovered around a low baseline, this stability ended abruptly in May 2021 with the withdrawal of US troops. This event triggered a sharp surge, driving food insecurity to a peak of nearly 55%. Subsequently, levels followed a volatile downward trajectory, declining steadily through 2026 to settle near 20%.
@@ -293,17 +299,17 @@ To understand the severity of food crises, HERO integrates and monitors various 
 
 ### Trends of food insecurity x trends of drivers+
 
-- Inserire grafici drivers (AFFIANCARLI UNO A ALTRO E NON SOVRAPPORLI)
-
 
 [TREND POLITICO/SOCIALI]
 
+<iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling" width="100%" height="600" style="border:none;"></iframe>
+
+
+<iframe src="assets/toADD/piogge_evt_best/Dashboard_SDN_Storytelling" width="100%" height="600" style="border:none;"></iframe>
 
 [TREND CLIMATICI]
-<iframe src="assets/toADD/CHIRPS_KEN_vs_SEN.html" width="100%" height="600" style="border:none;"></iframe>
+<iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto" width="100%" height="600" style="border:none;"></iframe>
 
-[CONFRONTO CON IPC]
-confrontare i trends dei drivers con trends food insecurity (c'è una correlazione)
 
 ### Seasonality of food insecurity x trends of drivers+
 -Inserire grafici (AFFIANCARLI UNO A ALTRO E NON SOVRAPPORLI)
@@ -337,7 +343,6 @@ Ultimately, we selected KNN (K-Nearest Neighbors) because it achieved the highes
 
 
 <h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">From Words to Data: Mapping Famine Drivers Through Term Frequency</h1>
-
 
 
 
