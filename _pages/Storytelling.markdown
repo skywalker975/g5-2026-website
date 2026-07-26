@@ -82,12 +82,14 @@ In this way, HERO goes beyond capturing a snapshot of the current situation to p
 -- why we move from national to admin1 level analysis
 ### Events of extreme levels of food insecurity (IPC Phase 5)
 <div class="my-5 text-center">
-    <img src="{{ site.baseurl }}/assets/toADD/sito/SSD_temporal_anomalies.png" alt="Static inference, per-country detail, one marker per scope" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
+    <iframe src="assets/toADD/AFG_temporal_anomalies_modificato.html" width="100%" height="600" style="border:none;"></iframe>
     <p class="text-muted mt-2"><small>We shift to admin1-level analysis to capture sub-national variances and cross-border similarities that broad national averages obscure. While admin2 provides better granularity, severe data sparsity renders it analytically unviable. Admin1 strikes the optimal balance, ensuring robust data availability while retaining sufficient detail to expose localized anomalies.</small></p>
 </div> 
 
 # Food Insecurity through the lens of its Main Drivers
 ## Drivers description
+
+<iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato.html" width="100%" height="600" style="border:none;"></iframe>
 
 To understand the severity of food crises, HERO integrates and monitors various global information flows, each representing a crucial piece of the humanitarian puzzle:
 
@@ -170,7 +172,7 @@ To understand the severity of food crises, HERO integrates and monitors various 
 -anche i drivers meno sensibili a stagionalità hanno stagionalità (ACLED e IDP)
 
 ### Missing data
-<iframe src="assets/toADD/sito/datiMancanti.html" width="100%" height="600" style="border:none;"></iframe>
+<iframe src="assets/toADD/DATI_MANCANTI.html" width="100%" height="600" style="border:none;"></iframe>
 "Since we don't know the root causes of the missing data, performing imputation could compromise explainability. This can be partly linked to the shadow matrix (Acled). It could also be cross-referenced with external data. Missing values are the main issue in our analysis. If IDP is missing, it could mean several things: it's too dangerous, or the surveys cover very few people."
 The prevalence of missing values constitutes the primary obstacle in this analysis, representing a significant "pain point" that severely degrades the performance and reliability of predictive models. As evidenced by the missingness matrix, there is a high concentration of null values characterized by stark disparities across different countries. Furthermore, data sparsity increases significantly at the admin2 level compared to broader aggregations, with the ACLED dataset being particularly compromised.
 Understanding the precise origin of these missing values is critical before applying any statistical interventions. As noted in stakeholder interviews, implementing blind imputation without knowing the underlying causes of the data gaps actively harms the explainability of the models. The absence of data is rarely random; for instance, an ACLED blackout could signify a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has collapsed. Similarly, missing IDP or WFP data often translates to environments that are too dangerous for humanitarian surveyors to operate in, or situations where survey sample sizes are critically low. To mitigate these structural blind spots, analytical strategies must cross-reference external data sources—as suggested by Manuel—or utilize shadow matrices for datasets like ACLED to explicitly capture and model the missingness itself, rather than arbitrarily filling the voids.
