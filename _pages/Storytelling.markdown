@@ -315,6 +315,17 @@ Unlike political shocks, which are sudden and structural, climatic drivers like 
     </div>
 </div>
 
+<div class="my-5 text-center fade-in-up" style="animation-delay: 0.2s;">
+    <div class="p-4 mx-auto" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-radius: 12px; border: 1px solid #bfdbfe; max-width: 750px; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);">
+        <h4 style="color: #1e40af; font-weight: 700; margin-bottom: 12px;"><i class="fas fa-sliders-h"></i> Take Control of the Data</h4>
+        <p style="color: #475569; font-size: 1.05rem; margin-bottom: 25px; line-height: 1.6;">
+            Want to explore these trends yourself? We've built a dedicated <strong>Interactive User Interface</strong> where you can freely navigate, filter, and dive deep into the statistics and distributions of all the humanitarian drivers we've collected.
+        </p>
+        <a href="{{ site.baseurl }}/UI.html" class="btn btn-primary btn-lg shadow-sm" style="background-color: #2563eb; border-color: #2563eb; font-weight: 600; padding: 14px 35px; border-radius: 8px; text-decoration: none;">
+            <i class="fas fa-chart-pie" style="margin-right: 8px;"></i> Launch the User Interface
+        </a>
+    </div>
+</div>
 
 ## Zooming In: Why National Averages Aren't Enough
 
