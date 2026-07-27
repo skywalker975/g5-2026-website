@@ -56,7 +56,7 @@ Before exploring the evolution of these crises, it is essential to understand ho
 ### Trends of food insecurity
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Not all food crises evolve in the same way. When we track the percentage of the population facing IPC Phase 3+ over time, distinct structural patterns emerge. Some nations, like <strong>South Sudan</strong>, endure a chronic crisis baseline punctuated by severe, high-amplitude oscillations. Others, such as <strong>Haiti</strong>, suffer from a relentless, secular deterioration, where food insecurity climbs steadily year after year without relief. Finally, there are countries like <strong>Sudan</strong>, which maintained relatively low and stable levels of hunger until a sudden, catastrophic shock—like the outbreak of a civil war—completely destabilized their entire food system overnight.
+Not all food crises evolve in the same way. When we track the percentage of the population facing IPC Phase 3+ over time, distinct structural patterns emerge. Some nations, like <strong>South Sudan</strong>, endure a chronic crisis baseline punctuated by severe oscillations. Others, such as <strong>Haiti</strong>, suffer from a continuous deterioration, where food insecurity climbs steadily year after year without relief. Finally, there are countries like <strong>Sudan</strong>, which maintained relatively stable levels of hunger until a sudden, catastrophic shock—like the outbreak of a civil war—completely destabilized their entire food system.
 </p>
 
 <div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
@@ -64,7 +64,7 @@ Not all food crises evolve in the same way. When we track the percentage of the 
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-As illustrated in the interactive chart above, <strong>Haiti</strong>'s trajectory shows a devastating upward climb, rising from under 20% in late 2017 to over 50% by 2026. <strong>South Sudan</strong>, on the other hand, remains trapped in a volatile loop, repeatedly fluctuating between 35% and 65% as seasonal and localized shocks hit a deeply fragile baseline. <strong>Sudan</strong> tells perhaps the most dramatic story of the three: a relatively stable environment (remaining under 25%) that was violently shattered in early 2023. The onset of systemic conflict caused an immediate, massive structural shock, resulting in a sudden escalation that peaked near 55% and completely destroyed the country's previous stability.
+As illustrated in the interactive chart above, <strong>Haiti</strong>'s trajectory shows a devastating upward climb, rising from under 20% in late 2017 to over 50% by 2026. <strong>South Sudan</strong>, on the other hand, remains trapped in a volatile loop, repeatedly fluctuating between 35% and 65% as seasonal and localized shocks hit a deeply fragile baseline. <strong>Sudan</strong> tells perhaps the most dramatic story of the three: a relatively stable environment (remaining under 25%) that was violently shattered in early 2023. The onset of systemic conflict caused an immediate structural shock, resulting in a sudden escalation that peaked near 55% and destroyed the country's previous stability.
 </p>
 
 # <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
@@ -74,11 +74,11 @@ Global food security is not threatened by a single factor, but by a complex, int
 </p>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
-Rather than merely describing the current state of global hunger, HERO was built to look ahead. Our primary objective is to radically refine how food crises are forecasted. Instead of relying on a "one-size-fits-all" global model, HERO leverages a completely novel approach: <strong>predicting the future of a specific region by leveraging data from other countries that share the exact same "DNA" of crisis drivers</strong>. If we know how a specific sequence of climate and economic shocks historically unfolded in one nation, we can use that pattern to issue early warnings for a different, but structurally similar, country facing those same initial shocks today.
+Rather than merely describing the current state of global hunger, HERO was built to look ahead. Our primary objective is to radically refine how food crises are forecasted. Instead of relying on a "one-size-fits-all" global model, HERO leverages a novel approach: <strong>predicting the level of food insecurity of a specific region by leveraging data from other countries that share the exact same "DNA" of crisis drivers</strong>. If we know how a specific sequence of climate and economic shocks historically unfolded in one nation, we can use that pattern to issue early warnings for a different, but structurally similar, country facing those same initial shocks today.
 </p>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
-To achieve this, HERO integrates massive global data streams—from geopolitical instability to precipitation anomalies—and analyzes them at the sub-national level (Admin1). This geographic choice is highly strategic: it allows us to overcome the severe data scarcity found at the hyper-local level (Admin2), while still capturing critical regional nuances that get completely lost in broad national averages. 
+To achieve this, HERO integrates massive global data streams—from geopolitical instability to precipitation anomalies—and analyzes them at the sub-national level (Admin1). This geographic choice is strategic: it allows us to overcome the severe data scarcity found at the hyper-local level (Admin2), while still capturing critical regional nuances that get lost in broad national averages. 
 </p>
 
 <!-- EXPERT QUOTE -->
@@ -117,7 +117,7 @@ By clustering regions with affine drivers, HERO acts as a true early-warning sys
     <div class="card card-body text-start mt-3" style="background-color: #fffbeb; border: none; border-left: 5px solid #f59e0b; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); cursor: text;">
         <h5 style="color: #d97706; font-weight: bold; margin-bottom: 12px;"><i class="fas fa-bolt" style="margin-right: 8px;"></i> Key Findings Anticipation</h5>
         <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0; color: #451a03;">
-            Our intuition proved correct: grouping regions by their dominant drivers (e.g., predicting a conflict-driven region by training the model only on other conflict-driven regions) <strong>dramatically outperformed</strong> standard global models. We discovered that food prices and conflict are the strongest structural drivers of hunger, while rainfall anomalies serve as the most critical, immediate early-warning signal for sudden shocks. <em>(We'll dive deeply into the predictive modeling at the end of this page).</em>
+            Our intuition proved correct: grouping regions by their dominant drivers (e.g., predicting a conflict-driven region by training the model only on other conflict-driven regions) <strong>outperformed</strong> standard global models. We discovered that food prices and conflict are the strongest structural drivers of hunger, while rainfall anomalies serve as the most critical, early-warning signal for changes in food insecurity. <em>(We'll dive deeply into the predictive modeling at the end of this page).</em>
         </p>
     </div>
 </details>
@@ -176,7 +176,7 @@ To anticipate a food crisis before it strikes, we must understand the underlying
                 <div class="card-body">
                     <h4 class="card-title text-info"><i class="fas fa-seedling"></i> Vegetation Health (NDVI)</h4>
                     <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
-                        The NDVI index acts as the pulse of the land, measuring the density and vigor of agricultural crops. Analyzing this data let us quantify the stress of climate shocks on vegetation, catching agricultural decline before it translated into a famine.
+                        The NDVI index measures the density and vigor of agricultural crops. Analyzing this data let us quantify the stress of climate shocks on vegetation, catching agricultural decline before it translated into a food crisis.
                     </p>
                 </div>
             </div>
@@ -186,7 +186,7 @@ To anticipate a food crisis before it strikes, we must understand the underlying
                 <div class="card-body">
                     <h4 class="card-title text-warning"><i class="fas fa-shopping-basket"></i> Food Markets (WFP)</h4>
                     <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
-                        Relying on comprehensive data from the World Food Programme, we reconstructed the heartbeat of local economies. By analyzing the cost of the basic food basket and local inflation, we captured sudden economic shocks that cut off food access for the most vulnerable.
+                        Relying on comprehensive data from the World Food Programme, we reconstructed the heart of local economies. By analyzing the cost of the basic food basket and local inflation, we captured sudden economic shocks that cut off food access for the most vulnerable.
                     </p>
                 </div>
             </div>
@@ -198,7 +198,7 @@ To anticipate a food crisis before it strikes, we must understand the underlying
                 <div class="card-body">
                     <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> Internally Displaced Persons (IDP)</h4>
                     <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
-                        When violence or climate disasters strike, people are forced to flee. By extracting internal migration flows as a percentage of the total population, we assessed the crushing demographic pressure placed on host communities.
+                        When violence or climate disasters strike, people are forced to flee. By extracting internal migration flows as a percentage of the total population, we assessed the demographic pressure placed on host communities.
                     </p>
                 </div>
             </div>
@@ -208,7 +208,7 @@ To anticipate a food crisis before it strikes, we must understand the underlying
                 <div class="card-body">
                     <h4 class="card-title" style="color: #d946ef !important;"><i class="fas fa-newspaper"></i> Sentiment and news (GDELT)</h4>
                     <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
-                        Leveraging the GDELT Project's massive global database, we integrated pre-calculated metrics on the tone and volume of news coverage. This allowed us to quantify the external perception of the crisis, mapping how international attention shifted as emergencies unfolded.
+                        Leveraging the GDELT Project's global database, we integrated pre-calculated metrics on the tone and volume of news coverage. This allowed us to quantify the external perception of the crisis, mapping how international attention shifted as emergencies unfolded.
                     </p>
                 </div>
             </div>
@@ -238,7 +238,7 @@ Knowing the drivers is only half the battle; understanding how they interact and
 ### <i class="fas fa-search"></i> Political and Social Shocks: Play the Detective
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-When we examine the trajectories of political and social drivers against food insecurity, major geopolitical events leave an unmistakable signature on the data. Before reading our analysis of the next two countries, we challenge you to <strong>play the detective</strong>: explore the interactive charts, observe the anomaly spikes, and try to pinpoint the exact moment massive structural shocks occurred. <em>(Hint: you can use the toggles in the charts to hide or reveal the key events!)</em>
+When we examine the trajectories of political and social drivers against food insecurity, major geopolitical events leave an unmistakable signature on the data. Before reading our analysis of the next two countries, we challenge you to <strong>play the detective</strong>: explore the interactive charts, observe the anomaly spikes, and try to pinpoint the exact moment structural shocks occurred. <em>(Hint: you can use the toggles in the charts to hide or reveal the key events!)</em>
 </p>
 
 #### Case File #1: Afghanistan's Tipping Point
@@ -252,14 +252,14 @@ When we examine the trajectories of political and social drivers against food in
 <div class="card card-body text-start my-4" style="background-color: #f8f9fa; border: none; border-left: 5px solid #2563eb; border-radius: 8px;">
     <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
         <strong>Did you manage to crack the case?</strong> <i class="fas fa-search-location" style="color: #2563eb; margin-left: 5px;"></i><br>
-        If you toggled the key event marker, you noticed how everything changes abruptly in <strong>May 2021</strong>. The withdrawal of US troops didn't just cause political upheaval; it triggered an immediate surge in crisis levels, completely shattering the country's previous stability.
+        If you toggled the key event marker, you noticed how everything changes abruptly in <strong>May 2021</strong>. The withdrawal of US troops didn't just cause political upheaval; it triggered an immediate surge in crisis levels, shattering the country's previous stability.
     </p>
     <details class="mt-3">
         <summary style="cursor: pointer; color: #2563eb; font-weight: 600; font-size: 0.95rem;">
             <i class="fas fa-book-open"></i> Dive Deeper: The US Withdrawal
         </summary>
         <p class="text-muted mt-2 mb-0" style="font-size: 0.95rem; line-height: 1.6;">
-            The departure of international forces led to an immediate collapse of the Afghan economy. Overnight, international aid—which previously funded 75% of public spending—was frozen. This sparked hyperinflation, massive unemployment, and an unprecedented liquidity crisis that crippled food access across the entire nation, transforming a fragile stability into a dire humanitarian emergency.
+            The departure of international forces led to an immediate collapse of the Afghan economy. Overnight, international aid—which previously funded 75% of public spending—was frozen. This sparked hyperinflation, massive unemployment, and an unprecedented liquidity crisis that crippled food access across the entire nation.
         </p>
     </details>
 </div>
@@ -275,7 +275,7 @@ To grasp the true depth of this structural shock, we performed a Statistical Tim
 #### Case File #2: Sudan's Shattered Stability
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Let's test your investigative skills again, this time looking at Sudan. Historically, Sudan presented a very different baseline compared to Afghanistan—maintaining relatively low and stable food insecurity levels. But stability can be deceiving. Explore the dashboard below and try to identify the exact moment the trend line violently breaks. <em>(Hint: toggle the key event marker in the legend when you think you've found it!)</em>
+Let's test your investigative skills again, this time looking at Sudan. Historically, Sudan presented a very different baseline compared to Afghanistan—maintaining relatively stable food insecurity levels. But stability can be deceiving. Explore the dashboard below and try to identify the exact moment the trend line violently breaks. <em>(Hint: toggle the key event marker in the legend when you think you've found it!)</em>
 </p>
 
 <div class="hero-iframe-fit-dashboard my-4">
@@ -287,7 +287,7 @@ Let's test your investigative skills again, this time looking at Sudan. Historic
 <div class="card card-body text-start my-4" style="background-color: #f8f9fa; border: none; border-left: 5px solid #2563eb; border-radius: 8px;">
     <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
         <strong>Did you spot the rupture?</strong> <i class="fas fa-search-location" style="color: #2563eb; margin-left: 5px;"></i><br>
-        The data unmistakably shatters on <strong>April 15, 2023</strong>. This marks the outbreak of the devastating civil war. Unlike a slow-moving climatic drought, this sudden, explosive political conflict caused an immediate and massive structural shock, destroying the country's prior stability and sending hunger levels skyrocketing in a matter of weeks.
+        The data unmistakably shatters on <strong>April 15, 2023</strong>. This marks the outbreak of the devastating civil war. Unlike a slow-moving climatic drought, this sudden, explosive political conflict caused an immediate and massive structural shock, destroying the country's prior stability and casuing hunger levels to soar.
     </p>
     <details class="mt-3">
         <summary style="cursor: pointer; color: #2563eb; font-weight: 600; font-size: 0.95rem;">
@@ -353,7 +353,7 @@ Unlike political shocks, which are sudden and structural, climatic drivers like 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
 As we highlighted when introducing the HERO architecture, our models operate mostly at the <strong>admin-1</strong> (regional/provincial) level. Why is this geographical granularity so crucial? Because food crises rarely strike a country uniformly, and relying solely on broad national aggregates often masks devastating localized shocks. 
 <br><br>
-To illustrate this, the interactive heatmap below visualizes temporal anomalies (isolated via residual analysis) in the IPC Phase 3+ time series across the different micro-regions of Afghanistan. While a national average might simply show a general upward trend, this regional breakdown reveals the true anatomy of a crisis. Notice how, immediately following the May 2021 shock, intense anomaly clusters flare up across multiple specific provinces. This proves that to accurately anticipate a crisis, we must look beyond the national surface and monitor the localized fault lines where the tremors begin.
+To illustrate this, the interactive heatmap below visualizes temporal anomalies (isolated via residual analysis) in the IPC Phase 3+ time series across the different micro-regions of Afghanistan. While a national average might simply show a general upward trend, this regional breakdown reveals the true anatomy of a crisis. Notice how, immediately following the May 2021 shock, intense anomaly clusters flare up across multiple specific provinces. This proves that to accurately anticipate a crisis, we must look beyond the national surface and monitor the local realities.
 </p>
 
 <div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
@@ -392,7 +392,7 @@ To illustrate this, the interactive heatmap below visualizes temporal anomalies 
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Our shift to admin-1 level analysis was a strategic move to preserve data integrity, but it didn't eliminate the issue completely. As the interactive heatmap below reveals, the distribution of missing data is highly uneven across both space and time. Notice the significant gaps impact large parts of the African continent and the Middle East, particularly prior to 2021.
+Our shift to admin-1 level analysis was a strategic move to preserve data integrity, but it didn't eliminate the issue completely. As the interactive heatmap below reveals, the distribution of missing data is highly uneven across both space and time. Notice how the significant gaps impact large parts of the African continent and the Middle East, particularly prior to 2021.
 </p>
 
 <div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
@@ -400,7 +400,7 @@ Our shift to admin-1 level analysis was a strategic move to preserve data integr
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-As you can see in the matrix above, the prevalence of these missing values forms the primary obstacle in our analysis. This "pain point" threatens to severely degrade the performance and reliability of our predictive models. Furthermore, as we attempt to drill down into more granular data, sparsity increases exponentially. At the <strong>admin-2</strong> (district) level, datasets like ACLED (conflict tracking) become particularly compromised.
+As you can see in the matrix above, the prevalence of these missing values forms the primary obstacle in our analysis. This "pain point" threatens to degrade the performance and reliability of our predictive models. Furthermore, as we attempt to drill down into more granular data, sparsity increases exponentially. At the <strong>admin-2</strong> (district) level, datasets like ACLED (conflict tracking) become particularly compromised.
 </p>
 
 ### Mapping the Void: Structural Missingness
@@ -408,7 +408,7 @@ As you can see in the matrix above, the prevalence of these missing values forms
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
 But these data gaps aren't just random noise—they have a distinct, structural pattern. When we mapped the correlation of missingness across our different drivers, we uncovered that data outages occur in distinct, interconnected blocks. 
 <br><br>
-As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a staggering <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
+As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
 </p>
 
 <div class="my-5 text-center">
@@ -447,9 +447,9 @@ Despite these immense challenges and the inherent risks highlighted by experts, 
 ### "Augmenting" Reality: The Clustering Approach
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
-If we can't always collect the data in the field, we must strategically "augment" the data we do have. Taking Alice's warning to heart, we knew we couldn't just blindly guess our way out of the void. To find the most reliable imputation method, we evaluated how geographic proximity and statistical profiles influence the data structure, testing everything from Hierarchical models to K-Means.
+If we can't always collect the data in the field, we must strategically "augment" the data we do have. To find the most reliable imputation method, we evaluated how geographic proximity and statistical profiles influence the data structure, testing everything from Hierarchical models to K-Means.
 <br><br>
-We deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to be the most effective at identifying coherent, well-separated neighbors across different regions. This ensures that when we fill a missing data point, we are using the profile of a truly similar, statistically verified neighbor—maintaining data integrity and minimizing the uncertainty inherent in any imputation. We will utilize these clustering results to refine our predictive models in the next phases.
+We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to be the most effective at identifying coherent, well-separated neighbors across different regions. This ensures that when we fill a missing data point, we are using the profile of a truly similar, statistically verified neighbor—maintaining data integrity and minimizing the uncertainty inherent in any imputation. We will utilize these clustering results to refine our predictive models in the next phases.
 </p>
 
 <div class="row mt-4 mb-5 fade-in-up" style="animation-delay: 0.2s;">
@@ -558,7 +558,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-filter"></i> 2. The Power and Limits of Keywords (TF-IDF)</h4>
         <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-        Our first instinct was to use <b>TF-IDF</b> (Term Frequency-Inverse Document Frequency)—a classic statistical method that groups reports based on the sheer frequency of identical words. Below, you can see two reports that the algorithm grouped together simply because they share the exact same vocabulary (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>) to describe a complex agricultural and economic shock. In cases like this, TF-IDF works perfectly.
+        Our first instinct was to use <b>TF-IDF</b> (Term Frequency-Inverse Document Frequency)—a classic statistical method that groups reports based on the frequency of identical words. Below, you can see two reports that the algorithm grouped together simply because they share the exact same vocabulary (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>) to describe a complex agricultural and economic shock. In cases like this, TF-IDF works perfectly.
         </p>
 
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #17a2b8;">
@@ -597,7 +597,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-brain"></i> 3. Dense Embeddings: Finding the Meaning</h4>
         <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-        To break free from the keyword trap, we needed a model that could read between the lines. We advanced to <b>Dense Semantic Embeddings</b> using the pretrained <a href="{{ site.baseurl }}/Text-analysis.html"><b>BGE-M3</b></a> model. Instead of blindly counting words, this architecture maps entire paragraphs into a high-dimensional mathematical space, grouping texts purely by their <b>underlying meaning</b>. This breakthrough allowed us to uncover profound, previously invisible connections—successfully linking reports that described the exact same structural crisis, even when they used entirely different vocabularies.
+        To break free from the keyword trap, we needed a model that could read between the lines. We advanced to <b>Dense Semantic Embeddings</b> using the pretrained <a href="{{ site.baseurl }}/Text-analysis.html"><b>BGE-M3</b></a> model. Instead of blindly counting words, this architecture maps entire paragraphs into a high-dimensional mathematical space, grouping texts purely by their <b>underlying meaning</b>. This breakthrough allowed us to uncover previously invisible connections—successfully linking reports that described the exact same structural crisis, even when they used different vocabularies.
         </p>
     </div>
 </div>
@@ -672,7 +672,7 @@ The most startling revelation from the dense clustering was the discovery of <b>
 #### Profile 1: The Agro-Pastoral Climate Trap (Kenya & Uganda)
 
 <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-Kenya and Uganda are bound by a shared geographical vulnerability. Their evolutionary trajectory perfectly mirrors the unpredictable swings of the climate. We see both nations plunge into <b>Agro-pastoral Water Vulnerability</b> during the devastating <span class="history-tooltip">El Niño-induced floods<span class="tooltip-text"><i class="fas fa-info-circle"></i> In 2015-2016, a super El Niño triggered torrential rains across East Africa, washing away harvests and decimating livestock herds before they could recover.</span></span>, and then suffer immense <b>Rainfall Impact on Crops</b> during the punishing <span class="history-tooltip">La Niña droughts<span class="tooltip-text"><i class="fas fa-info-circle"></i> Between 2020 and 2023, the Horn of Africa experienced an unprecedented five consecutive failed rainy seasons, pushing millions to the brink of famine.</span></span>. This is a classic climate-driven trap, where communities have no time to recover before the next environmental shock hits.
+Kenya and Uganda are bound by a shared geographical vulnerability. Their evolutionary trajectory perfectly mirrors the unpredictable swings of the climate. We see both nations plunge into <b>Agro-pastoral Water Vulnerability</b> during the devastating <span class="history-tooltip">El Niño-induced floods<span class="tooltip-text"><i class="fas fa-info-circle"></i> In 2015-2016, a super El Niño triggered torrential rains across East Africa, washing away harvests and decimating livestock herds before they could recover.</span></span>, and then suffer immense <b>Rainfall Impact on Crops</b> during the punishing <span class="history-tooltip">La Niña droughts<span class="tooltip-text"><i class="fas fa-info-circle"></i> Between 2020 and 2023, the Horn of Africa experienced an unprecedented five consecutive failed rainy seasons, pushing millions into high levels of food insecurity.</span></span>. This is a classic climate-driven trap, where communities have no time to recover before the next environmental shock hits.
 </p>
 
 <div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
@@ -682,7 +682,7 @@ Kenya and Uganda are bound by a shared geographical vulnerability. Their evoluti
 #### Profile 2: The Multi-Shock Vortex (Mozambique & Madagascar)
 
 <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-Located across the Mozambique Channel from one another, these two nations share more than just geography: they are trapped in the exact same vortex of climatic and systemic shocks. The algorithm maps an incredibly complex, yet shared trajectory for both. They are repeatedly battered by <b>Rainfall Impact on Crops</b> due to devastating Indian Ocean weather events <span class="history-tooltip">(like recurrent super-cyclones)<span class="tooltip-text"><i class="fas fa-info-circle"></i> Both countries are frequently in the crosshairs of extreme cyclones (e.g., Idai, Freddy, Batsirai), which decimate agricultural lands and infrastructure.</span></span>. This baseline fragility makes them highly susceptible to external shocks, driving them through identical, synchronized phases of <b>COVID-19 Economic Impact</b> and soaring <b>Agricultural Price Inflation</b>. Ultimately, these compounding economic and climatic crises converge on the most vulnerable, plunging both nations into recurring, severe spikes of <b>Child Malnutrition</b>. Their shared sequence highlights how repetitive climate disasters trap fragile economies in an inescapable loop.
+Located across the Mozambique Channel from one another, these two nations share more than just geography: they are trapped in the exact same vortex of climatic and systemic shocks. The algorithm maps a complex, yet shared trajectory for both. They are repeatedly battered by <b>Rainfall Impact on Crops</b> due to devastating Indian Ocean weather events <span class="history-tooltip">(like recurrent super-cyclones)<span class="tooltip-text"><i class="fas fa-info-circle"></i> Both countries are frequently in the crosshairs of extreme cyclones (e.g., Idai, Freddy, Batsirai), which decimate agricultural lands and infrastructure.</span></span>. This baseline fragility makes them highly susceptible to external shocks, driving them through identical, synchronized phases of <b>COVID-19 Economic Impact</b> and soaring <b>Agricultural Price Inflation</b>. Ultimately, these compounding economic and climatic crises converge on the most vulnerable, plunging both nations into recurring, severe spikes of <b>Child Malnutrition</b>. Their shared sequence highlights how repetitive climate disasters trap fragile economies in an inescapable loop.
 </p>
 
 <div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
@@ -692,7 +692,7 @@ Located across the Mozambique Channel from one another, these two nations share 
 <div style="background-color: #f8f9fa; border-left: 5px solid #6366f1; border-radius: 6px; padding: 1.5rem; margin-top: 3rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
 <h4 style="font-weight: 700; margin-top: 0; color: #4338ca;"><i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 10px;"></i> Looking Ahead: Clustering by Trajectory</h4>
 <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 0; color: #475569; text-align: justify;">
-The discovery of these perfectly synchronized crisis profiles opens a fascinating door for future research. Instead of classifying regions merely by their current dominant topic, what if we clustered them by their entire evolutionary sequence? By grouping nations that share the same "DNA" of crisis evolution (e.g., the <i>Climate-to-Economic-Collapse</i> pattern vs. the <i>Chronic-Conflict-Trap</i>), predictive models could anticipate the next phase of a food crisis simply by recognizing the historical precedent set by another country in the same trajectory group.
+The discovery of these synchronized crisis profiles opens a door for future research. Instead of classifying regions merely by their current dominant topic, what if we clustered them by their entire crisis sequence? By grouping nations that share the same "DNA" of crisis evolution (e.g., the <i>Climate-to-Economic-Collapse</i> pattern vs. the <i>Chronic-Conflict-Trap</i>), predictive models could anticipate the next phase of a food crisis simply by recognizing the historical precedent set by another country in the same trajectory group.
 </p>
 </div>
 
@@ -701,7 +701,7 @@ The discovery of these perfectly synchronized crisis profiles opens a fascinatin
 # <span class="text-gradient">Predicting Food Insecurity: From Insight to Foresight</span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-We've seen how tracking the semantic "DNA" of a crisis reveals its underlying evolutionary path. But understanding the past and present is only half the battle. The ultimate goal of our investigation is <b>foresight</b>. If we know the core drivers—the climate shocks, the economic volatility, the hidden conflicts—can we actually predict where hunger will strike next?
+We've seen how tracking the semantic "DNA" of a crisis reveals its underlying path. But understanding the past and present is only half the battle. The ultimate goal of our investigation is <b>foresight</b>. If we know the core drivers—the climate shocks, the economic volatility, the hidden conflicts—can we actually predict where hunger will strike next?
 <br><br>
 To answer this, we built two distinct models to tackle two critical questions:
 </p>
@@ -712,7 +712,7 @@ To answer this, we built two distinct models to tackle two critical questions:
 </div>
 
 <ul style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
-    <li class="mb-3"><b>Hunger is fiercely context-dependent:</b> The same drop in rainfall or the same level of conflict means different things in the Sahel, the Horn of Africa, or Central America. A single global rule fails to capture these nuances, often performing worse than a simple baseline like the country's historical average.</li>
+    <li class="mb-3"><b>Hunger is context-dependent:</b> The same drop in rainfall or the same level of conflict means different things in the Sahel, the Horn of Africa, or Central America. A single global rule fails to capture these nuances, often performing worse than a simple baseline like the country's historical average.</li>
     <li class="mb-3"><b>Localizing fixes this:</b> We train separate models for smaller groups of similar areas. The grouping that works best is determined by what an area's IPC reports actually discuss—such as conflict and refugees, farming and water, or prices and inflation.</li>
     <li><b>Key Drivers:</b> Across most contexts, food prices and conflict consistently emerge as the strongest predictors.</li>
 </ul>
@@ -747,7 +747,7 @@ To answer this, we built two distinct models to tackle two critical questions:
 </div>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-In humanitarian work, decisions affect lives. An algorithm's output cannot be a black box; results must be deeply explainable before anyone acts on them.
+In humanitarian work, decisions affect lives. An algorithm's output cannot be a black box; results must be explainable before anyone acts on them.
 </p>
 
 <div class="my-5 text-center">
@@ -761,13 +761,13 @@ In humanitarian work, decisions affect lives. An algorithm's output cannot be a 
 </div>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-IPC assessments are notoriously slow, meaning a sudden shock can go completely unseen for months. To solve this, we developed a nowcasting model designed to accurately estimate current hunger levels by combining the most recent assessment with real-time driver data.
+IPC assessments are slow, meaning a sudden shock can go completely unseen for months. To solve this, we developed a nowcasting model designed to accurately estimate current hunger levels by combining the most recent assessment with real-time driver data.
 </p>
 
 <ul style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
     <li class="mb-3"><b>Significant Accuracy Gains:</b> The model achieves about an 18% lower error rate compared to simply carrying the last value forward, and crucially, it successfully tracks the direction of change.</li>
-    <li class="mb-3"><b>A Global Approach Works:</b> In stark contrast to the static model, one global model is sufficient here. Once the algorithm factors in an area's historical baseline, hyper-localizing adds very little predictive power.</li>
-    <li><b>The Early Warning Signal:</b> Among all the real-time drivers, rainfall anomalies act as the strongest early indicator of an impending crisis.</li>
+    <li class="mb-3"><b>A Global Approach Works:</b> In stark contrast to the static model, one global model is sufficient here. Once the algorithm factors in an area's historical baseline, hyper-localizing adds little predictive power.</li>
+    <li><b>The Early Warning Signal:</b> Among all the real-time drivers, rainfall anomalies act as the strongest early indicator of changes in levels of food insecurity.</li>
 </ul>
 
 <div class="my-4 text-center">

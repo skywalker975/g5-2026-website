@@ -4,22 +4,23 @@ title: "Missing values"
 permalink: /Missing-values.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/header_data_coll.jpg
+header_img: assets/copertine_pagine/data_collection_and_processing.png
 header_title: "Missing values"
 
 ---
 
 
 <!-- Integrated Datasets and Architecture Section -->
+<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Integrated Datasets and Architecture of HERO</h1>
 
-<h3>Integrated Datasets and Architecture of HERO</h3>
-<p class="text-muted">
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
     The <b>HERO</b> system organizes humanitarian data and its analytical components around a unified, ready-to-use structure. The framework combines various dimensions of risk (IPC, conflict, displacement, meteorological data, market prices, media signals, and vegetation health) by directly aligning them with food security assessment periods.
 </p>
 
 <!-- Systemic Data Missingness Section -->
-<h3 class="mt-4">Systemic Data Missingness & Blackout Dynamics</h3>
-<p class="text-muted">
+<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Systemic Data Missingness & Blackout Dynamics</h1>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
     The <b>HERO</b> analytics engine performs a two-dimensional missingness diagnosis across all 7 target data sources. By mapping missing values into binary shadow indicators (1 for <code>NaN</code>, 0 for observed), the pipeline uncovers two distinct failure patterns to guide targeted imputation strategies:
 </p>
 <ul class="text-muted">
@@ -32,8 +33,9 @@ header_title: "Missing values"
 </ul>
 
 <!-- Two-Step Analytical Workflow -->
-<h4 class="text-primary fw-bold mb-2 mt-4">Shadow Matrix Analysis: Two-Step Analytical Workflow</h4>
-<p class="text-muted mb-4">
+<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Shadow Matrix Analysis: Two-Step Analytical Workflow</h1>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
     Data unavailability is rarely random. This workflow isolates structural dependencies between sensors and tracks regional data degradation to prevent operational bias during modeling:
 </p>
 
@@ -94,8 +96,9 @@ header_title: "Missing values"
 
 
 <!-- Two-Step Missingness Analysis Workflow -->
-<h4 class="text-primary fw-bold mb-2 mt-4">Missingness Analysis: Two-Step Analytical Workflow</h4>
-<p class="text-muted mb-4">
+<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Missingness Analysis: Two-Step Analytical Workflow</h1>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
     Data unavailability is rarely random. This workflow tests whether missing data points structurally depend on other observed features (MAR) or occur purely stochastically (MCAR), guiding the appropriate imputation strategy:
 </p>
 
@@ -157,13 +160,15 @@ header_title: "Missing values"
 
 
 <!-- Key Findings Section -->
-<h3 class="text-primary fw-bold mb-2 mt-5">Key Findings: Structurally Coupled Data Missingness</h3>
-<p class="text-muted mb-4">
+<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Key Findings: Structurally Coupled Data Missingness</h1>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
     Data gaps in the HERO pipeline are <b>structurally coupled</b> rather than randomly distributed. When missingness occurs, multiple indicators collapse simultaneously due to shared real-world failure mechanisms.
 </p>
 
 <!-- 1. Structural Topology -->
-<h4 class="fw-bold text-dark mt-4 mb-3"><i class="fas fa-network-wired me-2 text-primary"></i> 1. Structural Topology (Correlation Heatmap)</h4>
+## 1. Structural Topology (Correlation Heatmap)
+
 <p class="text-muted mb-3">The infrastructure collapses into isolated functional blocks:</p>
 
 <div class="container">
@@ -203,7 +208,8 @@ header_title: "Missing values"
     <img src="{{ site.baseurl }}/assets/images/Unknown.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
 
 <!-- 2. Temporal Dynamics -->
-<h4 class="fw-bold text-dark mt-4 mb-3"><i class="fas fa-chart-line me-2 text-primary"></i> 2. Temporal Dynamics (Time Series)</h4>
+## 2. Temporal Dynamics (Time Series)
+
 <p class="text-muted mb-3">Shadow vectors over time confirm distinct underlying causes for missingness:</p>
 
 <div class="container">
@@ -242,7 +248,8 @@ header_title: "Missing values"
 <img src="{{ site.baseurl }}/assets/images/Unknown-2.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
 
 <!-- 3. Geographic Fragmentation -->
-<h4 class="fw-bold text-dark mt-4 mb-3"><i class="fas fa-earth-americas me-2 text-primary"></i> 3. Geographic Fragmentation</h4>
+## 3. Geographic Fragmentation
+
 <p class="text-muted mb-3">Spatial distribution reveals structural gaps that standard imputation cannot address:</p>
 
 <div class="container">

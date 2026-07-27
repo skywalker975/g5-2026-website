@@ -4,7 +4,7 @@ title: "Clustering Spaziotemporale"
 permalink: /clustering.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/folium_map.webp
+header_img: assets/copertine_pagine/modelling.png
 header_title: "Clustering Spaziotemporale"
 subtitle: "Identificare gli archetipi della vulnerabilità umanitaria"
 ---

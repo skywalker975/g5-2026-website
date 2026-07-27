@@ -4,7 +4,7 @@ title: "Interactive UI & Dashboard"
 permalink: /Interactive-UI-and-Dashboard.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/header_ui_dash.jpg
+header_img: assets/copertine_pagine/dashboard.png
 header_title: "Interactive UI & Dashboard"
 subtitle: "Real-Time Decision Support & Monitoring Interface"
 ---
