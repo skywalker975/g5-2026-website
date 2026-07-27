@@ -139,7 +139,7 @@ details.spoiler-container > summary::-webkit-details-marker {
         <p class="text-muted" style="font-size: 0.95rem; font-style: italic; line-height: 1.6;">
             <i class="fas fa-search" style="margin-right: 5px;"></i> This map illustrates the most frequently occurring terms in official IPC crisis reports. The prominence of words like "price", "production", and "conflict" highlights the real-world drivers that shape food insecurity. 
             <br><br>
-            <a href="{{ site.baseurl }}/Text-analysis-storytelling.html" style="color: #4ade80; font-weight: 600; text-decoration: none;">Discover the full Text Analysis here &rarr;</a>
+            <a href="{{ site.baseurl }}/Text-analysis.html" style="color: #4ade80; font-weight: 600; text-decoration: none;">Discover the full Text Analysis here &rarr;</a>
         </p>
     </div>
 
