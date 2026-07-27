@@ -403,9 +403,9 @@ As you can see in the matrix above, the prevalence of these missing values forms
 ### Mapping the Void: Structural Missingness
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-But these data gaps aren't just random noise—they have a distinct, structural pattern. When we mapped the correlation of missingness across our different drivers, we uncovered a fascinating, albeit grim, reality: data outages occur in distinct, interconnected blocks. 
+But these data gaps aren't just random noise—they have a distinct, structural pattern. When we mapped the correlation of missingness across our different drivers, we uncovered that data outages occur in distinct, interconnected blocks. 
 <br><br>
-As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a staggering <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: kinetic, violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
+As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a staggering <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
 </p>
 
 <div class="my-5 text-center">
