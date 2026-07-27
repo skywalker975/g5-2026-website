@@ -10,7 +10,7 @@ header_title: "Data collection"
 
 
 
-<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;"> Integrated Datasets and Architecture of HERO</h1>
+## <h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;"> Integrated Datasets and Architecture of HERO</h1>
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 A fundamental pillar of this effort lies in the collection and integration of diverse data sources (spanning socio-economic indicators, climate patterns, agricultural yields, and conflict metrics) into a unified analytical framework. The backbone (*spine*) of this entire data architecture is established by the **Integrated Food Security Phase Classification (IPC)** assessments. All secondary, high-frequency signals—such as ACLED conflict records, IDP displacement data, WFP market prices, CHIRPS rainfall metrics, WFP NDVI vegetation indices, and GDELT media monitoring—are integrated into the IPC base structure via **Left Join** operations across the spatial and temporal dimensions. 
 
@@ -27,7 +27,7 @@ For Time Series Analysis (TSA) and Machine Learning (ML) modeling, irregular IPC
 ---
 
 
-<h2 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">HERO Dataset: Sources and Methodology</h2>
+## <h2 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">HERO Dataset: Sources and Methodology</h2>
 
 <h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">ACLED (Armed Conflict Location & Event Data Project)</h3>
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
@@ -48,7 +48,7 @@ Unmatched records during the `m:1` Left Join result in `NaN` values for ACLED me
 </p>
 ---
 
-<h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">IPC (Integrated Food Security Phase Classification)</h3>
+## <h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">IPC (Integrated Food Security Phase Classification)</h3>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 The IPC dataset captures spatial and socio-economic structures to monitor acute food insecurity mapped across the 2024–2025 analysis cycle and historical runs. The extraction is driven by APIs from the HDX platform and IPC platforms, structuring food insecurity metrics across both **wide** (`ipc_global_area_wide_pcoded.csv`, 72,213 rows) and **long** (`ipc_global_area_long_pcoded.csv`, 64,214 rows) schemas. The data is also serialized into columnar Parquet formats using `fastparquet-python`.
@@ -67,7 +67,7 @@ Temporal observations are categorized via `Validity period` / `ipc_type` into `c
 </p>
 ---
 
-<h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">WFP (World Food Prices)</h3>
+## <h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">WFP (World Food Prices)</h3>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 Powered by global food price data from the World Food Programme (WFP) via HDX, this pipeline tracks local market economics to detect early financial stress on food access. The extraction accesses the *Global Real-Time Food Prices* repository via a vertical metadata map (`metadata-global-real-time-food-prices.csv`), which dynamically supplies resource URLs for bulk processing.
@@ -86,7 +86,7 @@ Physical market coordinates are spatially mapped to administrative boundaries us
 
 ---
 
-<h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">IDP (Internally Displaced Persons)</h3>
+## <h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">IDP (Internally Displaced Persons)</h3>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 Sourced from the HDX HAPI (Humanitarian API), this pipeline gathers subnational displacement stock metrics to monitor internally displaced persons (IDPs) and population movements over time. The dataset is serialized into Parquet format using Apache Arrow structures.
@@ -104,7 +104,7 @@ The automated pipeline (`fetch.py`) queries global API endpoints, executing pagi
 
 ---
 
-<h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Rainfall</h3>
+## <h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Rainfall</h3>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 This pipeline collects subnational dekadal rainfall data from HDX/CHIRPS (Climate Hazards group InfraRed Precipitation with Stations) via the `HDXRainfallLoader` module, downloading raw files formatted as `{iso2}-rainfall-subnat-full.csv` under `data/raw_rainfall/{iso3}/`.
@@ -121,7 +121,7 @@ The 15-column schema comprises:
 
 ---
 
-<h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">NDVI (Normalized Difference Vegetation Index)</h3>
+## <h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">NDVI (Normalized Difference Vegetation Index)</h3>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 Driven by data from WFP via HDX (`organization:wfp`, query `ndvi`), this pipeline gathers subnational Normalized Difference Vegetation Index metrics to track crop health, biomass density, and drought anomalies.
@@ -137,7 +137,7 @@ Key identifying variables include `country_iso3`, `hdx_dataset_name`, and observ
 
 ---
 
-<h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">GDELT (Global Database of Events, Language, and Tone)</h3>
+## <h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">GDELT (Global Database of Events, Language, and Tone)</h3>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 Sourced from the GDELT Project via Google BigQuery (`gdelt-bq.gdeltv2.events_partitioned`), this pipeline monitors global news coverage to capture real-time media signals on conflict, geopolitical tension, and food crisis drivers.
@@ -158,7 +158,7 @@ The final wide-format dataset (`gdelt_adm1_final.parquet` and `gdelt_adm2_final.
 
 ---
 
-<h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">IPC Reports (via Web Scraping)</h3>
+## <h3 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">IPC Reports (via Web Scraping)</h3>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 This pipeline systematically collects official narrative reports from the IPC portal (`https://www.ipcinfo.org/ipc-country-analysis/en/`) covering Acute Food Insecurity Classification analyses published between 2011 and 2026. 
