@@ -269,3 +269,11 @@ The HERO v6 User Interface (UI) is an interactive dashboard designed to track re
   </div>
 
 </div>
+
+---
+
+Explore all the data, Cartesian graphs, geospatial maps, and test the interactive scenario simulator directly on our dashboard:
+
+<div class="text-center my-5">
+    <a href="https://github.com/skywalker975/g5-2026-website" class="btn btn-premium-hero btn-lg px-5 py-3 shadow"><i class="fas fa-chart-line mr-2"></i> Explore Dashboard HERO</a>
+</div>
