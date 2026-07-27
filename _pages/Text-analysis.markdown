@@ -100,7 +100,7 @@ Behind the IPC data architecture lies the convergence of macroeconomic, climatic
 
             <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
 
-                <li><b>Key Words:</b> <i>price</i> (524), <i>food price</i> (221), <i>access</i> (399), <i>income</i>, <i>market</i>.</li>
+                <li><b>Key Words:</b> <i>price</i>, <i>food price</i>, <i>access</i>, <i>income</i>, <i>market</i>.</li>
 
                 <li><b>Market Dynamics:</b> Hunger unfolds primarily as a purchasing power crisis. Inflationary spikes build invisible financial barriers: food remains on shelves but becomes entirely unaffordable for vulnerable households.</li>
 
@@ -112,9 +112,9 @@ Behind the IPC data architecture lies the convergence of macroeconomic, climatic
 
             <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
 
-                <li><b>Key Words:</b> <i>production</i> (346), <i>harvest</i> (316), <i>crop</i> (315), <i>drought</i>, <i>rain</i>.</li>
+                <li><b>Key Words:</b> <i>production</i>, <i>harvest</i>, <i>crop</i>, <i>drought</i>, <i>rain</i>.</li>
 
-                <li><b>Agricultural Collapse:</b> This reflects the systemic breakdown of local livelihoods (<i>livelihood</i>, 450). Weather anomalies and droughts destroy crops upstream, triggering physical supply deficits and rural income loss.</li>
+                <li><b>Agricultural Collapse:</b> This reflects the systemic breakdown of local livelihoods (<i>livelihood</i>). Weather anomalies and droughts destroy crops upstream, triggering physical supply deficits and rural income loss.</li>
 
             </ul>
 
@@ -124,7 +124,7 @@ Behind the IPC data architecture lies the convergence of macroeconomic, climatic
 
             <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
 
-                <li><b>Key Words:</b> <i>conflict</i>, <i>displacement</i>, <i>humanitarian assistance</i> (140), <i>food consumption</i> (195).</li>
+                <li><b>Key Words:</b> <i>conflict</i>, <i>displacement</i>, <i>humanitarian assistance</i>, <i>food consumption</i>.</li>
 
                 <li><b>Breaking Point:</b> Conflicts and forced displacement shatter local trade networks and drive populations to flee. At this tipping point, food consumption plummces, making external humanitarian aid vital to bridge survival deficits.</li>
 
