@@ -4,15 +4,13 @@ title: "Data collection"
 permalink: /Data-Collection.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/folium_map.webp
+header_img: assets/images/header_data_coll.jpg
 header_title: "Data collection"
 ---
 
-<div class="full-width-wrapper">
-    <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
-</div>
 
 ## Integrated Datasets and Architecture of HERO
+
 
 A fundamental pillar of this effort lies in the collection and integration of diverse data sources (spanning socio-economic indicators, climate patterns, agricultural yields, and conflict metrics) into a unified analytical framework. By combining these fragmented datasets, it becomes possible to identify hidden correlations and early warning signals that would otherwise remain undetected.
 

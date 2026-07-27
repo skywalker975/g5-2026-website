@@ -6,25 +6,20 @@ layout: minimal
     {% if page.show_breadcrumb or page.show_date or page.show_sociallinks -%}
     {%- include components/breadcrumbdatesocial.html -%}
     {% endif %}
-    <div class="row pt-2">
-        <aside class="col-lg-2 mt-lg-3 small">
+    <div class="row pt-1">
+        <aside class="col-lg-2 mt-lg-1 small hero-sidetoc-container">
+            {% if page.show_sidetoc %}
+            <nav class="hero-sidetoc-nav" aria-label="Table of contents">
+                <div class="hero-sidetoc-title">INDEX</div>
+                {% include components/toc.html sanitize=false html=content h_min=1 h_max=3 skip_no_ids=true id="toc" class="hero-toc-list" %}
+            </nav>
+            {% endif %}
             {%- if page.show_author -%}
             {% include components/author.html %}
             {%- endif -%}
         </aside>
-        <article id="maincontent" class="col-lg-8 mt-3 e-content">
-            {% if page.show_sidetoc %}
+        <article id="maincontent" class="col-lg-10 mt-1 e-content">
 
-            {% include components/sidetoc.html %}
-
-            {% endif %}
-            {% if page.show_toc %}
-            {% assign h_min = page.h_min | default: 2 %}
-            {% assign h_max = page.h_max | default: 4 %}
-            <nav aria-label="table-of-contents">
-                {% include components/toc.html sanitize=false html=content h_min=h_min h_max=h_max skip_no_ids=true id="toc" class="chulapa-toc-wrapper.list-group.mb-5.mx-3.mx-lg-5" item_class="list-group-item.font-weight-bold.py-1.pr-0.mr-0.chulapa-toc-reset" %}
-            </nav>
-            {% endif %}
             {{- content -}}
 
             {% if page.show_applause %}

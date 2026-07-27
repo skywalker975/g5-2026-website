@@ -9,12 +9,8 @@ header_title: "References"
 
 ---
 
-<div class="full-width-wrapper">
-    <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
-</div>
-
-
 <div class="container mt-5">
+
 
 <!-- Titolo Principale Senza Icone -->
 <h3 class="text-primary mb-4 fw-bold">

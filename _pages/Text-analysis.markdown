@@ -10,21 +10,13 @@ show_sidetoc: true
 
 header_type: hero
 
-header_img: assets/images/folium_map.webp
+header_img: assets/images/header_text_nlp.jpg
 
 header_title: "Text analysis"
-
-
 
 ---
 
 
-
-<div class="full-width-wrapper">
-
-    <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
-
-</div>
 
 
 

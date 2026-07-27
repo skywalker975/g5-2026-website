@@ -1,19 +1,17 @@
 ---
 layout: default
 title: "Storytelling"
-permalink: /Storytelling.html
+permalink: /index.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/folium_map.webp
+header_img: assets/copertine_pagine/storytelling.jpg
 header_title: "HERO"
 subtitle: "Hunger Early-warning & Risk Optimizer"
 ---
 
-<div class="full-width-wrapper">
-    <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
-</div>
-
 # Anatomy of a Global Crisis
+
+
 
 ## <span class="text-gradient">Zero Hunger by 2030: a promise still unfulfilled</span>
 
@@ -243,9 +241,11 @@ When we examine the trajectories of political and social drivers against food in
 
 #### Case File #1: Afghanistan's Tipping Point
 
-<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
-    <iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling" width="100%" height="100%" style="border:none;"></iframe>
+<div class="hero-iframe-fit-dashboard my-4">
+    <iframe src="assets/toADD/piogge_evt_best/Dashboard_AFG_Storytelling.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
+
+
 
 <div class="card card-body text-start my-4" style="background-color: #f8f9fa; border: none; border-left: 5px solid #2563eb; border-radius: 8px;">
     <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
@@ -276,9 +276,11 @@ To grasp the true depth of this structural shock, we performed a Statistical Tim
 Let's test your investigative skills again, this time looking at Sudan. Historically, Sudan presented a very different baseline compared to Afghanistan—maintaining relatively low and stable food insecurity levels. But stability can be deceiving. Explore the dashboard below and try to identify the exact moment the trend line violently breaks. <em>(Hint: toggle the key event marker in the legend when you think you've found it!)</em>
 </p>
 
-<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
-    <iframe src="assets/toADD/piogge_evt_best/Dashboard_SDN_Storytelling" width="100%" height="100%" style="border:none;"></iframe>
+<div class="hero-iframe-fit-dashboard my-4">
+    <iframe src="assets/toADD/piogge_evt_best/Dashboard_SDN_Storytelling.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
+
+
 
 <div class="card card-body text-start my-4" style="background-color: #f8f9fa; border: none; border-left: 5px solid #2563eb; border-radius: 8px;">
     <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
@@ -302,7 +304,7 @@ Unlike political shocks, which are sudden and structural, climatic drivers like 
 </p>
 
 <div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
-    <iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto_con_mappa" width="100%" height="100%" style="border:none;"></iframe>
+    <iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto_con_mappa.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
 
 <div class="row mb-5 mt-2">
@@ -772,5 +774,3 @@ IPC assessments are notoriously slow, meaning a sudden shock can go completely u
     <a href="{{ site.baseurl }}/modelling.html" class="btn btn-premium-hero">Read the full modelling details</a>
 </div>
 
-
-# Conclusion 

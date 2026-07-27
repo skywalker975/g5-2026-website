@@ -46,11 +46,13 @@ navbar:
   style :  dual # non modificarlo: imposta lo stile della navbar.
   brand: # brand della navbar, mostrato a sinistra.
     title :  "HERO"
-    img: "./assets/images/Logo_masthead.png" # non modificare
-    url: /Storytelling.html
+    img: "assets/favicon/tmp-africa-favicon-removebg-preview.png"
+    url: /index.html
+
+
   nav:
     - title: Main Article
-      url: /Storytelling.html
+      url: /index.html
     - title: Collection and data processing
       url: /Collection-and-Data-processing.html
       child:
@@ -64,6 +66,12 @@ navbar:
       url: /Text-analysis.html
     - title: Modelling
       url: /modelling.html
+    - title: Forecast & Time Series Analysis
+      url: /Forecast-and-Time-Series-Analysis.html
+    - title: Network Analysis
+      url: /Network-Analysis.html
+    - title: Interactive UI & Dashboard
+      url: /Interactive-UI-and-Dashboard.html
     - title: Dashboard
       url: /UI.html 
     - title: References
@@ -144,6 +152,7 @@ exclude:
  - vendor/gems/
  - vendor/ruby/
  - .idea/
+ - UI_style_structure/
 
 
 livereload: true

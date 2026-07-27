@@ -4,16 +4,14 @@ title: "Data augumentation"
 permalink: /data-augumentation.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/folium_map.webp
+header_img: assets/images/header_data_coll.jpg
 header_title: "Data augumentation"
 subtitle: "Handling missing data"
 ---
 
-<div class="full-width-wrapper">
-    <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
-</div>
 
 <h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Data augumentation</h1>
+
 
 <!-- Data Preprocessing & Feature Refinement Header -->
 ## Data Preprocessing & Feature Refinement

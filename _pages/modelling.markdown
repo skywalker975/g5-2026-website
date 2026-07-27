@@ -4,16 +4,14 @@ title: "Modelling Food Insecurity"
 permalink: /modelling.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/folium_map.webp
+header_img: assets/images/header_model_ai.jpg
 header_title: "Modelling Food Insecurity in Space and Time"
 subtitle: "Two questions: why an area suffers, and whether it is getting worse right now"
 ---
 
-<div class="full-width-wrapper">
-    <img src="{{ site.baseurl }}/assets/images/header.svg" alt="sbd-pattern" class="full-width-image">
-</div>
 
 <h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">Modelling Food Insecurity in Space and Time</h1>
+
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 The last stage of HERO turns the combined dataset into models. We use the same drivers for both models: conflict, displacement, rainfall, vegetation, food prices, and media coverage. From these drivers we answer two separate questions, and each question has its own model. In both cases the thing we predict is the share of the population in acute food insecurity, meaning IPC Phase 3 or above.

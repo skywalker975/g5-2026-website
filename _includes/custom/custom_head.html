@@ -10,22 +10,20 @@
 <script src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>
 {% endif %}
 
-
 {% if page.scrollama %}
 <script src="https://unpkg.com/scrollama"></script>
 {% endif %}
 
-
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
-<link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png">
-<link rel="manifest" href="{{site.baseurl}}/assets/favicon/site.webmanifest">
-<link rel="mask-icon" href="{{site.baseurl}}/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon/favicon.ico">
-<meta name="msapplication-TileColor" content="#333333">
-<meta name="msapplication-config" content="{{site.baseurl}}/assets/favicon/browserconfig.xml">
-<meta name="theme-color" content="#333333">
+<!-- HERO Africa Favicon -->
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/tmp-africa-favicon-removebg-preview.png">
+<link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/tmp-africa-favicon-removebg-preview.png">
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/favicon/tmp-africa-favicon-removebg-preview.png">
+<meta name="msapplication-TileColor" content="#0b0f19">
+<meta name="theme-color" content="#0b0f19">
+
+
+
 
 {% if include.imghero %}
 <meta property="og:image" content="{{ include.imghero | absolute_url }}">
@@ -33,4 +31,69 @@
 <meta property="og:image" content="https://summerschool2025.sobigdata.eu/assets/images/poggio.jpg">
 {% endif %}
 
+<!-- HERO Theme CSS Injection -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/hero-theme.css">
 
+<!-- HERO Automatic Left Sidebar Index Generator & Active Section Tracker -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const container = document.querySelector(".hero-sidetoc-container");
+    const article = document.querySelector("article#maincontent, article, main");
+    if (!container || !article) return;
+
+    // Extract all headings (h1, h2, h3, h4)
+    const headings = Array.from(article.querySelectorAll("h1, h2, h3, h4")).filter(h => {
+        const text = h.textContent.trim();
+        return text.length > 0 && !h.closest(".hero-sidetoc-container") && !h.closest("aside");
+    });
+
+    if (!headings.length) return;
+
+    let tocHTML = '<nav class="hero-sidetoc-nav" aria-label="Table of contents">';
+    tocHTML += '<div class="hero-sidetoc-title">INDEX</div>';
+    tocHTML += '<ul class="hero-toc-list">';
+
+    headings.forEach((h, index) => {
+        if (!h.id) {
+            h.id = "section-" + index + "-" + h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+        }
+        
+        let rawText = h.textContent.trim();
+        // Remove font awesome icon tags text if present
+        let cleanText = rawText.replace(/^[\s\S]*?\s{2,}/, "").trim();
+        if (cleanText.length > 38) {
+            cleanText = cleanText.substring(0, 35) + "...";
+        }
+        
+        const isSub = (h.tagName === "H3" || h.tagName === "H4");
+        const subClass = isSub ? 'class="hero-toc-subitem"' : '';
+        
+        tocHTML += `<li ${subClass}><a href="#${h.id}">${cleanText}</a></li>`;
+    });
+
+    tocHTML += '</ul></nav>';
+    container.innerHTML = tocHTML;
+
+    // IntersectionObserver Active Section Scroll Tracking
+    const links = container.querySelectorAll("a");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = "#" + entry.target.id;
+                links.forEach(link => {
+                    const parent = link.parentElement;
+                    if (link.getAttribute("href") === id) {
+                        link.classList.add("active");
+                        if (parent) parent.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                        if (parent) parent.classList.remove("active");
+                    }
+                });
+            }
+        });
+    }, { rootMargin: "-15% 0px -60% 0px" });
+
+    headings.forEach(h => observer.observe(h));
+});
+</script>
