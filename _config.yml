@@ -47,10 +47,10 @@ navbar:
   brand: # brand della navbar, mostrato a sinistra.
     title :  "HERO"
     img: "./assets/images/Logo_masthead.png" # non modificare
-    url: /Main-Article.html
+    url: /Storytelling.html
   nav:
     - title: Main Article
-      url: /Main-Article.html
+      url: /Storytelling.html
     - title: Collection and data processing
       url: /Collection-and-Data-processing.html
       child:
