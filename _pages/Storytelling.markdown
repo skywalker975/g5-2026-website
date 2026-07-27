@@ -232,7 +232,7 @@ Knowing the drivers is only half the battle; understanding how they interact and
 </p>
 
 <div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
-    <iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato_v4.html" width="100%" height="100%" style="border:none;"></iframe>
+    <iframe src="assets/toADD/mappa_evoluzione_forward_fill_v4.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
 
 ### <i class="fas fa-search"></i> Political and Social Shocks: Play the Detective
@@ -266,10 +266,9 @@ When we examine the trajectories of political and social drivers against food in
 To grasp the true depth of this structural shock, we performed a Statistical Time Series Decomposition (STL) on the percentage of the population facing IPC Phase 3+ food insecurity in Afghanistan. As the chart below demonstrates, the May 2021 event didn't just cause a temporary spike in hunger—it fundamentally altered the rhythm of the crisis. Before the withdrawal, the <strong>seasonal component</strong> exhibited a distinct, regular periodicity. After May 2021, you can clearly see a drastic change of pattern in the seasonality, proving that the systemic shock permanently disrupted the historical cycles of food insecurity.
 </p>
 
-<div class="my-4 text-center">
-    <img src="assets/toADD/sito/01_Statistical_Decomposition_STL.png" alt="Statistical Decomposition STL" class="img-fluid rounded shadow-sm" style="max-width: 100%; border: 1px solid #e0e0e0;">
+<div class="iframe-container my-4" style="width: 100%; height: 1050px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+    <iframe src="assets/toADD/AFG_01_Statistical_Decomposition_STL_mod.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
-
 
 #### Case File #2: Sudan's Shattered Stability
 
