@@ -8,3 +8,5 @@ vendor/
 .idea/
 
 **/.DS_Store
+Gemfile_mio.lock
+Gemfile_mio
