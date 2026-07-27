@@ -22,7 +22,9 @@ This architectural choice ensures that the final dataset preserves the exact row
 * **`merged_adm1_wide_knn.parquet`**: Provides a complete feature matrix with missing secondary values imputed via the KNN Imputer algorithm.
 * **`merged_adm2_wide.parquet`** (~42,957 rows): Structured at the Admin Level 2 (district/department) per IPC validity period, designed for high-resolution localized predictions.
 
+
 For Time Series Analysis (TSA) and Machine Learning (ML) modeling, irregular IPC validity windows (`From` – `To`) are expanded into a uniform monthly time axis (`MS` - Month Start). Overlapping months are aggregated via mean values, and intermediate gaps are filled using linear interpolation alongside edge carrying (`ffill`/`bfill`). This transformation extracts 9 static structural descriptors per time series, including statistical moments (mean, variance, skewness, kurtosis), long-term memory (Hurst exponent $H$), regularity (Approximate Entropy ApEn), and short-term memory through standardized AR(1)–AR(3) autoregressive coefficients.
+
 ---
 ### HERO Dataset: Sources and Methodology
 #### ACLED (Armed Conflict Location & Event Data Project)
@@ -90,7 +92,7 @@ The automated pipeline (`fetch.py`) queries global API endpoints, executing pagi
 
 ---
 
-#### RAINFALL
+#### Rainfall
 This pipeline collects subnational dekadal rainfall data from HDX/CHIRPS (Climate Hazards group InfraRed Precipitation with Stations) via the `HDXRainfallLoader` module, downloading raw files formatted as `{iso2}-rainfall-subnat-full.csv` under `data/raw_rainfall/{iso3}/`.
 
 The dataset provides continuous time-series coverage starting January 1, 1981, through the present, plus short-term forecast horizons. Observations are structured at a **dekad** granularity (10-day intervals, 3 per month starting on the 1st, 11th, and 21st, yielding ~36 dekads per year) across Admin 1 and Admin 2 levels. 
