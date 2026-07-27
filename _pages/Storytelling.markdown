@@ -295,7 +295,7 @@ Let's test your investigative skills again, this time looking at Sudan. Historic
 ## The Rhythm of the Rains: Profiling Climatic Diversity
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Unlike political shocks, which are sudden and structural, climatic drivers like rainfall are inherently cyclical. However, this rhythm is completely dictated by geography. In the dashboard below, we compare the rainfall profiles of Madagascar, Mozambique, Senegal, and Uganda. Explore the time series and the radar plot (which visualizes seasonality across the months of the year) to discover how drastically rainfall intensity and timing differ across the continent.
+Unlike political shocks, which are sudden and structural, climatic drivers like rainfall are inherently cyclical. However, this rhythm is completely dictated by geography. In the dashboard below, we compare the rainfall profiles of Madagascar, Mozambique, Senegal, and Ethiopia. Explore the time series and the radar plot (which visualizes seasonality across the months of the year) to discover how drastically rainfall intensity and timing differ across the continent.
 </p>
 
 <div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
@@ -314,8 +314,8 @@ Unlike political shocks, which are sudden and structural, climatic drivers like 
     <div class="col-md-4 mb-3 mb-md-0">
         <div class="card h-100 shadow-sm" style="border: none; border-left: 4px solid #10b981;">
             <div class="card-body">
-                <h5 class="card-title" style="color: #10b981; font-weight: 600; font-size: 1.1rem;"><i class="fas fa-cloud-sun-rain"></i> Uganda</h5>
-                <p class="card-text text-muted" style="font-size: 0.95rem;">Uganda sees its primary rainfall peaks later in the year, particularly in <strong>July and August</strong>, but with much lower overall intensity compared to the torrential rains of Mozambique.</p>
+                <h5 class="card-title" style="color: #10b981; font-weight: 600; font-size: 1.1rem;"><i class="fas fa-cloud-sun-rain"></i> Ethiopia</h5>
+                <p class="card-text text-muted" style="font-size: 0.95rem;">Ethiopia sees its primary rainfall peaks later in the year, particularly in <strong>July and August</strong>, but with much lower overall intensity compared to the torrential rains of Mozambique.</p>
             </div>
         </div>
     </div>
@@ -323,7 +323,7 @@ Unlike political shocks, which are sudden and structural, climatic drivers like 
         <div class="card h-100 shadow-sm" style="border: none; border-left: 4px solid #f59e0b;">
             <div class="card-body">
                 <h5 class="card-title" style="color: #f59e0b; font-weight: 600; font-size: 1.1rem;"><i class="fas fa-sun"></i> Senegal</h5>
-                <p class="card-text text-muted" style="font-size: 0.95rem;">Senegal operates on a strict, concentrated cycle. It matches Uganda's intensity but is highly localized: heavy peaks hit in <strong>August and September</strong>, while the rest of the year is almost entirely dry.</p>
+                <p class="card-text text-muted" style="font-size: 0.95rem;">Senegal operates on a strict, concentrated cycle. It matches Ethiopia's intensity but is highly localized: heavy peaks hit in <strong>August and September</strong>, while the rest of the year is almost entirely dry.</p>
             </div>
         </div>
     </div>
@@ -385,7 +385,7 @@ To illustrate this, the interactive heatmap below visualizes temporal anomalies 
 Our shift to admin-1 level analysis was a strategic move to preserve data integrity, but it didn't eliminate the issue completely. As the interactive heatmap below reveals, the distribution of missing data is highly uneven across both space and time. Notice how the significant gaps impact large parts of the African continent and the Middle East, particularly prior to 2021.
 </p>
 
-<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+<div class="iframe-container my-4" style="width: 100%; height: 1200px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
     <iframe src="assets/toADD/DATI_MANCANTI.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
 
@@ -441,6 +441,10 @@ If we can't always collect the data in the field, we must strategically "augment
 <br><br>
 We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to be the most effective at identifying coherent, well-separated neighbors across different regions. This ensures that when we fill a missing data point, we are using the profile of a truly similar, statistically verified neighbor—maintaining data integrity and minimizing the uncertainty inherent in any imputation. We will utilize these clustering results to refine our predictive models in the next phases.
 </p>
+
+<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+    <iframe src="assets/toADD/Cluster_Map_Catch22_AFG.html" width="100%" height="100%" style="border:none;"></iframe>
+</div>
 
 <div class="row mt-4 mb-5 fade-in-up" style="animation-delay: 0.2s;">
     <div class="col-12 text-center">
@@ -515,14 +519,6 @@ We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. I
 But numbers, no matter how rigorously clustered or augmented, only tell half the story. Behind every statistical peak or missing data point lies a complex human reality, vividly captured in the qualitative text of the IPC reports. To move beyond simple word counts and uncover the hidden semantic structures of food crises, we deployed an advanced Natural Language Processing (NLP) pipeline. We leveraged powerful pretrained models to "read" these reports and let the raw text organize itself into coherent, thematic clusters.
 </p>
 
-<div class="row mt-4 mb-5 fade-in-up" style="animation-delay: 0.2s;">
-    <div class="col-12 text-center">
-        <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
-            <i class="fas fa-project-diagram" style="margin-right: 6px;"></i> Fascinated by advanced NLP and semantic pipelines? 
-            <a href="{{ site.baseurl }}/Text-analysis.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Technical Text Analysis section &rarr;</a>
-        </p>
-    </div>
-</div>
 
 <div class="row mt-4">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
@@ -611,6 +607,15 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
                 "The current vulnerability in Zambia has been driven by a high incidence of poverty, the impact of the <span style="background-color: #d1ecf1; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #0c5460;">COVID-19 pandemic</span>, macroeconomic instability... primarily driven by shocks such as prolonged dry spells, flooding, <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">reduced livelihood opportunities</span> due to <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">restrictions</span> linked to <span style="background-color: #d1ecf1; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #0c5460;">COVID-19</span>."
             </p>
         </div>
+    </div>
+</div>
+
+<div class="row mt-4 mb-5 fade-in-up" style="animation-delay: 0.2s;">
+    <div class="col-12 text-center">
+        <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
+            <i class="fas fa-project-diagram" style="margin-right: 6px;"></i> Fascinated by advanced NLP and semantic pipelines? 
+            <a href="{{ site.baseurl }}/Text-analysis.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Technical Text Analysis section &rarr;</a>
+        </p>
     </div>
 </div>
 
