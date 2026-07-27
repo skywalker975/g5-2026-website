@@ -463,7 +463,7 @@ We won't bore you with all the deep technical mechanics here, but ultimately, we
 ## <span class="text-gradient">From Words to Data: Decoding the Narrative through NLP Pipeline </span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-To move beyond simple word counts and uncover the hidden semantic structures of food crises, we utilized an advanced Natural Language Processing (NLP) pipeline. Since we were operating on a highly specialized dataset of only a few hundred reports, training an AI from scratch was impossible. Instead, we leveraged powerful pretrained models to read the reports and let the data organize itself into coherent thematic clusters. <i>(For a deep dive into the technical details and architectures of the models cited below, please refer to our <a href="{{ site.baseurl }}/Text-analysis.html">Technical Text Analysis</a> page).</i>
+But numbers, no matter how rigorously clustered or augmented, only tell half the story. Behind every statistical peak or missing data point lies a complex human reality, vividly captured in the qualitative text of the IPC reports. To move beyond simple word counts and uncover the hidden semantic structures of food crises, we deployed an advanced Natural Language Processing (NLP) pipeline. We leveraged powerful pretrained models to "read" these reports and let the raw text organize itself into coherent, thematic clusters. <i>(For a deep dive into the technical details and architectures of the models cited below, please refer to our <a href="{{ site.baseurl }}/Text-analysis.html">Technical Text Analysis</a> page).</i>
 </p>
 
 <div class="row mt-4">
