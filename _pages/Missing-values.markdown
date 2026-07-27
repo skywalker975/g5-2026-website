@@ -4,7 +4,7 @@ title: "Missing values"
 permalink: /Missing-values.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/header_data_coll.jpg
+header_img: assets/copertine_pagine/data_collection_and_processing.png
 header_title: "Missing values"
 
 ---
