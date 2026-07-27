@@ -4,7 +4,7 @@ title: "Modelling Food Insecurity"
 permalink: /modelling.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/header_model_ai.jpg
+header_img: assets/copertine_pagine/modelling.png
 header_title: "Modelling Food Insecurity in Space and Time"
 subtitle: "Two questions: why an area suffers, and whether it is getting worse right now"
 ---
