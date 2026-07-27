@@ -456,7 +456,7 @@ We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. I
     <div class="col-12 text-center">
         <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
             <i class="fas fa-project-diagram" style="margin-right: 6px;"></i> Love the technical math behind silhouette scores and spatial clustering? 
-            <a href="{{ site.baseurl }}/Data-augmentation.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Data Augmentation section &rarr;</a>
+            <a href="{{ site.baseurl }}/Data-augumentation.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Data Augmentation section &rarr;</a>
         </p>
     </div>
 </div>
