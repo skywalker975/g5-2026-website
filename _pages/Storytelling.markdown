@@ -597,6 +597,8 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     </div>
 </div>
 
+a
+
 <div class="row mt-4">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-search-plus"></i> Discovery: Connecting Different Words to the Same Crisis</h4>
