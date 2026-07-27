@@ -667,7 +667,7 @@ The most startling revelation from the dense clustering was the discovery of <b>
 #### Profile 1: The Agro-Pastoral Climate Trap (Kenya & Uganda)
 
 <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-Kenya and Uganda are bound by a shared geographical vulnerability. Their evolutionary trajectory perfectly mirrors the unpredictable swings of the climate. We see both nations plunge into <b>Agro-pastoral Water Vulnerability</b> during the devastating <span class="history-tooltip">El Niño-induced floods<span class="tooltip-text"><i class="fas fa-info-circle"></i> In 2015-2016, a super El Niño triggered torrential rains across East Africa, washing away harvests and decimating livestock herds before they could recover.</span></span>, and then suffer immense <b>Rainfall Impact on Crops</b> during the punishing <span class="history-tooltip">La Niña droughts<span class="tooltip-text"><i class="fas fa-info-circle"></i> Between 2020 and 2023, the Horn of Africa experienced an unprecedented five consecutive failed rainy seasons, pushing millions to the brink of famine.</span></span>. This is a classic climate-driven trap, where communities have no time to recover before the next environmental shock hits.
+Kenya and Uganda are bound by a shared geographical vulnerability. Their evolutionary trajectory perfectly mirrors the unpredictable swings of the climate. We see both nations plunge into <b>Agro-pastoral Water Vulnerability</b> during the devastating <span class="history-tooltip">El Niño-induced floods<span class="tooltip-text"><i class="fas fa-info-circle"></i> In 2015-2016, a super El Niño triggered torrential rains across East Africa, washing away harvests and decimating livestock herds before they could recover.</span></span>, and then suffer immense <b>Rainfall Impact on Crops</b> during the punishing <span class="history-tooltip">La Niña droughts<span class="tooltip-text"><i class="fas fa-info-circle"></i> Between 2020 and 2023, the Horn of Africa experienced an unprecedented five consecutive failed rainy seasons, pushing millions into high levels of food insecurity.</span></span>. This is a classic climate-driven trap, where communities have no time to recover before the next environmental shock hits.
 </p>
 
 <div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
@@ -677,7 +677,7 @@ Kenya and Uganda are bound by a shared geographical vulnerability. Their evoluti
 #### Profile 2: The Multi-Shock Vortex (Mozambique & Madagascar)
 
 <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-Located across the Mozambique Channel from one another, these two nations share more than just geography: they are trapped in the exact same vortex of climatic and systemic shocks. The algorithm maps an incredibly complex, yet shared trajectory for both. They are repeatedly battered by <b>Rainfall Impact on Crops</b> due to devastating Indian Ocean weather events <span class="history-tooltip">(like recurrent super-cyclones)<span class="tooltip-text"><i class="fas fa-info-circle"></i> Both countries are frequently in the crosshairs of extreme cyclones (e.g., Idai, Freddy, Batsirai), which decimate agricultural lands and infrastructure.</span></span>. This baseline fragility makes them highly susceptible to external shocks, driving them through identical, synchronized phases of <b>COVID-19 Economic Impact</b> and soaring <b>Agricultural Price Inflation</b>. Ultimately, these compounding economic and climatic crises converge on the most vulnerable, plunging both nations into recurring, severe spikes of <b>Child Malnutrition</b>. Their shared sequence highlights how repetitive climate disasters trap fragile economies in an inescapable loop.
+Located across the Mozambique Channel from one another, these two nations share more than just geography: they are trapped in the exact same vortex of climatic and systemic shocks. The algorithm maps a complex, yet shared trajectory for both. They are repeatedly battered by <b>Rainfall Impact on Crops</b> due to devastating Indian Ocean weather events <span class="history-tooltip">(like recurrent super-cyclones)<span class="tooltip-text"><i class="fas fa-info-circle"></i> Both countries are frequently in the crosshairs of extreme cyclones (e.g., Idai, Freddy, Batsirai), which decimate agricultural lands and infrastructure.</span></span>. This baseline fragility makes them highly susceptible to external shocks, driving them through identical, synchronized phases of <b>COVID-19 Economic Impact</b> and soaring <b>Agricultural Price Inflation</b>. Ultimately, these compounding economic and climatic crises converge on the most vulnerable, plunging both nations into recurring, severe spikes of <b>Child Malnutrition</b>. Their shared sequence highlights how repetitive climate disasters trap fragile economies in an inescapable loop.
 </p>
 
 <div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
@@ -687,7 +687,7 @@ Located across the Mozambique Channel from one another, these two nations share 
 <div style="background-color: #f8f9fa; border-left: 5px solid #6366f1; border-radius: 6px; padding: 1.5rem; margin-top: 3rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
 <h4 style="font-weight: 700; margin-top: 0; color: #4338ca;"><i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 10px;"></i> Looking Ahead: Clustering by Trajectory</h4>
 <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 0; color: #475569; text-align: justify;">
-The discovery of these perfectly synchronized crisis profiles opens a fascinating door for future research. Instead of classifying regions merely by their current dominant topic, what if we clustered them by their entire evolutionary sequence? By grouping nations that share the same "DNA" of crisis evolution (e.g., the <i>Climate-to-Economic-Collapse</i> pattern vs. the <i>Chronic-Conflict-Trap</i>), predictive models could anticipate the next phase of a food crisis simply by recognizing the historical precedent set by another country in the same trajectory group.
+The discovery of these synchronized crisis profiles opens a door for future research. Instead of classifying regions merely by their current dominant topic, what if we clustered them by their entire crisis sequence? By grouping nations that share the same "DNA" of crisis evolution (e.g., the <i>Climate-to-Economic-Collapse</i> pattern vs. the <i>Chronic-Conflict-Trap</i>), predictive models could anticipate the next phase of a food crisis simply by recognizing the historical precedent set by another country in the same trajectory group.
 </p>
 </div>
 
@@ -696,7 +696,7 @@ The discovery of these perfectly synchronized crisis profiles opens a fascinatin
 # <span class="text-gradient">Predicting Food Insecurity: From Insight to Foresight</span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-We've seen how tracking the semantic "DNA" of a crisis reveals its underlying evolutionary path. But understanding the past and present is only half the battle. The ultimate goal of our investigation is <b>foresight</b>. If we know the core drivers—the climate shocks, the economic volatility, the hidden conflicts—can we actually predict where hunger will strike next?
+We've seen how tracking the semantic "DNA" of a crisis reveals its underlying path. But understanding the past and present is only half the battle. The ultimate goal of our investigation is <b>foresight</b>. If we know the core drivers—the climate shocks, the economic volatility, the hidden conflicts—can we actually predict where hunger will strike next?
 <br><br>
 To answer this, we built two distinct models to tackle two critical questions:
 </p>
@@ -707,7 +707,7 @@ To answer this, we built two distinct models to tackle two critical questions:
 </div>
 
 <ul style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
-    <li class="mb-3"><b>Hunger is fiercely context-dependent:</b> The same drop in rainfall or the same level of conflict means different things in the Sahel, the Horn of Africa, or Central America. A single global rule fails to capture these nuances, often performing worse than a simple baseline like the country's historical average.</li>
+    <li class="mb-3"><b>Hunger is context-dependent:</b> The same drop in rainfall or the same level of conflict means different things in the Sahel, the Horn of Africa, or Central America. A single global rule fails to capture these nuances, often performing worse than a simple baseline like the country's historical average.</li>
     <li class="mb-3"><b>Localizing fixes this:</b> We train separate models for smaller groups of similar areas. The grouping that works best is determined by what an area's IPC reports actually discuss—such as conflict and refugees, farming and water, or prices and inflation.</li>
     <li><b>Key Drivers:</b> Across most contexts, food prices and conflict consistently emerge as the strongest predictors.</li>
 </ul>
@@ -742,7 +742,7 @@ To answer this, we built two distinct models to tackle two critical questions:
 </div>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-In humanitarian work, decisions affect lives. An algorithm's output cannot be a black box; results must be deeply explainable before anyone acts on them.
+In humanitarian work, decisions affect lives. An algorithm's output cannot be a black box; results must be explainable before anyone acts on them.
 </p>
 
 <div class="my-5 text-center">
@@ -756,13 +756,13 @@ In humanitarian work, decisions affect lives. An algorithm's output cannot be a 
 </div>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-IPC assessments are notoriously slow, meaning a sudden shock can go completely unseen for months. To solve this, we developed a nowcasting model designed to accurately estimate current hunger levels by combining the most recent assessment with real-time driver data.
+IPC assessments are slow, meaning a sudden shock can go completely unseen for months. To solve this, we developed a nowcasting model designed to accurately estimate current hunger levels by combining the most recent assessment with real-time driver data.
 </p>
 
 <ul style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
     <li class="mb-3"><b>Significant Accuracy Gains:</b> The model achieves about an 18% lower error rate compared to simply carrying the last value forward, and crucially, it successfully tracks the direction of change.</li>
-    <li class="mb-3"><b>A Global Approach Works:</b> In stark contrast to the static model, one global model is sufficient here. Once the algorithm factors in an area's historical baseline, hyper-localizing adds very little predictive power.</li>
-    <li><b>The Early Warning Signal:</b> Among all the real-time drivers, rainfall anomalies act as the strongest early indicator of an impending crisis.</li>
+    <li class="mb-3"><b>A Global Approach Works:</b> In stark contrast to the static model, one global model is sufficient here. Once the algorithm factors in an area's historical baseline, hyper-localizing adds little predictive power.</li>
+    <li><b>The Early Warning Signal:</b> Among all the real-time drivers, rainfall anomalies act as the strongest early indicator of changes in levels of food insecurity.</li>
 </ul>
 
 <div class="my-4 text-center">
