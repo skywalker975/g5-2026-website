@@ -9,7 +9,7 @@ header_title: "Data collection"
 ---
 
 
-<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;"> Integrated Datasets and Architecture of HERO</h1>
+<span class="text-gradient"> Integrated Datasets and Architecture of HERO</span>
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 A fundamental pillar of this effort lies in the collection and integration of diverse data sources (spanning socio-economic indicators, climate patterns, agricultural yields, and conflict metrics) into a unified analytical framework. The backbone (*spine*) of this entire data architecture is established by the **Integrated Food Security Phase Classification (IPC)** assessments. All secondary, high-frequency signals—such as ACLED conflict records, IDP displacement data, WFP market prices, CHIRPS rainfall metrics, WFP NDVI vegetation indices, and GDELT media monitoring—are integrated into the IPC base structure via **Left Join** operations across the spatial and temporal dimensions. 
 
