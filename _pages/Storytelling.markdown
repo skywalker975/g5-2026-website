@@ -389,7 +389,7 @@ To illustrate this, the interactive heatmap below visualizes temporal anomalies 
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Our shift to admin-1 level analysis was a strategic move to preserve data integrity, but it didn't eliminate the issue completely. As the interactive heatmap below reveals, the distribution of missing data is highly uneven across both space and time. Notice the significant gaps impact large parts of the African continent and the Middle East, particularly prior to 2021.
+Our shift to admin-1 level analysis was a strategic move to preserve data integrity, but it didn't eliminate the issue completely. As the interactive heatmap below reveals, the distribution of missing data is highly uneven across both space and time. Notice how the significant gaps impact large parts of the African continent and the Middle East, particularly prior to 2021.
 </p>
 
 <div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
@@ -397,7 +397,7 @@ Our shift to admin-1 level analysis was a strategic move to preserve data integr
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-As you can see in the matrix above, the prevalence of these missing values forms the primary obstacle in our analysis. This "pain point" threatens to severely degrade the performance and reliability of our predictive models. Furthermore, as we attempt to drill down into more granular data, sparsity increases exponentially. At the <strong>admin-2</strong> (district) level, datasets like ACLED (conflict tracking) become particularly compromised.
+As you can see in the matrix above, the prevalence of these missing values forms the primary obstacle in our analysis. This "pain point" threatens to degrade the performance and reliability of our predictive models. Furthermore, as we attempt to drill down into more granular data, sparsity increases exponentially. At the <strong>admin-2</strong> (district) level, datasets like ACLED (conflict tracking) become particularly compromised.
 </p>
 
 ### Mapping the Void: Structural Missingness
@@ -405,7 +405,7 @@ As you can see in the matrix above, the prevalence of these missing values forms
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
 But these data gaps aren't just random noise—they have a distinct, structural pattern. When we mapped the correlation of missingness across our different drivers, we uncovered that data outages occur in distinct, interconnected blocks. 
 <br><br>
-As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a staggering <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
+As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
 </p>
 
 <div class="my-5 text-center">
@@ -443,9 +443,9 @@ Despite these immense challenges and the inherent risks highlighted by experts, 
 ### "Augmenting" Reality: The Clustering Approach
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
-If we can't always collect the data in the field, we must strategically "augment" the data we do have. Taking Alice's warning to heart, we knew we couldn't just blindly guess our way out of the void. To find the most reliable imputation method, we evaluated how geographic proximity and statistical profiles influence the data structure, testing everything from Hierarchical models to K-Means.
+If we can't always collect the data in the field, we must strategically "augment" the data we do have. To find the most reliable imputation method, we evaluated how geographic proximity and statistical profiles influence the data structure, testing everything from Hierarchical models to K-Means.
 <br><br>
-We deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to be the most effective at identifying coherent, well-separated neighbors across different regions. This ensures that when we fill a missing data point, we are using the profile of a truly similar, statistically verified neighbor—maintaining data integrity and minimizing the uncertainty inherent in any imputation. We will utilize these clustering results to refine our predictive models in the next phases.
+We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to be the most effective at identifying coherent, well-separated neighbors across different regions. This ensures that when we fill a missing data point, we are using the profile of a truly similar, statistically verified neighbor—maintaining data integrity and minimizing the uncertainty inherent in any imputation. We will utilize these clustering results to refine our predictive models in the next phases.
 </p>
 
 <div class="row mt-4 mb-5 fade-in-up" style="animation-delay: 0.2s;">
@@ -554,7 +554,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-filter"></i> 2. The Power and Limits of Keywords (TF-IDF)</h4>
         <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-        Our first instinct was to use <b>TF-IDF</b> (Term Frequency-Inverse Document Frequency)—a classic statistical method that groups reports based on the sheer frequency of identical words. Below, you can see two reports that the algorithm grouped together simply because they share the exact same vocabulary (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>) to describe a complex agricultural and economic shock. In cases like this, TF-IDF works perfectly.
+        Our first instinct was to use <b>TF-IDF</b> (Term Frequency-Inverse Document Frequency)—a classic statistical method that groups reports based on the frequency of identical words. Below, you can see two reports that the algorithm grouped together simply because they share the exact same vocabulary (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>) to describe a complex agricultural and economic shock. In cases like this, TF-IDF works perfectly.
         </p>
 
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #17a2b8;">
@@ -593,7 +593,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-brain"></i> 3. Dense Embeddings: Finding the Meaning</h4>
         <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-        To break free from the keyword trap, we needed a model that could read between the lines. We advanced to <b>Dense Semantic Embeddings</b> using the pretrained <a href="{{ site.baseurl }}/Text-analysis.html"><b>BGE-M3</b></a> model. Instead of blindly counting words, this architecture maps entire paragraphs into a high-dimensional mathematical space, grouping texts purely by their <b>underlying meaning</b>. This breakthrough allowed us to uncover profound, previously invisible connections—successfully linking reports that described the exact same structural crisis, even when they used entirely different vocabularies.
+        To break free from the keyword trap, we needed a model that could read between the lines. We advanced to <b>Dense Semantic Embeddings</b> using the pretrained <a href="{{ site.baseurl }}/Text-analysis.html"><b>BGE-M3</b></a> model. Instead of blindly counting words, this architecture maps entire paragraphs into a high-dimensional mathematical space, grouping texts purely by their <b>underlying meaning</b>. This breakthrough allowed us to uncover previously invisible connections—successfully linking reports that described the exact same structural crisis, even when they used different vocabularies.
         </p>
     </div>
 </div>
