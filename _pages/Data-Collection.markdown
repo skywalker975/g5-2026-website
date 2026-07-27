@@ -25,7 +25,6 @@ This architectural choice ensures that the final dataset preserves the exact row
 For Time Series Analysis (TSA) and Machine Learning (ML) modeling, irregular IPC validity windows (`From` – `To`) are expanded into a uniform monthly time axis (`MS` - Month Start). Overlapping months are aggregated via mean values, and intermediate gaps are filled using linear interpolation alongside edge carrying (`ffill`/`bfill`). This transformation extracts 9 static structural descriptors per time series, including statistical moments (mean, variance, skewness, kurtosis), long-term memory (Hurst exponent $H$), regularity (Approximate Entropy ApEn), and short-term memory through standardized AR(1)–AR(3) autoregressive coefficients.
 ---
 ### HERO Dataset: Sources and Methodology
----
 #### ACLED (Armed Conflict Location & Event Data Project)
 The ACLED pipeline processes raw conflict logs partitioned across multiple files (`violent_events_1-3.csv`) and matches them with IPC hunger data, yielding a consolidated dataset of 56,414 rows and 15 columns. Designed to feed machine learning models with clear conflict signals, it measures how localized violence directly drives food crisis severity and population displacement.
 
