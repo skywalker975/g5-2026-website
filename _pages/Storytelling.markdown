@@ -356,12 +356,9 @@ As we highlighted when introducing the HERO architecture, our models operate mos
 To illustrate this, the interactive heatmap below visualizes temporal anomalies (isolated via residual analysis) in the IPC Phase 3+ time series across the different micro-regions of Afghanistan. While a national average might simply show a general upward trend, this regional breakdown reveals the true anatomy of a crisis. Notice how, immediately following the May 2021 shock, intense anomaly clusters flare up across multiple specific provinces. This proves that to accurately anticipate a crisis, we must look beyond the national surface and monitor the local realities.
 </p>
 
-<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+<div class="iframe-container my-4" style="width: 100%; height: 800px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
     <iframe src="assets/toADD/AFG_temporal_anomalies_modificato.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
-<p class="text-center text-muted mt-2 mb-5" style="font-style: italic;">
-    <small><strong>Note on Methodology:</strong> We opted for admin-1 analysis to capture sub-national variances while avoiding the severe data sparsity that makes admin-2 analytically unviable. Admin-1 strikes the optimal balance between granularity and robust data availability.</small>
-</p>
 
 
 ## The Invisible Enemy: Tackling Missing Data
@@ -406,7 +403,7 @@ As you can see in the matrix above, the prevalence of these missing values forms
 ### Mapping the Void: Structural Missingness
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-But these data gaps aren't just random noise—they have a distinct, structural pattern. When we mapped the correlation of missingness across our different drivers, we uncovered that data outages occur in distinct, interconnected blocks. 
+But these data gaps aren't just random noise, they have a distinct, structural pattern. When we mapped the correlation of missingness across our different drivers, we uncovered that data outages occur in distinct, interconnected blocks. 
 <br><br>
 As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
 </p>
