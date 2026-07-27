@@ -22,6 +22,7 @@ subtitle: "Temporal Forecasting, Anomaly Detection & Time Series Decomposition"
     <p class="text-muted m-0">This page will contain the full temporal forecasting, STL decomposition, and time series models for crisis prediction.</p>
 </div>
 
+<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-top: 3rem; margin-bottom: 2rem; font-weight: 300;">
 To grasp the true depth of this structural shock, we performed a Statistical Time Series Decomposition (STL) on the percentage of the population facing IPC Phase 3+ food insecurity in Afghanistan. As the chart below demonstrates, the May 2021 event didn't just cause a temporary spike in hunger—it fundamentally altered the rhythm of the crisis. Before the withdrawal, the <strong>seasonal component</strong> exhibited a distinct, regular periodicity. After May 2021, you can clearly see a drastic change of pattern in the seasonality, proving that the systemic shock permanently disrupted the historical cycles of food insecurity.
 </p>
 

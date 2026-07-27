@@ -264,8 +264,6 @@ When we examine the trajectories of political and social drivers against food in
     </details>
 </div>
 
-<p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-top: 3rem; margin-bottom: 2rem; font-weight: 300;">
-
 
 #### Case File #2: Sudan's Shattered Stability
 
