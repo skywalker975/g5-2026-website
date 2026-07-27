@@ -4,7 +4,7 @@ title: "Network Analysis"
 permalink: /Network-Analysis.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/header_data_coll.jpg
+header_img: assets/copertine_pagine/network_analysis.png
 header_title: "Network & Structural Connectivity"
 subtitle: "How price shocks travel through trade corridors — and who pays the price"
 ---

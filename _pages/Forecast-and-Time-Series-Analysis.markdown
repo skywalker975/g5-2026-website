@@ -4,7 +4,7 @@ title: "Forecast & Time Series Analysis"
 permalink: /Forecast-and-Time-Series-Analysis.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/header_model_ai.jpg
+header_img: assets/copertine_pagine/time_series.png
 header_title: "Forecast & Time Series Analysis"
 subtitle: "Predicting humanitarian crises before they peak — from signal decomposition to zero-shot AI"
 ---
