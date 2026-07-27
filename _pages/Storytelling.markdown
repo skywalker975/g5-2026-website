@@ -389,7 +389,7 @@ To illustrate this, the interactive heatmap below visualizes temporal anomalies 
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Our shift to admin-1 level analysis was a strategic move to preserve data integrity, but it didn't eliminate the void completely. As the interactive heatmap below reveals, the distribution of missing data is highly uneven across both space and time. Notice the significant gaps plaguing large parts of the African continent and the Middle East, particularly prior to 2021.
+Our shift to admin-1 level analysis was a strategic move to preserve data integrity, but it didn't eliminate the issue completely. As the interactive heatmap below reveals, the distribution of missing data is highly uneven across both space and time. Notice the significant gaps impact large parts of the African continent and the Middle East, particularly prior to 2021.
 </p>
 
 <div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
@@ -397,7 +397,7 @@ Our shift to admin-1 level analysis was a strategic move to preserve data integr
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-As you can see in the matrix above, the sheer prevalence of these missing values forms the primary obstacle in our analysis. This "pain point" threatens to severely degrade the performance and reliability of our predictive models if left unchecked. There is a high concentration of null values characterized by stark disparities across different countries—what is well-documented in one nation might be a complete black box in another. Furthermore, as we attempt to drill down into more granular data, sparsity increases exponentially. At the <strong>admin-2</strong> (district) level, datasets like ACLED (conflict tracking) become particularly compromised, forcing us to balance our desire for hyper-local detail against the harsh reality of missing information on the ground.
+As you can see in the matrix above, the prevalence of these missing values forms the primary obstacle in our analysis. This "pain point" threatens to severely degrade the performance and reliability of our predictive models. Furthermore, as we attempt to drill down into more granular data, sparsity increases exponentially. At the <strong>admin-2</strong> (district) level, datasets like ACLED (conflict tracking) become particularly compromised, forcing us to balance our desire for hyper-local detail against the harsh reality of missing information on the ground.
 </p>
 
 ### Mapping the Void: Structural Missingness
