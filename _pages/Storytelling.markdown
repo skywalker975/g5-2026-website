@@ -463,14 +463,23 @@ We won't bore you with all the deep technical mechanics here, but ultimately, we
 ## <span class="text-gradient">From Words to Data: Decoding the Narrative through NLP Pipeline </span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-But numbers, no matter how rigorously clustered or augmented, only tell half the story. Behind every statistical peak or missing data point lies a complex human reality, vividly captured in the qualitative text of the IPC reports. To move beyond simple word counts and uncover the hidden semantic structures of food crises, we deployed an advanced Natural Language Processing (NLP) pipeline. We leveraged powerful pretrained models to "read" these reports and let the raw text organize itself into coherent, thematic clusters. <i>(For a deep dive into the technical details and architectures of the models cited below, please refer to our <a href="{{ site.baseurl }}/Text-analysis.html">Technical Text Analysis</a> page).</i>
+But numbers, no matter how rigorously clustered or augmented, only tell half the story. Behind every statistical peak or missing data point lies a complex human reality, vividly captured in the qualitative text of the IPC reports. To move beyond simple word counts and uncover the hidden semantic structures of food crises, we deployed an advanced Natural Language Processing (NLP) pipeline. We leveraged powerful pretrained models to "read" these reports and let the raw text organize itself into coherent, thematic clusters.
 </p>
+
+<div class="row mt-4 mb-5 fade-in-up" style="animation-delay: 0.2s;">
+    <div class="col-12 text-center">
+        <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
+            <i class="fas fa-project-diagram" style="margin-right: 6px;"></i> Fascinated by advanced NLP and semantic pipelines? 
+            <a href="{{ site.baseurl }}/Text-analysis.html" style="color: #0056b3; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Technical Text Analysis section &rarr;</a>
+        </p>
+    </div>
+</div>
 
 <div class="row mt-4">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-user-secret"></i> 1. Anonymization: Hiding the Map</h4>
         <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
-        Before diving into the vocabulary, it was crucial to anonymize the texts using <a href="{{ site.baseurl }}/Text-analysis.html"><b>GLiNER</b></a>, a pretrained model for Named Entity Recognition (NER). We explicitly masked dates and geopolitical entities (like country and region names). The goal was to prevent the algorithm from grouping reports simply because they mentioned the same country, forcing it instead to find the <i>true</i> underlying causes of the crisis.
+        Before our algorithm could analyze the vocabulary, we had to strip away its biases. If we fed the raw reports to the model, it would naturally group texts simply because they mentioned the same country or year, missing the deeper semantic connections. Using an <a href="{{ site.baseurl }}/Text-analysis.html"><b>advanced entity recognition model</b></a>, we systematically masked all dates and geopolitical names—effectively "hiding the map." By blinding the algorithm to <strong>where</strong> and <strong>when</strong> a crisis occurred, we forced it to focus entirely on <strong>why</strong> it occurred, uncovering the true, underlying drivers of food insecurity regardless of borders.
         </p>
 
         <div class="example-box mt-4 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #007bff;">
@@ -478,7 +487,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
             <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px;">
                 "The 8th analysis cycle on the Integrated Food Security Classification Framework (IPC) of <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">DRC</span> held in <span style="background-color: #ffffcc; padding: 2px 4px; border-radius: 3px;">December 2012</span> identified 6.4 million people affected by a situation of food and livelihood crises, <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">77 regions</span> have been classified in phase 3 and <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">8 regions</span> in Phase 4 throughout <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">DRC</span>."
             </p>
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-user-secret"></i> GLiNER Anonymized Text</h5>
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-user-secret"></i> Anonymized Text</h5>
             <p style="font-family: monospace; font-size: 0.85rem; color: #28a745; margin-bottom: 0;">
                 "The 8th analysis cycle on the Integrated Food Security Classification Framework (IPC) of <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span> held in <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[DATE]</span> identified 6.4 million people affected by a situation of food and livelihood crises, <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span> have been classified in phase 3 and <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span> in Phase 4 throughout <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span>."
             </p>
