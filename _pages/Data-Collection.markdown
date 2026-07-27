@@ -25,10 +25,8 @@ Additional qualitative descriptors include Level 1, Area, Validity period, From,
 The method aggregates raw records of violent events and casualties, mapping them directly onto regional food security levels to create a single, unified dataset. The ultimate purpose is to feed machine learning models with clear conflict signals, helping analysts measure how localized violence directly drives food crisis severity and population displacement, thereby catching emerging crisis hotspots early.
 
 # IPC (Integrated Food Security Phase Classification)
-This pipeline collects official data from IPC  on Acute Food Insecurity analyses spanning from 2011 to 2026.
-The method follows a two-stage automated process: first mapping and deduplicating report URLs, then extracting Key Results text and downloading PDFs—automatically separating full reports from summary snapshots.
 
-The resulting IPC Data dataset captures spatial and socio-economic structures to monitor food security based on the Integrated Food Security Phase Classification framework, mapped to the 2024–2025 analysis cycle. It follows a strict geographic hierarchy spanning from national levels (ISO-3) down to micro-administrative and local units—including Admin Levels 1–3, communes, and displacement camps—each uniquely referenced using standardized P-Codes.
+The IPC Data dataset captures spatial and socio-economic structures to monitor food security based on the Integrated Food Security Phase Classification framework, mapped to the 2024–2025 analysis cycle. It follows a strict geographic hierarchy spanning from national levels (ISO-3) down to micro-administrative and local units—including Admin Levels 1–3, communes, and displacement camps—each uniquely referenced using standardized P-Codes.
 
 Alongside geographic boundaries, the dataset classifies analysis units by demographic group (rural, urban, host, or displaced and refugee populations) and primary Livelihood Zones, such as agro-pastoral or coastal systems. Ultimately, the purpose of this architecture is to build a robust qualitative text corpus to identify food crisis drivers and perform semantic comparisons across different emergency contexts.
 
@@ -71,6 +69,9 @@ The GDELT dataset provides fine-grained spatial and temporal media-monitoring co
 The method queries daily partitioned event tables and categorizes geopolitical actions using the CAMEO taxonomy to structure raw news data.
 The ultimate purpose is to provide early, near-real-time indicators of instability that often lead to food shortages, filling the time gap before official, structured field reports are published.
 
+# IPC reports (via web scraping from https://www.ipcinfo.org/ipc-country-analysis/en/)
 
+This pipeline collects official report from IPC on Acute Food Insecurity analyses spanning from 2011 to 2026.
+The method follows a two-stage automated process: first mapping and deduplicating report URLs, then extracting Key Results text and downloading PDFs—automatically separating full reports from summary snapshots.
 
 
