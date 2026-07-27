@@ -10,7 +10,7 @@ show_sidetoc: true
 
 header_type: hero
 
-header_img: assets/images/header_text_nlp.jpg
+header_img: assets/copertine_pagine/text_analysis.png
 
 header_title: "Text analysis"
 
