@@ -425,7 +425,7 @@ While TF-IDF effectively captures statistical word frequencies, it can struggle 
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-search-plus"></i> Example 1: Dense Cluster (Economic Impacts of COVID-19)</h4>
         <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
-        To demonstrate the power of dense semantic embeddings, let's examine two texts from completely different contexts (El Salvador and Zambia) that BGE-M3 placed in the exact same cluster. Here, we want to focus purely on the <b>triggering conditions</b> of food insecurity, excluding conflict. 
+        To demonstrate the power of dense semantic embeddings, let's examine two texts from completely different contexts (El Salvador and Zambia) that BGE-M3 placed in the exact same cluster.  
         <br><br>
         The dense embedding model understands that these texts describe the same underlying driver—<b>economic constraints caused by pandemic restrictions</b>—even though they use completely different phrasing to describe it. A traditional model might miss the connection between "reduced livelihood opportunities" and "income losses due to mobility restrictions", but dense embeddings capture the shared semantic space of economic shock.
         <br><br>
