@@ -4,7 +4,7 @@ title: "Data augumentation"
 permalink: /data-augumentation.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/copertine_pagine/modelling.png
+header_img: assets/copertine_pagine/data_collection_and_processing.png
 header_title: "Data augumentation"
 subtitle: "Handling missing data"
 ---
