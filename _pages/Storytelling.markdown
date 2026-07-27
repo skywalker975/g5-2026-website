@@ -29,10 +29,11 @@ It is precisely to tackle this urgent challenge that the HERO project was born. 
 
 <hr class="section-divider">
 
-<div class="expert-profile-box" style="background-color: #f4f6f9; border-left: 5px solid #0056b3; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-    <h4 style="color: #0056b3; font-weight: 700; margin-top: 0; display: flex; align-items: center;">
+<div class="expert-profile-box" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95)); border: 1px solid rgba(99, 102, 241, 0.35); color: #f8fafc; border-left: 5px solid #0056b3; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+    <h4 style="color: #4ade80; font-weight: 700; margin-top: 0; display: flex; align-items: center;">
         <i class="fas fa-user-circle" style="font-size: 1.5rem; margin-right: 10px;"></i>
         Expert Insight: The View from the Field
+        <img src="https://cdn.wfp.org/guides/ui/v1.0.0/assets/logos/standard/en/wfp-logo-standard-blue-en.png" alt="WFP Logo" style="height: 55px; margin-left: auto;">
     </h4>
     <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify; margin-bottom: 10px;">
         As part of the development of our project, we had the pleasure of interviewing <strong>Alice Giorgio</strong>, Data Scientist at the World Food Programme (WFP). With years of experience working as a Data Scientist and an academic background in Economics from Bocconi University, Alice also shares a strong educational connection with us, having enrolled in the Master's in Big data and artificial intelligence at the University of Pisa. 
@@ -40,8 +41,8 @@ It is precisely to tackle this urgent challenge that the HERO project was born. 
     <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify; margin-bottom: 10px;">
         The main objective of our conversation was to gather feedback on our methodological approach. Discussing our framework with a domain expert provided us with valuable technical insights and a real-world perspective on how to refine our model for maximum reliability and impact.
     </p>
-    <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify; margin-bottom: 0; font-weight: 500; color: #495057;">
-        <i class="fas fa-info-circle" style="color: #6c757d; margin-right: 6px;"></i> Throughout the rest of this narrative, you will find snippets of her commentary interspersed alongside our findings. Her quotes provide a crucial bridge between our data-driven models and the operational realities of humanitarian action on the ground.
+    <p style="font-size: 1.05rem; line-height: 1.6; text-align: justify; margin-bottom: 0; font-weight: 500; color: #cbd5e1;">
+        <i class="fas fa-info-circle" style="color: #94a3b8; margin-right: 6px;"></i> Throughout the rest of this narrative, you will find snippets of her commentary interspersed alongside our findings. Her quotes provide a crucial bridge between our data-driven models and the operational realities of humanitarian action on the ground.
     </p>
 </div>
 
@@ -86,17 +87,18 @@ To achieve this, HERO integrates massive global data streams—from geopolitical
         <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
     </div>
     
-    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95)); border-top: 1px solid rgba(255, 255, 255, 0.1); border-right: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5); border-radius: 12px;">
         <div class="row align-items-center">
             <div class="col-md-3 text-center mb-4 mb-md-0">
-                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <h5 class="mb-1" style="font-weight: 700; color: #f8fafc; font-size: 1.1rem;">Alice Giorgio</h5>
                 <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Senior Data Analyst</p>
-                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP - VAM Unit</p>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px; margin-bottom: 0;">WFP - VAM Unit</p>
+                <img src="https://cdn.wfp.org/guides/ui/v1.0.0/assets/logos/standard/en/wfp-logo-standard-blue-en.png" alt="WFP Logo" style="width: 80px; margin-top: 10px; opacity: 0.9; filter: brightness(1.2);">
             </div>
             
             <div class="col-md-9">
-                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
-                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #4ade80; opacity: 0.3;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #e2e8f0; font-style: italic; margin-bottom: 0;">
                     "Data in our field are often a mess. Handling missing data and finding the right geographical granularity is the most critical aspect to address if we want these models to be truly operational and reliable."
                 </p>
             </div>
@@ -134,7 +136,7 @@ details.spoiler-container > summary::-webkit-details-marker {
         <img src="{{ site.baseurl }}/assets/images/packed_bubble_mixed.png" alt="Packed Bubble Chart of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift fade-in-up" style="max-width: 100%; border: 1px solid #e0e0e0; animation-delay: 0.6s;">
         <p class="text-muted mt-3" style="font-size: 0.95rem; font-style: italic;">
             <i class="fas fa-search" style="margin-right: 5px;"></i> This map illustrates the most frequently occurring terms in official IPC crisis reports. The prominence of words like "price", "production", and "conflict" highlights the real-world drivers that shape food insecurity. 
-            <a href="{{ site.baseurl }}/Text-analysis-storytelling.html" style="color: #0056b3; font-weight: 600; text-decoration: none; margin-left: 5px;">Discover the full Text Analysis here &rarr;</a>
+            <a href="{{ site.baseurl }}/Text-analysis-storytelling.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Discover the full Text Analysis here &rarr;</a>
         </p>
 
     </div>
@@ -202,9 +204,9 @@ To anticipate a food crisis before it strikes, we must understand the underlying
             </div>
         </div>
         <div class="col-md-6 mb-4">
-            <div class="card h-100 hero-card card-border-top-dark">
+            <div class="card h-100 hero-card" style="border-top-color: #d946ef;">
                 <div class="card-body">
-                    <h4 class="card-title text-dark"><i class="fas fa-newspaper"></i> Sentiment and news (GDELT)</h4>
+                    <h4 class="card-title" style="color: #d946ef !important;"><i class="fas fa-newspaper"></i> Sentiment and news (GDELT)</h4>
                     <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
                         Leveraging the GDELT Project's massive global database, we integrated pre-calculated metrics on the tone and volume of news coverage. This allowed us to quantify the external perception of the crisis, mapping how international attention shifted as emergencies unfolded.
                     </p>
@@ -217,7 +219,7 @@ To anticipate a food crisis before it strikes, we must understand the underlying
         <div class="col-12 text-center">
             <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
                 <i class="fas fa-database" style="margin-right: 6px;"></i> Curious about how we aggregated, cleaned, and handled these massive datasets? 
-                <a href="{{ site.baseurl }}/Data-Collection.html" style="color: #0056b3; font-weight: 600; text-decoration: none; margin-left: 5px;">Dive into our full Data Collection methodology &rarr;</a>
+                <a href="{{ site.baseurl }}/Data-Collection.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Dive into our full Data Collection methodology &rarr;</a>
             </p>
         </div>
     </div>
@@ -370,17 +372,18 @@ To illustrate this, the interactive heatmap below visualizes temporal anomalies 
         <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
     </div>
     
-    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95)); border-top: 1px solid rgba(255, 255, 255, 0.1); border-right: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5); border-radius: 12px;">
         <div class="row align-items-center">
             <div class="col-md-3 text-center mb-4 mb-md-0">
-                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <h5 class="mb-1" style="font-weight: 700; color: #f8fafc; font-size: 1.1rem;">Alice Giorgio</h5>
                 <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Senior Data Analyst</p>
-                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP - VAM Unit</p>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px; margin-bottom: 0;">WFP - VAM Unit</p>
+                <img src="https://cdn.wfp.org/guides/ui/v1.0.0/assets/logos/standard/en/wfp-logo-standard-blue-en.png" alt="WFP Logo" style="width: 80px; margin-top: 10px; opacity: 0.9; filter: brightness(1.2);">
             </div>
             
             <div class="col-md-9">
-                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
-                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #4ade80; opacity: 0.3;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #e2e8f0; font-style: italic; margin-bottom: 0;">
                     "Missing data remains one of the most critical pain points in this field. You simply cannot accurately predict what you cannot see."
                 </p>
             </div>
@@ -418,17 +421,18 @@ As illustrated in the correlation matrix below, environmental sensor blackouts e
         <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
     </div>
     
-    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95)); border-top: 1px solid rgba(255, 255, 255, 0.1); border-right: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5); border-radius: 12px;">
         <div class="row align-items-center">
             <div class="col-md-3 text-center mb-4 mb-md-0">
-                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <h5 class="mb-1" style="font-weight: 700; color: #f8fafc; font-size: 1.1rem;">Alice Giorgio</h5>
                 <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Senior Data Analyst</p>
-                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP - VAM Unit</p>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px; margin-bottom: 0;">WFP - VAM Unit</p>
+                <img src="https://cdn.wfp.org/guides/ui/v1.0.0/assets/logos/standard/en/wfp-logo-standard-blue-en.png" alt="WFP Logo" style="width: 80px; margin-top: 10px; opacity: 0.9; filter: brightness(1.2);">
             </div>
             
             <div class="col-md-9">
-                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
-                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #4ade80; opacity: 0.3;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #e2e8f0; font-style: italic; margin-bottom: 0;">
                     "Understanding the precise origin of missing values is critical before applying statistical interventions. Implementing 'blind imputation' without knowing the underlying causes actively harms the explainability of the models. We often cannot know the true cause: is an ACLED blackout signifying a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has completely collapsed? Similarly, missing WFP data often means environments are simply too dangerous for humanitarian surveyors to operate in. To mitigate these structural blind spots, analytical strategies must cross-reference external data sources."
                 </p>
             </div>
@@ -452,7 +456,7 @@ We deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to
     <div class="col-12 text-center">
         <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
             <i class="fas fa-project-diagram" style="margin-right: 6px;"></i> Love the technical math behind silhouette scores and spatial clustering? 
-            <a href="{{ site.baseurl }}/Data-augmentation.html" style="color: #0056b3; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Data Augmentation section &rarr;</a>
+            <a href="{{ site.baseurl }}/Data-augmentation.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Data Augmentation section &rarr;</a>
         </p>
     </div>
 </div>
@@ -525,7 +529,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     <div class="col-12 text-center">
         <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
             <i class="fas fa-project-diagram" style="margin-right: 6px;"></i> Fascinated by advanced NLP and semantic pipelines? 
-            <a href="{{ site.baseurl }}/Text-analysis.html" style="color: #0056b3; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Technical Text Analysis section &rarr;</a>
+            <a href="{{ site.baseurl }}/Text-analysis.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Technical Text Analysis section &rarr;</a>
         </p>
     </div>
 </div>
@@ -538,11 +542,11 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
         </p>
 
         <div class="example-box mt-4 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #007bff;">
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-file-alt"></i> Original Text</h5>
-            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #cbd5e1;"><i class="fas fa-file-alt"></i> Original Text</h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #94a3b8; margin-bottom: 15px;">
                 "The 8th analysis cycle on the Integrated Food Security Classification Framework (IPC) of <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">DRC</span> held in <span style="background-color: #ffffcc; padding: 2px 4px; border-radius: 3px;">December 2012</span> identified 6.4 million people affected by a situation of food and livelihood crises, <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">77 regions</span> have been classified in phase 3 and <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">8 regions</span> in Phase 4 throughout <span style="background-color: #ffcccc; padding: 2px 4px; border-radius: 3px;">DRC</span>."
             </p>
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-user-secret"></i> Anonymized Text</h5>
+            <h5 style="font-size: 1rem; font-weight: bold; color: #cbd5e1;"><i class="fas fa-user-secret"></i> Anonymized Text</h5>
             <p style="font-family: monospace; font-size: 0.85rem; color: #28a745; margin-bottom: 0;">
                 "The 8th analysis cycle on the Integrated Food Security Classification Framework (IPC) of <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span> held in <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[DATE]</span> identified 6.4 million people affected by a situation of food and livelihood crises, <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span> have been classified in phase 3 and <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span> in Phase 4 throughout <span style="background-color: #e2f0d9; padding: 2px 4px; border-radius: 3px; font-weight: bold;">[AFFECTED_AREA]</span>."
             </p>
@@ -558,12 +562,12 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
         </p>
 
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #17a2b8;">
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Zimbabwe <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Apr 2013 - Apr 2014) - <span style="color: #28a745; font-weight: bold;">Agro-Economic Shock</span></span></h5>
-            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #cbd5e1;"><i class="fas fa-map-marker-alt"></i> Zimbabwe <span style="font-size: 0.85rem; color: #94a3b8; font-weight: normal;">(Apr 2013 - Apr 2014) - <span style="color: #28a745; font-weight: bold;">Agro-Economic Shock</span></span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #94a3b8; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
                 "Agriculture is a key livelihoods activity for the majority of Zimbabwe's rural population. Mainly because of the <span style="color: #28a745; font-weight: bold; text-decoration: underline;"><span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">poor</span> rainfall</span> <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span> quality, <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> of major <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">crops</span> in 2012/13 fell compared to last <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span>'s harvest. Livestock were in a fair to <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> condition in April 2013. Grazing and water for livestock were generally adequate in most parts of the country save for the communal <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">areas</span>... Currently, staple cereals are generally available throughout the country from both own <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> and the market, but <span style="color: #28a745; font-weight: bold; text-decoration: underline;">low incomes and higher than normal <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">prices</span></span> of staple cereals are limiting household <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">access</span>. There is continued limited diversity of <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">food</span> consumed by rural <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span>..."
             </p>
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Uganda <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Jan 2017 - Feb 2018) - <span style="color: #28a745; font-weight: bold;">Agro-Economic Shock</span></span></h5>
-            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 0; line-height: 1.5; text-align: justify;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #cbd5e1;"><i class="fas fa-map-marker-alt"></i> Uganda <span style="font-size: 0.85rem; color: #94a3b8; font-weight: normal;">(Jan 2017 - Feb 2018) - <span style="color: #28a745; font-weight: bold;">Agro-Economic Shock</span></span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0; line-height: 1.5; text-align: justify;">
                 "<span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">Food</span> in markets is easily accessed and affordable because <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">prices</span> have declined and the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span> have adequate purchasing power. They have <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> nutrition levels because they are able to eat two or more time a day with a <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> dietary diversity. Currently <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">access</span> to livestock products is <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> because of the available pasture and water... The <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span> in these regions all suffered the effects of <span style="color: #28a745; font-weight: bold; text-decoration: underline;">prolonged dry spells</span> that stressed most of the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">crops</span> and reduced yields... However, as the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> in the second <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span> is anticipated to be normal and above normal for some <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">areas</span>... They have <span style="color: #28a745; font-weight: bold; text-decoration: underline;"><span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">poor</span> purchasing power as their incomes are low</span>..."
             </p>
         </div>
@@ -576,12 +580,12 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
         </p>
 
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #dc3545;">
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Angola <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Apr 2021 - Mar 2022) - <span style="color: #dc3545; font-weight: bold;">Drought Shock</span></span></h5>
-            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #cbd5e1;"><i class="fas fa-map-marker-alt"></i> Angola <span style="font-size: 0.85rem; color: #94a3b8; font-weight: normal;">(Apr 2021 - Mar 2022) - <span style="color: #dc3545; font-weight: bold;">Drought Shock</span></span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #94a3b8; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
                 "The worst <span style="color: #dc3545; font-weight: bold; text-decoration: underline;">drought in the last 40 years</span> and rising food prices have resulted in high acute food insecurity... The high acute food insecurity in this region can mainly be attributed to the recurrent effects of <span style="color: #dc3545; font-weight: bold; text-decoration: underline;">drought</span> which has reduced both agricultural and livestock <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span>... An IPC Acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">Malnutrition</span> analysis of 10 municipalities in Southern Angola has revealed that around 114,000 <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">children</span> under the age of five are suffering or are likely to suffer from acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">malnutrition</span>... For the period of October 2021 to February 2022, a projection analysis of the situation suggests that the rainy <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span>, characterized by food shortages and high incidence of acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">malnutrition</span>, may lead to a deterioration..."
             </p>
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Bangladesh <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Sep 2014 - Dec 2014) - <span style="color: #007bff; font-weight: bold;">Flooding Shock</span></span></h5>
-            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 0; line-height: 1.5; text-align: justify;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #cbd5e1;"><i class="fas fa-map-marker-alt"></i> Bangladesh <span style="font-size: 0.85rem; color: #94a3b8; font-weight: normal;">(Sep 2014 - Dec 2014) - <span style="color: #007bff; font-weight: bold;">Flooding Shock</span></span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0; line-height: 1.5; text-align: justify;">
                 "During the <span style="color: #007bff; font-weight: bold; text-decoration: underline;">flooding</span>, crop land and homesteads <span style="color: #007bff; font-weight: bold; text-decoration: underline;">deluged with water</span> and cause severe damage to standing crops... <span style="color: #007bff; font-weight: bold; text-decoration: underline;">Flood water</span> brings huge silt and sands and cultivable lands lose its productivity... Analysis revealed that income opportunities may be greatly hampered due to the 2014 <span style="color: #007bff; font-weight: bold; text-decoration: underline;">flooding and consequent river erosion</span>. Fish <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> is also negatively affected... <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">Child Malnutrition</span>: The districts and upazilas analyzed structurally suffer from the alarming <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">level</span> of acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">malnutrition</span>... shocks due to <span style="color: #007bff; font-weight: bold; text-decoration: underline;">flooding</span> and consequent river erosion... alarming <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">level</span> of acute <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">child malnutrition</span>."
             </p>
         </div>
@@ -608,12 +612,12 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
         Because they use completely different phrasing—"mobility restrictions" versus "reduced livelihood opportunities"—TF-IDF would struggle to link them. But the dense embedding model recognized they were describing the exact same underlying tragedy: families plunged into food insecurity by the economic paralysis of the COVID-19 lockdown.
         </p>
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #17a2b8;">
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> El Salvador <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(October 2020 - February 2021)</span></h5>
-            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #cbd5e1;"><i class="fas fa-map-marker-alt"></i> El Salvador <span style="font-size: 0.85rem; color: #94a3b8; font-weight: normal;">(October 2020 - February 2021)</span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #94a3b8; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
                 "These groups have experienced <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">income losses</span> due to <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">mobility and transportation restrictions</span> due to the <span style="background-color: #d1ecf1; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #0c5460;">COVID-19 pandemic</span>... This <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">reduction of income</span> limits affected households' access to basic services and food."
             </p>
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Zambia <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(July - September 2022)</span></h5>
-            <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 0; line-height: 1.5; text-align: justify;">
+            <h5 style="font-size: 1rem; font-weight: bold; color: #cbd5e1;"><i class="fas fa-map-marker-alt"></i> Zambia <span style="font-size: 0.85rem; color: #94a3b8; font-weight: normal;">(July - September 2022)</span></h5>
+            <p style="font-family: monospace; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0; line-height: 1.5; text-align: justify;">
                 "The current vulnerability in Zambia has been driven by a high incidence of poverty, the impact of the <span style="background-color: #d1ecf1; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #0c5460;">COVID-19 pandemic</span>, macroeconomic instability... primarily driven by shocks such as prolonged dry spells, flooding, <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">reduced livelihood opportunities</span> due to <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">restrictions</span> linked to <span style="background-color: #d1ecf1; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #0c5460;">COVID-19</span>."
             </p>
         </div>
@@ -643,17 +647,18 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
         <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
     </div>
     
-    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95)); border-top: 1px solid rgba(255, 255, 255, 0.1); border-right: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5); border-radius: 12px;">
         <div class="row align-items-center">
             <div class="col-md-3 text-center mb-4 mb-md-0">
-                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <h5 class="mb-1" style="font-weight: 700; color: #f8fafc; font-size: 1.1rem;">Alice Giorgio</h5>
                 <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Senior Data Analyst</p>
-                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP - VAM Unit</p>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px; margin-bottom: 0;">WFP - VAM Unit</p>
+                <img src="https://cdn.wfp.org/guides/ui/v1.0.0/assets/logos/standard/en/wfp-logo-standard-blue-en.png" alt="WFP Logo" style="width: 80px; margin-top: 10px; opacity: 0.9; filter: brightness(1.2);">
             </div>
             
             <div class="col-md-9">
-                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
-                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #4ade80; opacity: 0.3;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #e2e8f0; font-style: italic; margin-bottom: 0;">
                     "The most important thing in this field is to identify the crisis profile in order to understand how a crisis will evolve in a certain country, and adapt our decision-making accordingly."
                 </p>
             </div>
@@ -723,17 +728,17 @@ To answer this, we built two distinct models to tackle two critical questions:
         <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
     </div>
     
-    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95)); border-top: 1px solid rgba(255, 255, 255, 0.1); border-right: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5); border-radius: 12px;">
         <div class="row align-items-center">
             <div class="col-md-3 text-center mb-4 mb-md-0">
-                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <h5 class="mb-1" style="font-weight: 700; color: #f8fafc; font-size: 1.1rem;">Alice Giorgio</h5>
                 <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Data Scientist</p>
                 <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP</p>
             </div>
             
             <div class="col-md-9">
-                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
-                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #4ade80; opacity: 0.3;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #e2e8f0; font-style: italic; margin-bottom: 0;">
                     "Predictive models in this domain will inherently be imperfect. Because of this, uncovering the underlying correlations and causal drivers is often far more valuable than the raw predicted values themselves. Ultimately, explainability is even more important than performance."
                 </p>
             </div>
