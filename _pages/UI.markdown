@@ -4,7 +4,7 @@ title: "Interactive Decision Support Dashboard"
 permalink: /UI.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/header_ui_dash.jpg
+header_img: assets/copertine_pagine/dashboard.png
 header_title: "Interactive Decision Support Dashboard"
 subtitle: "Real-time humanitarian intelligence across 53 nations — from global overview to sub-national diagnostics"
 ---
