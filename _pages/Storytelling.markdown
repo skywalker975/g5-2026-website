@@ -402,130 +402,8 @@ We won't bore you with all the deep technical mechanics here, but ultimately, we
     </div>
 </div>
 
-# Qualitative Profiles of Food Insecurity
 
 
-<h1 class="text-gradient font-weight-bold mb-4 fade-in-up" style="animation-delay: 0.1s;">From Words to Data: Mapping Famine Drivers Through Term Frequency</h1>
-
-<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-
-In IPC reports, words are never neutral: their recurrence forms the digital footprint of a real-world emergency. Textual analysis reveals that the bigram <b>'food insecurity'</b> dominates the dataset with 1,068 occurrences, frequently paired with critical terms like <b>'acute'</b> (658) and <b>'malnutrition'</b> (154). However, it is the underlying drivers that shape this semantic map. The frequency of words like <b>'price'</b> (524) highlights economic shocks and barriers to food access, while the agricultural production cluster (<i>'production'</i>, <i>'harvest'</i>, <i>'crop'</i>) captures the immediate impact of climate factors on the ground. In this context, counting words means mapping the boundaries of hunger.
-
-</p>
-
-
-
-<div class="row my-5 justify-content-center text-center">
-
-    <div class="col-md-12 mb-4">
-
-        <img src="{{ site.baseurl }}/assets/images/packed_bubble_mixed.png" alt="Packed Bubble Chart of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift fade-in-up" style="max-width: 100%; border: 1px solid #e0e0e0; animation-delay: 0.6s;">
-
-    </div>
-
-</div>
-
-
-
-<hr class="section-divider">
-
-
-
-## <span class="text-gradient">The Crisis Algorithm: Drivers of Food Insecurity</span>
-
-
-
-Behind the IPC data architecture lies the convergence of macroeconomic, climatic, and social forces. By analyzing the semantic patterns within the reports, the primary catalysts of hunger emerge clearly across three interconnected macro-drivers:
-
-
-
-<div class="comparison-table-wrapper glass-card hover-lift">
-
-    <div class="row text-center mb-3">
-
-        <div class="col-md-4 mb-2">
-
-            <span class="badge-premium-admin1 shadow-sm"><i class="fas fa-chart-line"></i> ECONOMIC SHOCKS (Access)</span>
-
-        </div>
-
-        <div class="col-md-4 mb-2">
-
-            <span class="badge-premium-admin2 shadow-sm"><i class="fas fa-cloud-sun-rain"></i> CLIMATE FACTORS (Availability)</span>
-
-        </div>
-
-        <div class="col-md-4 mb-2">
-
-            <span class="badge-premium-admin1 shadow-sm"><i class="fas fa-shield-alt"></i> STRUCTURAL INSTABILITY (Vulnerability)</span>
-
-        </div>
-
-    </div>
-
-    <div class="row mt-3">
-
-        <div class="col-md-4 border-right">
-
-            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
-
-                <li><b>Key Words:</b> <i>price</i> (524), <i>food price</i> (221), <i>access</i> (399), <i>income</i>, <i>market</i>.</li>
-
-                <li><b>Market Dynamics:</b> Hunger unfolds primarily as a purchasing power crisis. Inflationary spikes build invisible financial barriers: food remains on shelves but becomes entirely unaffordable for vulnerable households.</li>
-
-            </ul>
-
-        </div>
-
-        <div class="col-md-4 border-right">
-
-            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
-
-                <li><b>Key Words:</b> <i>production</i> (346), <i>harvest</i> (316), <i>crop</i> (315), <i>drought</i>, <i>rain</i>.</li>
-
-                <li><b>Agricultural Collapse:</b> This reflects the systemic breakdown of local livelihoods (<i>livelihood</i>, 450). Weather anomalies and droughts destroy crops upstream, triggering physical supply deficits and rural income loss.</li>
-
-            </ul>
-
-        </div>
-
-        <div class="col-md-4">
-
-            <ul class="lead" style="font-size: 0.95rem; line-height: 1.6;">
-
-                <li><b>Key Words:</b> <i>conflict</i>, <i>displacement</i>, <i>humanitarian assistance</i> (140), <i>food consumption</i> (195).</li>
-
-                <li><b>Breaking Point:</b> Conflicts and forced displacement shatter local trade networks and drive populations to flee. At this tipping point, food consumption plummces, making external humanitarian aid vital to bridge survival deficits.</li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<h3 class="mt-5 mb-4 text-gradient">Mapping the Geography of Crisis Drivers</h3>
-
-<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-
-While the macroeconomic, climatic, and structural drivers of hunger are universal, their impact is intensely localized. By normalizing the frequency of these critical terms, we can generate a focused heatmap highlighting a selected group of highly vulnerable nations. The visualization below reveals the unique crisis signature of these specific regions: some nations are predominantly scarred by conflict and displacement, while others suffer primarily from the collapse of agricultural production due to climate extremes. This heatmap translates semantic prevalence into a stark geographic reality.
-
-</p>
-
-
-
-<div class="my-5 text-center">
-
-    <img src="{{ site.baseurl }}/assets/images/heatmap_driver.png" alt="Heatmap of Food Insecurity Drivers by Country" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
-
-</div>
-
-
-
-<hr class="section-divider">
 
 
 <style>
@@ -582,8 +460,7 @@ While the macroeconomic, climatic, and structural drivers of hunger are universa
     color: #4ade80;
 }
 </style>
-## From Words to Data: Decoding the Narrative through NLP Pipeline
-## <span class="text-gradient">Decoding the Narrative: The NLP Pipeline</span>
+## <span class="text-gradient">From Words to Data: Decoding the Narrative through NLP Pipeline </span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 To move beyond simple word counts and uncover the hidden semantic structures of food crises, we utilized an advanced Natural Language Processing (NLP) pipeline. Since we were operating on a highly specialized dataset of only a few hundred reports, training an AI from scratch was impossible. Instead, we leveraged powerful pretrained models to read the reports and let the data organize itself into coherent thematic clusters. <i>(For a deep dive into the technical details and architectures of the models cited below, please refer to our <a href="{{ site.baseurl }}/Text-analysis.html">Technical Text Analysis</a> page).</i>
