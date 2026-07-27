@@ -56,7 +56,7 @@ Before exploring the evolution of these crises, it is essential to understand ho
 ### Trends of food insecurity
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Not all food crises evolve in the same way. When we track the percentage of the population facing IPC Phase 3+ over time, distinct structural patterns emerge. Some nations, like <strong>South Sudan</strong>, endure a chronic crisis baseline punctuated by severe oscillations. Others, such as <strong>Haiti</strong>, suffer from a continuous deterioration, where food insecurity climbs steadily year after year without relief. Finally, there are countries like <strong>Sudan</strong>, which maintained relatively stable levels of hunger until a sudden, catastrophic shock—like the outbreak of a civil war—completely destabilized their entire food system.
+Not all food crises evolve in the same way. When we track the percentage of the population facing IPC Phase 3+ over time, distinct structural patterns emerge. Some nations, like <strong>South Sudan</strong>, endure a chronic crisis baseline punctuated by severe oscillations. Others, such as <strong>Haiti</strong>, suffer from a continuous deterioration, where food insecurity climbs steadily year after year without relief. Finally, there are countries like <strong>Sudan</strong>, which maintained relatively stable levels of hunger until a sudden, catastrophic shock, like the outbreak of a civil war, completely destabilized their entire food system.
 </p>
 
 <div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
@@ -114,9 +114,9 @@ By clustering regions with affine drivers, HERO acts as a true early-warning sys
     <summary class="btn btn-outline-primary" style="font-weight: 600; padding: 10px 20px; border-radius: 30px; display: inline-block; list-style: none;">
         <i class="fas fa-eye" style="margin-right: 8px;"></i> Curious about the outcome? Click for a spoiler of the results!
     </summary>
-    <div class="card card-body text-start mt-3" style="background-color: #fffbeb; border: none; border-left: 5px solid #f59e0b; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); cursor: text;">
-        <h5 style="color: #d97706; font-weight: bold; margin-bottom: 12px;"><i class="fas fa-bolt" style="margin-right: 8px;"></i> Key Findings Anticipation</h5>
-        <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0; color: #451a03;">
+    <div class="card card-body text-start mt-3" style="background-color: rgba(30, 41, 59, 0.85); border: 1px solid rgba(255,255,255,0.1); border-left: 5px solid #3b82f6; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: text;">
+        <h5 style="color: #60a5fa; font-weight: bold; margin-bottom: 12px;"><i class="fas fa-bolt" style="margin-right: 8px;"></i> Key Findings Anticipation</h5>
+        <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0; color: #e2e8f0;">
             Our intuition proved correct: grouping regions by their dominant drivers (e.g., predicting a conflict-driven region by training the model only on other conflict-driven regions) <strong>outperformed</strong> standard global models. We discovered that food prices and conflict are the strongest structural drivers of hunger, while rainfall anomalies serve as the most critical, early-warning signal for changes in food insecurity. <em>(We'll dive deeply into the predictive modeling at the end of this page).</em>
         </p>
     </div>
@@ -129,16 +129,18 @@ details.spoiler-container > summary::-webkit-details-marker {
 
 # The Root Causes: Decoding the Drivers of Crisis
 
-<div class="row my-5 justify-content-center text-center">
+<div class="row my-5 align-items-center">
 
-    <div class="col-md-12 mb-4">
-
-        <img src="{{ site.baseurl }}/assets/images/packed_bubble_mixed.png" alt="Packed Bubble Chart of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift fade-in-up" style="max-width: 100%; border: 1px solid #e0e0e0; animation-delay: 0.6s;">
-        <p class="text-muted mt-3" style="font-size: 0.95rem; font-style: italic;">
+    <div class="col-md-6 mb-4 mb-md-0 text-center">
+        <img src="{{ site.baseurl }}/assets/images/packed_bubble_mixed.png" alt="Packed Bubble Chart of Unigrams and Bigrams" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
+    </div>
+    
+    <div class="col-md-6 text-start">
+        <p class="text-muted" style="font-size: 0.95rem; font-style: italic; line-height: 1.6;">
             <i class="fas fa-search" style="margin-right: 5px;"></i> This map illustrates the most frequently occurring terms in official IPC crisis reports. The prominence of words like "price", "production", and "conflict" highlights the real-world drivers that shape food insecurity. 
-            <a href="{{ site.baseurl }}/Text-analysis-storytelling.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Discover the full Text Analysis here &rarr;</a>
+            <br><br>
+            <a href="{{ site.baseurl }}/Text-analysis-storytelling.html" style="color: #4ade80; font-weight: 600; text-decoration: none;">Discover the full Text Analysis here &rarr;</a>
         </p>
-
     </div>
 
 </div>
