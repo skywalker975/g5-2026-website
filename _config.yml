@@ -60,7 +60,7 @@ navbar:
           url: /Data-Collection.html
         - title: Missing values
           url: /Missing-values.html
-        - title: Data augumentation
+        - title: Data augmentation
           url: /data-augumentation.html
     - title: Text analysis
       url: /Text-analysis.html

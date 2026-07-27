@@ -485,7 +485,7 @@ While TF-IDF effectively captures statistical word frequencies, it can struggle 
 
 <div class="row mt-4">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
-        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-search-plus"></i> Example 1: Dense Cluster (Economic Impacts of COVID-19)</h4>
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-search-plus"></i> Example 1: Semantic Cluster (Economic Impacts of COVID-19)</h4>
         <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
         To demonstrate the power of dense semantic embeddings, let's examine two texts from completely different contexts (El Salvador and Zambia) that BGE-M3 placed in the exact same cluster.  
         <br><br>
@@ -508,11 +508,11 @@ While TF-IDF effectively captures statistical word frequencies, it can struggle 
 
 <div class="row mt-4">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
-        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-search-plus"></i> Example 2: Dense Cluster (Mixed Climate & Economic Shocks)</h4>
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-search-plus"></i> Example 2: Semantic Cluster (Mixed Climate & Economic Shocks)</h4>
         <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
         The true power of BGE-M3 dense embeddings is grouping texts by <b>meaning</b> when the <b>vocabulary and register are completely different</b>. Traditional keyword-based systems (like TF-IDF) fail when authors use different synonyms or technical jargon to describe the exact same event.
         <br><br>
-        In this dense cluster, we find reports describing food insecurity caused by a combination of bad weather and a struggling economy. Notice how the author of the Lesotho report uses simple, direct terms like "dry spells", "high temperatures", and "economic challenges". Conversely, the author of the Zambia report describes the exact same phenomena using highly technical jargon: "hydro meteorological hazard shocks" and "macroeconomic instability". The model ignores the stylistic differences and correctly maps both to the same semantic concept: <b>a dual climate-economic crisis</b>.
+        In this semantic cluster, we find reports describing food insecurity caused by a combination of bad weather and a struggling economy. Notice how the author of the Lesotho report uses simple, direct terms like "dry spells", "high temperatures", and "economic challenges". Conversely, the author of the Zambia report describes the exact same phenomena using highly technical jargon: "hydro meteorological hazard shocks" and "macroeconomic instability". The model ignores the stylistic differences and correctly maps both to the same semantic concept: <b>a dual climate-economic crisis</b>.
         </p>
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #ffc107;">
             <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Lesotho <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(May 2024 - March 2025)</span></h5>
