@@ -144,7 +144,7 @@ The HERO v6 User Interface (UI) is an interactive dashboard designed to track re
 <!-- 3.1 Vista Panoramica Globale -->
 <h3 class="font-weight-bold mt-4 mb-3">3.1. Global Overview</h3>
 
-<div class="row g-4 mb-5">
+<div class="row g-5 mb-5">
   <div class="col-12">
     <div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1.25rem 1.5rem;">
       <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1; margin-bottom: 0.35rem;">Interactive Map</div>
