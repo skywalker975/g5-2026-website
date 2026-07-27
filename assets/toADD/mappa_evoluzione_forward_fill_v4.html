@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HERO v4 — Evoluzione Geografica Spazio-Temporale</title>
+    <title>Evoluzione Geografica Spazio-Temporale</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236485,7 +236485,7 @@
 
     <div class="loading-overlay" id="loadingOverlay">
         <div class="spinner"></div>
-        <div style="font-weight: 700; font-size: 1.1rem;">Caricamento Dati Spazio-Temporali HERO...</div>
+        <div style="font-weight: 700; font-size: 1.1rem;">Loading Spatiotemporal Data...</div>
     </div>
 
     <div id="temporal-map"></div>
@@ -236494,30 +236494,30 @@
         <div class="header-brand">
             <div class="logo-icon"><i class="fa-solid fa-layer-group"></i></div>
             <div class="brand-text">
-                <h1>HERO v4</h1>
-                <p>Evoluzione Geografica Interattiva</p>
+                <h1 style="display:none;"></h1>
+                <p>Interactive Geographic Evolution</p>
             </div>
         </div>
         
         <div class="custom-dropdown">
             <button class="dropdown-toggle" id="current-dataset-btn">
-                <i class="fa-solid fa-wheat-awn" style="color: #f59e0b;"></i> Sicurezza Alimentare (IPC 3+)
+                <i class="fa-solid fa-wheat-awn" style="color: #f59e0b;"></i> Food Security (IPC 3+)
                 <i class="fa-solid fa-chevron-down" style="margin-left: auto;"></i>
             </button>
             <div class="dropdown-content">
-                <button class="tab-btn active" data-dataset="ipc"><i class="fa-solid fa-wheat-awn" style="color: #f59e0b;"></i> Sicurezza Alimentare (IPC 3+)</button>
-                <button class="tab-btn" data-dataset="acled"><i class="fa-solid fa-person-rifle" style="color: #ef4444;"></i> Conflitti (ACLED)</button>
-                <button class="tab-btn" data-dataset="idp"><i class="fa-solid fa-person-walking-dashed-line-arrow-right" style="color: #fbbf24;"></i> Sfollati Interni (IDP)</button>
-                <button class="tab-btn" data-dataset="rainfall"><i class="fa-solid fa-cloud-showers-heavy" style="color: #3b82f6;"></i> Precipitazioni (CHIRPS)</button>
-                <button class="tab-btn" data-dataset="wfp"><i class="fa-solid fa-money-bill-trend-up" style="color: #818cf8;"></i> Indice Prezzi (WFP)</button>
-                <button class="tab-btn" data-dataset="ndvi"><i class="fa-solid fa-leaf" style="color: #10b981;"></i> Indice NDVI (VIM)</button>
-                <button class="tab-btn" data-dataset="gdelt"><i class="fa-solid fa-globe" style="color: #a855f7;"></i> Instabilità (GDELT)</button>
+                <button class="tab-btn active" data-dataset="ipc"><i class="fa-solid fa-wheat-awn" style="color: #f59e0b;"></i> Food Security (IPC 3+)</button>
+                <button class="tab-btn" data-dataset="acled"><i class="fa-solid fa-person-rifle" style="color: #ef4444;"></i> Conflicts (ACLED)</button>
+                <button class="tab-btn" data-dataset="idp"><i class="fa-solid fa-person-walking-dashed-line-arrow-right" style="color: #fbbf24;"></i> Internally Displaced Persons (IDP)</button>
+                <button class="tab-btn" data-dataset="rainfall"><i class="fa-solid fa-cloud-showers-heavy" style="color: #3b82f6;"></i> Rainfall (CHIRPS)</button>
+                <button class="tab-btn" data-dataset="wfp"><i class="fa-solid fa-money-bill-trend-up" style="color: #818cf8;"></i> Price Index (WFP)</button>
+                <button class="tab-btn" data-dataset="ndvi"><i class="fa-solid fa-leaf" style="color: #10b981;"></i> NDVI Index (VIM)</button>
+                <button class="tab-btn" data-dataset="gdelt"><i class="fa-solid fa-globe" style="color: #a855f7;"></i> Instability (GDELT)</button>
             </div>
         </div>
     </div>
 
     <div class="floating-ui ui-bottom-center">
-        <button class="play-btn" id="playBtn" title="Avvia/Pausa Riproduzione"><i class="fa-solid fa-play"></i></button>
+        <button class="play-btn" id="playBtn" title="Play/Pause Animation"><i class="fa-solid fa-play"></i></button>
 
         <div class="timeline-wrapper">
             <div class="timeline-track-container">
@@ -236528,14 +236528,14 @@
         </div>
 
         <div class="period-box">
-            <span class="pb-title">Periodo di Analisi</span>
+            <span class="pb-title">Analysis Period</span>
             <span class="pb-value" id="currentDateVal">---</span>
         </div>
 
-        <select class="speed-control" id="speedSelect" title="Velocità di Riproduzione">
-            <option value="1500">0.5x (Lento)</option>
-            <option value="800" selected>1.0x (Normale)</option>
-            <option value="400">2.0x (Veloce)</option>
+        <select class="speed-control" id="speedSelect" title="Playback Speed">
+            <option value="1500">0.5x (Slow)</option>
+            <option value="800" selected>1.0x (Normal)</option>
+            <option value="400">2.0x (Fast)</option>
             <option value="150">5.0x (Ultra)</option>
         </select>
     </div>
@@ -236567,12 +236567,12 @@
         // Soglie massime standard per evitare colori sballati a 100% per dati grezzi
         const DATASET_CONFIGS = {
             ipc: { name: "IPC Fase 3+", format: "{0}%", colorMax: "#ef4444", maxVal: 100 },
-            acled: { name: "Conflitti", format: "{0}", colorMax: "#f43f5e", maxVal: 100 },
-            idp: { name: "Sfollati", format: "{0}", colorMax: "#fbbf24", maxVal: 100 },
-            rainfall: { name: "Pioggia", format: "{0}mm", colorMax: "#3b82f6", maxVal: 100 },
-            wfp: { name: "Indice WFP", format: "{0}", colorMax: "#818cf8", maxVal: 100 },
+            acled: { name: "Conflicts", format: "{0}", colorMax: "#f43f5e", maxVal: 100 },
+            idp: { name: "IDPs", format: "{0}", colorMax: "#fbbf24", maxVal: 100 },
+            rainfall: { name: "Rainfall", format: "{0}mm", colorMax: "#3b82f6", maxVal: 100 },
+            wfp: { name: "WFP Index", format: "{0}", colorMax: "#818cf8", maxVal: 100 },
             ndvi: { name: "NDVI", format: "{0}", colorMax: "#10b981", maxVal: 100 },
-            gdelt: { name: "Instabilità", format: "{0}", colorMax: "#a855f7", maxVal: 100 }
+            gdelt: { name: "Instability", format: "{0}", colorMax: "#a855f7", maxVal: 100 }
         };
 
         function interpolateColor(color1, color2, factor) {
@@ -236600,10 +236600,10 @@
                 updateTimelineBounds();
                 render();
             } catch (err) {
-                console.error("Errore inizializzazione:", err);
+                console.error("Initialization Error:", err);
                 document.getElementById('loadingOverlay').innerHTML = `
                     <div style="color: #ef4444; font-size: 2rem;"><i class="fa-solid fa-triangle-exclamation"></i></div>
-                    <div style="font-weight: 700; font-size: 1.2rem; margin-top: 15px; color: #f8fafc;">Errore nel Caricamento</div>
+                    <div style="font-weight: 700; font-size: 1.2rem; margin-top: 15px; color: #f8fafc;">Loading Error</div>
                     <div style="font-size: 0.85rem; color: #94a3b8; max-width: 400px; text-align: center; margin-top: 5px;">${err.message}</div>
                 `;
             }
