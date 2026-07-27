@@ -409,7 +409,69 @@ While TF-IDF effectively captures statistical word frequencies, it can struggle 
 
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
 
-        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-robot"></i> 3. Extracting Dense Topics (c-TF-IDF Revisited)</h4>
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-project-diagram"></i> 3. Clustering Strategies</h4>
+        
+        <div class="mt-4">
+            <style scoped>
+                .dataframe tbody tr th:only-of-type {
+                    vertical-align: middle;
+                }
+                .dataframe tbody tr th {
+                    vertical-align: top;
+                }
+                .dataframe thead th {
+                    text-align: right;
+                }
+            </style>
+            <div class="table-responsive">
+                <table border="1" class="dataframe table table-striped table-bordered text-center" style="font-size: 0.9rem;">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th></th>
+                      <th style="text-align: center;">Metrica</th>
+                      <th style="text-align: center;">K-Means</th>
+                      <th style="text-align: center;">HDBSCAN</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>0</th>
+                      <td>Numero di Cluster trovati</td>
+                      <td>7</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>Silhouette Score</td>
+                      <td>0.397</td>
+                      <td>0.501</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>Calinski-Harabasz Index</td>
+                      <td>1177.2</td>
+                      <td>340.0</td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>Davies-Bouldin Index</td>
+                      <td>0.804</td>
+                      <td>0.752</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
+
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-robot"></i> 4. Extracting Dense Topics (c-TF-IDF)</h4>
 
         <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
 
