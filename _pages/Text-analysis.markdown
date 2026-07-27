@@ -39,9 +39,7 @@ header_title: "Text analysis"
 
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-
-In IPC reports, words are never neutral: their recurrence forms the digital footprint of a real-world emergency. Textual analysis reveals that the bigram <b>'food insecurity'</b> dominates the dataset with 1,068 occurrences, frequently paired with critical terms like <b>'acute'</b> (658) and <b>'malnutrition'</b> (154). However, it is the underlying drivers that shape this semantic map. The frequency of words like <b>'price'</b> (524) highlights economic shocks and barriers to food access, while the agricultural production cluster (<i>'production'</i>, <i>'harvest'</i>, <i>'crop'</i>) captures the immediate impact of climate factors on the ground. In this context, counting words means mapping the boundaries of hunger.
-
+In IPC reports, words are never neutral: their recurrence forms the digital footprint of a real-world emergency. Textual analysis reveals that the bigram <b>'food insecurity'</b> unsurprisingly dominates the dataset, frequently paired with critical terms like <b>'acute'</b> and <b>'malnutrition'</b>. However, it is the underlying drivers that shape this semantic map. The high frequency of words like <b>'price'</b> highlights economic shocks and barriers to food access, while the agricultural production cluster (<i>'production'</i>, <i>'harvest'</i>, <i>'crop'</i>) captures the immediate impact of climate factors on the ground. In this context, counting words means mapping the boundaries of hunger.
 </p>
 
 
@@ -164,7 +162,7 @@ While the macroeconomic, climatic, and structural drivers of hunger are universa
 
 
 
-## <span class="text-gradient">Decoding the Narrative: The NLP Pipeline</span>
+## <span class="text-gradient">Architecting the Semantic Engine: The NLP Pipeline</span>
 
 
 
@@ -249,6 +247,10 @@ To move beyond simple word counts and uncover the hidden semantic structures of 
         To categorize the reports into distinct crisis typologies, we tested two different clustering algorithms. First, <b>K-Means</b>, an approach that partitions the space into a predefined number of clusters, perfect for segmenting broad macro-trends. Second, <b>HDBSCAN</b>, a density-based algorithm capable of discovering clusters of varying shapes and sizes while isolating "noise" (reports that don't fit into any clear pattern). 
         </p>
         
+        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify; margin-top: 1.5rem; padding-left: 1rem; border-left: 4px solid #17a2b8; background-color: #f8f9fa; padding: 1rem; border-radius: 4px;">
+        <i class="fas fa-balance-scale" style="color: #17a2b8; margin-right: 8px;"></i> <b>Model Evaluation:</b> To determine which methodology best captured the semantic boundaries of the dataset, we compared their performance across standard clustering metrics. The table below summarizes the quantitative evaluation of both models on the reduced TF-IDF space.
+        </p>
+        
         <div class="mt-4">
             <style scoped>
                 .dataframe tbody tr th:only-of-type {
@@ -305,7 +307,14 @@ To move beyond simple word counts and uncover the hidden semantic structures of 
 
 </div>
 
-
+<div class="row">
+    <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-robot"></i> 5. Topic Extraction (c-TF-IDF)</h4>
+        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
+        Once the clusters are formed, the critical next step is understanding what they actually represent. To do this—across both our TF-IDF and Dense Embedding pipelines—we used <b>class-based TF-IDF (c-TF-IDF)</b>, a technique popularized by the paper <a href="https://arxiv.org/abs/2203.05794" target="_blank"><i>"BERTopic: Neural topic modeling with a class-based TF-IDF procedure"</i></a>. This methodology represents a paradigm shift because it <b>decouples</b> the semantic clustering of documents from the extraction of their topic representations. By treating all documents within a single cluster as one massive "super-document", c-TF-IDF generates highly coherent and distinctive keywords, empirically outperforming traditional generative models like LDA. This guarantees high topic diversity and human-readable accuracy for translating mathematical groupings into clear, actionable narratives of conflict, drought, and economic collapse.
+        </p>
+    </div>
+</div>
 
 <div class="row mt-4">
 
@@ -410,11 +419,11 @@ While TF-IDF effectively captures statistical word frequencies, it can struggle 
 
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
 
-        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-robot"></i> 3. Topic Extraction (c-TF-IDF) & LLM-as-a-Judge</h4>
+        <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-robot"></i> 3. Extracting Dense Topics (c-TF-IDF Revisited)</h4>
 
         <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
 
-        Once the clusters were formed in both Phase 1 and Phase 2, the final step was understanding what they represented. We used <b>class-based TF-IDF (c-TF-IDF)</b>, a technique popularized by the paper <i>"BERTopic: Neural topic modeling with a class-based TF-IDF procedure"</i>. This methodology represents a paradigm shift in topic modeling because it <b>decouples</b> the semantic clustering of documents from the extraction of their topic representations. By treating all documents within a single cluster as one massive "super-document", c-TF-IDF generates highly coherent and distinctive keywords, empirically outperforming traditional generative probabilistic models like Latent Dirichlet Allocation (LDA). Rather than struggling to balance word frequencies and semantic meaning simultaneously, this approach guarantees high topic diversity and human-readable accuracy. Finally, we employed an <b>LLM-as-a-Judge</b> approach, leveraging a Large Language Model to interpret these c-TF-IDF keywords, evaluate the semantic coherence of the clusters, and translate mathematical groupings into clear, actionable narratives of conflict, drought, and economic collapse.
+        Just as we did in Phase 1, we applied the <b>c-TF-IDF</b> methodology to the clusters generated by the dense BGE-M3 embeddings. Because the clusters were now formed based on deep semantic meaning rather than just word co-occurrence, the resulting "super-documents" fed into the c-TF-IDF algorithm yielded even richer and more conceptually unified keywords, providing highly precise crisis narratives.
 
         </p>
 
