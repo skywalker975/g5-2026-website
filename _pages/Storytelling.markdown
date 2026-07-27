@@ -437,7 +437,7 @@ As illustrated in the correlation matrix below, environmental sensor blackouts e
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 3rem; font-weight: 300;">
-Despite these immense challenges and the inherent risks highlighted by experts, an early warning system cannot function on empty spaces. To bridge the gap between acknowledging the dangers of missing data and actually making our models operational, we had to find a scientifically robust way to fill in the blanks. We needed an imputation strategy that respected the underlying geography and socioeconomic realities of the regions, minimizing the "hallucinations" of blind statistics. This is where clustering came into play.
+Despite these immense challenges and the inherent risks highlighted by experts, an early warning system cannot function on empty spaces. This is where clustering came into play.
 </p>
 
 ### "Augmenting" Reality: The Clustering Approach
