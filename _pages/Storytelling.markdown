@@ -4,7 +4,7 @@ title: "Storytelling"
 permalink: /index.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/copertine_pagine/storytelling.jpg
+header_img: assets/copertine_pagine/storytelling.png
 header_title: "HERO"
 subtitle: "Hunger Early-warning & Risk Optimizer"
 ---
