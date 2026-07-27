@@ -365,16 +365,6 @@ To move beyond simple word counts and uncover the hidden semantic structures of 
 <hr class="section-divider">
 
 
-
-## Interactive Timeline & Semantic Clusters
-
-
-
-<div class="iframe-container my-5" style="width: 100%; height: 500px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-    <iframe src="{{ site.baseurl }}/assets/data/df_cluster_tf_idf.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
-</div>
-
-
 <hr class="section-divider">
 
 
