@@ -4,7 +4,7 @@ title: "ML approach"
 permalink: /ML-Pipeline.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/header.svg
+header_img: assets/copertine_pagine/modelling.png
 header_title: "Machine learning implementation"
 
 ---
