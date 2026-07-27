@@ -55,7 +55,7 @@ Before exploring the evolution of these crises, it is essential to understand ho
 ### Trends of food insecurity
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Not all food crises evolve in the same way. When we track the percentage of the population facing IPC Phase 3+ over time, distinct structural patterns emerge. Some nations, like <strong>South Sudan</strong>, endure a chronic crisis baseline punctuated by severe, high-amplitude oscillations. Others, such as <strong>Haiti</strong>, suffer from a relentless, secular deterioration, where food insecurity climbs steadily year after year without relief. Finally, there are countries like <strong>Sudan</strong>, which maintained relatively low and stable levels of hunger until a sudden, catastrophic shock—like the outbreak of a civil war—completely destabilized their entire food system overnight.
+Not all food crises evolve in the same way. When we track the percentage of the population facing IPC Phase 3+ over time, distinct structural patterns emerge. Some nations, like <strong>South Sudan</strong>, endure a chronic crisis baseline punctuated by severe oscillations. Others, such as <strong>Haiti</strong>, suffer from a continuous deterioration, where food insecurity climbs steadily year after year without relief. Finally, there are countries like <strong>Sudan</strong>, which maintained relatively stable levels of hunger until a sudden, catastrophic shock—like the outbreak of a civil war—completely destabilized their entire food system.
 </p>
 
 <div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
@@ -63,7 +63,7 @@ Not all food crises evolve in the same way. When we track the percentage of the 
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-As illustrated in the interactive chart above, <strong>Haiti</strong>'s trajectory shows a devastating upward climb, rising from under 20% in late 2017 to over 50% by 2026. <strong>South Sudan</strong>, on the other hand, remains trapped in a volatile loop, repeatedly fluctuating between 35% and 65% as seasonal and localized shocks hit a deeply fragile baseline. <strong>Sudan</strong> tells perhaps the most dramatic story of the three: a relatively stable environment (remaining under 25%) that was violently shattered in early 2023. The onset of systemic conflict caused an immediate, massive structural shock, resulting in a sudden escalation that peaked near 55% and completely destroyed the country's previous stability.
+As illustrated in the interactive chart above, <strong>Haiti</strong>'s trajectory shows a devastating upward climb, rising from under 20% in late 2017 to over 50% by 2026. <strong>South Sudan</strong>, on the other hand, remains trapped in a volatile loop, repeatedly fluctuating between 35% and 65% as seasonal and localized shocks hit a deeply fragile baseline. <strong>Sudan</strong> tells perhaps the most dramatic story of the three: a relatively stable environment (remaining under 25%) that was violently shattered in early 2023. The onset of systemic conflict caused an immediate structural shock, resulting in a sudden escalation that peaked near 55% and destroyed the country's previous stability.
 </p>
 
 # <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
@@ -73,11 +73,11 @@ Global food security is not threatened by a single factor, but by a complex, int
 </p>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
-Rather than merely describing the current state of global hunger, HERO was built to look ahead. Our primary objective is to radically refine how food crises are forecasted. Instead of relying on a "one-size-fits-all" global model, HERO leverages a completely novel approach: <strong>predicting the future of a specific region by leveraging data from other countries that share the exact same "DNA" of crisis drivers</strong>. If we know how a specific sequence of climate and economic shocks historically unfolded in one nation, we can use that pattern to issue early warnings for a different, but structurally similar, country facing those same initial shocks today.
+Rather than merely describing the current state of global hunger, HERO was built to look ahead. Our primary objective is to radically refine how food crises are forecasted. Instead of relying on a "one-size-fits-all" global model, HERO leverages a novel approach: <strong>predicting the level of food insecurity of a specific region by leveraging data from other countries that share the exact same "DNA" of crisis drivers</strong>. If we know how a specific sequence of climate and economic shocks historically unfolded in one nation, we can use that pattern to issue early warnings for a different, but structurally similar, country facing those same initial shocks today.
 </p>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
-To achieve this, HERO integrates massive global data streams—from geopolitical instability to precipitation anomalies—and analyzes them at the sub-national level (Admin1). This geographic choice is highly strategic: it allows us to overcome the severe data scarcity found at the hyper-local level (Admin2), while still capturing critical regional nuances that get completely lost in broad national averages. 
+To achieve this, HERO integrates massive global data streams—from geopolitical instability to precipitation anomalies—and analyzes them at the sub-national level (Admin1). This geographic choice is strategic: it allows us to overcome the severe data scarcity found at the hyper-local level (Admin2), while still capturing critical regional nuances that get lost in broad national averages. 
 </p>
 
 <!-- EXPERT QUOTE -->
@@ -115,7 +115,7 @@ By clustering regions with affine drivers, HERO acts as a true early-warning sys
     <div class="card card-body text-start mt-3" style="background-color: #fffbeb; border: none; border-left: 5px solid #f59e0b; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); cursor: text;">
         <h5 style="color: #d97706; font-weight: bold; margin-bottom: 12px;"><i class="fas fa-bolt" style="margin-right: 8px;"></i> Key Findings Anticipation</h5>
         <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0; color: #451a03;">
-            Our intuition proved correct: grouping regions by their dominant drivers (e.g., predicting a conflict-driven region by training the model only on other conflict-driven regions) <strong>dramatically outperformed</strong> standard global models. We discovered that food prices and conflict are the strongest structural drivers of hunger, while rainfall anomalies serve as the most critical, immediate early-warning signal for sudden shocks. <em>(We'll dive deeply into the predictive modeling at the end of this page).</em>
+            Our intuition proved correct: grouping regions by their dominant drivers (e.g., predicting a conflict-driven region by training the model only on other conflict-driven regions) <strong>outperformed</strong> standard global models. We discovered that food prices and conflict are the strongest structural drivers of hunger, while rainfall anomalies serve as the most critical, early-warning signal for changes in food insecurity. <em>(We'll dive deeply into the predictive modeling at the end of this page).</em>
         </p>
     </div>
 </details>
@@ -174,7 +174,7 @@ To anticipate a food crisis before it strikes, we must understand the underlying
                 <div class="card-body">
                     <h4 class="card-title text-info"><i class="fas fa-seedling"></i> Vegetation Health (NDVI)</h4>
                     <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
-                        The NDVI index acts as the pulse of the land, measuring the density and vigor of agricultural crops. Analyzing this data let us quantify the stress of climate shocks on vegetation, catching agricultural decline before it translated into a famine.
+                        The NDVI index measures the density and vigor of agricultural crops. Analyzing this data let us quantify the stress of climate shocks on vegetation, catching agricultural decline before it translated into a food crisis.
                     </p>
                 </div>
             </div>
@@ -184,7 +184,7 @@ To anticipate a food crisis before it strikes, we must understand the underlying
                 <div class="card-body">
                     <h4 class="card-title text-warning"><i class="fas fa-shopping-basket"></i> Food Markets (WFP)</h4>
                     <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
-                        Relying on comprehensive data from the World Food Programme, we reconstructed the heartbeat of local economies. By analyzing the cost of the basic food basket and local inflation, we captured sudden economic shocks that cut off food access for the most vulnerable.
+                        Relying on comprehensive data from the World Food Programme, we reconstructed the heart of local economies. By analyzing the cost of the basic food basket and local inflation, we captured sudden economic shocks that cut off food access for the most vulnerable.
                     </p>
                 </div>
             </div>
@@ -196,7 +196,7 @@ To anticipate a food crisis before it strikes, we must understand the underlying
                 <div class="card-body">
                     <h4 class="card-title text-secondary" style="color: #4f46e5 !important;"><i class="fas fa-people-arrows"></i> Internally Displaced Persons (IDP)</h4>
                     <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
-                        When violence or climate disasters strike, people are forced to flee. By extracting internal migration flows as a percentage of the total population, we assessed the crushing demographic pressure placed on host communities.
+                        When violence or climate disasters strike, people are forced to flee. By extracting internal migration flows as a percentage of the total population, we assessed the demographic pressure placed on host communities.
                     </p>
                 </div>
             </div>
@@ -206,7 +206,7 @@ To anticipate a food crisis before it strikes, we must understand the underlying
                 <div class="card-body">
                     <h4 class="card-title text-dark"><i class="fas fa-newspaper"></i> Sentiment and news (GDELT)</h4>
                     <p class="card-text text-muted" style="line-height: 1.6; text-align: justify;">
-                        Leveraging the GDELT Project's massive global database, we integrated pre-calculated metrics on the tone and volume of news coverage. This allowed us to quantify the external perception of the crisis, mapping how international attention shifted as emergencies unfolded.
+                        Leveraging the GDELT Project's global database, we integrated pre-calculated metrics on the tone and volume of news coverage. This allowed us to quantify the external perception of the crisis, mapping how international attention shifted as emergencies unfolded.
                     </p>
                 </div>
             </div>
