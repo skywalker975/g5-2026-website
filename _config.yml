@@ -70,8 +70,6 @@ navbar:
       url: /Forecast-and-Time-Series-Analysis.html
     - title: Network Analysis
       url: /Network-Analysis.html
-    - title: Interactive UI & Dashboard
-      url: /Interactive-UI-and-Dashboard.html
     - title: Dashboard
       url: /UI.html 
     - title: References
