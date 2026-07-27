@@ -397,7 +397,7 @@ Our shift to admin-1 level analysis was a strategic move to preserve data integr
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-As you can see in the matrix above, the prevalence of these missing values forms the primary obstacle in our analysis. This "pain point" threatens to severely degrade the performance and reliability of our predictive models. Furthermore, as we attempt to drill down into more granular data, sparsity increases exponentially. At the <strong>admin-2</strong> (district) level, datasets like ACLED (conflict tracking) become particularly compromised, forcing us to balance our desire for hyper-local detail against the harsh reality of missing information on the ground.
+As you can see in the matrix above, the prevalence of these missing values forms the primary obstacle in our analysis. This "pain point" threatens to severely degrade the performance and reliability of our predictive models. Furthermore, as we attempt to drill down into more granular data, sparsity increases exponentially. At the <strong>admin-2</strong> (district) level, datasets like ACLED (conflict tracking) become particularly compromised.
 </p>
 
 ### Mapping the Void: Structural Missingness
