@@ -4,7 +4,7 @@ title: "References"
 permalink: /References.html
 show_sidetoc: true
 header_type: hero
-header_img: assets/images/folium_map.webp
+header_img: assets/copertine_pagine/references.png
 header_title: "References"
 
 ---
