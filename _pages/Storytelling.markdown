@@ -265,12 +265,7 @@ When we examine the trajectories of political and social drivers against food in
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-top: 3rem; margin-bottom: 2rem; font-weight: 300;">
-To grasp the true depth of this structural shock, we performed a Statistical Time Series Decomposition (STL) on the percentage of the population facing IPC Phase 3+ food insecurity in Afghanistan. As the chart below demonstrates, the May 2021 event didn't just cause a temporary spike in hunger—it fundamentally altered the rhythm of the crisis. Before the withdrawal, the <strong>seasonal component</strong> exhibited a distinct, regular periodicity. After May 2021, you can clearly see a drastic change of pattern in the seasonality, proving that the systemic shock permanently disrupted the historical cycles of food insecurity.
-</p>
 
-<div class="iframe-container my-4" style="width: 100%; height: 1050px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
-    <iframe src="assets/toADD/AFG_01_Statistical_Decomposition_STL_mod.html" width="100%" height="100%" style="border:none;"></iframe>
-</div>
 
 #### Case File #2: Sudan's Shattered Stability
 
@@ -453,7 +448,7 @@ We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. I
     <div class="col-12 text-center">
         <p class="text-muted" style="font-size: 1.05rem; font-style: italic;">
             <i class="fas fa-project-diagram" style="margin-right: 6px;"></i> Love the technical math behind silhouette scores and spatial clustering? 
-            <a href="{{ site.baseurl }}/Data-augumentation.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Data Augmentation section &rarr;</a>
+            <a href="{{ site.baseurl }}/data-augumentation.html" style="color: #4ade80; font-weight: 600; text-decoration: none; margin-left: 5px;">Explore the full methodology in our Data Augmentation section &rarr;</a>
         </p>
     </div>
 </div>
