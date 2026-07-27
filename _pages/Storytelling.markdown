@@ -232,7 +232,7 @@ Knowing the drivers is only half the battle; understanding how they interact and
 </p>
 
 <div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
-    <iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato_v3.html" width="100%" height="100%" style="border:none;"></iframe>
+    <iframe src="assets/toADD/mappa_evoluzione_forward_fill_modificato_v4.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
 
 ### <i class="fas fa-search"></i> Political and Social Shocks: Play the Detective
@@ -597,7 +597,6 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     </div>
 </div>
 
-a
 
 <div class="row mt-4">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
