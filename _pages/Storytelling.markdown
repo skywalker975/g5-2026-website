@@ -236,7 +236,7 @@ Knowing the drivers is only half the battle; understanding how they interact and
 ### <i class="fas fa-search"></i> Political and Social Shocks: Play the Detective
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-When we examine the trajectories of political and social drivers against food insecurity, major geopolitical events leave an unmistakable signature on the data. Before reading our analysis of the next two countries, we challenge you to <strong>play the detective</strong>: explore the interactive charts, observe the anomaly spikes, and try to pinpoint the exact moment massive structural shocks occurred. <em>(Hint: you can use the toggles in the charts to hide or reveal the key events!)</em>
+When we examine the trajectories of political and social drivers against food insecurity, major geopolitical events leave an unmistakable signature on the data. Before reading our analysis of the next two countries, we challenge you to <strong>play the detective</strong>: explore the interactive charts, observe the anomaly spikes, and try to pinpoint the exact moment structural shocks occurred. <em>(Hint: you can use the toggles in the charts to hide or reveal the key events!)</em>
 </p>
 
 #### Case File #1: Afghanistan's Tipping Point
@@ -250,14 +250,14 @@ When we examine the trajectories of political and social drivers against food in
 <div class="card card-body text-start my-4" style="background-color: #f8f9fa; border: none; border-left: 5px solid #2563eb; border-radius: 8px;">
     <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
         <strong>Did you manage to crack the case?</strong> <i class="fas fa-search-location" style="color: #2563eb; margin-left: 5px;"></i><br>
-        If you toggled the key event marker, you noticed how everything changes abruptly in <strong>May 2021</strong>. The withdrawal of US troops didn't just cause political upheaval; it triggered an immediate surge in crisis levels, completely shattering the country's previous stability.
+        If you toggled the key event marker, you noticed how everything changes abruptly in <strong>May 2021</strong>. The withdrawal of US troops didn't just cause political upheaval; it triggered an immediate surge in crisis levels, shattering the country's previous stability.
     </p>
     <details class="mt-3">
         <summary style="cursor: pointer; color: #2563eb; font-weight: 600; font-size: 0.95rem;">
             <i class="fas fa-book-open"></i> Dive Deeper: The US Withdrawal
         </summary>
         <p class="text-muted mt-2 mb-0" style="font-size: 0.95rem; line-height: 1.6;">
-            The departure of international forces led to an immediate collapse of the Afghan economy. Overnight, international aid—which previously funded 75% of public spending—was frozen. This sparked hyperinflation, massive unemployment, and an unprecedented liquidity crisis that crippled food access across the entire nation, transforming a fragile stability into a dire humanitarian emergency.
+            The departure of international forces led to an immediate collapse of the Afghan economy. Overnight, international aid—which previously funded 75% of public spending—was frozen. This sparked hyperinflation, massive unemployment, and an unprecedented liquidity crisis that crippled food access across the entire nation.
         </p>
     </details>
 </div>
@@ -273,7 +273,7 @@ To grasp the true depth of this structural shock, we performed a Statistical Tim
 #### Case File #2: Sudan's Shattered Stability
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Let's test your investigative skills again, this time looking at Sudan. Historically, Sudan presented a very different baseline compared to Afghanistan—maintaining relatively low and stable food insecurity levels. But stability can be deceiving. Explore the dashboard below and try to identify the exact moment the trend line violently breaks. <em>(Hint: toggle the key event marker in the legend when you think you've found it!)</em>
+Let's test your investigative skills again, this time looking at Sudan. Historically, Sudan presented a very different baseline compared to Afghanistan—maintaining relatively stable food insecurity levels. But stability can be deceiving. Explore the dashboard below and try to identify the exact moment the trend line violently breaks. <em>(Hint: toggle the key event marker in the legend when you think you've found it!)</em>
 </p>
 
 <div class="hero-iframe-fit-dashboard my-4">
@@ -285,7 +285,7 @@ Let's test your investigative skills again, this time looking at Sudan. Historic
 <div class="card card-body text-start my-4" style="background-color: #f8f9fa; border: none; border-left: 5px solid #2563eb; border-radius: 8px;">
     <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
         <strong>Did you spot the rupture?</strong> <i class="fas fa-search-location" style="color: #2563eb; margin-left: 5px;"></i><br>
-        The data unmistakably shatters on <strong>April 15, 2023</strong>. This marks the outbreak of the devastating civil war. Unlike a slow-moving climatic drought, this sudden, explosive political conflict caused an immediate and massive structural shock, destroying the country's prior stability and sending hunger levels skyrocketing in a matter of weeks.
+        The data unmistakably shatters on <strong>April 15, 2023</strong>. This marks the outbreak of the devastating civil war. Unlike a slow-moving climatic drought, this sudden, explosive political conflict caused an immediate and massive structural shock, destroying the country's prior stability and casuing hunger levels to soar.
     </p>
     <details class="mt-3">
         <summary style="cursor: pointer; color: #2563eb; font-weight: 600; font-size: 0.95rem;">
@@ -351,7 +351,7 @@ Unlike political shocks, which are sudden and structural, climatic drivers like 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
 As we highlighted when introducing the HERO architecture, our models operate mostly at the <strong>admin-1</strong> (regional/provincial) level. Why is this geographical granularity so crucial? Because food crises rarely strike a country uniformly, and relying solely on broad national aggregates often masks devastating localized shocks. 
 <br><br>
-To illustrate this, the interactive heatmap below visualizes temporal anomalies (isolated via residual analysis) in the IPC Phase 3+ time series across the different micro-regions of Afghanistan. While a national average might simply show a general upward trend, this regional breakdown reveals the true anatomy of a crisis. Notice how, immediately following the May 2021 shock, intense anomaly clusters flare up across multiple specific provinces. This proves that to accurately anticipate a crisis, we must look beyond the national surface and monitor the localized fault lines where the tremors begin.
+To illustrate this, the interactive heatmap below visualizes temporal anomalies (isolated via residual analysis) in the IPC Phase 3+ time series across the different micro-regions of Afghanistan. While a national average might simply show a general upward trend, this regional breakdown reveals the true anatomy of a crisis. Notice how, immediately following the May 2021 shock, intense anomaly clusters flare up across multiple specific provinces. This proves that to accurately anticipate a crisis, we must look beyond the national surface and monitor the local realities.
 </p>
 
 <div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
