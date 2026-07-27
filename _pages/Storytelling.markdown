@@ -82,10 +82,28 @@ Rather than merely describing the current state of global hunger, HERO was built
 To achieve this, HERO integrates massive global data streams—from geopolitical instability to precipitation anomalies—and analyzes them at the sub-national level (Admin1). This geographic choice is highly strategic: it allows us to overcome the severe data scarcity found at the hyper-local level (Admin2), while still capturing critical regional nuances that get completely lost in broad national averages. 
 </p>
 
-<div style="background-color: #f8f9fa; border-left: 5px solid #10b981; border-radius: 6px; padding: 1.2rem; margin-top: 1.5rem; margin-bottom: 2rem;">
-<p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: #475569; font-style: italic;">
-<i class="fas fa-quote-left" style="color: #10b981; margin-right: 8px;"></i> "Data in our field are often a mess. Handling missing data and finding the right geographical granularity is the most critical aspect to address if we want these models to be truly operational and reliable." <br><strong>— Alice Giorgio</strong>
-</p>
+<!-- EXPERT QUOTE -->
+<div class="expert-quote-container my-5 fade-in-up" style="animation-delay: 0.3s; position: relative;">
+    <div style="position: absolute; top: -20px; left: 30px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 2;">
+        <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
+    </div>
+    
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+        <div class="row align-items-center">
+            <div class="col-md-3 text-center mb-4 mb-md-0">
+                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Senior Data Analyst</p>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP - VAM Unit</p>
+            </div>
+            
+            <div class="col-md-9">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                    "Data in our field are often a mess. Handling missing data and finding the right geographical granularity is the most critical aspect to address if we want these models to be truly operational and reliable."
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
@@ -345,10 +363,28 @@ To illustrate this, the interactive heatmap below visualizes temporal anomalies 
 
 ## The Invisible Enemy: Tackling Missing Data
 
-<div style="background-color: #f8f9fa; border-left: 5px solid #10b981; border-radius: 6px; padding: 1.2rem; margin-top: 1.5rem; margin-bottom: 2rem;">
-<p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: #475569; font-style: italic;">
-<i class="fas fa-quote-left" style="color: #10b981; margin-right: 8px;"></i> "Missing data remains one of the most critical pain points in this field. You simply cannot accurately predict what you cannot see." <br><br><strong>— Alice Giorgio, Data Scientist (WFP)</strong>
-</p>
+<!-- EXPERT QUOTE -->
+<div class="expert-quote-container my-5 fade-in-up" style="animation-delay: 0.3s; position: relative;">
+    <div style="position: absolute; top: -20px; left: 30px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 2;">
+        <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
+    </div>
+    
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+        <div class="row align-items-center">
+            <div class="col-md-3 text-center mb-4 mb-md-0">
+                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Senior Data Analyst</p>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP - VAM Unit</p>
+            </div>
+            
+            <div class="col-md-9">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                    "Missing data remains one of the most critical pain points in this field. You simply cannot accurately predict what you cannot see."
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
@@ -375,10 +411,28 @@ As illustrated in the correlation matrix below, environmental sensor blackouts e
     <img src="{{ site.baseurl }}/assets/images/ANALISI_NULLI_correlazione_strutturale.png" alt="Structural Missingness Correlation Matrix" class="img-fluid rounded shadow-sm" style="max-width: 100%; border: 1px solid #e0e0e0; border-radius: 8px;">
 </div>
 
-<div style="background-color: #f8f9fa; border-left: 5px solid #10b981; border-radius: 6px; padding: 1.2rem; margin-top: 3rem; margin-bottom: 2rem;">
-<p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: #475569; font-style: italic;">
-<i class="fas fa-quote-left" style="color: #10b981; margin-right: 8px;"></i> "Understanding the precise origin of missing values is critical before applying statistical interventions. Implementing 'blind imputation' without knowing the underlying causes actively harms the explainability of the models. We often cannot know the true cause: is an ACLED blackout signifying a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has completely collapsed? Similarly, missing WFP data often means environments are simply too dangerous for humanitarian surveyors to operate in. To mitigate these structural blind spots, analytical strategies must cross-reference external data sources." <br><br><strong>— Alice Giorgio, Data Scientist (WFP)</strong>
-</p>
+<!-- EXPERT QUOTE -->
+<div class="expert-quote-container my-5 fade-in-up" style="animation-delay: 0.3s; position: relative;">
+    <div style="position: absolute; top: -20px; left: 30px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 2;">
+        <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
+    </div>
+    
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+        <div class="row align-items-center">
+            <div class="col-md-3 text-center mb-4 mb-md-0">
+                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Senior Data Analyst</p>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP - VAM Unit</p>
+            </div>
+            
+            <div class="col-md-9">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                    "Understanding the precise origin of missing values is critical before applying statistical interventions. Implementing 'blind imputation' without knowing the underlying causes actively harms the explainability of the models. We often cannot know the true cause: is an ACLED blackout signifying a genuine absence of conflict, or conversely, a situation so violently unstable that on-the-ground reporting has completely collapsed? Similarly, missing WFP data often means environments are simply too dangerous for humanitarian surveyors to operate in. To mitigate these structural blind spots, analytical strategies must cross-reference external data sources."
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 3rem; font-weight: 300;">
@@ -478,7 +532,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
 <div class="row mt-4">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-user-secret"></i> 1. Anonymization: Hiding the Map</h4>
-        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
+        <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
         Before our algorithm could analyze the vocabulary, we had to strip away its biases. If we fed the raw reports to the model, it would naturally group texts simply because they mentioned the same country or year, missing the deeper semantic connections. Using an <a href="{{ site.baseurl }}/Text-analysis.html"><b>advanced entity recognition model</b></a>, we systematically masked all dates and geopolitical names—effectively "hiding the map." By blinding the algorithm to <strong>where</strong> and <strong>when</strong> a crisis occurred, we forced it to focus entirely on <strong>why</strong> it occurred, uncovering the true, underlying drivers of food insecurity regardless of borders.
         </p>
 
@@ -498,26 +552,26 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
 <div class="row">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-filter"></i> 2. The Power and Limits of Keywords (TF-IDF)</h4>
-        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
-        Initially, we used <b>TF-IDF</b> (Term Frequency-Inverse Document Frequency) to cluster the reports. This method groups texts based on the statistical frequency of identical words. Below, we can see two reports that were grouped together because they share the exact same vocabulary (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>) to describe a complex agricultural and economic shock. 
+        <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+        Our first instinct was to use <b>TF-IDF</b> (Term Frequency-Inverse Document Frequency)—a classic statistical method that groups reports based on the sheer frequency of identical words. Below, you can see two reports that the algorithm grouped together simply because they share the exact same vocabulary (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>) to describe a complex agricultural and economic shock. In cases like this, TF-IDF works perfectly.
         </p>
 
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #17a2b8;">
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Zimbabwe <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Apr 2013 - Apr 2014)</span></h5>
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Zimbabwe <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Apr 2013 - Apr 2014) - <span style="color: #28a745; font-weight: bold;">Agro-Economic Shock</span></span></h5>
             <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 15px; line-height: 1.5; text-align: justify;">
-                "Agriculture is a key livelihoods activity for the majority of Zimbabwe's rural population. Mainly because of the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">poor</span> rainfall <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span> quality, <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> of major <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">crops</span> in 2012/13 fell compared to last <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span>'s harvest. Livestock were in a fair to <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> condition in April 2013. Grazing and water for livestock were generally adequate in most parts of the country save for the communal <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">areas</span>... Currently, staple cereals are generally available throughout the country from both own <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> and the market, but low incomes and higher than normal <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">prices</span> of staple cereals are limiting household <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">access</span>. There is continued limited diversity of <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">food</span> consumed by rural <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span>..."
+                "Agriculture is a key livelihoods activity for the majority of Zimbabwe's rural population. Mainly because of the <span style="color: #28a745; font-weight: bold; text-decoration: underline;"><span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">poor</span> rainfall</span> <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span> quality, <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> of major <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">crops</span> in 2012/13 fell compared to last <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span>'s harvest. Livestock were in a fair to <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> condition in April 2013. Grazing and water for livestock were generally adequate in most parts of the country save for the communal <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">areas</span>... Currently, staple cereals are generally available throughout the country from both own <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> and the market, but <span style="color: #28a745; font-weight: bold; text-decoration: underline;">low incomes and higher than normal <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">prices</span></span> of staple cereals are limiting household <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">access</span>. There is continued limited diversity of <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">food</span> consumed by rural <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span>..."
             </p>
-            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Uganda <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Jan 2017 - Feb 2018)</span></h5>
+            <h5 style="font-size: 1rem; font-weight: bold; color: #495057;"><i class="fas fa-map-marker-alt"></i> Uganda <span style="font-size: 0.85rem; color: #6c757d; font-weight: normal;">(Jan 2017 - Feb 2018) - <span style="color: #28a745; font-weight: bold;">Agro-Economic Shock</span></span></h5>
             <p style="font-family: monospace; font-size: 0.85rem; color: #6c757d; margin-bottom: 0; line-height: 1.5; text-align: justify;">
-                "<span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">Food</span> in markets is easily accessed and affordable because <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">prices</span> have declined and the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span> have adequate purchasing power. They have <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> nutrition levels because they are able to eat two or more time a day with a <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> dietary diversity. Currently <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">access</span> to livestock products is <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> because of the available pasture and water... The <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span> in these regions all suffered the effects of prolonged dry spells that stressed most of the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">crops</span> and reduced yields... However, as the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> in the second <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span> is anticipated to be normal and above normal for some <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">areas</span>... They have <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">poor</span> purchasing power as their incomes are low..."
+                "<span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">Food</span> in markets is easily accessed and affordable because <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">prices</span> have declined and the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span> have adequate purchasing power. They have <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> nutrition levels because they are able to eat two or more time a day with a <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> dietary diversity. Currently <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">access</span> to livestock products is <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">good</span> because of the available pasture and water... The <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">households</span> in these regions all suffered the effects of <span style="color: #28a745; font-weight: bold; text-decoration: underline;">prolonged dry spells</span> that stressed most of the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">crops</span> and reduced yields... However, as the <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">production</span> in the second <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">season</span> is anticipated to be normal and above normal for some <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">areas</span>... They have <span style="color: #28a745; font-weight: bold; text-decoration: underline;"><span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">poor</span> purchasing power as their incomes are low</span>..."
             </p>
         </div>
         
         <br>
-        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
-        While TF-IDF is highly effective when authors use the exact same terminology, it has a fatal flaw: <b>it relies entirely on exact keyword matches</b>. This makes it vulnerable to <b>False Positives</b>. Because many reports use the same standard humanitarian boilerplate language, TF-IDF will often cluster them together, completely ignoring the underlying cause of the crisis. 
+        <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+        While TF-IDF is highly effective when reports use the exact same terminology, it has a <b>fatal flaw</b>: it relies entirely on exact keyword matches. This makes it incredibly vulnerable to <b>False Positives</b>. Because many IPC reports use the same standard humanitarian boilerplate language, TF-IDF will often cluster them together, completely ignoring the true underlying cause of the crisis. 
         <br><br>
-        Take a look at the two reports below. TF-IDF confidently clustered them together because they both heavily use words like <i>"malnutrition"</i>, <i>"child"</i>, <i>"production"</i>, and <i>"season"</i> (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>). However, look at the actual climatic shock that triggered the crisis (highlighted in <span style="color: #dc3545; font-weight: bold;">red</span>): Angola is suffering from the worst <b>drought</b> in 40 years, while Bangladesh is submerged by severe river <b>flooding</b>. TF-IDF grouped a crisis of "no water" with a crisis of "too much water" just because the humanitarian jargon matched!
+        Take a look at the two reports below. TF-IDF confidently clustered them together because they both heavily use generic words like <i>"malnutrition"</i>, <i>"child"</i>, <i>"production"</i>, and <i>"season"</i> (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>). However, look at the actual climatic shock that triggered the crisis: Angola is suffering from the worst <b>drought</b> in 40 years (highlighted in <span style="color: #dc3545; font-weight: bold;">red</span>), while Bangladesh is submerged by severe river <b>flooding</b> (highlighted in <span style="color: #007bff; font-weight: bold;">blue</span>). TF-IDF grouped a crisis of "no water" with a crisis of "too much water" just because the humanitarian jargon matched!
         </p>
 
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #dc3545;">
@@ -537,8 +591,8 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
 <div class="row">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-brain"></i> 3. Dense Embeddings: Finding the Meaning</h4>
-        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
-        To solve the keyword limitation, we advanced to <b>Dense Semantic Embeddings</b> using the pretrained <b>BGE-M3</b> model. Instead of counting words, this model maps entire paragraphs into a high-dimensional mathematical space where texts are grouped purely by their <i>meaning</i>. This allowed us to discover profound, previously invisible connections, successfully linking reports that described the exact same structural crisis using entirely different vocabularies.
+        <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+        To break free from the keyword trap, we needed a model that could read between the lines. We advanced to <b>Dense Semantic Embeddings</b> using the pretrained <a href="{{ site.baseurl }}/Text-analysis.html"><b>BGE-M3</b></a> model. Instead of blindly counting words, this architecture maps entire paragraphs into a high-dimensional mathematical space, grouping texts purely by their <b>underlying meaning</b>. This breakthrough allowed us to uncover profound, previously invisible connections—successfully linking reports that described the exact same structural crisis, even when they used entirely different vocabularies.
         </p>
     </div>
 </div>
@@ -546,7 +600,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
 <div class="row mt-4">
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-search-plus"></i> Discovery: Connecting Different Words to the Same Crisis</h4>
-        <p class="lead" style="font-size: 0.95rem; line-height: 1.6; text-align: justify;">
+        <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
         To demonstrate what we gained by moving to dense embeddings, look at how the model connected a report from <b>El Salvador</b> with one from <b>Zambia</b>. 
         <br><br>
         Because they use completely different phrasing—"mobility restrictions" versus "reduced livelihood opportunities"—TF-IDF would struggle to link them. But the dense embedding model recognized they were describing the exact same underlying tragedy: families plunged into food insecurity by the economic paralysis of the COVID-19 lockdown.
@@ -569,7 +623,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
 ## <span class="text-gradient">The Interactive Timeline: A History of Crisis</span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-Food insecurity is rarely a static condition; it evolves. By mapping out the dominant crisis type (using our semantic clusters) for each country year by year, we built the interactive timeline below. You can explore how nations shift from agricultural shocks to economic inflation, or how conflict suddenly hijacks a country's entire food system. 
+<b>With the reports finally grouped by their true underlying causes (our semantic clusters), we could start tracking them over time.</b> Food insecurity is rarely a static condition; it evolves. By mapping out the dominant crisis type for each country year by year, we built the interactive timeline below. You can explore how nations shift from agricultural shocks to economic inflation, or how conflict suddenly hijacks a country's entire food system. 
 <br><br><i>Select a country from the sidebar to isolate its unique journey through the crisis landscape.</i>
 </p>
 
@@ -581,15 +635,36 @@ Food insecurity is rarely a static condition; it evolves. By mapping out the dom
 
 ### <span class="text-gradient">Crisis Profiles: Shared Destinies</span>
 
-"Cosa più importante in questo campo è individuare profilo di crisi in modo da capire quale sarà l'evoluzione della crisi in un certo paese e adattare di conseguenza le decisioni da prendere"
-quote by Alice Giorgio
+<!-- EXPERT QUOTE -->
+<div class="expert-quote-container my-5 fade-in-up" style="animation-delay: 0.3s; position: relative;">
+    <div style="position: absolute; top: -20px; left: 30px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 2;">
+        <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
+    </div>
+    
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+        <div class="row align-items-center">
+            <div class="col-md-3 text-center mb-4 mb-md-0">
+                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Senior Data Analyst</p>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP - VAM Unit</p>
+            </div>
+            
+            <div class="col-md-9">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                    "The most important thing in this field is to identify the crisis profile in order to understand how a crisis will evolve in a certain country, and adapt our decision-making accordingly."
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 The most startling revelation from the dense clustering was the discovery of <b>Crisis Profiles</b>—nations that share identical evolutionary paths despite being thousands of miles apart. By removing borders, the data showed us that risk follows specific, recurring patterns. <i>(Hover over the highlighted text to reveal the historical context).</i>
 </p>
 
 #### Profile 1: The Agro-Pastoral Climate Trap (Kenya & Uganda)
 
-<p style="font-size: 1rem; line-height: 1.6; text-align: justify;">
+<p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
 Kenya and Uganda are bound by a shared geographical vulnerability. Their evolutionary trajectory perfectly mirrors the unpredictable swings of the climate. We see both nations plunge into <b>Agro-pastoral Water Vulnerability</b> during the devastating <span class="history-tooltip">El Niño-induced floods<span class="tooltip-text"><i class="fas fa-info-circle"></i> In 2015-2016, a super El Niño triggered torrential rains across East Africa, washing away harvests and decimating livestock herds before they could recover.</span></span>, and then suffer immense <b>Rainfall Impact on Crops</b> during the punishing <span class="history-tooltip">La Niña droughts<span class="tooltip-text"><i class="fas fa-info-circle"></i> Between 2020 and 2023, the Horn of Africa experienced an unprecedented five consecutive failed rainy seasons, pushing millions to the brink of famine.</span></span>. This is a classic climate-driven trap, where communities have no time to recover before the next environmental shock hits.
 </p>
 
@@ -599,7 +674,7 @@ Kenya and Uganda are bound by a shared geographical vulnerability. Their evoluti
 
 #### Profile 2: The Multi-Shock Vortex (Mozambique & Madagascar)
 
-<p style="font-size: 1rem; line-height: 1.6; text-align: justify;">
+<p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
 Located across the Mozambique Channel from one another, these two nations share more than just geography: they are trapped in the exact same vortex of climatic and systemic shocks. The algorithm maps an incredibly complex, yet shared trajectory for both. They are repeatedly battered by <b>Rainfall Impact on Crops</b> due to devastating Indian Ocean weather events <span class="history-tooltip">(like recurrent super-cyclones)<span class="tooltip-text"><i class="fas fa-info-circle"></i> Both countries are frequently in the crosshairs of extreme cyclones (e.g., Idai, Freddy, Batsirai), which decimate agricultural lands and infrastructure.</span></span>. This baseline fragility makes them highly susceptible to external shocks, driving them through identical, synchronized phases of <b>COVID-19 Economic Impact</b> and soaring <b>Agricultural Price Inflation</b>. Ultimately, these compounding economic and climatic crises converge on the most vulnerable, plunging both nations into recurring, severe spikes of <b>Child Malnutrition</b>. Their shared sequence highlights how repetitive climate disasters trap fragile economies in an inescapable loop.
 </p>
 
@@ -609,34 +684,64 @@ Located across the Mozambique Channel from one another, these two nations share 
 
 <div style="background-color: #f8f9fa; border-left: 5px solid #6366f1; border-radius: 6px; padding: 1.5rem; margin-top: 3rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
 <h4 style="font-weight: 700; margin-top: 0; color: #4338ca;"><i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 10px;"></i> Looking Ahead: Clustering by Trajectory</h4>
-<p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0; color: #475569; text-align: justify;">
+<p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 0; color: #475569; text-align: justify;">
 The discovery of these perfectly synchronized crisis profiles opens a fascinating door for future research. Instead of classifying regions merely by their current dominant topic, what if we clustered them by their entire evolutionary sequence? By grouping nations that share the same "DNA" of crisis evolution (e.g., the <i>Climate-to-Economic-Collapse</i> pattern vs. the <i>Chronic-Conflict-Trap</i>), predictive models could anticipate the next phase of a food crisis simply by recognizing the historical precedent set by another country in the same trajectory group.
 </p>
 </div>
 
 
 
-# Predicting Food Insecurity through its drivers
+# <span class="text-gradient">Predicting Food Insecurity: From Insight to Foresight</span>
 
-Can the drivers predict hunger? We ask two questions, each with its own model.
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+We've seen how tracking the semantic "DNA" of a crisis reveals its underlying evolutionary path. But understanding the past and present is only half the battle. The ultimate goal of our investigation is <b>foresight</b>. If we know the core drivers—the climate shocks, the economic volatility, the hidden conflicts—can we actually predict where hunger will strike next?
+<br><br>
+To answer this, we built two distinct models to tackle two critical questions:
+</p>
 
 <div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1rem 1.25rem; margin-top: 1.5rem; margin-bottom: 1.25rem;">
 <div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1;">Question 1 · Static inference</div>
 <h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #0369a1;">What explains where hunger is?</h4>
 </div>
 
-- Hunger is very context dependent: the same drop in rainfall or the same level of conflict means different things in the Sahel, the Horn of Africa, or Central America. One global rule has to fit all of them at once, so it does not even beat a simple baseline: the average level of each country.
-- Localising fixes this. We train separate models for smaller groups of similar areas, for example one model per country, or one per geographic region. The grouping that works best is by what an area's IPC reports actually talk about, such as conflict and refugees, farming and water, or prices and inflation.
-- Food prices and conflict are the strongest drivers.
+<ul style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
+    <li class="mb-3"><b>Hunger is fiercely context-dependent:</b> The same drop in rainfall or the same level of conflict means different things in the Sahel, the Horn of Africa, or Central America. A single global rule fails to capture these nuances, often performing worse than a simple baseline like the country's historical average.</li>
+    <li class="mb-3"><b>Localizing fixes this:</b> We train separate models for smaller groups of similar areas. The grouping that works best is determined by what an area's IPC reports actually discuss—such as conflict and refugees, farming and water, or prices and inflation.</li>
+    <li><b>Key Drivers:</b> Across most contexts, food prices and conflict consistently emerge as the strongest predictors.</li>
+</ul>
 
 <div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/nowcast/static_scope_box.png" alt="Accuracy by grouping method" class="img-fluid rounded shadow-lg" style="max-width: 100%; border: 1px solid #e0e0e0;">
     <p class="text-muted mt-2"><small>Accuracy by grouping method, scored per country. Boxes to the right of the dashed global line do better. Grouping by report text wins.</small></p>
 </div>
 
-> "Explainability is even more important than performance." —  WFP data scientist
+<!-- EXPERT QUOTE -->
+<div class="expert-quote-container my-5 fade-in-up" style="animation-delay: 0.3s; position: relative;">
+    <div style="position: absolute; top: -20px; left: 30px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 2;">
+        <i class="fas fa-comment-alt" style="margin-right: 5px;"></i> EXPERT INSIGHT
+    </div>
+    
+    <div class="glass-card p-4 p-md-5" style="border-left: 6px solid #4ade80; background: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+        <div class="row align-items-center">
+            <div class="col-md-3 text-center mb-4 mb-md-0">
+                <h5 class="mb-1" style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">Alice Giorgio</h5>
+                <p class="text-muted mb-0" style="font-size: 0.85rem; font-weight: 500;">Data Scientist</p>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">WFP</p>
+            </div>
+            
+            <div class="col-md-9">
+                <i class="fas fa-quote-left fa-2x mb-3" style="color: #cbd5e1; opacity: 0.5;"></i>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-style: italic; margin-bottom: 0;">
+                    "Predictive models in this domain will inherently be imperfect. Because of this, uncovering the underlying correlations and causal drivers is often far more valuable than the raw predicted values themselves. Ultimately, explainability is even more important than performance."
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
-In humanitarian work, decisions affect lives, so results have to be explainable before anyone acts on them.
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+In humanitarian work, decisions affect lives. An algorithm's output cannot be a black box; results must be deeply explainable before anyone acts on them.
+</p>
 
 <div class="my-5 text-center">
     <img src="{{ site.baseurl }}/assets/images/nowcast/static_shap_beeswarm.png" alt="Which drivers explain hunger" class="img-fluid rounded shadow-sm hover-lift" style="max-width: 100%; border: 1px solid #e0e0e0;">
@@ -648,13 +753,17 @@ In humanitarian work, decisions affect lives, so results have to be explainable 
 <h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #a16207;">What are hunger levels right now?</h4>
 </div>
 
-IPC assessments are slow, so a shock can go unseen for months. We developed a nowcasting model to accurately estimate the current level from the last assessment plus the latest drivers.
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+IPC assessments are notoriously slow, meaning a sudden shock can go completely unseen for months. To solve this, we developed a nowcasting model designed to accurately estimate current hunger levels by combining the most recent assessment with real-time driver data.
+</p>
 
-- About 18 percent lower error than carrying the last value forward, and it tracks the direction of change.
-- One global model is enough here, the opposite of the static question. Once the model knows an area's own last value, a local model adds little.
-- Rainfall is the strongest early signal among the drivers.
+<ul style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
+    <li class="mb-3"><b>Significant Accuracy Gains:</b> The model achieves about an 18% lower error rate compared to simply carrying the last value forward, and crucially, it successfully tracks the direction of change.</li>
+    <li class="mb-3"><b>A Global Approach Works:</b> In stark contrast to the static model, one global model is sufficient here. Once the algorithm factors in an area's historical baseline, hyper-localizing adds very little predictive power.</li>
+    <li><b>The Early Warning Signal:</b> Among all the real-time drivers, rainfall anomalies act as the strongest early indicator of an impending crisis.</li>
+</ul>
 
-<div class="my-4">
+<div class="my-4 text-center">
     <iframe src="{{ site.baseurl }}/assets/charts/nowcast_map.html" width="100%" height="640px" style="border: 1px solid #e0e0e0; border-radius: 0.5rem;" loading="lazy" title="HERO live nowcast map"></iframe>
     <p class="text-muted mt-2"><small>Latest nowcast of the share of people in IPC Phase 3 or above. Hover for the trend, click to zoom.</small></p>
 </div>
