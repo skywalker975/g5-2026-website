@@ -9,11 +9,11 @@ header_title: "HERO"
 subtitle: "Hunger Early-warning & Risk Optimizer"
 ---
 
-# Anatomy of a Global Crisis
+# <span class="text-gradient">1. Introduction</span>
 
+## Anatomy of a Global Crisis
 
-
-## <span class="text-gradient">Zero Hunger by 2030: a promise still unfulfilled</span>
+### Zero Hunger by 2030: a promise still unfulfilled
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.2rem; font-weight: 300;">
 In 2015, all United Nations Member States adopted the <span class="history-tooltip">2030 Agenda for Sustainable Development<span class="tooltip-text"><i class="fas fa-info-circle"></i> The 2030 Agenda is a universal call to action to end poverty, protect the planet, and improve the lives and prospects of everyone, everywhere. It encompasses 17 Sustainable Development Goals (SDGs) tackling global challenges.</span></span>, whose second goal, "Zero Hunger" (SDG 2), commits the international community to «end hunger, achieve food security and improved nutrition and promote sustainable agriculture». Over a decade later, that promise remains dramatically distant.
@@ -47,7 +47,7 @@ It is precisely to tackle this urgent challenge that the HERO project was born. 
 </div>
 
 
-# Measuring the Breaking Point
+## Measuring the Breaking Point
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
 Before exploring the evolution of these crises, it is essential to understand how hunger is measured globally. The standard metric used by humanitarian organizations is the <span class="history-tooltip">Integrated Food Security Phase Classification (IPC)<span class="tooltip-text"><i class="fas fa-info-circle"></i> The IPC is a standardized global scale that classifies acute food insecurity into five severity phases: 1 (Minimal), 2 (Stressed), 3 (Crisis), 4 (Emergency), and 5 (Catastrophe/Famine). Source: ipcinfo.org</span></span>. Throughout our analysis, we specifically focus on the percentage of a country's population in <strong>IPC Phase 3 or higher (Phase 3+)</strong>. This threshold represents the critical tipping point where populations face acute food insecurity or are forced to deplete essential livelihood assets just to survive, requiring urgent humanitarian intervention.
@@ -67,7 +67,7 @@ Not all food crises evolve in the same way. When we track the percentage of the 
 As illustrated in the interactive chart above, <strong>Haiti</strong>'s trajectory shows a devastating upward climb, rising from under 20% in late 2017 to over 50% by 2026. <strong>South Sudan</strong>, on the other hand, remains trapped in a volatile loop, repeatedly fluctuating between 35% and 65% as seasonal and localized shocks hit a deeply fragile baseline. <strong>Sudan</strong> tells perhaps the most dramatic story of the three: a relatively stable environment (remaining under 25%) that was violently shattered in early 2023. The onset of systemic conflict caused an immediate structural shock, resulting in a sudden escalation that peaked near 55% and destroyed the country's previous stability.
 </p>
 
-# <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
+## HERO: Hunger Early-warning & Risk Optimizer
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
 Global food security is not threatened by a single factor, but by a complex, interconnected web of crises: armed conflict, extreme climate events, macroeconomic instability, and forced migration. To disentangle this complexity, we created <strong>HERO (Hunger Early-warning & Risk Optimizer)</strong>, a Big Data architecture designed to analytically dissect and anticipate these humanitarian emergencies.
@@ -127,7 +127,11 @@ details.spoiler-container > summary::-webkit-details-marker {
 }
 </style>
 
-# The Root Causes: Decoding the Drivers of Crisis
+<hr class="section-divider">
+
+# <span class="text-gradient">2. Data: Exploration, Drivers, and the Missing Data Challenge</span>
+
+## The Root Causes: Decoding the Drivers of Crisis
 
 <div class="row my-5 align-items-center">
 
@@ -237,7 +241,7 @@ Knowing the drivers is only half the battle; understanding how they interact and
     <iframe src="assets/toADD/mappa_evoluzione_forward_fill_v4.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
 
-### <i class="fas fa-search"></i> Political and Social Shocks: Play the Detective
+### Political and Social Shocks: Play the Detective
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
 When we examine the trajectories of political and social drivers against food insecurity, major geopolitical events leave an unmistakable signature on the data. Before reading our analysis of the next two countries, we challenge you to <strong>play the detective</strong>: explore the interactive charts, observe the anomaly spikes, and try to pinpoint the exact moment structural shocks occurred. <em>(Hint: you can use the toggles in the charts to hide or reveal the key events!)</em>
@@ -527,7 +531,9 @@ We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. I
     color: #4ade80;
 }
 </style>
-## <span class="text-gradient">From Words to Data: Decoding the Narrative through NLP Pipeline </span>
+<hr class="section-divider">
+
+# <span class="text-gradient">3. From Words to Data: Decoding the Narrative</span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 But numbers, no matter how rigorously clustered or augmented, only tell half the story. Behind every statistical peak or missing data point lies a complex human reality, vividly captured in the qualitative text of the IPC reports. To move beyond simple word counts and uncover the hidden semantic structures of food crises, we deployed an advanced Natural Language Processing (NLP) pipeline. We leveraged powerful pretrained models to "read" these reports and let the raw text organize itself into coherent, thematic clusters.
@@ -635,7 +641,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
 
 <hr class="section-divider">
 
-## <span class="text-gradient">The Interactive Timeline: A History of Crisis</span>
+## The Interactive Timeline: A History of Crisis
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 <b>With the reports finally grouped by their true underlying causes (our semantic clusters), we could start tracking them over time.</b> Food insecurity is rarely a static condition; it evolves. By mapping out the dominant crisis type for each country year by year, we built the interactive timeline below. You can explore how nations shift from agricultural shocks to economic inflation, or how conflict suddenly hijacks a country's entire food system. 
@@ -648,7 +654,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
 
 <hr class="section-divider">
 
-### <span class="text-gradient">Crisis Profiles: Shared Destinies</span>
+## Crisis Profiles: Shared Destinies
 
 <!-- EXPERT QUOTE -->
 <div class="expert-quote-container my-5 fade-in-up" style="animation-delay: 0.3s; position: relative;">
@@ -699,7 +705,9 @@ The discovery of these synchronized crisis profiles opens a door for future rese
 
 
 
-# <span class="text-gradient">Predicting Food Insecurity: From Insight to Foresight</span>
+<hr class="section-divider">
+
+# <span class="text-gradient">4. Predicting Food Insecurity: From Insight to Foresight</span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 We've seen how tracking the semantic "DNA" of a crisis reveals its underlying path. But understanding the past and present is only half the battle. The ultimate goal of our investigation is <b>foresight</b>. If we know the core drivers, such as climate shocks, economic volatility, and hidden conflicts, can we actually predict where hunger will strike next?
@@ -707,10 +715,7 @@ We've seen how tracking the semantic "DNA" of a crisis reveals its underlying pa
 To answer this, we built two distinct models to tackle two critical questions:
 </p>
 
-<div style="background-color: #e8f4fa !important; border-left: 5px solid #0284c7 !important; border-radius: 6px; padding: 1rem 1.25rem; margin-top: 1.5rem; margin-bottom: 1.25rem;">
-<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #000000 !important;">Question 1 · Static inference</div>
-<h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #000000 !important;">What explains where hunger is?</h4>
-</div>
+## Question 1 · Static inference: What explains where hunger is?
 
 <ul style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
     <li class="mb-3"><b>Hunger is context-dependent:</b> The same drop in rainfall or the same level of conflict means different things in the Sahel, the Horn of Africa, or Central America. A single global rule fails to capture these nuances, often performing worse than a simple baseline like the country's historical average.</li>
@@ -756,10 +761,7 @@ In humanitarian work, decisions affect lives. An algorithm's output cannot be a 
     <p class="text-muted mt-2"><small>Higher food prices and more conflict push the predicted level of hunger up.</small></p>
 </div>
 
-<div style="background-color: #fff8e1; border-left: 5px solid #e0a800; border-radius: 6px; padding: 1rem 1.25rem; margin-top: 2rem; margin-bottom: 1.25rem;">
-<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #a16207;">Question 2 · Nowcasting</div>
-<h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #a16207;">What are hunger levels right now?</h4>
-</div>
+## Question 2 · Nowcasting: What are hunger levels right now?
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 IPC assessments are slow, meaning a sudden shock can go completely unseen for months. To solve this, we developed a nowcasting model designed to accurately estimate current hunger levels by combining the most recent assessment with real-time driver data.
@@ -780,20 +782,22 @@ IPC assessments are slow, meaning a sudden shock can go completely unseen for mo
     <a href="{{ site.baseurl }}/modelling.html" class="btn btn-premium-hero">Read the full modelling details</a>
 </div>
 
-<div style="background-color: #f3e8ff; border-left: 5px solid #a855f7; border-radius: 6px; padding: 1rem 1.25rem; margin-top: 2rem; margin-bottom: 1.25rem;">
-<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #7e22ce;">Bonus Question · Forecasting</div>
-<h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #7e22ce;">What will hunger look like months from now?</h4>
-</div>
+## Bonus Question · Forecasting: What will hunger look like months from now?
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 We also built a forecasting model that reads each region's history as a time series and projects it forward. Being honest, this is where we struggled most. Forecasting food insecurity months into the future proved much harder than explaining the present or nowcasting it, and the results came with noticeably lower performance.
 </p>
 
-<div class="my-5 text-center">
-  <p style="font-size: 1.5rem; font-style: italic; font-weight: 300; color: #475569; line-height: 1.5; max-width: 720px; margin: 0 auto;">
-    "It's difficult to make predictions, especially about the future."
-  </p>
-  <p style="font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; color: #a855f7; margin-top: 0.75rem;">Yogi Berra / Niels Bohr</p>
+<div class="my-5 fade-in-up" style="animation-delay: 0.3s; position: relative;">
+    <div class="glass-card p-4 p-md-5 text-center mx-auto" style="border-left: 6px solid #c084fc; background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95)); border-top: 1px solid rgba(255, 255, 255, 0.12); border-right: 1px solid rgba(255, 255, 255, 0.12); border-bottom: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 10px 30px -5px rgba(168, 85, 247, 0.25); border-radius: 14px; max-width: 780px;">
+        <i class="fas fa-quote-left fa-2x mb-3" style="color: #c084fc; opacity: 0.6;"></i>
+        <p style="font-size: 1.6rem; font-style: italic; font-weight: 600; color: #f3e8ff; line-height: 1.6; margin-bottom: 0.75rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+            "It's difficult to make predictions, especially about the future."
+        </p>
+        <p style="font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; color: #c084fc; margin-bottom: 0; text-transform: uppercase;">
+            <i class="fas fa-feather-alt me-1"></i> Yogi Berra / Niels Bohr
+        </p>
+    </div>
 </div>
 
 <p class="fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
@@ -804,7 +808,9 @@ This question is still open. If you want to help us crack it, the dedicated sect
     <a href="{{ site.baseurl }}/Forecast-and-Time-Series-Analysis.html" class="btn btn-premium-hero">Explore the forecasting deep dive</a>
 </div>
 
-# <span class="text-gradient">Conclusion</span>
+<hr class="section-divider">
+
+# <span class="text-gradient">5. Conclusion</span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
 Zero Hunger by 2030 remains an unfulfilled promise. It is a genuinely hard problem: food crises emerge from many interacting drivers at once, and no single cause explains them all. The good news is that we are not short on data. The difficulty lies in making sense of it, especially since the assessments that matter most are often incomplete or out of date by the time they reach us.
@@ -815,7 +821,7 @@ HERO is our attempt to bring order to that complexity. It provides an architectu
 </p>
 
 <p class="fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-A central part of this was profiling crises and how they evolve. By reading IPC reports for their meaning rather than their vocabulary, we grouped crises by their true causes and tracked how these profiles shift over time. The most striking finding was <b>shared destinies</b>: countries thousands of miles apart moving through nearly identical paths, where the history of one can become an early script for another.
+A central part of this was profiling crises and how they evolve. By reading IPC reports for their meaning rather than their vocabulary, we grouped crises by their true causes and tracked how these profiles shift over time.
 </p>
 
 <p class="fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
