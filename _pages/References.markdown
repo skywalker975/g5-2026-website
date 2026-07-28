@@ -26,7 +26,7 @@ header_title: "References"
 <div>
   <h6 class="mb-1 text-light fw-bold">Predicting Risk of Inadequate Micronutrient Intake with Transferable Machine Learning Models</h6>
   <p class="text-muted small mb-2">Voukelatou, V., Tang, K., Lauzana, I., Jangid, M., Martini, G., de Pee, S., Knight, F., & Piovani, D. (2026)</p>
-  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Scientific Reports</span><code class="text-primary fs-6">16(1): 4104</code></p>
+  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Scientific Reports</span><a href="https://doi.org/10.1038/s41598-025-26179-7" target="_blank" class="text-primary text-decoration-none fw-semibold">doi:10.1038/s41598-025-26179-7</a></p>
 </div>
 </li>
 
@@ -44,7 +44,7 @@ header_title: "References"
 <div>
   <h6 class="mb-1 text-light fw-bold">Time-Series Clustering – A Decade Review</h6>
   <p class="text-muted small mb-2">Aghabozorgi, S., Shirkhorshidi, A. S., & Wah, T. Y. (2015)</p>
-  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Information Systems</span><code class="text-primary fs-6">Vol. 53, pp. 16–38</code></p>
+  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Information Systems</span><a href="https://doi.org/10.1016/j.is.2015.04.007" target="_blank" class="text-primary text-decoration-none fw-semibold">doi:10.1016/j.is.2015.04.007</a></p>
 </div>
 </li>
 
@@ -98,7 +98,7 @@ header_title: "References"
 <div>
   <h6 class="mb-1 text-light fw-bold">Forecasting Trends in Food Security with Real Time Data</h6>
   <p class="text-muted small mb-2">Herteux, J., Räth, C., Martini, G., Baha, A., Koupparis, K., Lauzana, I., & Piovani, D. (2024)</p>
-  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Communications Earth & Environment</span><code class="text-primary fs-6">5(1): 611</code></p>
+  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Communications Earth & Environment</span><a href="https://doi.org/10.1038/s43247-024-01698-9" target="_blank" class="text-primary text-decoration-none fw-semibold">doi:10.1038/s43247-024-01698-9</a></p>
 </div>
 </li>
 
@@ -107,7 +107,7 @@ header_title: "References"
 <div>
   <h6 class="mb-1 text-light fw-bold">On the Forecastability of Food Insecurity</h6>
   <p class="text-muted small mb-2">Foini, P., Tizzoni, M., Martini, G., Paolotti, D., & Omodei, E. (2023)</p>
-  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Scientific Reports</span><code class="text-primary fs-6">13(1): 2793</code></p>
+  <p class="mb-0 small"><span class="badge bg-light text-dark me-2 border">Scientific Reports</span><a href="https://doi.org/10.1038/s41598-023-29700-y" target="_blank" class="text-primary text-decoration-none fw-semibold">doi:10.1038/s41598-023-29700-y</a></p>
 </div>
 </li>
 
