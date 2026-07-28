@@ -17,15 +17,15 @@ subtitle: "Two questions: why an area suffers, and whether it is getting worse r
 The last stage of HERO turns the combined dataset into models. We use the same drivers for both models: conflict, displacement, rainfall, vegetation, food prices, and media coverage. From these drivers we answer two separate questions, and each question has its own model. In both cases the thing we predict is the share of the population in acute food insecurity, meaning IPC Phase 3 or above.
 </p>
 
-<div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1.25rem 1.5rem; margin-top: 1.5rem; margin-bottom: 1.25rem;">
-<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1; margin-bottom: 0.35rem;">Question 1 · Static inference</div>
-<h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #0369a1;">What explains global hunger?</h4>
+<div style="background-color: #e8f4fa !important; border-left: 5px solid #0284c7 !important; border-radius: 6px; padding: 1.25rem 1.5rem; margin-top: 1.5rem; margin-bottom: 1.25rem;">
+<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #000000 !important; margin-bottom: 0.35rem;">Question 1 · Static inference</div>
+<h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #000000 !important;">What explains global hunger?</h4>
 <p class="text-muted mb-0">Why is one area worse off than another? Using the drivers alone, we try to explain the level of acute food insecurity in each area, and to learn which drivers matter most.</p>
 </div>
 
-<div style="background-color: #fff8e1; border-left: 5px solid #e0a800; border-radius: 6px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #a16207; margin-bottom: 0.35rem;">Question 2 · Nowcasting</div>
-<h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #a16207;">What are hunger levels right now?</h4>
+<div style="background-color: #fff8e1 !important; border-left: 5px solid #e0a800 !important; border-radius: 6px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #a16207 !important; margin-bottom: 0.35rem;">Question 2 · Nowcasting</div>
+<h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #a16207 !important;">What are hunger levels right now?</h4>
 <p class="text-muted mb-0">IPC assessments are expensive and slow. Most areas are updated only once or twice a year, so a sudden shock can go unseen for months. Between two assessments, we estimate the current level of acute food insecurity from the latest drivers.</p>
 </div>
 
