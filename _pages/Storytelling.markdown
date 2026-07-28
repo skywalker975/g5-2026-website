@@ -300,9 +300,14 @@ Let's test your investigative skills again, this time looking at Sudan. Historic
 Unlike political shocks, which are sudden and structural, climatic drivers like rainfall are inherently cyclical. However, this rhythm is completely dictated by geography. In the dashboard below, we compare the rainfall profiles of Madagascar, Mozambique, Senegal, and Ethiopia. Explore the time series and the radar plot (which visualizes seasonality across the months of the year) to discover how drastically rainfall intensity and timing differ across the continent.
 </p>
 
-<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+<div class="iframe-container mt-4 mb-2" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
     <iframe src="assets/toADD/piogge_evt_best/Dashboard_Rainfall_Confronto_con_mappa.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
+
+<p class="text-muted text-center mt-1 mb-4" style="font-size: 0.85rem; font-style: italic;">
+    <i class="fas fa-info-circle" style="color: #0ea5e9; margin-right: 4px;"></i>
+    <strong>Chart Note:</strong> The vertical axis in the time-series plot (as well as the radial axis in the seasonality radar plot) expresses monthly precipitation depth in <strong>millimeters (mm)</strong>.
+</p>
 
 <div class="row mb-5 mt-2">
     <div class="col-md-4 mb-3 mb-md-0">
@@ -332,12 +337,14 @@ Unlike political shocks, which are sudden and structural, climatic drivers like 
 </div>
 
 <div class="my-5 text-center fade-in-up" style="animation-delay: 0.2s;">
-    <div class="p-4 mx-auto" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-radius: 12px; border: 1px solid #bfdbfe; max-width: 750px; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);">
-        <h4 style="color: #1e40af; font-weight: 700; margin-bottom: 12px;"><i class="fas fa-sliders-h"></i> Take Control of the Data</h4>
-        <p style="color: #475569; font-size: 1.05rem; margin-bottom: 25px; line-height: 1.6;">
+    <div class="p-4 p-md-5 mx-auto glass-card" style="border-left: 6px solid #0ea5e9; background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95)); border-top: 1px solid rgba(255, 255, 255, 0.1); border-right: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); max-width: 780px; box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.25); border-radius: 14px;">
+        <h4 style="color: #38bdf8; font-weight: 700; margin-bottom: 14px; font-size: 1.4rem;">
+            <i class="fas fa-sliders-h me-2" style="color: #38bdf8;"></i> Take Control of the Data
+        </h4>
+        <p style="color: #e2e8f0; font-size: 1.05rem; margin-bottom: 28px; line-height: 1.7; font-weight: 300;">
             Want to explore these trends yourself? We've built a dedicated <strong>Interactive User Interface</strong> where you can freely navigate, filter, and dive deep into the statistics and distributions of all the humanitarian drivers we've collected.
         </p>
-        <a href="{{ site.baseurl }}/UI.html" class="btn btn-primary btn-lg shadow-sm" style="background-color: #2563eb; border-color: #2563eb; font-weight: 600; padding: 14px 35px; border-radius: 8px; text-decoration: none;">
+        <a href="http://epimelesi.isti.cnr.it:8080/" target="_blank" class="btn btn-primary btn-lg shadow-sm" style="background: linear-gradient(135deg, #0284c7, #2563eb); border: none; font-weight: 600; padding: 14px 35px; border-radius: 8px; text-decoration: none; color: #ffffff; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);">
             <i class="fas fa-chart-pie" style="margin-right: 8px;"></i> Launch the User Interface
         </a>
     </div>
@@ -670,7 +677,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     </div>
 </div>
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-The most startling revelation from the dense clustering was the discovery of <b>Crisis Profiles</b>—nations that share identical evolutionary paths in their food insecurity crisis. By removing borders, the data showed us that risk follows specific, recurring patterns. Below, we present one striking example of these profiles. <i>(Hover over the highlighted text to reveal the historical context).</i>
+The most startling revelation from the dense clustering was the discovery of <b>Crisis Profiles</b>, representing nations that share identical evolutionary paths in their food insecurity crisis. By removing borders, the data showed us that risk follows specific, recurring patterns. Below, we present one striking example of these profiles. <i>(Hover over the highlighted text to reveal the historical context).</i>
 </p>
 
 #### The Agro-Pastoral Climate Trap (Kenya & Uganda)
@@ -697,7 +704,7 @@ The discovery of these synchronized crisis profiles opens a door for future rese
 # <span class="text-gradient">Predicting Food Insecurity: From Insight to Foresight</span>
 
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-We've seen how tracking the semantic "DNA" of a crisis reveals its underlying path. But understanding the past and present is only half the battle. The ultimate goal of our investigation is <b>foresight</b>. If we know the core drivers—the climate shocks, the economic volatility, the hidden conflicts—can we actually predict where hunger will strike next?
+We've seen how tracking the semantic "DNA" of a crisis reveals its underlying path. But understanding the past and present is only half the battle. The ultimate goal of our investigation is <b>foresight</b>. If we know the core drivers, such as climate shocks, economic volatility, and hidden conflicts, can we actually predict where hunger will strike next?
 <br><br>
 To answer this, we built two distinct models to tackle two critical questions:
 </p>

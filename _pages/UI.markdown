@@ -33,8 +33,8 @@ The HERO v6 dashboard is not just a data visualisation tool — it is an operati
 </div>
 
 <div class="text-center my-5">
-  <a href="https://github.com/skywalker975/g5-2026-website" class="btn btn-premium-hero btn-lg px-5 py-3 shadow" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; text-transform: uppercase; letter-spacing: 1px;">
-    Explore HERO Dashboard Repository
+  <a href="http://epimelesi.isti.cnr.it:8080/" target="_blank" class="btn btn-premium-hero btn-lg px-5 py-3 shadow" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; text-transform: uppercase; letter-spacing: 1px;">
+    Explore HERO Interactive Dashboard
   </a>
 </div>
 
