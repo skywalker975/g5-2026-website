@@ -1,0 +1,359 @@
+/* ==========================================================================
+   HERO Theme - Cyber Dark & Glassmorphism Design System (v2.0 Enhanced)
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap");
+:root {
+  --hero-bg-main: #070a12;
+  --hero-bg-card: rgba(15, 23, 42, 0.78);
+  --hero-bg-card-hover: rgba(30, 41, 59, 0.9);
+  --hero-border-color: rgba(255, 255, 255, 0.08);
+  --hero-border-hover: rgba(99, 102, 241, 0.45);
+  --hero-text-primary: #f8fafc;
+  --hero-text-secondary: #cbd5e1;
+  --hero-text-muted: #94a3b8;
+  --hero-primary: #6366f1;
+  /* Indigo Accent */
+  --hero-primary-glow: rgba(99, 102, 241, 0.35);
+  --hero-cyan: #06b6d4;
+  /* Cyan Glow */
+  --hero-success: #10b981;
+  /* Emerald */
+  --hero-warning: #f59e0b;
+  /* Amber */
+  --hero-danger: #ef4444;
+  /* Rose */
+  --hero-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --hero-font-title: 'Outfit', sans-serif;
+  --hero-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px; }
+
+::-webkit-scrollbar-track {
+  background: var(--hero-bg-main); }
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hero-primary); }
+
+/* Base Body & Layout Overrides */
+body {
+  background-color: var(--hero-bg-main) !important;
+  color: var(--hero-text-primary) !important;
+  font-family: var(--hero-font-sans) !important; }
+
+header.hero-chulapa-image {
+  margin-bottom: 0 !important; }
+
+main.container-lg {
+  padding-top: 0.25rem !important; }
+
+article#maincontent {
+  margin-top: 0.25rem !important;
+  padding-top: 0 !important; }
+  article#maincontent > h1:first-child,
+  article#maincontent > h2:first-child {
+    margin-top: 0.25rem !important;
+    padding-top: 0 !important; }
+
+h1, h2, h3, h4, h5, h6, .page-title, .p-name {
+  font-family: var(--hero-font-title) !important;
+  letter-spacing: -0.015em;
+  color: var(--hero-text-primary) !important; }
+
+p, li, span, td, th {
+  color: var(--hero-text-secondary); }
+
+a {
+  color: #818cf8;
+  transition: var(--hero-transition); }
+
+a:hover {
+  color: #a5b4fc;
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+  text-decoration: none; }
+
+/* High Contrast Fixes for White-on-White Inline Styles & Light Containers */
+.example-box, .expert-profile-box, .card, .card-body, .bg-light, .bg-white,
+[style*="background-color: #f"], [style*="background-color: #fff"], [style*="background: rgba(255, 255, 255"], [style*="background: #f"] {
+  background-color: var(--hero-bg-card) !important;
+  background: var(--hero-bg-card) !important;
+  color: var(--hero-text-primary) !important;
+  border: 1px solid var(--hero-border-color) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35) !important; }
+
+.example-box *, .expert-profile-box *, .card *, [style*="background-color: #f"] *, [style*="background: rgba(255, 255, 255"] * {
+  color: var(--hero-text-primary); }
+
+/* Ensure Text Highlights inside Badges/Spans remain readable */
+span[style*="background-color: #fff3cd"], span[style*="background-color: #ffffcc"] {
+  background-color: rgba(245, 158, 11, 0.3) !important;
+  color: #fef08a !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important; }
+
+span[style*="background-color: #e2f0d9"], span[style*="background-color: #d1ecf1"] {
+  background-color: rgba(16, 185, 129, 0.25) !important;
+  color: #6ee7b7 !important;
+  border: 1px solid rgba(16, 185, 129, 0.4) !important; }
+
+span[style*="background-color: #ffcccc"] {
+  background-color: rgba(239, 68, 68, 0.3) !important;
+  color: #fca5a5 !important;
+  border: 1px solid rgba(239, 68, 68, 0.4) !important; }
+
+/* Dropdown Menus Fix (High Contrast Dark Glassmorphism) */
+.dropdown-menu {
+  background: rgba(15, 23, 42, 0.96) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid var(--hero-border-hover) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
+  padding: 0.5rem !important; }
+
+.dropdown-item {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+  padding: 0.6rem 1rem !important;
+  border-radius: 8px !important;
+  transition: var(--hero-transition) !important; }
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background: rgba(99, 102, 241, 0.25) !important;
+  color: #a5b4fc !important;
+  transform: translateX(4px); }
+
+/* Gradient Text Effect with Personality */
+.text-gradient, .hero-title-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #6366f1 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 10px rgba(99, 102, 241, 0.25)); }
+
+/* Asymmetrical Layout & Minimal Left Index (Table of Contents) */
+.container, .container-lg, .container-xl, .container-xxl {
+  max-width: 95% !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important; }
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-xl, .container-xxl {
+    max-width: 1520px !important; } }
+@media (min-width: 1600px) {
+  .container, .container-lg, .container-xl, .container-xxl {
+    max-width: 1820px !important; } }
+/* Minimal Sticky Left Sidebar Index */
+@media (min-width: 992px) {
+  aside.col-lg-2, .hero-sidetoc-container {
+    display: block !important;
+    position: sticky !important;
+    top: 90px !important;
+    height: calc(100vh - 110px) !important;
+    overflow-y: auto !important;
+    padding-right: 1.25rem !important;
+    padding-left: 0.25rem !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+    z-index: 10 !important; }
+
+  .hero-sidetoc-title {
+    font-family: var(--hero-font-title) !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.12em !important;
+    color: var(--hero-primary) !important;
+    text-transform: uppercase !important;
+    margin-bottom: 0.75rem !important; }
+
+  .hero-toc-list, .hero-sidetoc-nav nav, .hero-sidetoc-nav ul, .hero-sidetoc-nav ol, #toc {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important; }
+    .hero-toc-list li, .hero-toc-list div, .hero-sidetoc-nav nav li, .hero-sidetoc-nav nav div, .hero-sidetoc-nav ul li, .hero-sidetoc-nav ul div, .hero-sidetoc-nav ol li, .hero-sidetoc-nav ol div, #toc li, #toc div {
+      list-style: none !important;
+      margin-bottom: 0.45rem !important;
+      font-size: 0.78rem !important;
+      line-height: 1.35 !important;
+      position: relative !important;
+      padding-left: 1.2rem !important; }
+      .hero-toc-list li::before, .hero-toc-list div::before, .hero-sidetoc-nav nav li::before, .hero-sidetoc-nav nav div::before, .hero-sidetoc-nav ul li::before, .hero-sidetoc-nav ul div::before, .hero-sidetoc-nav ol li::before, .hero-sidetoc-nav ol div::before, #toc li::before, #toc div::before {
+        content: '' !important;
+        position: absolute !important;
+        left: 2px !important;
+        top: 6px !important;
+        width: 6px !important;
+        height: 6px !important;
+        border-radius: 50% !important;
+        background: #475569 !important;
+        transition: var(--hero-transition) !important; }
+      .hero-toc-list li a, .hero-toc-list div a, .hero-sidetoc-nav nav li a, .hero-sidetoc-nav nav div a, .hero-sidetoc-nav ul li a, .hero-sidetoc-nav ul div a, .hero-sidetoc-nav ol li a, .hero-sidetoc-nav ol div a, #toc li a, #toc div a {
+        color: #94a3b8 !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        transition: var(--hero-transition) !important;
+        display: block !important;
+        white-space: normal !important;
+        word-break: break-word !important; }
+        .hero-toc-list li a:hover, .hero-toc-list li a.active, .hero-toc-list div a:hover, .hero-toc-list div a.active, .hero-sidetoc-nav nav li a:hover, .hero-sidetoc-nav nav li a.active, .hero-sidetoc-nav nav div a:hover, .hero-sidetoc-nav nav div a.active, .hero-sidetoc-nav ul li a:hover, .hero-sidetoc-nav ul li a.active, .hero-sidetoc-nav ul div a:hover, .hero-sidetoc-nav ul div a.active, .hero-sidetoc-nav ol li a:hover, .hero-sidetoc-nav ol li a.active, .hero-sidetoc-nav ol div a:hover, .hero-sidetoc-nav ol div a.active, #toc li a:hover, #toc li a.active, #toc div a:hover, #toc div a.active {
+          color: #ffffff !important; }
+      .hero-toc-list li.hero-toc-subitem, .hero-toc-list div.hero-toc-subitem, .hero-sidetoc-nav nav li.hero-toc-subitem, .hero-sidetoc-nav nav div.hero-toc-subitem, .hero-sidetoc-nav ul li.hero-toc-subitem, .hero-sidetoc-nav ul div.hero-toc-subitem, .hero-sidetoc-nav ol li.hero-toc-subitem, .hero-sidetoc-nav ol div.hero-toc-subitem, #toc li.hero-toc-subitem, #toc div.hero-toc-subitem {
+        padding-left: 1.8rem !important;
+        font-size: 0.72rem !important;
+        opacity: 0.88; }
+        .hero-toc-list li.hero-toc-subitem::before, .hero-toc-list div.hero-toc-subitem::before, .hero-sidetoc-nav nav li.hero-toc-subitem::before, .hero-sidetoc-nav nav div.hero-toc-subitem::before, .hero-sidetoc-nav ul li.hero-toc-subitem::before, .hero-sidetoc-nav ul div.hero-toc-subitem::before, .hero-sidetoc-nav ol li.hero-toc-subitem::before, .hero-sidetoc-nav ol div.hero-toc-subitem::before, #toc li.hero-toc-subitem::before, #toc div.hero-toc-subitem::before {
+          left: 10px !important;
+          width: 4px !important;
+          height: 4px !important;
+          top: 7px !important; }
+      .hero-toc-list li:hover::before, .hero-toc-list li.active::before, .hero-toc-list li:has(a.active)::before, .hero-toc-list li:has(a:hover)::before, .hero-toc-list div:hover::before, .hero-toc-list div.active::before, .hero-toc-list div:has(a.active)::before, .hero-toc-list div:has(a:hover)::before, .hero-sidetoc-nav nav li:hover::before, .hero-sidetoc-nav nav li.active::before, .hero-sidetoc-nav nav li:has(a.active)::before, .hero-sidetoc-nav nav li:has(a:hover)::before, .hero-sidetoc-nav nav div:hover::before, .hero-sidetoc-nav nav div.active::before, .hero-sidetoc-nav nav div:has(a.active)::before, .hero-sidetoc-nav nav div:has(a:hover)::before, .hero-sidetoc-nav ul li:hover::before, .hero-sidetoc-nav ul li.active::before, .hero-sidetoc-nav ul li:has(a.active)::before, .hero-sidetoc-nav ul li:has(a:hover)::before, .hero-sidetoc-nav ul div:hover::before, .hero-sidetoc-nav ul div.active::before, .hero-sidetoc-nav ul div:has(a.active)::before, .hero-sidetoc-nav ul div:has(a:hover)::before, .hero-sidetoc-nav ol li:hover::before, .hero-sidetoc-nav ol li.active::before, .hero-sidetoc-nav ol li:has(a.active)::before, .hero-sidetoc-nav ol li:has(a:hover)::before, .hero-sidetoc-nav ol div:hover::before, .hero-sidetoc-nav ol div.active::before, .hero-sidetoc-nav ol div:has(a.active)::before, .hero-sidetoc-nav ol div:has(a:hover)::before, #toc li:hover::before, #toc li.active::before, #toc li:has(a.active)::before, #toc li:has(a:hover)::before, #toc div:hover::before, #toc div.active::before, #toc div:has(a.active)::before, #toc div:has(a:hover)::before {
+        background: var(--hero-primary) !important;
+        box-shadow: 0 0 10px var(--hero-primary), 0 0 4px #a5b4fc !important;
+        transform: scale(1.4) !important; }
+      .hero-toc-list li:hover a, .hero-toc-list li:has(a:hover) a, .hero-toc-list div:hover a, .hero-toc-list div:has(a:hover) a, .hero-sidetoc-nav nav li:hover a, .hero-sidetoc-nav nav li:has(a:hover) a, .hero-sidetoc-nav nav div:hover a, .hero-sidetoc-nav nav div:has(a:hover) a, .hero-sidetoc-nav ul li:hover a, .hero-sidetoc-nav ul li:has(a:hover) a, .hero-sidetoc-nav ul div:hover a, .hero-sidetoc-nav ul div:has(a:hover) a, .hero-sidetoc-nav ol li:hover a, .hero-sidetoc-nav ol li:has(a:hover) a, .hero-sidetoc-nav ol div:hover a, .hero-sidetoc-nav ol div:has(a:hover) a, #toc li:hover a, #toc li:has(a:hover) a, #toc div:hover a, #toc div:has(a:hover) a {
+        color: #a5b4fc !important;
+        text-shadow: 0 0 8px rgba(99, 102, 241, 0.4) !important; }
+
+  article#maincontent.col-lg-10, article#maincontent.col-lg-8 {
+    flex: 0 0 83% !important;
+    max-width: 83% !important;
+    padding-left: 2rem !important; } }
+/* 16:9 Scaled Non-Scrolling Dashboard Iframe Container */
+.hero-iframe-fit-dashboard, .hero-iframe-fit-16-9 {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  min-height: 680px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 14px !important;
+  border: 1px solid var(--hero-border-hover) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5) !important;
+  background: var(--hero-bg-card) !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important; }
+  .hero-iframe-fit-dashboard iframe, .hero-iframe-fit-16-9 iframe {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    transform: none !important; }
+
+/* Glassmorphism Cards with Neon Accent Lines */
+.glass-card, .hero-card, .hero-glass-card {
+  background: var(--hero-bg-card) !important;
+  border: 1px solid var(--hero-border-color) !important;
+  border-radius: 18px !important;
+  padding: 1.75rem !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5) !important;
+  transition: var(--hero-transition) !important;
+  position: relative;
+  overflow: hidden; }
+  .glass-card:hover, .hero-card:hover, .hero-glass-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--hero-border-hover) !important;
+    box-shadow: 0 15px 40px -5px rgba(99, 102, 241, 0.3) !important; }
+
+/* Card Banners */
+.card-border-top-danger {
+  border-top: 4px solid var(--hero-danger) !important; }
+
+.card-border-top-success {
+  border-top: 4px solid var(--hero-success) !important; }
+
+.card-border-top-info {
+  border-top: 4px solid var(--hero-cyan) !important; }
+
+.card-border-top-warning {
+  border-top: 4px solid var(--hero-warning) !important; }
+
+.card-border-top-secondary {
+  border-top: 4px solid var(--hero-primary) !important; }
+
+/* Premium Buttons */
+.btn-premium-hero, .hero-btn-primary, .btn-primary {
+  background: linear-gradient(135deg, var(--hero-primary) 0%, #4f46e5 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 0.65rem 1.5rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  transition: var(--hero-transition) !important;
+  box-shadow: 0 4px 20px var(--hero-primary-glow) !important; }
+  .btn-premium-hero:hover, .hero-btn-primary:hover, .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5) !important;
+    filter: brightness(1.15) !important;
+    text-decoration: none !important; }
+
+/* Badges & Indicators */
+.badge-premium-admin1, .hero-badge-primary {
+  background-color: rgba(99, 102, 241, 0.2) !important;
+  color: #a5b4fc !important;
+  border: 1px solid rgba(99, 102, 241, 0.35) !important;
+  font-weight: 600 !important;
+  padding: 5px 12px !important;
+  border-radius: 8px !important;
+  display: inline-block !important;
+  font-size: 0.8rem !important; }
+
+.badge-premium-admin2, .hero-badge-warning {
+  background-color: rgba(245, 158, 11, 0.2) !important;
+  color: #fde047 !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+  font-weight: 600 !important;
+  padding: 5px 12px !important;
+  border-radius: 8px !important;
+  display: inline-block !important;
+  font-size: 0.8rem !important; }
+
+/* Custom Table / Container wrappers */
+.comparison-table-wrapper, table, .table {
+  background: var(--hero-bg-card) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  border: 1px solid var(--hero-border-color) !important;
+  color: var(--hero-text-primary) !important;
+  backdrop-filter: blur(12px) !important; }
+
+th, td {
+  color: var(--hero-text-secondary) !important;
+  border-color: var(--hero-border-color) !important; }
+
+thead th {
+  background: rgba(30, 41, 59, 0.9) !important;
+  color: #a5b4fc !important;
+  font-family: var(--hero-font-title);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em; }
+
+/* Custom Code & Pre Blocks */
+code, pre, .highlight {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important; }
+
+/* Navbar & Footer Styling */
+.footer-chulapa, .navbar-chulapa {
+  background: rgba(7, 10, 18, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  border-top: 1px solid var(--hero-border-color) !important;
+  border-bottom: 1px solid var(--hero-border-color) !important; }
+
+.navbar-chulapa .nav-link {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+  transition: var(--hero-transition); }
+
+.navbar-chulapa .nav-link:hover, .navbar-chulapa .nav-link.active {
+  color: #a5b4fc !important;
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.4); }
