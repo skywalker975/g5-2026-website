@@ -213,7 +213,26 @@ One of the most universal regularities uncovered by the TSgraph module is **dist
 
 <hr class="section-divider">
 
-## <span class="text-gradient">4. Bidirectional Visual Analytics</span>
+
+
+## <span class="text-gradient">4. Assortativity & Market Hierarchy: Comparative Dynamics</span>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+Network <strong>assortativity</strong> measures the tendency of major market hubs to connect with one another (creating a resilient, interconnected core) versus linking primarily to isolated peripheral markets. By comparing the assortativity scatter profiles of <strong>Afghanistan (AFG)</strong> and <strong>Sudan (SDN)</strong>, we observe a striking structural similarity that underscores a shared vulnerability in their supply chains.
+</p>
+
+<div class="row my-5 justify-content-center">
+  <div class="col-md-7">
+    <img src="{{ site.baseurl }}/assets/UI-NA-TSA-FORC/Network analysis/assortatività_AFG_SDN.png" alt="Market Assortativity Comparison: Afghanistan vs Sudan" class="img-fluid rounded shadow-sm hover-lift" style="border: 1px solid rgba(255,255,255,0.1); width: 100%;">
+    <p class="text-secondary small mt-2 text-center"><em>Assortativity scatter plot comparing node degree (k) against average neighbor degree (K<sub>nn</sub>) for market nodes in Afghanistan (blue) vs Sudan (orange).</em></p>
+  </div>
+</div>
+
+
+
+<hr class="section-divider">
+
+## <span class="text-gradient">5. Bidirectional Visual Analytics</span>
 
 The TSgraph interface connects **geographic space** (Leaflet maps) to **analytic space** (Plotly distributions) through a live cross-highlighting system. Every click propagates across both views simultaneously:
 
@@ -261,4 +280,10 @@ The TSgraph interface connects **geographic space** (Leaflet maps) to **analytic
   <p class="m-0 text-light" style="font-size: 0.95rem; line-height: 1.7;">
     <strong>🌍 Reproducibility Note:</strong> The full network analysis pipeline (graph construction, statistical filtering, topological benchmarking, distance decay fitting, and bidirectional visual analytics) is executed for <strong>every country in the HERO dataset</strong>. Cross-country comparisons (as shown for AFG vs NGA) are available via the dashboard's "Confronto Multi-Paese" modal.
   </p>
+</div>
+
+<div class="text-center my-5 fade-in-up">
+  <a href="http://epimelesi.isti.cnr.it:8080/" target="_blank" class="btn btn-premium-hero btn-lg px-5 py-3 shadow" style="background: linear-gradient(135deg, #0284c7, #2563eb); border: none; color: #ffffff; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4); text-decoration: none;">
+    <i class="fas fa-network-wired me-2"></i> Explore These Data Trends with the Interactive Dashboard!
+  </a>
 </div>
