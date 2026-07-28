@@ -775,3 +775,54 @@ IPC assessments are slow, meaning a sudden shock can go completely unseen for mo
     <a href="{{ site.baseurl }}/modelling.html" class="btn btn-premium-hero">Read the full modelling details</a>
 </div>
 
+<div style="background-color: #f3e8ff; border-left: 5px solid #a855f7; border-radius: 6px; padding: 1rem 1.25rem; margin-top: 2rem; margin-bottom: 1.25rem;">
+<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #7e22ce;">Bonus Question · Forecasting</div>
+<h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #7e22ce;">What will hunger look like months from now?</h4>
+</div>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+We also built a forecasting model that reads each region's history as a time series and projects it forward. Being honest, this is where we struggled most. Forecasting food insecurity months into the future proved much harder than explaining the present or nowcasting it, and the results came with noticeably lower performance.
+</p>
+
+<div class="my-5 text-center">
+  <p style="font-size: 1.5rem; font-style: italic; font-weight: 300; color: #475569; line-height: 1.5; max-width: 720px; margin: 0 auto;">
+    "It's difficult to make predictions, especially about the future."
+  </p>
+  <p style="font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; color: #a855f7; margin-top: 0.75rem;">— Yogi Berra / Niels Bohr</p>
+</div>
+
+<p class="fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+This question is still open. If you want to help us crack it, the dedicated section walks through the full time-series pipeline, the models we tried, and exactly where they fall short.
+</p>
+
+<div class="my-4 text-center">
+    <a href="{{ site.baseurl }}/Forecast-and-Time-Series-Analysis.html" class="btn btn-premium-hero">Explore the forecasting deep dive</a>
+</div>
+
+# <span class="text-gradient">Conclusion</span>
+
+<p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
+Zero Hunger by 2030 remains an unfulfilled promise. It is a genuinely hard problem: food crises emerge from many interacting drivers at once, and no single cause explains them all. The good news is that we are not short on data. The difficulty lies in making sense of it, especially since the assessments that matter most are often incomplete or out of date by the time they reach us.
+</p>
+
+<p class="fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+HERO is our attempt to bring order to that complexity. It provides an architecture to study food crises more systematically through the lens of the drivers that shape them.
+</p>
+
+<p class="fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+A central part of this was profiling crises and how they evolve. By reading IPC reports for their meaning rather than their vocabulary, we grouped crises by their true causes and tracked how these profiles shift over time. The most striking finding was <b>shared destinies</b>: countries thousands of miles apart moving through nearly identical paths, where the history of one can become an early script for another.
+</p>
+
+<p class="fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+On this foundation, we built two models to answer two different questions:
+</p>
+
+<ul style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
+    <li class="mb-3"><b>Understanding hunger through its drivers.</b> The key insight was localization: a good model has to account for the specific context of each country, because the same shock means different things in different places. This localization can be done effectively by grouping regions according to what their IPC reports, written by domain experts on the ground, actually describe. And because the model points to <i>which</i> drivers matter, its outputs stay explainable, which is essential when decisions affect lives.</li>
+    <li><b>Keeping up with crises as they unfold.</b> Because official assessments are slow, our nowcasting model continuously updates the estimated level of food insecurity as new shocks hit, so a sudden deterioration doesn't stay invisible for months.</li>
+</ul>
+
+<p class="fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+Taken together, these pieces move HERO from describing hunger toward anticipating it. The work is far from finished, but it points to a practical path: combining the expertise already captured in humanitarian reporting with models fast enough to keep pace with the crises they aim to prevent, and transparent enough to act on.
+</p>
+
