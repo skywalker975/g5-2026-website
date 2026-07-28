@@ -46,7 +46,7 @@ header_title: "Missing values"
             <div class="card h-100 hero-card card-border-top-primary">
                 <div class="card-body">
                     <h4 class="card-title text-primary">
-                        <i class="fas fa-network-wired me-2"></i> STEP 1: STRUCTURAL CORRELATION
+                        <i class="fas fa-layer-group me-2 text-warning"></i> STEP 1: STRUCTURAL CORRELATION
                     </h4>
                     <h6 class="card-subtitle mb-3 text-muted">Cross-Dataset Dependencies</h6>
                     <ul class="list-unstyled mb-0 card-text text-muted">
@@ -71,7 +71,7 @@ header_title: "Missing values"
             <div class="card h-100 hero-card card-border-top-danger">
                 <div class="card-body">
                     <h4 class="card-title text-danger">
-                        <i class="fas fa-earth-americas me-2"></i> STEP 2: GEOGRAPHICAL BLACKOUT
+                        <i class="fas fa-layer-group me-2 text-success"></i> STEP 2: GEOGRAPHICAL BLACKOUT
                     </h4>
                     <h6 class="card-subtitle mb-3 text-muted">Spatial Failure Patterns</h6>
                     <ul class="list-unstyled mb-0 card-text text-muted">
@@ -109,7 +109,7 @@ header_title: "Missing values"
             <div class="card h-100 hero-card card-border-top-primary">
                 <div class="card-body">
                     <h4 class="card-title text-primary">
-                        <i class="fas fa-brain me-2"></i> STEP 1: MULTIVARIATE MODELING
+                        <i class="fas fa-layer-group me-2 text-danger"></i> STEP 1: MULTIVARIATE MODELING
                     </h4>
                     <h6 class="card-subtitle mb-3 text-muted">Logistic Regression & Predictability of Absence</h6>
                     <ul class="list-unstyled mb-0 card-text text-muted">
