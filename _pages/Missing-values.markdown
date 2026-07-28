@@ -208,6 +208,7 @@ header_title: "Missing values"
     <img src="{{ site.baseurl }}/assets/images/Unknown.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
 
 <!-- 2. Temporal Dynamics -->
+
 ## 2. Temporal Dynamics (Time Series)
 
 <p class="text-muted mb-3">Shadow vectors over time confirm distinct underlying causes for missingness:</p>
@@ -248,6 +249,7 @@ header_title: "Missing values"
 <img src="{{ site.baseurl }}/assets/images/Unknown-2.png"  style="max-width: 100%; border: 1px solid #e0e0e0;">
 
 <!-- 3. Geographic Fragmentation -->
+
 ## 3. Geographic Fragmentation
 
 <p class="text-muted mb-3">Spatial distribution reveals structural gaps that standard imputation cannot address:</p>
