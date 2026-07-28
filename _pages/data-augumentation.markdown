@@ -32,7 +32,7 @@ subtitle: "Handling missing data"
                         <!-- Column 1: Subgroup Decoupling -->
                         <div class="col-md-4">
                             <div class="p-3 bg-light rounded h-100 border-start border-3 border-primary">
-                                <h6 class="text-dark fw-bold mb-2">
+                                <h6 class="text-light font-weight-bold">
                                     <i class="fas fa-layer-group me-2 text-primary"></i> Subgroup Decoupling
                                 </h6>
                                 <p class="card-text text-muted small mb-0">
@@ -43,7 +43,7 @@ subtitle: "Handling missing data"
 <!-- Column 2: Multicollinearity Mitigation -->
                         <div class="col-md-4">
                             <div class="p-3 bg-light rounded h-100 border-start border-3 border-info">
-                                <h6 class="text-dark fw-bold mb-2">
+                                <h6 class="text-light font-weight-bold">
                                     <i class="fas fa-drafting-compass me-2 text-info"></i> Multicollinearity Mitigation
                                 </h6>
                                 <p class="card-text text-muted small mb-0">
@@ -54,7 +54,7 @@ subtitle: "Handling missing data"
 <!-- Column 3: Cluster Explainability -->
                         <div class="col-md-4">
                             <div class="p-3 bg-light rounded h-100 border-start border-3 border-success">
-                                <h6 class="text-dark fw-bold mb-2">
+                                <h6 class="text-light font-weight-bold">
                                     <i class="fas fa-chart-pie me-2 text-success"></i> Cluster Explainability
                                 </h6>
                                 <p class="card-text text-muted small mb-0">
