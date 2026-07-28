@@ -395,7 +395,7 @@ Our shift to admin-1 level analysis was a strategic move to preserve data integr
 </p>
 
 <div class="iframe-container my-4" style="width: 100%; height: 1100px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
-    <iframe src="assets/toADD/DATI_MANCANTI.html" width="100%" height="100%" style="border:none;"></iframe>
+    <iframe src="assets/toADD/MISSING_DATA.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
@@ -406,17 +406,15 @@ As you can see in the matrix above, the prevalence of these missing values forms
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
 But these data gaps aren't just random noise, they have a distinct, structural pattern. When we mapped the correlation of missingness across our different drivers, we uncovered that data outages occur in distinct, interconnected blocks. 
-<br><br>
-As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
 </p>
 
 <div class="my-5 row align-items-center justify-content-center">
-    <div class="col-12 col-md-8 text-center">
+    <div class="col-12 col-md-7 text-center">
         <img src="{{ site.baseurl }}/assets/images/ANALISI_NULLI_correlazione_strutturale_mod.png" alt="Structural Missingness Correlation Matrix" class="img-fluid rounded shadow-sm" style="width: 100%; max-width: 650px; border: 1px solid #e0e0e0; border-radius: 8px;">
     </div>
-    <div class="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-start">
-        <p class="text-muted mb-0" style="font-size: 0.95rem; font-style: italic; line-height: 1.6;">
-            <i class="fas fa-search" style="margin-right: 5px;"></i> Structural Missingness Correlation Matrix 
+    <div class="col-12 col-md-5 mt-4 mt-md-0 text-center text-md-start">
+        <p style="font-size: 1.05rem; line-height: 1.6; text-align: left; margin-bottom: 0; font-weight: 300;">
+            As illustrated in the correlation matrix, environmental sensor blackouts exhibit severe collinearity. There is a <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
         </p>
     </div>
 </div>
