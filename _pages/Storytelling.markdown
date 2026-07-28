@@ -74,7 +74,7 @@ Global food security is not threatened by a single factor, but by a complex, int
 </p>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
-Rather than merely describing the current state of global hunger, HERO was built to look ahead. Our primary objective is to radically refine how food crises are forecasted. Instead of relying on a "one-size-fits-all" global model, HERO leverages a novel approach: <strong>predicting the level of food insecurity of a specific region by leveraging data from other countries that share the exact same "DNA" of crisis drivers</strong>. If we know how a specific sequence of climate and economic shocks historically unfolded in one nation, we can use that pattern to issue early warnings for a different, but structurally similar, country facing those same initial shocks today.
+Rather than merely describing the current state of global hunger, HERO was built to look ahead. Our primary objective is to radically refine how food crises are forecasted. Instead of relying on a "one-size-fits-all" global model, HERO leverages a novel approach: <strong>predicting the level of food insecurity of a specific region by leveraging data from other countries that share the exact same "DNA" of crisis drivers</strong>. If we understand how a specific sequence of climate and economic shocks historically unfolded in one nation, we can use that pattern to issue early warnings for another country, structurally similar yet distinct, that is currently facing the same initial shocks.
 </p>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
@@ -282,7 +282,7 @@ Let's test your investigative skills again, this time looking at Sudan. Historic
 <div class="card card-body text-start my-4" style="background-color: #f8f9fa; border: none; border-left: 5px solid #2563eb; border-radius: 8px;">
     <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
         <strong>Did you spot the rupture?</strong> <i class="fas fa-search-location" style="color: #2563eb; margin-left: 5px;"></i><br>
-        The data unmistakably shatters on <strong>April 15, 2023</strong>. This marks the outbreak of the devastating civil war. Unlike a slow-moving climatic drought, this sudden, explosive political conflict caused an immediate and massive structural shock, destroying the country's prior stability and casuing hunger levels to soar.
+        The data unmistakably shatters on <strong>April 15, 2023</strong>. This marks the outbreak of the devastating civil war. Unlike a slow-moving climatic drought, this sudden, explosive political conflict caused an immediate and massive structural shock, destroying the country's prior stability and causing hunger levels to soar.
     </p>
     <details class="mt-3">
         <summary style="cursor: pointer; color: #2563eb; font-weight: 600; font-size: 0.95rem;">
