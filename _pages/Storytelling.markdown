@@ -16,7 +16,7 @@ subtitle: "Hunger Early-warning & Risk Optimizer"
 ## <span class="text-gradient">Zero Hunger by 2030: a promise still unfulfilled</span>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.2rem; font-weight: 300;">
-In 2015, all United Nations Member States adopted the <span class="history-tooltip">2030 Agenda for Sustainable Development<span class="tooltip-text"><i class="fas fa-info-circle"></i> The 2030 Agenda is a universal call to action to end poverty, protect the planet, and improve the lives and prospects of everyone, everywhere. It encompasses 17 Sustainable Development Goals (SDGs) tackling global challenges.</span></span>, whose second goal — "Zero Hunger" (SDG 2) — commits the international community to «end hunger, achieve food security and improved nutrition and promote sustainable agriculture». Over a decade later, that promise remains dramatically distant.
+In 2015, all United Nations Member States adopted the <span class="history-tooltip">2030 Agenda for Sustainable Development<span class="tooltip-text"><i class="fas fa-info-circle"></i> The 2030 Agenda is a universal call to action to end poverty, protect the planet, and improve the lives and prospects of everyone, everywhere. It encompasses 17 Sustainable Development Goals (SDGs) tackling global challenges.</span></span>, whose second goal, "Zero Hunger" (SDG 2), commits the international community to «end hunger, achieve food security and improved nutrition and promote sustainable agriculture». Over a decade later, that promise remains dramatically distant.
 </p>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.2rem; font-weight: 300;">
@@ -70,7 +70,7 @@ As illustrated in the interactive chart above, <strong>Haiti</strong>'s trajecto
 # <span class="text-gradient">HERO: Hunger Early-warning & Risk Optimizer</span>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
-Global food security is not threatened by a single factor, but by a complex, interconnected web of crises: armed conflict, extreme climate events, macroeconomic instability, and forced migration. To disentangle this complexity, we created <strong>HERO (Hunger Early-warning & Risk Optimizer)</strong>—a Big Data architecture designed to analytically dissect and anticipate these humanitarian emergencies.
+Global food security is not threatened by a single factor, but by a complex, interconnected web of crises: armed conflict, extreme climate events, macroeconomic instability, and forced migration. To disentangle this complexity, we created <strong>HERO (Hunger Early-warning & Risk Optimizer)</strong>, a Big Data architecture designed to analytically dissect and anticipate these humanitarian emergencies.
 </p>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
@@ -78,7 +78,7 @@ Rather than merely describing the current state of global hunger, HERO was built
 </p>
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
-To achieve this, HERO integrates massive global data streams—from geopolitical instability to precipitation anomalies—and analyzes them at the sub-national level (Admin1). This geographic choice is strategic: it allows us to overcome the severe data scarcity found at the hyper-local level (Admin2), while still capturing critical regional nuances that get lost in broad national averages. 
+To achieve this, HERO integrates massive global data streams, spanning from geopolitical instability to precipitation anomalies, and analyzes them at the sub-national level (Admin1). This geographic choice is strategic: it allows us to overcome the severe data scarcity found at the hyper-local level (Admin2), while still capturing critical regional nuances that get lost in broad national averages. 
 </p>
 
 <!-- EXPERT QUOTE -->
@@ -261,7 +261,7 @@ When we examine the trajectories of political and social drivers against food in
             <i class="fas fa-book-open"></i> Dive Deeper: The US Withdrawal
         </summary>
         <p class="text-muted mt-2 mb-0" style="font-size: 0.95rem; line-height: 1.6;">
-            The departure of international forces led to an immediate collapse of the Afghan economy. Overnight, international aid—which previously funded 75% of public spending—was frozen. This sparked hyperinflation, massive unemployment, and an unprecedented liquidity crisis that crippled food access across the entire nation.
+            The departure of international forces led to an immediate collapse of the Afghan economy. Overnight, international aid, which previously funded 75% of public spending, was frozen. This sparked hyperinflation, massive unemployment, and an unprecedented liquidity crisis that crippled food access across the entire nation.
         </p>
     </details>
 </div>
@@ -270,7 +270,7 @@ When we examine the trajectories of political and social drivers against food in
 #### Case File #2: Sudan's Shattered Stability
 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem; font-weight: 300;">
-Let's test your investigative skills again, this time looking at Sudan. Historically, Sudan presented a very different baseline compared to Afghanistan—maintaining relatively stable food insecurity levels. But stability can be deceiving. Explore the dashboard below and try to identify the exact moment the trend line violently breaks. <em>(Hint: toggle the key event marker in the legend when you think you've found it!)</em>
+Let's test your investigative skills again, this time looking at Sudan. Historically, Sudan presented a very different baseline compared to Afghanistan, maintaining relatively stable food insecurity levels. But stability can be deceiving. Explore the dashboard below and try to identify the exact moment the trend line violently breaks. <em>(Hint: toggle the key event marker in the legend when you think you've found it!)</em>
 </p>
 
 <div class="hero-iframe-fit-dashboard my-4">
@@ -455,7 +455,7 @@ Despite these immense challenges and the inherent risks highlighted by experts, 
 <p style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 1.5rem; font-weight: 300;">
 If we can't always collect the data in the field, we must strategically "augment" the data we do have. To find the most reliable imputation method, we evaluated how geographic proximity and statistical profiles influence the data structure, testing everything from Hierarchical models to K-Means.
 <br><br>
-We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to be the most effective at identifying coherent, well-separated neighbors across different regions. This ensures that when we fill a missing data point, we are using the profile of a truly similar, statistically verified neighbor—maintaining data integrity and minimizing the uncertainty inherent in any imputation. We will utilize these clustering results to refine our predictive models in the next phases.
+We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to be the most effective at identifying coherent, well-separated neighbors across different regions. This ensures that when we fill a missing data point, we are using the profile of a truly similar, statistically verified neighbor, maintaining data integrity and minimizing the uncertainty inherent in any imputation. We will utilize these clustering results to refine our predictive models in the next phases.
 </p>
 
 <div class="iframe-container my-4" style="width: 100%; height: 550px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
@@ -540,7 +540,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-user-secret"></i> 1. Anonymization: Hiding the Map</h4>
         <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-        Before our algorithm could analyze the vocabulary, we had to strip away its biases. If we fed the raw reports to the model, it would naturally group texts simply because they mentioned the same country or year, missing the deeper semantic connections. Using an <a href="{{ site.baseurl }}/Text-analysis.html"><b>advanced entity recognition model</b></a>, we systematically masked all dates and geopolitical names—effectively "hiding the map." By blinding the algorithm to <strong>where</strong> and <strong>when</strong> a crisis occurred, we forced it to focus entirely on <strong>why</strong> it occurred, uncovering the true, underlying drivers of food insecurity regardless of borders.
+        Before our algorithm could analyze the vocabulary, we had to strip away its biases. If we fed the raw reports to the model, it would naturally group texts simply because they mentioned the same country or year, missing the deeper semantic connections. Using an <a href="{{ site.baseurl }}/Text-analysis.html"><b>advanced entity recognition model</b></a>, we systematically masked all dates and geopolitical names, effectively "hiding the map." By blinding the algorithm to <strong>where</strong> and <strong>when</strong> a crisis occurred, we forced it to focus entirely on <strong>why</strong> it occurred, uncovering the true, underlying drivers of food insecurity regardless of borders.
         </p>
 
         <div class="example-box mt-4 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #007bff;">
@@ -560,7 +560,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-filter"></i> 2. The Power and Limits of Keywords (TF-IDF)</h4>
         <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-        Our first instinct was to use <b>TF-IDF</b> (Term Frequency-Inverse Document Frequency)—a classic statistical method that groups reports based on the frequency of identical words. Below, you can see two reports that the algorithm grouped together simply because they share the exact same vocabulary (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>) to describe a complex agricultural and economic shock. In cases like this, TF-IDF works perfectly.
+        Our first instinct was to use <b>TF-IDF</b> (Term Frequency-Inverse Document Frequency), a classic statistical method that groups reports based on the frequency of identical words. Below, you can see two reports that the algorithm grouped together simply because they share the exact same vocabulary (highlighted in <span style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; font-weight: bold; color: #856404;">yellow</span>) to describe a complex agricultural and economic shock. In cases like this, TF-IDF works perfectly.
         </p>
 
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #17a2b8;">
@@ -599,7 +599,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     <div class="col-md-12 mb-4 glass-card p-4 hover-lift">
         <h4 style="color: #007bff; font-weight: bold;"><i class="fas fa-brain"></i> 3. Dense Embeddings: Finding the Meaning</h4>
         <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-        To break free from the keyword trap, we needed a model that could read between the lines. We advanced to <b>Dense Semantic Embeddings</b> using the pretrained <a href="{{ site.baseurl }}/Text-analysis.html"><b>BGE-M3</b></a> model. Instead of blindly counting words, this architecture maps entire paragraphs into a high-dimensional mathematical space, grouping texts purely by their <b>underlying meaning</b>. This breakthrough allowed us to uncover previously invisible connections—successfully linking reports that described the exact same structural crisis, even when they used different vocabularies.
+        To break free from the keyword trap, we needed a model that could read between the lines. We advanced to <b>Dense Semantic Embeddings</b> using the pretrained <a href="{{ site.baseurl }}/Text-analysis.html"><b>BGE-M3</b></a> model. Instead of blindly counting words, this architecture maps entire paragraphs into a high-dimensional mathematical space, grouping texts purely by their <b>underlying meaning</b>. This breakthrough allowed us to uncover previously invisible connections, successfully linking reports that described the exact same structural crisis, even when they used different vocabularies.
         </p>
     </div>
 </div>
@@ -611,7 +611,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
         <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
         To demonstrate what we gained by moving to dense embeddings, look at how the model connected a report from <b>El Salvador</b> with one from <b>Zambia</b>. 
         <br><br>
-        Because they use completely different phrasing—"mobility restrictions" versus "reduced livelihood opportunities"—TF-IDF would struggle to link them. But the dense embedding model recognized they were describing the exact same underlying tragedy: families plunged into food insecurity by the economic paralysis of the COVID-19 lockdown.
+        Because they use completely different phrasing ("mobility restrictions" versus "reduced livelihood opportunities"), TF-IDF would struggle to link them. But the dense embedding model recognized they were describing the exact same underlying tragedy: families plunged into food insecurity by the economic paralysis of the COVID-19 lockdown.
         </p>
         <div class="example-box mt-3 p-3 rounded" style="background-color: #f8f9fa; border-left: 4px solid #17a2b8;">
             <h5 style="font-size: 1rem; font-weight: bold; color: #cbd5e1;"><i class="fas fa-map-marker-alt"></i> El Salvador <span style="font-size: 0.85rem; color: #94a3b8; font-weight: normal;">(October 2020 - February 2021)</span></h5>
@@ -795,7 +795,7 @@ We also built a forecasting model that reads each region's history as a time ser
   <p style="font-size: 1.5rem; font-style: italic; font-weight: 300; color: #475569; line-height: 1.5; max-width: 720px; margin: 0 auto;">
     "It's difficult to make predictions, especially about the future."
   </p>
-  <p style="font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; color: #a855f7; margin-top: 0.75rem;">— Yogi Berra / Niels Bohr</p>
+  <p style="font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; color: #a855f7; margin-top: 0.75rem;">Yogi Berra / Niels Bohr</p>
 </div>
 
 <p class="fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
