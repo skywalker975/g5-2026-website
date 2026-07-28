@@ -2,7 +2,7 @@
 layout: default
 title: "References"
 permalink: /References.html
-show_sidetoc: true
+show_sidetoc: false
 header_type: hero
 header_img: assets/copertine_pagine/references.png
 header_title: "References"

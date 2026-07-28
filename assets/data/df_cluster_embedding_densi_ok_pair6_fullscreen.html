@@ -37,8 +37,8 @@ body{font-family:var(--font-sans);background:var(--bg-main);color:var(--text-pri
     padding:24px 22px 20px;border-bottom:1px solid var(--border-color);
     background:linear-gradient(180deg, rgba(99,102,241,0.08) 0%, transparent 100%);
 }
-.side-head h1{font-family:var(--font-title);font-size:24px;font-weight:700;color:var(--text-primary)}
-.side-head p{font-size:15px;color:var(--text-secondary);margin-top:4px}
+.side-head h1{font-family:var(--font-title);font-size:18px;font-weight:700;color:var(--text-primary)}
+.side-head p{font-size:13px;color:var(--text-secondary);margin-top:4px}
 
 .side-block{padding:16px 22px;border-bottom:1px solid var(--border-color);display:flex;flex-direction:column;overflow:hidden}
 .side-block h3{
@@ -86,9 +86,9 @@ body{font-family:var(--font-sans);background:var(--bg-main);color:var(--text-pri
 .crow.off{opacity:0.3}
 .crow .cdot{width:16px;height:16px;border-radius:4px;flex-shrink:0;transition:all .2s}
 .crow.off .cdot{opacity:0.3;filter:grayscale(1)}
-.crow .ceye{color:var(--text-muted);font-size:18px;flex-shrink:0;width:24px;text-align:center;transition:all .2s}
+.crow .ceye{color:var(--text-muted);font-size:10px;flex-shrink:0;width:18px;text-align:center;transition:all .2s}
 .crow.off .ceye{opacity:0.3}
-.crow .cname{font-size:18px;color:var(--text-secondary);transition:color .2s;line-height:1.35}
+.crow .cname{font-size:9px;color:var(--text-secondary);transition:color .2s;line-height:1.35}
 .crow:hover .cname{color:var(--text-primary)}
 .crow.off .cname{color:var(--text-muted);text-decoration:line-through}
 
@@ -130,7 +130,7 @@ body{font-family:var(--font-sans);background:var(--bg-main);color:var(--text-pri
 <div class="tip" id="tip"></div>
 
 <script>
-const D={"years": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "countries": ["Madagascar", "Mozambique"], "clusters": ["Agricultural Price Inflation", "Agro-pastoral Water Vulnerability", "COVID-19 Economic Impact", "Child Malnutrition", "Conflict-Induced Refugee Emergency", "Rainfall Impact on Crops", "Uncategorized Reports"], "records": [{"country": "Madagascar", "year": 2016, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Mozambique", "year": 2016, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2017, "cluster": "Rainfall Impact on Crops"}, {"country": "Mozambique", "year": 2017, "cluster": "Agricultural Price Inflation"}, {"country": "Madagascar", "year": 2018, "cluster": "Rainfall Impact on Crops"}, {"country": "Mozambique", "year": 2018, "cluster": "Child Malnutrition"}, {"country": "Madagascar", "year": 2019, "cluster": "Child Malnutrition"}, {"country": "Mozambique", "year": 2019, "cluster": "Child Malnutrition"}, {"country": "Madagascar", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Mozambique", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Madagascar", "year": 2021, "cluster": "Child Malnutrition"}, {"country": "Mozambique", "year": 2021, "cluster": "COVID-19 Economic Impact"}, {"country": "Madagascar", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Madagascar", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2023, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2025, "cluster": "Agricultural Price Inflation"}], "colors": {"Agricultural Price Inflation": "#6366f1", "Agro-pastoral Water Vulnerability": "#10b981", "COVID-19 Economic Impact": "#f59e0b", "Child Malnutrition": "#ef4444", "Conflict-Induced Refugee Emergency": "#a855f7", "Rainfall Impact on Crops": "#06b6d4", "Uncategorized Reports": "#ec4899"}, "filename": "df_cluster_embedding_densi_ok.csv"};
+const D={"years": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "countries": ["Madagascar", "Mozambique"], "clusters": ["Conflict-Induced Refugee Emergency", "COVID-19 Economic Impact", "Rainfall Impact on Crops", "Agricultural Price Inflation", "Child Malnutrition", "Uncategorized Reports", "Agro-pastoral Water Vulnerability"], "records": [{"country": "Madagascar", "year": 2016, "cluster": "Conflict-Induced Refugee Emergency"}, {"country": "Mozambique", "year": 2016, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2017, "cluster": "Rainfall Impact on Crops"}, {"country": "Mozambique", "year": 2017, "cluster": "Agricultural Price Inflation"}, {"country": "Madagascar", "year": 2018, "cluster": "Rainfall Impact on Crops"}, {"country": "Mozambique", "year": 2018, "cluster": "Child Malnutrition"}, {"country": "Madagascar", "year": 2019, "cluster": "Child Malnutrition"}, {"country": "Mozambique", "year": 2019, "cluster": "Child Malnutrition"}, {"country": "Madagascar", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Mozambique", "year": 2020, "cluster": "COVID-19 Economic Impact"}, {"country": "Madagascar", "year": 2021, "cluster": "Child Malnutrition"}, {"country": "Mozambique", "year": 2021, "cluster": "COVID-19 Economic Impact"}, {"country": "Madagascar", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2022, "cluster": "Agricultural Price Inflation"}, {"country": "Madagascar", "year": 2023, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2023, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2024, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2024, "cluster": "Rainfall Impact on Crops"}, {"country": "Madagascar", "year": 2025, "cluster": "Agricultural Price Inflation"}, {"country": "Mozambique", "year": 2025, "cluster": "Agricultural Price Inflation"}], "colors": {"Conflict-Induced Refugee Emergency": "#6366f1", "COVID-19 Economic Impact": "#10b981", "Rainfall Impact on Crops": "#f59e0b", "Agricultural Price Inflation": "#ef4444", "Child Malnutrition": "#a855f7", "Uncategorized Reports": "#06b6d4", "Agro-pastoral Water Vulnerability": "#ec4899"}, "filename": "df_cluster_embedding_densi_ok.csv"};
 let sel=null, enK=new Set(D.clusters);
 
 const ISO={
@@ -181,8 +181,8 @@ function draw(){
  filt.forEach(r=>{if(!byY[r.year])return;if(!byY[r.year][r.cluster])byY[r.year][r.cluster]=[];byY[r.year][r.cluster].push(r.country)});
 
  const vis=[...enK].sort();
- const colW = (window.innerWidth - 320) / Math.max(1, D.years.length);
- const rowH = Math.max(50, (window.innerHeight - 120) / Math.max(1, D.clusters.length));
+ const colW = (window.innerWidth - 180 - 60) / Math.max(1, D.years.length);
+ const rowH = Math.max(30, (window.innerWidth / 1450) * (680 / 7));
  const yearHeaderH=60;
 
  const ccol=document.getElementById('clusterCol');
@@ -197,7 +197,7 @@ function draw(){
   colHtml+='</div>';
  });
  ccol.innerHTML=colHtml;
- ccol.style.width='300px';
+ ccol.style.width='180px';
 
  ccol.querySelectorAll('.crow').forEach(row=>{
   row.addEventListener('click',()=>{
@@ -227,7 +227,7 @@ function draw(){
  D.years.forEach((y,i)=>{
   const x=i*colW+colW/2+30;
   s+='<line x1="'+x+'" y1="'+yearHeaderH+'" x2="'+x+'" y2="'+(svgH-20)+'" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>';
-  s+='<text x="'+x+'" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#64748b" font-family="Outfit,sans-serif">'+y+'</text>';
+  s+='<text x="'+x+'" y="36" text-anchor="middle" font-size="9" font-weight="700" fill="#64748b" font-family="Outfit,sans-serif">'+y+'</text>';
  });
 
  let mxF=1;const flows=[];
@@ -267,7 +267,7 @@ function draw(){
    s+='<g id="'+nid+'" opacity="'+op+'" style="cursor:pointer;transition:opacity .25s" data-k="'+encodeURIComponent(c)+'" data-y="'+y+'" data-cs="'+cs.join('|')+'" onmousemove="snTip(event,\''+nid+'\')" onmouseleave="hideTip()">';
    s+='<circle cx="'+x+'" cy="'+cy+'" r="'+(r+4)+'" fill="'+col+'" fill-opacity=".06"/>';
    s+='<circle cx="'+x+'" cy="'+cy+'" r="'+r+'" fill="rgba(11,15,25,0.85)" stroke="'+col+'" stroke-width="2.5"/>';
-   s+='<text x="'+x+'" y="'+(cy+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="700" fill="'+col+'" font-family="Outfit,sans-serif">'+n+'</text>';
+   s+='<text x="'+x+'" y="'+(cy+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="8" font-weight="700" fill="'+col+'" font-family="Outfit,sans-serif">'+n+'</text>';
    s+='</g>';
   });
  });
@@ -291,7 +291,7 @@ function draw(){
    const lw=Math.max(100, label.length*8+20);
    const yOffset = fp.y - 35 - (ci * 30);
    s+='<rect x="'+(fp.x-lw/2)+'" y="'+yOffset+'" width="'+lw+'" height="28" rx="14" fill="'+color+'" filter="url(#ds)"/>';
-   s+='<text x="'+fp.x+'" y="'+(yOffset+18)+'" text-anchor="middle" font-size="15" font-weight="700" fill="#0b0f19" font-family="Outfit,sans-serif">'+escSvg(country)+'</text>';
+   s+='<text x="'+fp.x+'" y="'+(yOffset+18)+'" text-anchor="middle" font-size="9" font-weight="700" fill="#0b0f19" font-family="Outfit,sans-serif">'+escSvg(country)+'</text>';
   }
  });
 

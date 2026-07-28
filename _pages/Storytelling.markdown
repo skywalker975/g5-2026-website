@@ -387,7 +387,7 @@ To illustrate this, the interactive heatmap below visualizes temporal anomalies 
 Our shift to admin-1 level analysis was a strategic move to preserve data integrity, but it didn't eliminate the issue completely. As the interactive heatmap below reveals, the distribution of missing data is highly uneven across both space and time. Notice how the significant gaps impact large parts of the African continent and the Middle East, particularly prior to 2021.
 </p>
 
-<div class="iframe-container my-4" style="width: 100%; height: 1200px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+<div class="iframe-container my-4" style="width: 100%; height: 1100px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
     <iframe src="assets/toADD/DATI_MANCANTI.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
 
@@ -403,8 +403,15 @@ But these data gaps aren't just random noise, they have a distinct, structural p
 As illustrated in the correlation matrix below, environmental sensor blackouts exhibit severe collinearity. There is a <strong>0.92 correlation between NDVI and CHIRPS</strong>, meaning that when one satellite metric fails, the other is almost guaranteed to be offline. Even more tellingly, the loss of conflict tracking data (ACLED) is critically linked to logistical blindness on the field. It correlates strongly with missing market vulnerability data (WFP, <strong>0.65</strong>) and displacement metrics (IDP, <strong>0.60</strong>). This reveals a profound truth about data collection: violent events directly disrupt on-the-ground humanitarian reporting pipelines, resulting in compounded analytical blind spots exactly when crises are most acute.
 </p>
 
-<div class="my-5 text-center">
-    <img src="{{ site.baseurl }}/assets/images/ANALISI_NULLI_correlazione_strutturale.png" alt="Structural Missingness Correlation Matrix" class="img-fluid rounded shadow-sm" style="max-width: 100%; border: 1px solid #e0e0e0; border-radius: 8px;">
+<div class="my-5 row align-items-center justify-content-center">
+    <div class="col-12 col-md-8 text-center">
+        <img src="{{ site.baseurl }}/assets/images/ANALISI_NULLI_correlazione_strutturale_mod.png" alt="Structural Missingness Correlation Matrix" class="img-fluid rounded shadow-sm" style="width: 100%; max-width: 650px; border: 1px solid #e0e0e0; border-radius: 8px;">
+    </div>
+    <div class="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-start">
+        <p class="text-muted mb-0" style="font-size: 0.95rem; font-style: italic; line-height: 1.6;">
+            <i class="fas fa-search" style="margin-right: 5px;"></i> Structural Missingness Correlation Matrix 
+        </p>
+    </div>
 </div>
 
 <!-- EXPERT QUOTE -->
@@ -444,7 +451,7 @@ If we can't always collect the data in the field, we must strategically "augment
 We eventually deployed a <strong>K-Nearest Neighbors (KNN)</strong> algorithm. It proved to be the most effective at identifying coherent, well-separated neighbors across different regions. This ensures that when we fill a missing data point, we are using the profile of a truly similar, statistically verified neighbor—maintaining data integrity and minimizing the uncertainty inherent in any imputation. We will utilize these clustering results to refine our predictive models in the next phases.
 </p>
 
-<div class="iframe-container my-4" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
+<div class="iframe-container my-4" style="width: 100%; height: 550px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-radius: 8px;">
     <iframe src="assets/toADD/Cluster_Map_Catch22_AFG.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
 
@@ -630,7 +637,7 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
 <br><br><i>Select a country from the sidebar to isolate its unique journey through the crisis landscape.</i>
 </p>
 
-<div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+<div class="iframe-container my-5" style="width: 100%; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 8px;">
     <iframe src="{{ site.baseurl }}/assets/data/Cluster_evolution_global.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
 </div>
 
@@ -663,28 +670,20 @@ But numbers, no matter how rigorously clustered or augmented, only tell half the
     </div>
 </div>
 <p class="lead fade-in-up" style="font-size: 1.1rem; line-height: 1.7; text-align: justify; animation-delay: 0.2s;">
-The most startling revelation from the dense clustering was the discovery of <b>Crisis Profiles</b>—nations that share identical evolutionary paths despite being thousands of miles apart. By removing borders, the data showed us that risk follows specific, recurring patterns. <i>(Hover over the highlighted text to reveal the historical context).</i>
+The most startling revelation from the dense clustering was the discovery of <b>Crisis Profiles</b>—nations that share identical evolutionary paths in their food insecurity crisis. By removing borders, the data showed us that risk follows specific, recurring patterns. Below, we present one striking example of these profiles. <i>(Hover over the highlighted text to reveal the historical context).</i>
 </p>
 
-#### Profile 1: The Agro-Pastoral Climate Trap (Kenya & Uganda)
+#### The Agro-Pastoral Climate Trap (Kenya & Uganda)
 
 <p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-Kenya and Uganda are bound by a shared geographical vulnerability. Their evolutionary trajectory perfectly mirrors the unpredictable swings of the climate. We see both nations plunge into <b>Agro-pastoral Water Vulnerability</b> during the devastating <span class="history-tooltip">El Niño-induced floods<span class="tooltip-text"><i class="fas fa-info-circle"></i> In 2015-2016, a super El Niño triggered torrential rains across East Africa, washing away harvests and decimating livestock herds before they could recover.</span></span>, and then suffer immense <b>Rainfall Impact on Crops</b> during the punishing <span class="history-tooltip">La Niña droughts<span class="tooltip-text"><i class="fas fa-info-circle"></i> Between 2020 and 2023, the Horn of Africa experienced an unprecedented five consecutive failed rainy seasons, pushing millions into high levels of food insecurity.</span></span>. This is a classic climate-driven trap, where communities have no time to recover before the next environmental shock hits.
+Kenya and Uganda are bound by a shared geographical vulnerability. We see both nations plunge into <b>Agro-pastoral Water Vulnerability</b> due to prolonged droughts (2013-2017), which devastated both agriculture and pastoralism, culminating in 2017 when the <span class="history-tooltip">Kenyan government declared the drought a national disaster<span class="tooltip-text"><i class="fas fa-info-circle"></i> In early 2017, Kenya officially declared a national disaster, appealing for international food aid as millions faced starvation due to widespread crop failure and livestock deaths.</span></span>. Between 2020 and 2023, the Horn of Africa experienced an unprecedented five consecutive failed rainy seasons, pushing millions into high levels of food insecurity. This is a classic climate-driven trap, where communities have no time to recover before the next environmental shock hits.
 </p>
 
-<div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+<div class="iframe-container my-5" style="width: 100%; height: 600px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 8px;">
     <iframe src="{{ site.baseurl }}/assets/data/df_cluster_embedding_densi_ok_pair_fullscreen.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
 </div>
 
-#### Profile 2: The Multi-Shock Vortex (Mozambique & Madagascar)
 
-<p class="lead" style="font-size: 1.1rem; line-height: 1.7; text-align: justify;">
-Located across the Mozambique Channel from one another, these two nations share more than just geography: they are trapped in the exact same vortex of climatic and systemic shocks. The algorithm maps a complex, yet shared trajectory for both. They are repeatedly battered by <b>Rainfall Impact on Crops</b> due to devastating Indian Ocean weather events <span class="history-tooltip">(like recurrent super-cyclones)<span class="tooltip-text"><i class="fas fa-info-circle"></i> Both countries are frequently in the crosshairs of extreme cyclones (e.g., Idai, Freddy, Batsirai), which decimate agricultural lands and infrastructure.</span></span>. This baseline fragility makes them highly susceptible to external shocks, driving them through identical, synchronized phases of <b>COVID-19 Economic Impact</b> and soaring <b>Agricultural Price Inflation</b>. Ultimately, these compounding economic and climatic crises converge on the most vulnerable, plunging both nations into recurring, severe spikes of <b>Child Malnutrition</b>. Their shared sequence highlights how repetitive climate disasters trap fragile economies in an inescapable loop.
-</p>
-
-<div class="iframe-container my-5" style="width: 90vw; position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; height: 650px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-    <iframe src="{{ site.baseurl }}/assets/data/df_cluster_embedding_densi_ok_pair6_fullscreen.html" width="100%" height="100%" frameborder="0" style="border:none;"></iframe>
-</div>
 
 <div style="background-color: #f8f9fa; border-left: 5px solid #6366f1; border-radius: 6px; padding: 1.5rem; margin-top: 3rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
 <h4 style="font-weight: 700; margin-top: 0; color: #4338ca;"><i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 10px;"></i> Looking Ahead: Clustering by Trajectory</h4>
@@ -703,9 +702,9 @@ We've seen how tracking the semantic "DNA" of a crisis reveals its underlying pa
 To answer this, we built two distinct models to tackle two critical questions:
 </p>
 
-<div style="background-color: #e8f4fa; border-left: 5px solid #0284c7; border-radius: 6px; padding: 1rem 1.25rem; margin-top: 1.5rem; margin-bottom: 1.25rem;">
-<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #0369a1;">Question 1 · Static inference</div>
-<h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #0369a1;">What explains where hunger is?</h4>
+<div style="background-color: #e8f4fa !important; border-left: 5px solid #0284c7 !important; border-radius: 6px; padding: 1rem 1.25rem; margin-top: 1.5rem; margin-bottom: 1.25rem;">
+<div style="text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; font-weight: 700; color: #000000 !important;">Question 1 · Static inference</div>
+<h4 style="font-weight: 700; margin: 0.25rem 0 0; color: #000000 !important;">What explains where hunger is?</h4>
 </div>
 
 <ul style="font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 2rem;">
